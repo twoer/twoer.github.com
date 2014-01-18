@@ -316,3 +316,69 @@ textarea {
   background-position: right 0px;
   background-repeat: no-repeat;
 }
+.demo-content .checkbox,
+.demo-content .radio {
+  position: relative;
+  display: inline-block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.demo-content .checkbox b,
+.demo-content .radio b {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  border: solid 2px #860000;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.demo-content .checkbox b input[type="checkbox"],
+.demo-content .radio b input[type="checkbox"] {
+  visibility: hidden;
+  cursor: pointer;
+}
+.demo-content .checkbox b input[type="checkbox"]:checked:after,
+.demo-content .radio b input[type="checkbox"]:checked:after {
+  content: '\2714';
+  margin-left: 2px;
+  visibility: visible;
+  font-size: 16px;
+  color: #860000;
+}
+.demo-content .radio b {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.demo-content .radio b input[type="radio"] {
+  visibility: hidden;
+  cursor: pointer;
+}
+.demo-content .radio b input[type="radio"]:checked:after {
+  content: ' ';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 3px 0px 0px 3px;
+  visibility: visible;
+  font-size: 16px;
+  background-color: #860000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
