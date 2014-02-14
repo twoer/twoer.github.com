@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/tab-pages-demo.css" />
+    <link rel="stylesheet" href="../style/tab-pages.css" />
+</head>
+<body>
+
+
+
+    <style>
+    
+    .link-list
+    {
+        padding:10px 0px;
+    }
+    .link-list a
+    {
+        margin-right:10px;
+    }
+
+    </style>
+    <div class="demo demo-tab-pages">
+        
+
+        <div class="link-list">
+            
+            <a href="http://www.baidu.com" data-open="tab" data-tab-title="百度">在父页面的 tab pages 中打开 百度</a>
+           
+        </div>
+
+
+    </div>
+</body>
+<script src="../script/require.js" data-main="../script/" ></script>
+
+<script>
+    require.config( 
+    {
+        paths: 
+        {
+            jquery : 'jquery',
+            tabpages : 'jquery.tabpages'
+        },
+        shim:
+        {
+            tabpages:
+            {
+                deps: ['jquery']
+            }
+        }
+    });
+
+
+    require(['tabpages'], function()
+    {
+
+    });
+    
+</script>
+
+</html>

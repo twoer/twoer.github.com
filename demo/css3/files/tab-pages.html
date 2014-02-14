@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/tab-pages-demo.css" />
+    <link rel="stylesheet" href="../style/tab-pages.css" />
+</head>
+<body>
+
+
+
+    <style>
+    
+    .link-list
+    {
+        padding:10px 0px;
+    }
+    .link-list a
+    {
+        margin-right:10px;
+    }
+
+    </style>
+    <div class="demo demo-tab-pages">
+        
+
+        <div class="link-list">
+            
+            <a href="tab-pages-test.html" data-open="tab">test</a>
+
+            <a href="http://www.baidu.com?1" data-open="tab">百度1</a>
+            <a href="http://www.bing.com?1" data-open="tab">bing1</a>
+            <a href="http://www.youdao.com?1" data-open="tab">youdao1</a>
+            <a href="http://www.sina.com.cn?1" data-open="tab" data-tab-title="新浪1">sina1</a>
+
+            <a href="http://www.baidu.com?2" data-open="tab">百度2</a>
+            <a href="http://www.bing.com?2" data-open="tab">bing2</a>
+            <a href="http://www.youdao.com?2" data-open="tab">youdao2</a>
+            <a href="http://www.sina.com.cn?2" data-open="tab" data-tab-title="新浪2">sina2</a>
+
+            <a href="http://www.baidu.com?3" data-open="tab">百度3</a>
+            <a href="http://www.bing.com?3" data-open="tab">bing3</a>
+            <a href="http://www.youdao.com?3" data-open="tab">youdao3</a>
+            <a href="http://www.sina.com.cn?3" data-open="tab" data-tab-title="新浪3">sina3</a>
+
+            <a href="http://www.baidu.com?4" data-open="tab">百度4</a>
+            <a href="http://www.bing.com?4" data-open="tab">bing4</a>
+            <a href="http://www.youdao.com?4" data-open="tab">youdao4</a>
+            <a href="http://www.sina.com.cn?4" data-open="tab" data-tab-title="新浪4">sina4</a>
+
+           
+        </div>
+
+
+        <div class="hd"></div>
+
+        <div class="tab-pages">
+            <div class="tab-header">
+                <ul class="tab-nav clear">
+                    <li class="selected">
+                        <a href="javascript:;" data-tab-role='nav'>首页</a>
+                    </li>
+                    <li class=""><a href="http://www.baidu.com?1" data-tab-role="nav">百度1<i data-tab-role="close"></i></a></li><li class=""><a href="http://www.youdao.com?1" data-tab-role="nav">youdao1<i data-tab-role="close"></i></a></li><li class=""><a href="http://www.sina.com.cn?1" data-tab-role="nav">新浪1<i data-tab-role="close"></i></a></li><li class=""><a href="http://www.baidu.com?2" data-tab-role="nav">百度2<i data-tab-role="close"></i></a></li><li class=""><a href="http://www.bing.com?2" data-tab-role="nav">bing2<i data-tab-role="close"></i></a></li><li class=""><a href="http://www.youdao.com?2" data-tab-role="nav">youdao2<i data-tab-role="close"></i></a></li><li class=""><a href="http://www.sina.com.cn?2" data-tab-role="nav">新浪2<i data-tab-role="close"></i></a></li><li class=""><a href="http://www.baidu.com?3" data-tab-role="nav">百度3<i data-tab-role="close"></i></a></li><li ><a href="http://www.bing.com?3" data-tab-role="nav">bing3<i data-tab-role="close"></i></a></li>
+                </ul>
+                <div class="tab-nav-switch">
+                    <a href="javascript:;" class="prev" >&lt;</a>
+                    <a href="javascript:;" class="next" >&gt;</a>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <div>
+                    首页......
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="../script/require.js" data-main="../script/" ></script>
+
+<script>
+    require.config( 
+    {
+        paths: 
+        {
+            jquery : 'jquery',
+            tabpages : 'jquery.tabpages'
+        },
+        shim:
+        {
+            tabpages:
+            {
+                deps: ['jquery']
+            }
+        }
+    });
+
+
+    require(['tabpages'], function()
+    {
+
+    });
+    
+</script>
+
+</html>

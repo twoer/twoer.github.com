@@ -145,6 +145,7 @@ a:hover {
   display: none;
 }
 /* css3 v1.0 */
+/** sprite: icon-fold-bar; sprite-image: url('../images/t/icon-fold-bar.png'); sprite-layout: vertical */
 html {
   overflow-y: scroll;
 }
