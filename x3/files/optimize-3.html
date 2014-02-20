@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="../style/x3.css" />
+	<link rel="stylesheet" href="..//script/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+</head>
+<body>
+	<div class="main">
+		<h2>连接:</h2>
+		<pre class="brush: js;">
+			http://mingdao.x3china.com/query
+		</pre>
+		
+		<h2>代码:</h2>
+		<pre class="brush: js;">
+			$("#oredrByApplicationDate").click(function(){
+				$("body").showLoading();
+				if(sortType == 'Amount') {
+					$("input[name='sortType']").val("ApplicationDate");
+					$("input[name='orderBy']").val("DESC");
+				}else {
+					switch(orderBy) {
+					case 'DESC':
+						$("input[name='orderBy']").val("ASC");
+						break;
+					case 'ASC':
+						$("input[name='orderBy']").val("DESC");
+						break;
+					}
+				}
+				$("#form").submit();
+			});
+
+			$("#time").change(function(){
+				var today=new Date();
+				var ty = today.getFullYear();
+				var tm = today.getMonth()+1+"";
+				if(tm.length==1){
+					tm = "0"+tm;
+				}
+				var td = today.getDate()+"";
+				if(td.length==1){
+					td = "0"+td;
+				}
+				$("#endDay").val(ty + "-" + tm + "-" + td);
+				var thisSelect = $(this).val();
+				if(thisSelect=='7day'){
+					today.setDate(today.getDate()-7);//7天前的今天
+				}else if(thisSelect=='1month'){
+					today.setMonth(today.getMonth()-1);//一个月前的今天
+				}else if(thisSelect=='3month'){
+					today.setMonth(today.getMonth()-3);//三个个月前的今天
+				}
+				var y = today.getFullYear();
+				var m = today.getMonth()+1+"";
+				if(m.length==1){
+					m = '0'+m;
+				}
+				var d = today.getDate()+"";
+				if(d.length==1){
+					d = '0'+d;
+				}
+				$("#beginDay").val(y + "-" + m + "-" + d);
+			});
+
+
+
+		</pre>
+
+		<h2>建议:</h2>
+		<pre class="brush: js;">
+			jq 高效的选择器是 id 、class 选择器
+
+			这种 $("input[name='orderBy']") ，如果多次使用，建议先用变量缓存起来
+			
+			日期 加减 可以使用我以前推荐的 http://arshaw.com/xdate/ 
+
+		</pre>
+
+	</div>
+</body>
+<script src="..//script/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script src="..//script/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script>
+	SyntaxHighlighter.all();
+</script>
+</html>

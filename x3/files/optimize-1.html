@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="../style/x3.css" />
+	<link rel="stylesheet" href="..//script/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+</head>
+<body>
+	<div class="main">
+		<h2>连接:</h2>
+		<pre class="brush: js;">
+			http://mingdao.x3china.com/draft
+		</pre>
+		
+		<h2>代码:</h2>
+		<pre class="brush: js;">
+			<script type="text/javascript">
+				$(function(){
+					$(".lookDetail").click(function(){
+						var url = $(this).attr("href");
+						$.dialog.open(url,{title:$(this).parent().parent().attr("requestType"),width:980,height:615,lock:true,opacity:0.3,close:function(){
+							window.location.reload();
+						}});
+						return false;
+					});
+				});
+			</script>
+
+			<script type="text/javascript">
+				$(function(){
+					$(".lookup").find("td:not(.first,.last)").dblclick(function(){
+					var url = $(this).parent().find("a").attr("href");
+					$.dialog.open(url,{title:$(this).parent().attr("requestType"),width:980,height:615,lock:true,opacity:0.3,close:function(){
+						window.location.reload();
+					}});	
+					return false;
+					
+				}).attr("title","双击查看单据！");;
+				});
+			</script>
+		</pre>
+
+		<h2>建议:</h2>
+		<pre class="brush: js;">
+			简单的看了两个 list 页面，都会有这两段重复的代码，显然可以提取出来，所有的 list 页面都可以使用;
+
+			$.dialog.open 那一段也是重复的;
+
+			$(this).parent().parent().attr("requestType") 选择器建议改成 $(this).closest('tr[requestType]').attr('requestType');
+
+			$(this).parent().find("a").attr("href"); 也是非常不严谨的，既然 a 有自己的 class ，可以 $(this).closest('tr').find('.lookDetail').attr('href');
+
+		</pre>
+
+		<h2>更多类似问题:</h2>
+		<pre class="brush: js;">
+			function placeholderCompatible (input) {
+				input.each(function(i,item){
+					var val = $(item).attr("placeholder");
+					if($(item).val()=="") {
+						$(item).attr({value:val});
+					}
+					$(item).focus(function() {
+						if ($(item).val() == val) {
+							$(this).attr({value:""});
+						}
+					}).blur(function() {
+						if ($(item).val() == "") {
+							$(this).attr({value:val});
+						}
+					});
+				});
+			}
+
+			$(function(){
+				placeholderCompatible($("input[placeholder]"));
+				$("form").submit(function(){
+					$("input[placeholder]").each(function(i,item){
+						var text = $(item).attr("placeholder");
+						if($(item).val()==text){
+							$(item).val("");
+						}
+						return true;
+					});
+				});
+			})
+
+			//解决firefox反斜杠路径问题
+			function changeURLforFireFox() {
+					$("img").each(function(i,item){
+						$(item).attr("src", $(item).attr("src").replace(/\\/, "/"));
+					});
+			}
+
+		</pre>
+
+	</div>
+</body>
+<script src="..//script/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script src="..//script/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script>
+	SyntaxHighlighter.all();
+</script>
+</html>
