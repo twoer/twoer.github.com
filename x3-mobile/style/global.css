@@ -545,7 +545,7 @@ html {
 .index .content .function-list li a:before {
   content: ' ';
   display: inline-block;
-  margin: 18% auto 0px auto;
+  margin: 30px auto 0px auto;
   width: 54px;
   height: 36px;
   background-repeat: no-repeat;
@@ -553,7 +553,7 @@ html {
 }
 .index .content .function-list li a b {
   position: absolute;
-  bottom: 15%;
+  bottom: 12px;
   left: 0px;
   width: 100%;
   font-size: 14px;
