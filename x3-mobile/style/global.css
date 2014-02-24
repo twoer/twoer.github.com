@@ -275,16 +275,27 @@ html {
   height: 81px;
   color: #fff;
 }
-.side-menu .user-info img {
+.side-menu .user-info .avatar {
   display: inline-block;
   margin-left: 12px;
   width: 50px;
   height: 50px;
   border: solid 3px #707D88;
   vertical-align: top;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.side-menu .user-info .avatar img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -328,6 +339,7 @@ html {
   width: 30px;
   height: 20px;
   background-repeat: no-repeat;
+  background-size: 30px;
 }
 .side-menu .menu-list li a i {
   position: absolute;
@@ -358,23 +370,27 @@ html {
 .side-menu .menu-list li .my-expense:before {
   background-image: url('../images/bg-side-menu.png');
   background-position: left -0px;
+  background-position: 0px 0px;
 }
 .side-menu .menu-list li .business-transaction:before {
   background-image: url('../images/bg-side-menu.png');
-  background-position: left -27px;
+  background-position: left -48px;
+  background-position: 0px -20px;
 }
 .side-menu .menu-list li .bill-sign:before {
   background-image: url('../images/bg-side-menu.png');
-  background-position: left -54px;
+  background-position: left -96px;
+  background-position: 0px -40px;
 }
 .side-menu .menu-list li .bill-payment:before {
   background-image: url('../images/bg-side-menu.png');
-  background-position: left -82px;
+  background-position: left -144px;
+  background-position: 0px -60px;
 }
 .side-menu .menu-list li .system-setting:before {
-  top: 13px;
   background-image: url('../images/bg-side-menu.png');
-  background-position: left -109px;
+  background-position: left -192px;
+  background-position: 0px -80px;
 }
 .hd {
   height: 40px;
@@ -384,9 +400,9 @@ html {
   top: 0px;
   left: 0%;
   z-index: 1;
-  padding: 10px 0px;
   width: 100%;
-  height: 20px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   font-size: 15px;
   font-weight: 500;
@@ -395,26 +411,37 @@ html {
 }
 .hd .hd-fixed .left-link,
 .hd .hd-fixed .right-link {
-  float: right;
-  width: 20px;
-  height: 20px;
+  position: relative;
+  width: 40px;
+  height: 40px;
   background-repeat: no-repeat;
   background-size: 20px;
 }
+.hd .hd-fixed .left-link:before,
+.hd .hd-fixed .right-link:before {
+  content: ' ';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 21.6px;
+  height: 21.6px;
+  background-size: 21.6px;
+}
 .hd .hd-fixed .left-link {
   float: left;
-  margin-left: 10px;
 }
 .hd .hd-fixed .right-link {
-  margin-right: 10px;
+  float: right;
 }
-.hd .hd-fixed .left-link.menu {
-  background-image: url('../images/bg-hd.png');
+.hd .hd-fixed .left-link.menu:before {
+  background-image: url('../images/bg-hd-link.png');
   background-position: left -0px;
+  background-position: 0px 0px;
 }
-.hd .hd-fixed .right-link.refresh {
-  background-image: url('../images/bg-hd.png');
-  background-position: left -31px;
+.hd .hd-fixed .right-link.refresh:before {
+  background-image: url('../images/bg-hd-link.png');
+  background-position: left -36px;
+  background-position: 0px -21.6px;
 }
 .index {
   background-color: #FFFFFF;
@@ -473,7 +500,7 @@ html {
   display: block;
   height: 100%;
   line-height: 50px;
-  text-indent: 75px;
+  text-indent: 85px;
   color: #fff;
   font-size: 16px;
 }
@@ -481,18 +508,21 @@ html {
   position: absolute;
   content: ' ';
   top: 14px;
-  left: 30px;
+  left: 40px;
   width: 36px;
   height: 24px;
   background-repeat: no-repeat;
+  background-size: 36px;
 }
 .index .content .often-links li .expense:before {
-  background-image: url('../images/bg-index.png');
-  background-position: left -219px;
+  background-image: url('../images/bg-index-often-links-approve.png');
+  background-position: left -0px;
+  background-position: 0px 0px;
 }
 .index .content .often-links li .approve:before {
-  background-image: url('../images/bg-index.png');
-  background-position: left -243px;
+  background-image: url('../images/bg-index-often-links-approve.png');
+  background-position: left -48px;
+  background-position: 0px -24px;
 }
 .index .content .function-list {
   padding-bottom: 30px;
@@ -510,54 +540,60 @@ html {
   border: solid 1px #DDD;
   border-top: none;
   border-left: 0px;
+  text-align: center;
 }
 .index .content .function-list li a:before {
-  position: absolute;
   content: ' ';
-  top: 40%;
-  left: 50%;
-  margin: -12px 0px 0px -18px;
-  width: 36px;
-  height: 24px;
+  display: inline-block;
+  margin: 18% auto 0px auto;
+  width: 54px;
+  height: 36px;
   background-repeat: no-repeat;
+  background-size: 54px;
 }
 .index .content .function-list li a b {
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   left: 0px;
   width: 100%;
-  text-align: center;
   font-size: 14px;
   color: #7F7F7F;
   font-weight: 500;
 }
 .index .content .function-list li .my-expense:before {
-  background-image: url('../images/bg-index.png');
-  background-position: left -267px;
+  background-image: url('../images/bg-index-function-list.png');
+  background-position: left -0px;
+  background-position: 0px 0px;
 }
 .index .content .function-list li .bill-sign:before {
-  background-image: url('../images/bg-index.png');
-  background-position: left -291px;
+  background-image: url('../images/bg-index-function-list.png');
+  background-position: left -48px;
+  background-position: 0px -36px;
 }
 .index .content .function-list li .bill-payment:before {
-  background-image: url('../images/bg-index.png');
-  background-position: left -315px;
+  background-image: url('../images/bg-index-function-list.png');
+  background-position: left -96px;
+  background-position: 0px -72px;
 }
 .index .content .function-list li .report-statistic:before {
-  background-image: url('../images/bg-index.png');
-  background-position: left -339px;
+  background-image: url('../images/bg-index-function-list.png');
+  background-position: left -144px;
+  background-position: 0px -108px;
 }
 .index .content .function-list li .bill-statistic:before {
-  background-image: url('../images/bg-index.png');
-  background-position: left -363px;
+  background-image: url('../images/bg-index-function-list.png');
+  background-position: left -192px;
+  background-position: 0px -144px;
 }
 .index .content .function-list li .borrowing-status:before {
-  background-image: url('../images/bg-index.png');
-  background-position: left -387px;
+  background-image: url('../images/bg-index-function-list.png');
+  background-position: left -240px;
+  background-position: 0px -180px;
 }
 .index .content .function-list li .system-setting:before {
-  background-image: url('../images/bg-index.png');
-  background-position: left -411px;
+  background-image: url('../images/bg-index-function-list.png');
+  background-position: left -288px;
+  background-position: 0px -216px;
 }
 .index .content .function-list li:nth-of-type(3n+1) {
   width: 34%;
