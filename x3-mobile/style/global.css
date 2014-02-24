@@ -149,7 +149,7 @@ a,
 input,
 textarea,
 button {
-  font: 12px/1.5 tahoma, arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53', sans-serif;
+  font: 13px/1.5 tahoma, arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53', sans-serif;
 }
 a:focus,
 input:focus,
@@ -177,6 +177,7 @@ html {
 }
 .login {
   background-color: #F7F7F7;
+  overflow: hidden;
 }
 .login .logo {
   padding: 30px 0px 20px 0px;
@@ -271,8 +272,8 @@ html {
   overflow: hidden;
 }
 .side-menu .user-info {
-  padding-top: 25px;
-  height: 81px;
+  padding-top: 15px;
+  height: 71px;
   color: #fff;
 }
 .side-menu .user-info .avatar {
@@ -314,13 +315,13 @@ html {
   font-size: 12px;
 }
 .side-menu .menu-list li {
-  height: 48px;
+  height: 45px;
 }
 .side-menu .menu-list li a {
   position: relative;
   display: block;
-  height: 48px;
-  line-height: 48px;
+  height: 45px;
+  line-height: 45px;
   text-indent: 60px;
   color: #fff;
   font-size: 14px;
@@ -334,7 +335,7 @@ html {
 .side-menu .menu-list li a:before {
   position: absolute;
   content: ' ';
-  top: 16px;
+  top: 13px;
   left: 20px;
   width: 30px;
   height: 20px;
@@ -343,7 +344,7 @@ html {
 }
 .side-menu .menu-list li a i {
   position: absolute;
-  top: 14px;
+  top: 12px;
   right: 10px;
   padding: 0px 8px;
   text-indent: 0px;
@@ -362,7 +363,7 @@ html {
 }
 .side-menu .menu-list li a:hover,
 .side-menu .menu-list li a.selected {
-  height: 49px;
+  height: 46px;
   background-color: #172A39;
   border-left: solid 4px #2C8AD3;
   border-bottom: none;
@@ -442,6 +443,16 @@ html {
   background-image: url('../images/bg-hd-link.png');
   background-position: left -36px;
   background-position: 0px -21.6px;
+}
+.hd .hd-fixed .right-link.create:before {
+  background-image: url('../images/bg-hd-link.png');
+  background-position: left -72px;
+  background-position: 0px -43.2px;
+}
+.hd .hd-fixed .left-link.back:before {
+  background-image: url('../images/bg-hd-link.png');
+  background-position: left -108px;
+  background-position: 0px -64.80000000000001px;
 }
 .index {
   background-color: #FFFFFF;
@@ -597,4 +608,331 @@ html {
 }
 .index .content .function-list li:nth-of-type(3n+1) {
   width: 34%;
+}
+.bill-details {
+  padding-bottom: 10px;
+  background-color: #F7F7F7;
+}
+.bill-details .content .bill-overview {
+  padding: 20px 12px 0px 20px;
+  height: 70px;
+}
+.bill-details .content .bill-overview h1 {
+  line-height: 24px;
+  font-size: 18px;
+  color: #000;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.bill-details .content .bill-overview .amount {
+  color: #000;
+  font-size: 14px;
+}
+.bill-details .content .bill-overview .amount b {
+  margin-left: 10px;
+  font-size: 18px;
+  color: #F37815;
+}
+.bill-details .content .bill-overview .date {
+  float: right;
+  line-height: 24px;
+  color: #999;
+  font-style: normal;
+}
+.bill-details .content .bill-overview .cate {
+  position: relative;
+  float: left;
+  margin-top: 3px;
+  margin-right: 15px;
+  width: 45px;
+  height: 45px;
+  background-color: #2C8AD3;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.bill-details .content .bill-overview .cate:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -9.6px 0px 0px -14.4px;
+  width: 28.8px;
+  height: 19.2px;
+  background-repeat: no-repeat;
+  background-size: 28.8px;
+}
+.bill-details .content .bill-overview .cate.everyday:before {
+  background-image: url('../images/bg-bill-type.png');
+  background-position: left -0px;
+  background-position: 0px 0px;
+}
+.bill-details .content h2 {
+  line-height: 25px;
+  font-size: 14px;
+  text-indent: 10px;
+  color: #888;
+  font-weight: 500;
+  background-color: #EEE;
+  border-left-style: solid;
+  border-left-width: 3px;
+}
+.bill-details .content h2 b {
+  float: right;
+  margin-right: 12px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #F37815;
+}
+.bill-details .content .base-info h2 {
+  border-left-color: #2C8AD3;
+}
+.bill-details .content .base-info .base-info-details {
+  padding: 10px 0px;
+  border-left: solid 3px #91C0E5;
+}
+.bill-details .content .base-info .form-grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+.bill-details .content .base-info .form-grid th {
+  width: 80px;
+  text-indent: 12px;
+  color: #999;
+}
+.bill-details .content .base-info .form-grid td {
+  height: 24px;
+  color: #000;
+}
+.bill-details .content .details-total h2 {
+  border-left-color: #31B5AD;
+}
+.bill-details .content .details-total .details-list {
+  border-left: solid 3px #94D6D2;
+}
+.bill-details .content .details-total .details-list li {
+  position: relative;
+  padding: 5px 0px 8px 80px;
+  min-height: 45px;
+  border-bottom: solid 1px #CCC;
+}
+.bill-details .content .details-total .details-list li .screenage {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 50px;
+  height: 37.5px;
+}
+.bill-details .content .details-total .details-list li .screenage img {
+  width: 50px;
+  height: 37.5px;
+  vertical-align: top;
+}
+.bill-details .content .details-total .details-list li .details {
+  width: 100%;
+}
+.bill-details .content .details-total .details-list li .details h3 {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  overflow: hidden;
+  color: #000;
+}
+.bill-details .content .details-total .details-list li .details h3 b {
+  float: right;
+  margin-right: 12px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #F37815;
+}
+.bill-details .content .details-total .details-list li .details .date {
+  line-height: 20px;
+  height: 20px;
+  color: #999;
+}
+.bill-details .content .details-total .details-list li .details .date span {
+  float: left;
+  width: 160px;
+}
+.bill-details .content .details-total .details-list li .details .date cite {
+  float: right;
+  margin-right: 10px;
+  width: 60px;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.bill-details .content .details-total .details-list li .details .remark {
+  margin-top: 3px;
+  line-height: 18px;
+  color: #999;
+}
+.bill-details .content .borrowing-bill h2 {
+  border-left-color: #63C532;
+}
+.bill-details .content .borrowing-bill .details-list {
+  border-left: solid 3px #94D6D2;
+  border-left: solid 3px #ADDE94;
+}
+.bill-details .content .borrowing-bill .details-list li {
+  position: relative;
+  padding: 5px 0px 8px 80px;
+  min-height: 45px;
+  border-bottom: solid 1px #CCC;
+}
+.bill-details .content .borrowing-bill .details-list li .screenage {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 50px;
+  height: 37.5px;
+}
+.bill-details .content .borrowing-bill .details-list li .screenage img {
+  width: 50px;
+  height: 37.5px;
+  vertical-align: top;
+}
+.bill-details .content .borrowing-bill .details-list li .details {
+  width: 100%;
+}
+.bill-details .content .borrowing-bill .details-list li .details h3 {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  overflow: hidden;
+  color: #000;
+}
+.bill-details .content .borrowing-bill .details-list li .details h3 b {
+  float: right;
+  margin-right: 12px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #F37815;
+}
+.bill-details .content .borrowing-bill .details-list li .details .date {
+  line-height: 20px;
+  height: 20px;
+  color: #999;
+}
+.bill-details .content .borrowing-bill .details-list li .details .date span {
+  float: left;
+  width: 160px;
+}
+.bill-details .content .borrowing-bill .details-list li .details .date cite {
+  float: right;
+  margin-right: 10px;
+  width: 60px;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.bill-details .content .borrowing-bill .details-list li .details .remark {
+  margin-top: 3px;
+  line-height: 18px;
+  color: #999;
+}
+.bill-details .content .borrowing-bill .details-list li {
+  padding-left: 10px;
+}
+.bill-details .content .attachment {
+  padding: 8px 0px;
+  margin: 0px auto;
+  width: 90%;
+}
+.bill-details .content .attachment .button {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  border: solid 1px #DDD;
+  background-color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.bill-details .content .attachment .button:before {
+  content: ' ';
+  display: inline-block;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  background-image: url('../images/bg-button-attachment.png');
+  background-position: left -0px;
+  background-size: 18px;
+  vertical-align: middle;
+}
+.bill-details .content .new-status {
+  height: 45px;
+}
+.bill-details .content .new-status .new-status-fixed {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background-color: #fff;
+  border: solid 1px #ddd;
+  color: #000;
+  font-size: 16px;
+  text-indent: 38px;
+}
+.bill-details .content .new-status .new-status-fixed:before {
+  content: ' ';
+  position: absolute;
+  top: 0px;
+  left: 12px;
+  width: 20px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+.bill-details .content .new-status .new-status-fixed:after {
+  content: ' ';
+  float: right;
+  margin: 16px 12px 0px 0px;
+  width: 8px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-image: url('../images/bg-process-details.png');
+  background-position: left -0px;
+  background-size: 8px;
+}
+.bill-details .content .new-status .new-status-fixed.process-start:before {
+  background-image: url('..//images/process-status/process-status-start.png');
+  background-position: 0px -6px;
+}
+.bill-details .content .new-status .new-status-fixed.process-back:before {
+  background-image: url('..//images/process-status/process-status-back.png');
+  background-position: 0px -6px;
+}
+.bill-details .content .new-status .new-status-fixed.process-deny:before {
+  background-image: url('..//images/process-status/process-status-deny.png');
+  background-position: 0px -6px;
+}
+.bill-details .content .new-status .new-status-fixed.process-pass:before {
+  background-image: url('..//images/process-status/process-status-pass.png');
+  background-position: 0px -6px;
+}
+.bill-details .content .new-status .new-status-fixed.process-pending:before {
+  background-image: url('..//images/process-status/process-status-pending.gif');
+  background-position: 0px -6px;
+}
+.bill-details .content .new-status .new-status-fixed.process-waiting:before {
+  background-image: url('..//images/process-status/process-status-waiting.png');
+  background-position: 0px -6px;
 }
