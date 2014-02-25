@@ -57,7 +57,7 @@
 <script>
 	
 	//menu
-	$(document).delegate('.hd .left-link.menu', 'click', function()
+	$(document).delegate('.hd .left-link.menu', 'mousedown', function()
 	{
 		var $this = $(this);
 		var _height = [$(window).height(), $('.main .content').height() ].sort(function(i, j){return i > j ? -1 : 1}).shift();
@@ -94,9 +94,15 @@
 	});
 
 	//refresh
-	$(document).delegate('.hd .right-link.refresh', 'click', function()
+	$(document).delegate('.hd .right-link.refresh', 'mousedown', function()
 	{
 		window.location.reload();
+	});
+
+	//back
+	$(document).delegate('.hd .left-link.back', 'mousedown', function()
+	{
+		window.history.go(-1);
 	});
 
 </script>

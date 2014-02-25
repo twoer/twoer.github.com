@@ -46,7 +46,7 @@
 				<div class="hd-fixed">
 					查看单据
 					<a href="javascript:;" class="left-link back"></a>
-					<a href="javascript:;" class="right-link conform"></a>
+					<a href="javascript:;" class="right-link confirm"></a>
 				</div>
 			</div>
 
@@ -175,7 +175,7 @@
 			</div>
 
 			<div class="attachment">
-				<a href="attachment-list.html" class="button">查看附件（10）</a>
+				<a href="attachment-view.html" class="button">查看附件（10）</a>
 			</div>
 			
 			
@@ -194,7 +194,7 @@
 <script>
 	
 	//menu
-	$(document).delegate('.hd .left-link.menu', 'click', function()
+	$(document).delegate('.hd .left-link.menu', 'mousedown', function()
 	{
 		var $this = $(this);
 		var _height = [$(window).height(), $('.main .content').height() ].sort(function(i, j){return i > j ? -1 : 1}).shift();
@@ -231,9 +231,15 @@
 	});
 
 	//refresh
-	$(document).delegate('.hd .right-link.refresh', 'click', function()
+	$(document).delegate('.hd .right-link.refresh', 'mousedown', function()
 	{
 		window.location.reload();
+	});
+
+	//back
+	$(document).delegate('.hd .left-link.back', 'mousedown', function()
+	{
+		window.history.go(-1);
 	});
 
 </script>

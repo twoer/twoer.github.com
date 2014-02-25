@@ -160,6 +160,7 @@ select:focus {
 }
 a:hover {
   text-decoration: none;
+  outline: none;
 }
 button {
   border: none;
@@ -177,7 +178,7 @@ html {
 }
 .login {
   background-color: #F7F7F7;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .login .logo {
   padding: 30px 0px 20px 0px;
@@ -260,6 +261,9 @@ html {
 }
 .main {
   overflow: hidden;
+}
+.main .content {
+  background-color: #F7F7F7;
 }
 .side-menu {
   position: fixed;
@@ -405,14 +409,15 @@ html {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
   background-color: #2C8AD3;
 }
 .hd .hd-fixed .left-link,
 .hd .hd-fixed .right-link {
-  position: relative;
+  position: absolute;
+  top: 0px;
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
@@ -429,10 +434,10 @@ html {
   background-size: 21.6px;
 }
 .hd .hd-fixed .left-link {
-  float: left;
+  left: 0px;
 }
 .hd .hd-fixed .right-link {
-  float: right;
+  right: 0px;
 }
 .hd .hd-fixed .left-link.menu:before {
   background-image: url('../images/bg-hd-link.png');
@@ -453,6 +458,11 @@ html {
   background-image: url('../images/bg-hd-link.png');
   background-position: left -108px;
   background-position: 0px -64.80000000000001px;
+}
+.hd .hd-fixed .right-link.confirm:before {
+  background-image: url('../images/bg-hd-link.png');
+  background-position: left -144px;
+  background-position: 0px -86.4px;
 }
 .index {
   background-color: #FFFFFF;
@@ -536,7 +546,7 @@ html {
   background-position: 0px -24px;
 }
 .index .content .function-list {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   border-left: solid 1px #DDD;
 }
 .index .content .function-list li {
@@ -557,10 +567,10 @@ html {
   content: ' ';
   display: inline-block;
   margin: 30px auto 0px auto;
-  width: 54px;
-  height: 36px;
+  width: 36px;
+  height: 24px;
   background-repeat: no-repeat;
-  background-size: 54px;
+  background-size: 36px;
 }
 .index .content .function-list li a b {
   position: absolute;
@@ -579,39 +589,35 @@ html {
 .index .content .function-list li .bill-sign:before {
   background-image: url('../images/bg-index-function-list.png');
   background-position: left -48px;
-  background-position: 0px -36px;
+  background-position: 0px -24px;
 }
 .index .content .function-list li .bill-payment:before {
   background-image: url('../images/bg-index-function-list.png');
   background-position: left -96px;
-  background-position: 0px -72px;
+  background-position: 0px -48px;
 }
 .index .content .function-list li .report-statistic:before {
   background-image: url('../images/bg-index-function-list.png');
   background-position: left -144px;
-  background-position: 0px -108px;
+  background-position: 0px -72px;
 }
 .index .content .function-list li .bill-statistic:before {
   background-image: url('../images/bg-index-function-list.png');
   background-position: left -192px;
-  background-position: 0px -144px;
+  background-position: 0px -96px;
 }
 .index .content .function-list li .borrowing-status:before {
   background-image: url('../images/bg-index-function-list.png');
   background-position: left -240px;
-  background-position: 0px -180px;
+  background-position: 0px -120px;
 }
 .index .content .function-list li .system-setting:before {
   background-image: url('../images/bg-index-function-list.png');
   background-position: left -288px;
-  background-position: 0px -216px;
+  background-position: 0px -144px;
 }
 .index .content .function-list li:nth-of-type(3n+1) {
   width: 34%;
-}
-.bill-details {
-  padding-bottom: 10px;
-  background-color: #F7F7F7;
 }
 .bill-details .content .bill-overview {
   padding: 20px 12px 0px 20px;
@@ -935,4 +941,237 @@ html {
 .bill-details .content .new-status .new-status-fixed.process-waiting:before {
   background-image: url('..//images/process-status/process-status-waiting.png');
   background-position: 0px -6px;
+}
+.process-status .content .process-status-list {
+  padding: 10px;
+}
+.process-status .content .process-status-list .process-status {
+  position: relative;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  min-height: 50px;
+}
+.process-status .content .process-status-list .process-status:before {
+  content: ' ';
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  width: 20px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+.process-status .content .process-status-list .process-status .details {
+  position: relative;
+  padding: 7px 5px 7px 10px;
+  min-height: 34px;
+  border: solid 1px #CCC;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.process-status .content .process-status-list .process-status .details:before {
+  content: ' ';
+  position: absolute;
+  top: 6px;
+  left: -16px;
+  width: 0px;
+  height: 0px;
+  border: solid 8px transparent;
+  border-right-color: #ccc;
+  overflow: hidden;
+}
+.process-status .content .process-status-list .process-status .details:after {
+  content: ' ';
+  position: absolute;
+  top: 6px;
+  left: -15px;
+  width: 0px;
+  height: 0px;
+  border: solid 8px transparent;
+  border-right-color: #F7F7F7;
+  overflow: hidden;
+}
+.process-status .content .process-status-list .process-status .details h3 {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.process-status .content .process-status-list .process-status .details span {
+  display: block;
+  line-height: 20px;
+  color: #888;
+}
+.process-status .content .process-status-list .process-status .details span b {
+  color: #333;
+  font-weight: 500;
+}
+.process-status .content .process-status-list .process-status.process-start:before {
+  background-image: url('..//images/process-status/process-status-start.png');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-list .process-status.process-start:before {
+  background-image: url('..//images/process-status/process-status-start.png');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-list .process-status.process-back:before {
+  background-image: url('..//images/process-status/process-status-back.png');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-list .process-status.process-back:last-child:before {
+  background-image: url('..//images/process-status/process-status-back_last.png');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-list .process-status.process-deny:before {
+  background-image: url('..//images/process-status/process-status-deny.png');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-list .process-status.process-deny:last-child:before {
+  background-image: url('..//images/process-status/process-status-deny-last.png');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-list .process-status.process-pass:before {
+  background-image: url('..//images/process-status/process-status-pass.png');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-list .process-status.process-pass:last-child:before {
+  background-image: url('..//images/process-status/process-status-pass-last.png');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-list .process-status.process-pending:before {
+  background-image: url('..//images/process-status/process-status-pending.gif');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-list .process-status.process-waiting:before {
+  background-image: url('..//images/process-status/process-status-waiting.png');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-list .process-status.process-waiting:last-child:before {
+  background-image: url('..//images/process-status/process-status-waiting-last.png');
+  background-position: 0px -6px;
+}
+.process-status .content .process-status-log {
+  padding: 10px;
+}
+.process-status .content .process-status-log h2 {
+  position: relative;
+  line-height: 20px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  text-indent: 22px;
+}
+.process-status .content .process-status-log h2:before {
+  content: ' ';
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/bg-process-status-log.png');
+  background-position: left -0px;
+  background-size: 16px;
+}
+.process-status .content .process-status-log .log-list li {
+  padding: 8px 0px 10px 5px;
+  border-bottom: solid 1px #DDD;
+  color: #888;
+}
+.process-status .content .process-status-log .log-list li div {
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+}
+.process-status .content .process-status-log .log-list li div b {
+  font-weight: 500;
+  color: #333;
+}
+.process-status .content .process-status-log .log-list li div span {
+  float: right;
+  width: 120px;
+}
+.process-status .content .process-status-log .log-list li div span:first-child {
+  float: left;
+  width: 170px;
+}
+.attachment-view .attachment-list {
+  padding: 20px 10px;
+}
+.attachment-view .attachment-list li {
+  float: left;
+  padding: 0px 5px;
+  margin-bottom: 15px;
+  width: 25%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.attachment-view .attachment-list li .cate {
+  display: block;
+  padding: 5px 0px;
+  text-align: center;
+}
+.attachment-view .attachment-list li .cate:before {
+  content: ' ';
+  display: block;
+  margin: 0px auto;
+  width: 46px;
+  height: 46px;
+  background-repeat: no-repeat;
+  background-size: 46px;
+}
+.attachment-view .attachment-list li span {
+  display: block;
+  line-height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.attachment-view .attachment-list li .name {
+  margin-top: 5px;
+  color: #333;
+}
+.attachment-view .attachment-list li .size {
+  color: #949494;
+}
+.attachment-view .attachment-list li .cate.doc:before {
+  background-image: url('../images/bg-attachment-cate.png');
+  background-position: left -0px;
+  background-position: 0px 0px;
+}
+.attachment-view .attachment-list li .cate.ppt:before {
+  background-image: url('../images/bg-attachment-cate.png');
+  background-position: left -92px;
+  background-position: 0px -46px;
+}
+.attachment-view .attachment-list li .cate.excel:before {
+  background-image: url('../images/bg-attachment-cate.png');
+  background-position: left -184px;
+  background-position: 0px -92px;
+}
+.attachment-view .attachment-list li .cate.txt:before {
+  background-image: url('../images/bg-attachment-cate.png');
+  background-position: left -276px;
+  background-position: 0px -138px;
+}
+.attachment-view .attachment-list li .cate.pdf:before {
+  background-image: url('../images/bg-attachment-cate.png');
+  background-position: left -368px;
+  background-position: 0px -184px;
+}
+.attachment-view .attachment-list li .cate.rar:before {
+  background-image: url('../images/bg-attachment-cate.png');
+  background-position: left -460px;
+  background-position: 0px -230px;
+}
+.attachment-view .attachment-list li .cate.img:before {
+  display: none;
+}
+.attachment-view .attachment-list li .cate.img img {
+  max-width: 46px;
+  max-height: 46px;
+  vertical-align: top;
 }

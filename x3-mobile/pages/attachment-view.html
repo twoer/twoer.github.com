@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en" class="attachment-list">
+<html lang="en" class="attachment-view">
 <head>
 	<meta charset="UTF-8">
-	<title>attachment list</title>
+	<title>attachment view</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <link rel="stylesheet" href="../style/global.css">
 </head>
@@ -49,7 +49,58 @@
 				</div>
 			</div>
 			
-			<ul class="att"></ul>			
+			<ul class="attachment-list">
+				<li>
+					<a href="javascript:;" class="cate rar">
+						<span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+						<span class="size">2.3M</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="cate doc">
+						<span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+						<span class="size">2.3M</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="cate excel">
+						<span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+						<span class="size">2.3M</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="cate ppt">
+						<span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+						<span class="size">2.3M</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="cate txt">
+						<span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+						<span class="size">2.3M</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="cate pdf">
+						<span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+						<span class="size">2.3M</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="cate img">
+						<img src="../images/test.png" alt="">
+						<span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+						<span class="size">2.3M</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="cate img">
+						<img src="../images/test.png" alt="">
+						<span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+						<span class="size">2.3M</span>
+					</a>
+				</li>
+			</ul>			
 		</div>
 	</div>
 </body>
@@ -57,7 +108,7 @@
 <script>
 	
 	//menu
-	$(document).delegate('.hd .left-link.menu', 'click', function()
+	$(document).delegate('.hd .left-link.menu', 'mousedown', function()
 	{
 		var $this = $(this);
 		var _height = [$(window).height(), $('.main .content').height() ].sort(function(i, j){return i > j ? -1 : 1}).shift();
@@ -94,13 +145,13 @@
 	});
 
 	//refresh
-	$(document).delegate('.hd .right-link.refresh', 'click', function()
+	$(document).delegate('.hd .right-link.refresh', 'mousedown', function()
 	{
 		window.location.reload();
 	});
 
 	//back
-	$(document).delegate('.hd .left-link.back', 'click', function()
+	$(document).delegate('.hd .left-link.back', 'mousedown', function()
 	{
 		window.history.go(-1);
 	});
