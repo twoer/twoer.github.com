@@ -243,7 +243,7 @@ textarea {
   border: solid 1px #ddd;
   background-color: #fff;
   max-height: 350px;
-  overflow: scroll;
+  overflow-y: auto;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -271,6 +271,7 @@ div.overlay {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
+/** sprite: bg-login; sprite-image: url('../images/bg-login.png'); */
 html {
   overflow-x: hidden;
   background-color: #F7F7F7;
@@ -296,8 +297,7 @@ html.login .login-form .user-pwd {
   height: 40px;
   border: solid 1px #DDDDDD;
   background-color: #FFFFFF;
-  background-image: url('../images/bg-login.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-login-user-name.png');  /** sprite-ref: bg-login; sprite-margin-top:13px; sprite-margin-left:10px;*/
   background-repeat: no-repeat;
   background-size: 30px;
   -webkit-border-radius: 5px 5px 0px 0px;;
@@ -315,8 +315,7 @@ html.login .login-form .user-pwd .text {
 }
 html.login .login-form .user-pwd {
   border-top: none;
-  background-image: url('../images/bg-login.png');
-  background-position: left -45px;
+  background-image: url('../../images/sprite/bg-login-user-pwd.png');  /** sprite-ref: bg-login; sprite-margin-top:35px; sprite-margin-left:15px;*/
   -webkit-border-radius: 0px 0px 5px 5px;;
   -moz-border-radius: 0px 0px 5px 5px;;
   border-radius: 0px 0px 5px 5px;;
@@ -364,6 +363,7 @@ html.login .login-form .user-forgetpwd a {
 .main {
   overflow: hidden;
 }
+/** sprite: bg-side-menu; sprite-image: url('../images/bg-side-menu.png'); */
 .side-menu {
   position: fixed;
   top: 0px;
@@ -472,30 +472,26 @@ html.login .login-form .user-forgetpwd a {
   border-bottom: none;
 }
 .side-menu .menu-list li .my-expense:before {
-  background-image: url('../images/bg-side-menu.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-side-menu-my-expense.png');  /** sprite-ref: bg-side-menu; */
   background-position: 0px 0px;
 }
 .side-menu .menu-list li .business-transaction:before {
-  background-image: url('../images/bg-side-menu.png');
-  background-position: left -48px;
+  background-image: url('../../images/sprite/bg-side-menu-business-transaction.png');  /** sprite-ref: bg-side-menu; */
   background-position: 0px -20px;
 }
 .side-menu .menu-list li .bill-sign:before {
-  background-image: url('../images/bg-side-menu.png');
-  background-position: left -96px;
+  background-image: url('../../images/sprite/bg-side-menu-bill-sign.png');  /** sprite-ref: bg-side-menu; */
   background-position: 0px -40px;
 }
 .side-menu .menu-list li .bill-payment:before {
-  background-image: url('../images/bg-side-menu.png');
-  background-position: left -144px;
+  background-image: url('../../images/sprite/bg-side-menu-bill-payment.png');  /** sprite-ref: bg-side-menu; */
   background-position: 0px -60px;
 }
 .side-menu .menu-list li .system-setting:before {
-  background-image: url('../images/bg-side-menu.png');
-  background-position: left -192px;
+  background-image: url('../../images/sprite/bg-side-menu-system-setting.png');  /** sprite-ref: bg-side-menu; */
   background-position: 0px -80px;
 }
+/** sprite: bg-hd-link; sprite-image: url('../images/bg-hd-link.png'); */
 .hd {
   height: 40px;
 }
@@ -539,30 +535,28 @@ html.login .login-form .user-forgetpwd a {
   right: 0px;
 }
 .hd .hd-fixed .left-link.menu:before {
-  background-image: url('../images/bg-hd-link.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-hd-link-menu.png');  /** sprite-ref: bg-hd-link; */
   background-position: 0px 0px;
 }
 .hd .hd-fixed .right-link.refresh:before {
-  background-image: url('../images/bg-hd-link.png');
-  background-position: left -36px;
+  background-image: url('../../images/sprite/bg-hd-link-refresh.png');  /** sprite-ref: bg-hd-link; */
   background-position: 0px -21.6px;
 }
 .hd .hd-fixed .right-link.create:before {
-  background-image: url('../images/bg-hd-link.png');
-  background-position: left -72px;
+  background-image: url('../../images/sprite/bg-hd-link-create.png');  /** sprite-ref: bg-hd-link; */
   background-position: 0px -43.2px;
 }
 .hd .hd-fixed .left-link.back:before {
-  background-image: url('../images/bg-hd-link.png');
-  background-position: left -108px;
+  background-image: url('../../images/sprite/bg-hd-link-back.png');  /** sprite-ref: bg-hd-link; */
   background-position: 0px -64.80000000000001px;
 }
 .hd .hd-fixed .right-link.confirm:before {
-  background-image: url('../images/bg-hd-link.png');
-  background-position: left -144px;
+  background-image: url('../../images/sprite/bg-hd-link-confirm.png');  /** sprite-ref: bg-hd-link; */
   background-position: 0px -86.4px;
 }
+/** sprite: bg-index; sprite-image: url('../images/bg-index.png'); */
+/** sprite: bg-index-often-links-approve; sprite-image: url('../images/bg-index-often-links-approve.png'); */
+/** sprite: bg-index-function-list; sprite-image: url('../images/bg-index-function-list.png'); */
 html.index {
   background-color: #FFFFFF;
 }
@@ -570,8 +564,7 @@ html.index .content .user-info {
   position: relative;
   padding: 10px 0px 10px 20px;
   height: 45px;
-  background-image: url('../images/bg-index.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-index-user-info.png');  /** sprite-ref: bg-index; */
   background-size: 100%;
   color: #fff;
 }
@@ -602,8 +595,7 @@ html.index .content .user-info .link-details {
   right: 0px;
   width: 35px;
   height: 65px;
-  background-image: url('../images/bg-index.png');
-  background-position: left -150px;
+  background-image: url('../../images/sprite/bg-index-user-info-arrow.png');  /** sprite-ref: bg-index; sprite-margin-top:25px; sprite-margin-left:15px; sprite-margin-bottom:30px; */
   background-repeat: no-repeat;
 }
 html.index .content .often-links {
@@ -635,13 +627,11 @@ html.index .content .often-links li a:before {
   background-size: 36px;
 }
 html.index .content .often-links li .expense:before {
-  background-image: url('../images/bg-index-often-links-approve.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-index-often-links-expense.png');  /** sprite-ref: bg-index-often-links-approve;*/
   background-position: 0px 0px;
 }
 html.index .content .often-links li .approve:before {
-  background-image: url('../images/bg-index-often-links-approve.png');
-  background-position: left -48px;
+  background-image: url('../../images/sprite/bg-index-often-links-approve.png');  /** sprite-ref: bg-index-often-links-approve;*/
   background-position: 0px -24px;
 }
 html.index .content .function-list {
@@ -681,76 +671,65 @@ html.index .content .function-list li a b {
   font-weight: 500;
 }
 html.index .content .function-list li .my-expense:before {
-  background-image: url('../images/bg-index-function-list.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-index-function-list-my-expense.png');  /** sprite-ref: bg-index-function-list;*/
   background-position: 0px 0px;
 }
 html.index .content .function-list li .bill-sign:before {
-  background-image: url('../images/bg-index-function-list.png');
-  background-position: left -48px;
+  background-image: url('../../images/sprite/bg-index-function-list-bill-sign.png');  /** sprite-ref: bg-index-function-list; */
   background-position: 0px -24px;
 }
 html.index .content .function-list li .bill-payment:before {
-  background-image: url('../images/bg-index-function-list.png');
-  background-position: left -96px;
+  background-image: url('../../images/sprite/bg-index-function-list-bill-payment.png');  /** sprite-ref: bg-index-function-list; */
   background-position: 0px -48px;
 }
 html.index .content .function-list li .report-statistic:before {
-  background-image: url('../images/bg-index-function-list.png');
-  background-position: left -144px;
+  background-image: url('../../images/sprite/bg-index-function-list-report-statistic.png');  /** sprite-ref: bg-index-function-list; */
   background-position: 0px -72px;
 }
 html.index .content .function-list li .bill-statistic:before {
-  background-image: url('../images/bg-index-function-list.png');
-  background-position: left -192px;
+  background-image: url('../../images/sprite/bg-index-function-list-bill-statistic.png');  /** sprite-ref: bg-index-function-list; */
   background-position: 0px -96px;
 }
 html.index .content .function-list li .borrowing-status:before {
-  background-image: url('../images/bg-index-function-list.png');
-  background-position: left -240px;
+  background-image: url('../../images/sprite/bg-index-function-list-borrowing-status.png');  /** sprite-ref: bg-index-function-list;*/
   background-position: 0px -120px;
 }
 html.index .content .function-list li .system-setting:before {
-  background-image: url('../images/bg-index-function-list.png');
-  background-position: left -288px;
+  background-image: url('../../images/sprite/bg-index-function-list-system-setting.png');  /** sprite-ref: bg-index-function-list;*/
   background-position: 0px -144px;
 }
 html.index .content .function-list li:nth-of-type(3n+1) {
   width: 34%;
 }
+/** sprite: bg-bill-cate; sprite-image: url('../images/bg-bill-cate.png'); */
+/** sprite: bg-button-attachment; sprite-image: url('../images/bg-button-attachment.png'); */
+/** sprite: bg-process-details; sprite-image: url('../images/bg-process-details.png'); */
 .cate.borrowing:before {
-  background-image: url('../images/bg-bill-cate.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-bill-cate-borrowing.png');  /** sprite-ref: bg-bill-cate;*/
   background-position: 0px 0px;
 }
 .cate.everyday:before {
-  background-image: url('../images/bg-bill-cate.png');
-  background-position: left -38px;
+  background-image: url('../../images/sprite/bg-bill-cate-everyday.png');  /** sprite-ref: bg-bill-cate;*/
   background-position: 0px -19px;
 }
 .cate.repayment:before {
-  background-image: url('../images/bg-bill-cate.png');
-  background-position: left -76px;
+  background-image: url('../../images/sprite/bg-bill-cate-repayment.png');  /** sprite-ref: bg-bill-cate;*/
   background-position: 0px -38px;
 }
 .cate.request:before {
-  background-image: url('../images/bg-bill-cate.png');
-  background-position: left -114px;
+  background-image: url('../../images/sprite/bg-bill-cate-request.png');  /** sprite-ref: bg-bill-cate;*/
   background-position: 0px -57px;
 }
 .cate.travelling:before {
-  background-image: url('../images/bg-bill-cate.png');
-  background-position: left -152px;
+  background-image: url('../../images/sprite/bg-bill-cate-travelling.png');  /** sprite-ref: bg-bill-cate;*/
   background-position: 0px -76px;
 }
 .cate.vendor:before {
-  background-image: url('../images/bg-bill-cate.png');
-  background-position: left -190px;
+  background-image: url('../../images/sprite/bg-bill-cate-vendor.png');  /** sprite-ref: bg-bill-cate;*/
   background-position: 0px -95px;
 }
 .cate.travel:before {
-  background-image: url('../images/bg-bill-cate.png');
-  background-position: left -228px;
+  background-image: url('../../images/sprite/bg-bill-cate-travel.png');  /** sprite-ref: bg-bill-cate;*/
   background-position: 0px -114px;
 }
 html.bill-details .content .bill-overview {
@@ -1005,8 +984,7 @@ html.bill-details .content .attachment .button:before {
   margin-right: 5px;
   width: 18px;
   height: 18px;
-  background-image: url('../images/bg-button-attachment.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-button-attachment.png');  /** sprite-ref: bg-button-attachment;*/
   background-size: 18px;
   vertical-align: middle;
 }
@@ -1043,8 +1021,7 @@ html.bill-details .content .new-status .new-status-fixed:after {
   width: 8px;
   height: 18px;
   background-repeat: no-repeat;
-  background-image: url('../images/bg-process-details.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-process-details.png');  /** sprite-ref: bg-process-details;*/
   background-size: 8px;
 }
 html.bill-details .content .new-status .new-status-fixed.process-start:before {
@@ -1071,6 +1048,7 @@ html.bill-details .content .new-status .new-status-fixed.process-waiting:before 
   background-image: url('..//images/process-status/process-status-waiting.png');
   background-position: 0px -6px;
 }
+/** sprite: bg-process-status-log; sprite-image: url('../images/bg-process-status-log.png'); */
 html.process-status .content .process-status-list {
   padding: 10px;
 }
@@ -1200,8 +1178,7 @@ html.process-status .content .process-status-log h2:before {
   left: 0px;
   width: 16px;
   height: 16px;
-  background-image: url('../images/bg-process-status-log.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-process-status-log.png');  /** sprite-ref: bg-process-status-log;*/
   background-size: 16px;
 }
 html.process-status .content .process-status-log .log-list li {
@@ -1226,6 +1203,7 @@ html.process-status .content .process-status-log .log-list li div span:first-chi
   float: left;
   width: 170px;
 }
+/** sprite: bg-attachment-cate; sprite-image: url('../images/bg-attachment-cate.png'); */
 html.attachment-view .content .attachment-list {
   padding: 20px 10px;
 }
@@ -1267,33 +1245,27 @@ html.attachment-view .content .attachment-list li .size {
   color: #949494;
 }
 html.attachment-view .content .attachment-list li .cate.doc:before {
-  background-image: url('../images/bg-attachment-cate.png');
-  background-position: left -0px;
+  background-image: url('../../images/sprite/bg-attachment-doc.png');  /** sprite-ref: bg-attachment-cate;*/
   background-position: 0px 0px;
 }
 html.attachment-view .content .attachment-list li .cate.ppt:before {
-  background-image: url('../images/bg-attachment-cate.png');
-  background-position: left -92px;
+  background-image: url('../../images/sprite/bg-attachment-ppt.png');  /** sprite-ref: bg-attachment-cate;*/
   background-position: 0px -46px;
 }
 html.attachment-view .content .attachment-list li .cate.excel:before {
-  background-image: url('../images/bg-attachment-cate.png');
-  background-position: left -184px;
+  background-image: url('../../images/sprite/bg-attachment-excel.png');  /** sprite-ref: bg-attachment-cate;*/
   background-position: 0px -92px;
 }
 html.attachment-view .content .attachment-list li .cate.txt:before {
-  background-image: url('../images/bg-attachment-cate.png');
-  background-position: left -276px;
+  background-image: url('../../images/sprite/bg-attachment-txt.png');  /** sprite-ref: bg-attachment-cate;*/
   background-position: 0px -138px;
 }
 html.attachment-view .content .attachment-list li .cate.pdf:before {
-  background-image: url('../images/bg-attachment-cate.png');
-  background-position: left -368px;
+  background-image: url('../../images/sprite/bg-attachment-pdf.png');  /** sprite-ref: bg-attachment-cate;*/
   background-position: 0px -184px;
 }
 html.attachment-view .content .attachment-list li .cate.rar:before {
-  background-image: url('../images/bg-attachment-cate.png');
-  background-position: left -460px;
+  background-image: url('../../images/sprite/bg-attachment-rar.png');  /** sprite-ref: bg-attachment-cate;*/
   background-position: 0px -230px;
 }
 html.attachment-view .content .attachment-list li .cate.img:before {
