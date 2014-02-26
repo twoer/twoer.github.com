@@ -52,7 +52,7 @@
 
 			<div class="bill-overview">
 				<i class="cate everyday"></i>
-				<!-- everyday/... -->
+				<!-- borrowing/everyday/repayment/request/travelling/vendor/travel -->
 				<!-- 单据类型暂时只用 everyyday 日常费用，后期加上其他 -->
 				<i class="date">2014-12-12</i>
 				<h1>日常费用报销</h1>
@@ -175,7 +175,7 @@
 			</div>
 
 			<div class="attachment">
-				<a href="attachment-view.html" class="button">查看附件（10）</a>
+				<a href="attachment-view.html" class="button">查看附件 (10)</a>
 			</div>
 			
 			
@@ -183,7 +183,7 @@
 				<a href="process-status.html" class="new-status-fixed process-pass">
 					<!-- process-start/process-back/process-deny/process-pass/process-pending/process-waiting -->
 					<!-- 单据什么状态就使用什么 class 即可 -->
-					部门经理 高明（通过）
+					部门经理 高明 (通过)
 				</a>
 			</div>
 			
@@ -191,56 +191,5 @@
 	</div>
 </body>
 <script src="../script/jquery.js"></script>
-<script>
-	
-	//menu
-	$(document).delegate('.hd .left-link.menu', 'mousedown', function()
-	{
-		var $this = $(this);
-		var _height = [$(window).height(), $('.main .content').height() ].sort(function(i, j){return i > j ? -1 : 1}).shift();
-		var _dataShowMenu = ($this.attr('data-show-menu') === 'true');
-		var _showwidth = '62.5%';
-		var _animateTime = 200;
-
-		if(_dataShowMenu)
-		{
-			_showwidth = '0%';
-			$this.attr('data-show-menu', false);
-		}
-		else
-		{
-			$this.attr('data-show-menu', true);
-		}
-
-		_dataShowMenu ? _showwidth = '0%' : _showwidth = '62.5%';
-
-		$('.main .side-menu').stop().height(_height).animate(
-		{
-			'left' : _showwidth === '0%' ? '-62.5%' : '0%'
-		}, _animateTime);
-
-		$('.main .content').stop().width($(window).width()).animate(
-		{
-			'margin-left' : _showwidth
-		}, _animateTime);
-
-		$('.main .hd-fixed').stop().width($(window).width()).animate(
-		{
-			'left' : _showwidth
-		}, _animateTime);
-	});
-
-	//refresh
-	$(document).delegate('.hd .right-link.refresh', 'mousedown', function()
-	{
-		window.location.reload();
-	});
-
-	//back
-	$(document).delegate('.hd .left-link.back', 'mousedown', function()
-	{
-		window.history.go(-1);
-	});
-
-</script>
+<script src="../script/global.js"></script>
 </html>
