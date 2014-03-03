@@ -158,7 +158,7 @@ button:focus,
 select:focus {
   outline: none;
 }
-a {
+* {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
@@ -1407,10 +1407,12 @@ html.process-status .content .process-status-log .log-list li div span:first-chi
   float: left;
   width: 170px;
 }
-html.attachment-view .content .attachment-list {
+html.attachment-view .content .attachment-list,
+html.bill-create .content .attachment-list {
   padding: 20px 10px;
 }
-html.attachment-view .content .attachment-list li {
+html.attachment-view .content .attachment-list li,
+html.bill-create .content .attachment-list li {
   float: left;
   padding: 0px 5px;
   margin-bottom: 15px;
@@ -1419,12 +1421,14 @@ html.attachment-view .content .attachment-list li {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-html.attachment-view .content .attachment-list li .cate {
+html.attachment-view .content .attachment-list li .cate,
+html.bill-create .content .attachment-list li .cate {
   display: block;
   padding: 5px 0px;
   text-align: center;
 }
-html.attachment-view .content .attachment-list li .cate:before {
+html.attachment-view .content .attachment-list li .cate:before,
+html.bill-create .content .attachment-list li .cate:before {
   content: ' ';
   display: block;
   margin: 0px auto;
@@ -1433,54 +1437,65 @@ html.attachment-view .content .attachment-list li .cate:before {
   background-repeat: no-repeat;
   background-size: 46px;
 }
-html.attachment-view .content .attachment-list li span {
+html.attachment-view .content .attachment-list li span,
+html.bill-create .content .attachment-list li span {
   display: block;
   line-height: 18px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-html.attachment-view .content .attachment-list li .name {
+html.attachment-view .content .attachment-list li .name,
+html.bill-create .content .attachment-list li .name {
   margin-top: 5px;
   color: #333;
 }
-html.attachment-view .content .attachment-list li .size {
+html.attachment-view .content .attachment-list li .size,
+html.bill-create .content .attachment-list li .size {
   color: #949494;
 }
-html.attachment-view .content .attachment-list li .cate.doc:before {
+html.attachment-view .content .attachment-list li .cate.doc:before,
+html.bill-create .content .attachment-list li .cate.doc:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -0px;
   background-position: 0px 0px;
 }
-html.attachment-view .content .attachment-list li .cate.ppt:before {
+html.attachment-view .content .attachment-list li .cate.ppt:before,
+html.bill-create .content .attachment-list li .cate.ppt:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -92px;
   background-position: 0px -46px;
 }
-html.attachment-view .content .attachment-list li .cate.excel:before {
+html.attachment-view .content .attachment-list li .cate.excel:before,
+html.bill-create .content .attachment-list li .cate.excel:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -184px;
   background-position: 0px -92px;
 }
-html.attachment-view .content .attachment-list li .cate.txt:before {
+html.attachment-view .content .attachment-list li .cate.txt:before,
+html.bill-create .content .attachment-list li .cate.txt:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -276px;
   background-position: 0px -138px;
 }
-html.attachment-view .content .attachment-list li .cate.pdf:before {
+html.attachment-view .content .attachment-list li .cate.pdf:before,
+html.bill-create .content .attachment-list li .cate.pdf:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -368px;
   background-position: 0px -184px;
 }
-html.attachment-view .content .attachment-list li .cate.rar:before {
+html.attachment-view .content .attachment-list li .cate.rar:before,
+html.bill-create .content .attachment-list li .cate.rar:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -460px;
   background-position: 0px -230px;
 }
-html.attachment-view .content .attachment-list li .cate.img:before {
+html.attachment-view .content .attachment-list li .cate.img:before,
+html.bill-create .content .attachment-list li .cate.img:before {
   display: none;
 }
-html.attachment-view .content .attachment-list li .cate.img img {
+html.attachment-view .content .attachment-list li .cate.img img,
+html.bill-create .content .attachment-list li .cate.img img {
   max-width: 46px;
   max-height: 46px;
   vertical-align: top;
@@ -1672,7 +1687,8 @@ html.bill-create .content .bill-form .form-item-groups .form-item.choose-content
   border-top: solid 5px #7F7F7F;
   overflow: hidden;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .form-item b {
+html.bill-create .content .bill-form .form-item-groups.details-total .form-item b,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .form-item b {
   float: right;
   margin-right: 2px;
   line-height: 30px;
@@ -1680,28 +1696,33 @@ html.bill-create .content .bill-form .form-item-groups.details-total .form-item 
   color: #F37815;
   font-size: 14px;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .details-list li {
+html.bill-create .content .bill-form .form-item-groups.details-total .details-list li,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li {
   position: relative;
   padding: 5px 0px 8px 80px;
   min-height: 45px;
   border-top: solid 1px #CCC;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .screenage {
+html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .screenage,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li .screenage {
   position: absolute;
   top: 10px;
   left: 12px;
   width: 50px;
   height: 37.5px;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .screenage img {
+html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .screenage img,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li .screenage img {
   width: 50px;
   height: 37.5px;
   vertical-align: top;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details {
+html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li .details {
   width: 100%;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details h3 {
+html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details h3,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li .details h3 {
   width: 100%;
   height: 25px;
   line-height: 25px;
@@ -1710,23 +1731,27 @@ html.bill-create .content .bill-form .form-item-groups.details-total .details-li
   overflow: hidden;
   color: #000;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details h3 b {
+html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details h3 b,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li .details h3 b {
   float: right;
   margin-right: 12px;
   line-height: 25px;
   font-weight: 500;
   color: #F37815;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details .date {
+html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details .date,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li .details .date {
   line-height: 20px;
   height: 20px;
   color: #999;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details .date span {
+html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details .date span,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li .details .date span {
   float: left;
   width: 160px;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details .date cite {
+html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details .date cite,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li .details .date cite {
   float: right;
   margin-right: 10px;
   width: 60px;
@@ -1735,13 +1760,14 @@ html.bill-create .content .bill-form .form-item-groups.details-total .details-li
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details .remark {
+html.bill-create .content .bill-form .form-item-groups.details-total .details-list li .details .remark,
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li .details .remark {
   margin-top: 3px;
   line-height: 18px;
   color: #999;
 }
 html.bill-create .content .bill-form .form-item-groups.details-total .add-details,
-html.bill-create .content .bill-form .form-item-groups.details-total .add-details {
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .add-details {
   display: block;
   height: 28px;
   line-height: 28px;
@@ -1749,33 +1775,135 @@ html.bill-create .content .bill-form .form-item-groups.details-total .add-detail
   color: #888;
 }
 html.bill-create .content .bill-form .form-item-groups.details-total .add-details i,
-html.bill-create .content .bill-form .form-item-groups.details-total .add-details i {
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .add-details i {
   position: relative;
   padding-left: 18px;
-  margin-left: 30%;
+  margin-left: 35%;
   font-style: normal;
 }
 html.bill-create .content .bill-form .form-item-groups.details-total .add-details i:before,
-html.bill-create .content .bill-form .form-item-groups.details-total .add-details i:before {
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .add-details i:before {
   content: ' ';
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 15px;
-  height: 15px;
-  line-height: 15px;
-  text-align: center;
-  font-weight: 700;
-  color: #EEE;
-  font-size: 14px;
-  font-family: 'Arial';
-  background-color: #8F8F8F;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-image: url('../images/bg-bill-details-add.png');
+  background-position: left -0px;
+  background-size: 16px;
+}
+html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li {
+  padding-left: 10px;
+}
+html.bill-create .content .bill-form .attachment-list {
+  padding: 10px;
+  border: solid 1px #DDD;
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
+}
+html.bill-create .content .bill-form .attachment-list li .delete {
+  display: block;
+  padding: 4px 0px;
+  margin: 0px auto;
+  margin-top: 5px;
+  width: 40px;
+  height: 14px;
+  background-color: #CCC;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.bill-create .content .bill-form .attachment-list li .delete:before {
+  content: ' ';
+  display: block;
+  margin: 0px auto;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-image: url('../images/bg-bill-details-attachment.png');
+  background-position: left -0px;
+  background-size: 14px;
+}
+html.bill-create .content .bill-form .attachment-list li .add {
+  display: block;
+  padding: 35px 0px;
+  margin-top: 10px;
+  width: 60px;
+  height: 14px;
+  border: dashed 1px #ABABAB;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.bill-create .content .bill-form .attachment-list li .add:before {
+  content: ' ';
+  display: block;
+  margin: 0px auto;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-image: url('../images/bg-bill-details-attachment.png');
+  background-position: left -16px;
+  background-size: 14px;
+}
+html.bill-create .content .bill-form .buttons {
+  padding: 10px 0px;
+  height: 30px;
+}
+html.bill-create .content .bill-form .buttons button {
+  padding: 0px 15px;
+  height: 30px;
+  color: #fff;
+  -webkit-border-radius: 15px;;
+  -moz-border-radius: 15px;;
+  border-radius: 15px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.bill-create .content .bill-form .buttons .button-delete {
+  position: relative;
+  padding-left: 32px;
+  background-color: #DF3646;
+}
+html.bill-create .content .bill-form .buttons .button-delete:before {
+  content: ' ';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-image: url('../images/bg-bill-create-delete.png');
+  background-position: left -0px;
+  background-size: 16px;
+  background-position: center center;
+  -webkit-border-radius: 13px;;
+  -moz-border-radius: 13px;;
+  border-radius: 13px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.bill-create .content .bill-form .buttons .button-chose-template,
+html.bill-create .content .bill-form .buttons .button-save-template {
+  float: right;
+  margin-left: 10px;
+  background-color: #BBB;
 }
 .selector-dialog-bill-cate .data-list li a .cate {
   position: relative;
@@ -1801,22 +1929,6 @@ html.bill-create .content .bill-form .form-item-groups.details-total .add-detail
   height: 19px;
   background-repeat: no-repeat;
   background-size: 28px;
-}
-html.business-transaction .content .approve-bar {
-  height: 48px;
-}
-html.business-transaction .content .approve-bar .approve-bar-fixed {
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  padding: 8px 0px;
-  width: 100%;
-  height: 32px;
-  border: solid 1px #ccc;
-  background-color: #fff;
-}
-html.business-transaction .content .approve-bar .approve-bar-fixed .check-all {
-  position: relative;
 }
 html.business-transaction .content .tabs .tab-nav {
   padding: 10px;
@@ -2008,4 +2120,89 @@ html.business-transaction .content.show-approve .approve-bar {
 }
 html.business-transaction .content.show-approve .approve-bar .approve-bar-fixed {
   bottom: 0px;
+}
+.selector-expense-cate .content,
+.selector-emp .content {
+  padding: 10px;
+}
+.selector-expense-cate .content .search,
+.selector-emp .content .search {
+  padding-right: 30px;
+  height: 30px;
+  position: relative;
+  border: solid 1px #CCC;
+  background-color: #fff;
+  -webkit-border-radius: 15px;;
+  -moz-border-radius: 15px;;
+  border-radius: 15px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.selector-expense-cate .content .search:after,
+.selector-emp .content .search:after {
+  content: ' ';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
+  background-image: url('../../images/sprite/bg-selector-emp-search.png');  /** sprite-ref: bg-selector-emp-search; */
+  background-size: 18px;
+}
+.selector-expense-cate .content .search .text,
+.selector-emp .content .search .text {
+  padding: 0px 10px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 15px;;
+  -moz-border-radius: 15px;;
+  border-radius: 15px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.selector-expense-cate .content .data-list,
+.selector-emp .content .data-list {
+  margin-top: 10px;
+  background-color: #fff;
+  border: solid 1px #CCC;
+  -webkit-border-radius: 3px;;
+  -moz-border-radius: 3px;;
+  border-radius: 3px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.selector-expense-cate .content .data-list li,
+.selector-emp .content .data-list li {
+  border-top: solid 1px #CCC;
+}
+.selector-expense-cate .content .data-list li a,
+.selector-emp .content .data-list li a {
+  position: relative;
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  color: #000;
+  text-indent: 12px;
+}
+.selector-expense-cate .content .data-list li .checked:after,
+.selector-emp .content .data-list li .checked:after {
+  content: ' ';
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 18px;
+  height: 18px;
+  background-image: url('../../images/sprite/bg-selector-emp-item-check.png');  /** sprite-ref: bg-selector-emp-search; */
+  background-size: 18px;
+}
+.selector-expense-cate .content .data-list li:first-child,
+.selector-emp .content .data-list li:first-child {
+  border-top: none;
 }

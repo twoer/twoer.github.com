@@ -1,3 +1,5 @@
+var gWidth = $(window).width();
+
 //menu
 $(document).delegate('.hd .left-link.menu', 'mousedown', function()
 {
@@ -92,7 +94,19 @@ $(document).delegate('.approve-content .button-back', 'mousedown', function()
 //business transaction
 $(document).delegate('.business-transaction .right-link.confirm', 'mousedown', function()
 {
-	$(this).closest('.content').toggleClass('show-approve');
+	var $content  = $(this).closest('.content');
+	$content.toggleClass('show-approve');
+
+	//start 修复低端安卓
+	if($content.hasClass('show-approve'))
+	{
+		$('.bill-list li a').width(gWidth - 70 );
+	}
+	else
+	{
+		$('.bill-list li a').width(gWidth - 30 );	
+	}
+	//end
 
 	//one checked (delegate 方式在 iphone，ipad 下面有 bug)
 	$('.bill-list .check').unbind('mousedown').bind('mousedown', function()
@@ -135,7 +149,7 @@ $(document).delegate('.bill-details-approve .right-link.confirm', 'mousedown', f
 });
 
 //selector dialog
-$(document).delegate('*[data-selector]', 'mousedown', function()
+$('*[data-selector]').bind('mousedown', function()
 {
 	var $this = $(this);
 	var _cate = $this.attr('data-selector');
@@ -144,14 +158,21 @@ $(document).delegate('*[data-selector]', 'mousedown', function()
 
 	$('.selector-dialog-' + _cate).show();
 });
-$(document).delegate('*[data-selector-url]', 'mousedown', function()
+$('*[data-selector-url]').bind('mousedown', function()
 {
 	var $this = $(this);
 	var _url = $this.attr('data-selector-url');
-	window.location.replace(_url);
+	window.location.href = _url;
 });
 
 
+//selector emp / expense cate
+$('html.selector-emp .data-list li a,html.selector-expense-cate .data-list li a').bind('mousedown', function()
+{
+	var $this = $(this);
+	$this.closest('.data-list').find('li a').removeClass('checked');
+	$this.addClass('checked');
+});
 
 
 function _showOverlay()
