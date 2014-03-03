@@ -65,8 +65,77 @@ $('.tabs .tab-nav').each(function()
     $this.next('.tab-content').find('.tab-pane').not(':eq(' + index + ')').hide();
 });
 
+
+//show approve content
+$(document).delegate('.approve-bar .button-approve', 'mousedown', function()
+{
+	_showApproveContent();
+});
+
+$(document).delegate('.approve-content .button-pass', 'mousedown', function()
+{
+	alert('pass');
+});
+$(document).delegate('.approve-content .button-return', 'mousedown', function()
+{
+	alert('return');
+});
+$(document).delegate('.approve-content .button-deny', 'mousedown', function()
+{
+	alert('deny');
+});
+$(document).delegate('.approve-content .button-back', 'mousedown', function()
+{
+	alert('back');
+});
+
+//business transaction
+$(document).delegate('.business-transaction .right-link.confirm', 'mousedown', function()
+{
+	$(this).closest('.content').toggleClass('show-approve');
+
+	//one checked (delegate 方式在 iphone，ipad 下面有 bug)
+	$('.bill-list .check').unbind('mousedown').bind('mousedown', function()
+	{
+		$(this).closest('li').toggleClass('checked');
+	});
+});
+
+// tab 切换时处理 check all 按钮
+$(document).delegate('.business-transaction .tabs .tab-nav li', 'mousedown', function()
+{
+	var $checkall = $('.business-transaction .approve-bar .check-all');
+	var $items = $('.business-transaction .content .bill-list:visible li');
+	($items.size() === $items.filter('.checked').size()) ? $checkall.addClass('checked') : $checkall.removeClass('checked');
+});
+
+
+
+//all checked
+$(document).delegate('.business-transaction .approve-bar .check-all', 'mousedown', function(e)
+{
+	var $this = $(this);
+	var $items = $('.business-transaction .content .bill-list:visible li');
+	if($this.hasClass('checked'))
+	{
+		$items.removeClass('checked');
+		$this.removeClass('checked');
+	}
+	else
+	{
+		$items.addClass('checked');
+		$this.addClass('checked');
+	}
+});
+
+//bill details approve
+$(document).delegate('.bill-details-approve .right-link.confirm', 'mousedown', function()
+{
+	_showApproveContent();
+});
+
 //selector dialog
-$(document).delegate('a[data-selector]', 'mousedown', function()
+$(document).delegate('*[data-selector]', 'mousedown', function()
 {
 	var $this = $(this);
 	var _cate = $this.attr('data-selector');
@@ -75,12 +144,39 @@ $(document).delegate('a[data-selector]', 'mousedown', function()
 
 	$('.selector-dialog-' + _cate).show();
 });
+$(document).delegate('*[data-selector-url]', 'mousedown', function()
+{
+	var $this = $(this);
+	var _url = $this.attr('data-selector-url');
+	window.location.replace(_url);
+});
+
+
 
 
 function _showOverlay()
 {
-	var $overlay =	$('.overlay');
+	var $overlay =	$('div.overlay');
 	$overlay = ($overlay.size() === 0) ? $('<div class="overlay"></div>').appendTo($('body')) : $overlay;
 	$overlay.show();
 	$('html').addClass('overlay');
+}
+
+function _hideOverlay()
+{
+	$('div.overlay').hide();
+	$('html').removeClass('overlay');
+}
+
+//show approve content
+function _showApproveContent()
+{
+	$('.approve-content').show();
+	_showOverlay();
+
+	$('div.overlay').unbind('mousedown').bind('mousedown', function()
+	{
+		$('.approve-content').hide();
+		_hideOverlay();
+	});
 }

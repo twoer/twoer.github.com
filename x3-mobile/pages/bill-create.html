@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" class="bill-create">
+<head>
+	<meta charset="UTF-8">
+	<title>bill create</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="../style/global.css">
+</head>
+<body >
+	<div class="main">
+		
+		<div class="side-menu">
+	<div class="user-info">
+		<a class="avatar">
+			<img src="../images/avatar.jpg" alt="">
+		</a>
+		<div class="user-details">
+			<span>张三</span>
+			<cite>Java程序员</cite>
+		</div>
+	</div>
+
+	<ul class="menu-list">
+		<li>
+			<a href="my-expense.html" class="my-expense">我的报销<i>999</i></a>
+			
+		</li>
+		<li>
+			<a href="business-transaction.html" class="business-transaction">业务办理<i>88</i></a>
+
+		</li>
+		<li>
+			<a href="javascript:;" class="bill-sign">单据签收<i>3</i></a>
+		</li>
+		<li>
+			<a href="javascript:;" class="bill-payment">单据支付<i>2</i></a>
+		</li>
+		<li>
+			<a href="javascript:;" class="system-setting">系统设置<i>1</i></a>
+		</li>
+	</ul>
+</div>
+
+		<div class="content">
+			<div class="hd">
+				<div class="hd-fixed">
+					<a href="javascript:;" class="change" data-selector="bill-cate">新增单据</a>
+					<a href="javascript:;" class="left-link back"></a>
+					<a href="javascript:;" class="right-link confirm"></a>
+				</div>
+			</div>
+
+			<div class="bill-overview">
+				<i class="cate everyday"></i>
+				<!-- borrowing/everyday/repayment/request/travelling/vendor/travel -->
+				<!-- 单据类型暂时只用 everyyday 日常费用，后期加上其他 -->
+				<h1 class="change">日常费用报销</h1>
+				<div class="amount">
+					报销金额<b>2,500.00</b>
+				</div>
+			</div>
+
+			<div class="bill-form">
+				<form action="bill-create.html">
+					<div class="form-item-groups">
+						<div class="form-item bill-note">
+							<span class="cell-label require">附票据</span>
+							<span class="cell-input-unit">张</span>
+							<input type="text" class="text" value="">
+						</div>
+					</div>
+
+					<div class="form-item-groups">
+						<div class="form-item choose-content" data-selector-url="selector-emp.html">
+							<span class="cell-label require">申请人</span>
+							<b>张坤</b>
+						</div>
+						<div class="form-item choose-content" data-selector="dept">
+							<span class="cell-label require">部门</span>
+							<b>财务部</b>
+						</div>
+						<div class="form-item choose-content" data-selector="payment-pattern">
+							<span class="cell-label require">支付方式</span>
+							<b>网银</b>
+						</div>
+						<div class="form-item choose-content" data-selector="currency">
+							<span class="cell-label require">币种</span>
+							<b>人民币</b>
+						</div>
+						<div class="form-item choose-content">
+							<span class="cell-label require">项目/产品</span>
+						</div>
+						<div class="form-item choose-content">
+							<span class="cell-label">银行</span>
+						</div>
+					</div>
+
+					<div class="form-item-groups details-total">
+						<div class="form-item ">
+							<span class="cell-label">明细合计</span>
+							<b>500.00</b>
+						</div>
+						<ul class="details-list">
+							<li>
+								<a href="javascript:;" class="screenage">
+									<img src="../images/screenage.png" alt="" class="">
+								</a>
+								<div class="details">
+									<h3>办公费<b>10.00</b></h3>
+									<div class="date">
+										<span>2013-01-18 至 2014-12-12</span>
+										<cite>SGM-SDDDDD</cite>
+									</div>
+									<div class="remark">备注备注</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:;" class="screenage">
+									<img src="../images/screenage.png" alt="" class="">
+								</a>
+								<div class="details">
+									<h3>办公费<b>500.00</b></h3>
+									<div class="date">
+										<span>2013-01-18 至 2014-12-12</span>
+										<cite>SGM-SDDDDD</cite>
+									</div>
+									<div class="remark">备注备注备注备注备备注备注备注</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:;" class="screenage">
+									<img src="../images/screenage.png" alt="" class="">
+								</a>
+								<div class="details">
+									<h3>办公费<b>2,500.00</b></h3>
+									<div class="date">
+										<span>2013-01-18 至 2014-12-12</span>
+										<cite>SGM-SDDDDD</cite>
+									</div>
+									<div class="remark">备注备注备注备注备注备注备注备注备注备注备注备注备注备注</div>
+								</div>
+							</li>
+						</ul>
+						<a href="javascript:;" class="add-details"><i>添加明细</i></a>
+					</div>
+
+					<a href="javascript:;" class="add-borrowing"><i>添加借款单</i></a>
+
+					<a href="javascript:;" class="add-attachment"><i>添加附件</i></a>
+
+
+				</form>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="selector-dialog selector-dialog-bill-cate">
+	<h2>选择单据类型</h2>
+	<ul class="data-list">
+		<li>
+			<a href="bill-create.html">
+				<i class="cate borrowing"></i>申请单
+			</a>
+		</li>
+		<li>
+			<a href="bill-create.html">
+				<i class="cate everyday"></i>借款单
+			</a>
+		</li>
+		<li>
+			<a href="bill-create.html">
+				<i class="cate repayment"></i>还款单
+			</a>
+		</li>
+		<li>
+			<a href="bill-create.html">
+				<i class="cate request"></i>出差申请
+			</a>
+		</li>
+		<li>
+			<a href="bill-create.html">
+				<i class="cate travelling"></i>差旅费用报销
+			</a>
+		</li>
+		<li>
+			<a href="bill-create.html">
+				<i class="cate vendor"></i>日常费用报销
+			</a>
+		</li>
+		<li>
+			<a href="bill-create.html">
+				<i class="cate travel"></i>供应商支付
+			</a>
+		</li>
+	</ul>
+</div>
+	<div class="selector-dialog selector-dialog-currency">
+	<h2>选择币种</h2>
+	<ul class="data-list">
+		<li>
+			<a href="bill-create.html">
+				人民币
+			</a>
+		</li>
+		<li>
+			<a href="bill-create.html">
+				美元
+			</a>
+		</li>
+	</ul>
+</div>
+	<div class="selector-dialog selector-dialog-payment-pattern">
+	<h2>选择支付方式</h2>
+	<ul class="data-list">
+		<li>
+			<a href="bill-create.html">
+				现金
+			</a>
+		</li>
+		<li>
+			<a href="bill-create.html">
+				网银
+			</a>
+		</li>
+	</ul>
+</div>
+	<div class="selector-dialog selector-dialog-dept">
+	<h2>选择部门</h2>
+	<ul class="data-list">
+		<li>
+			<a href="bill-create.html">财务部</a>
+		</li>
+		<li>
+			<a href="bill-create.html">产品部</a>
+		</li>
+		<li>
+			<a href="bill-create.html">软件实施部门</a>
+		</li>
+	</ul>
+</div>
+
+</body>
+<script src="../script/jquery.js"></script>
+<script src="../script/global.js"></script>
+</html>

@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en" class="bill-details">
+<html lang="en" class="bill-details bill-details-approve">
 <head>
 	<meta charset="UTF-8">
-	<title>bill details</title>
+	<title>bill details approve</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <link rel="stylesheet" href="../style/global.css">
 </head>
@@ -46,6 +46,7 @@
 				<div class="hd-fixed">
 					查看单据
 					<a href="javascript:;" class="left-link back"></a>
+					<a href="javascript:;" class="right-link confirm"></a>
 				</div>
 			</div>
 
@@ -184,6 +185,16 @@
 					<!-- 单据什么状态就使用什么 class 即可 -->
 					部门经理 高明 (通过)
 				</a>
+			</div>
+
+			<div class="approve-content">
+				<textarea name=""  class="textarea"></textarea>
+				<div class="buttons">
+					<button class="button-pass">同意</button>
+					<button class="button-return">退回申请人</button>
+					<button class="button-deny">拒绝</button>
+					<button class="button-back">返回上级</button>
+				</div>
 			</div>
 			
 		</div>
