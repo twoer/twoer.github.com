@@ -193,14 +193,14 @@
     { 
         repeat : '.daily-report-write-list',
         min : 1,
-        max : 8,
+        max : 99,
         onMin : function(sender)
         {
-            alert('至少需要 1 条记录。');
+            alert('最少需要 1 条记录。');
         },
         onMax : function($item, sender)
         {
-            alert('最多 10 个参数.');
+            alert('最多 99 条记录。');
         },
         onRemoveBefore : function()
         {
@@ -234,6 +234,8 @@
 			var _marker = $this.attr('data-copy-marker');
 			$this.is('input') ? $this.val($item.find('*[data-copy-marker="' + _marker + '"]').val()) : $this.html($item.find('*[data-copy-marker="' + _marker + '"]').html());
 		});
+
+		$newItem.insertAfter($item);
 
 		_bindSelectorEvent();
 	});
