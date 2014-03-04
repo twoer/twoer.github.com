@@ -1973,7 +1973,7 @@ html.daily-report .content .daily-report-list .Return h3:after {
   background-position: 0px -48px;
 }
 html.daily-report .content .daily-report-list .Submited h3:after {
-  background-image: url('../../images/daily-report/bg-daily-report-status-submited.gif');
+  background-image: url('../images//daily-report/bg-daily-report-status-submited.gif');
 }
 html.daily-report-write .content {
   padding: 10px;
