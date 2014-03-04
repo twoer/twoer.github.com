@@ -167,7 +167,7 @@ $('*[data-selector-url]').bind('mousedown', function()
 
 
 //selector emp / expense cate
-$('html.selector-emp .data-list li a,html.selector-expense-cate .data-list li a').bind('mousedown', function()
+$('html.selector-emp .data-list li a,html.selector-expense-cate .data-list li a,html.selector-project .data-list li a').bind('mousedown', function()
 {
 	var $this = $(this);
 	$this.closest('.data-list').find('li a').removeClass('checked');
