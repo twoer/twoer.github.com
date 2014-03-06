@@ -144,12 +144,14 @@ a:hover {
   display: none;
 }
 /* css3 v1.0 */
-body,
+body {
+  font: 81.25%/1.38 tahoma, arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53', sans-serif;
+}
 a,
 input,
 textarea,
 button {
-  font: 13px/1.5 tahoma, arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53', sans-serif;
+  font: 100%/1.38 tahoma, arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53', sans-serif;
 }
 a:focus,
 input:focus,
@@ -187,7 +189,7 @@ textarea {
   line-height: 30px;
   text-align: center;
   color: #2C8AD3;
-  font-size: 14px;
+  font-size: 1.15em;
   border: solid 1px #2C8AD3;
 }
 .tabs .tab-nav li:first-child a {
@@ -239,7 +241,6 @@ textarea {
   content: ' *';
   color: #FD6B00;
   font-weight: 700;
-  font-size: 14px;
 }
 .form-item-groups .form-item .text {
   width: 100px;
@@ -343,7 +344,7 @@ textarea {
   line-height: 32px;
   color: #333;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1.07em;
 }
 .selector-dialog .data-list {
   border: solid 1px #ddd;
@@ -366,7 +367,6 @@ textarea {
   padding: 6px 0px 0px 10px;
   height: 34px;
   line-height: 30px;
-  font-size: 14px;
   color: #666;
 }
 .selector-dialog .data-list li:first-child {
@@ -490,7 +490,7 @@ html.login .login-form .user-button .button {
   height: 40px;
   background-color: #2C8AD3;
   color: #fff;
-  font-size: 16px;
+  font-size: 1.23em;
   letter-spacing: 2px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -504,7 +504,7 @@ html.login .login-form .user-forgetpwd {
   text-align: right;
 }
 html.login .login-form .user-forgetpwd a {
-  font-size: 14px;
+  font-size: 1.23em;
   color: #2C8AD3;
 }
 @media screen and (max-width: 1024px) {
@@ -570,22 +570,20 @@ html.login .login-form .user-forgetpwd a {
 }
 .side-menu .user-info .user-details span {
   display: block;
-  font-size: 14px;
 }
 .side-menu .user-info .user-details cite {
-  font-size: 12px;
+  font-size: 1em;
 }
 .side-menu .menu-list li {
   height: 45px;
 }
-.side-menu .menu-list li a {
+.side-menu .menu-list li a[class] {
   position: relative;
   display: block;
   height: 45px;
   line-height: 45px;
   text-indent: 60px;
   color: #fff;
-  font-size: 14px;
   border-bottom: solid 1px #475865;
   -webkit-transition: -webkit-all 0.3s linear;
   -moz-transition: -moz-all 0.3s linear;
@@ -593,7 +591,7 @@ html.login .login-form .user-forgetpwd a {
   -o-transition: -o-all 0.3s linear;
   transition: all 0.3s linear;
 }
-.side-menu .menu-list li a:before {
+.side-menu .menu-list li a[class]:before {
   position: absolute;
   content: ' ';
   top: 13px;
@@ -603,7 +601,7 @@ html.login .login-form .user-forgetpwd a {
   background-repeat: no-repeat;
   background-size: 30px;
 }
-.side-menu .menu-list li a i {
+.side-menu .menu-list li a[class] i {
   position: absolute;
   top: 12px;
   right: 10px;
@@ -622,8 +620,8 @@ html.login .login-form .user-forgetpwd a {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.side-menu .menu-list li a:hover,
-.side-menu .menu-list li a.selected {
+.side-menu .menu-list li a[class]:hover,
+.side-menu .menu-list li a[class].selected {
   height: 46px;
   background-color: #172A39;
   border-left: solid 4px #2C8AD3;
@@ -654,6 +652,27 @@ html.login .login-form .user-forgetpwd a {
   background-position: left -192px;
   background-position: 0px -80px;
 }
+.side-menu .menu-list li .daily-report-write:before {
+  background-image: url('../images/bg-side-menu.png');
+  background-position: left -240px;
+  background-position: 0px -100px;
+}
+.side-menu .menu-list .logout a {
+  display: block;
+  margin: 20px auto 0px auto;
+  width: 140px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #2C8AD3;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
 .hd {
   height: 40px;
 }
@@ -668,7 +687,7 @@ html.login .login-form .user-forgetpwd a {
   text-align: center;
   font-weight: 500;
   background-color: #2C8AD3;
-  font-size: 16px;
+  font-size: 1.23em;
   color: #fff;
 }
 .hd .hd-fixed a {
@@ -676,7 +695,7 @@ html.login .login-form .user-forgetpwd a {
   text-align: center;
   line-height: 40px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1.0em;
   color: #fff;
 }
 .hd .hd-fixed a.change {
@@ -758,21 +777,21 @@ html.index .content .user-info {
 }
 html.index .content .user-info .user-details {
   height: 25px;
-  font-size: 12px;
+  font-size: 1em;
 }
 html.index .content .user-info .user-details label {
   margin-right: 8px;
-  font-size: 16px;
+  font-size: 1.23em;
 }
 html.index .content .user-info .finance-details {
-  font-size: 16px;
+  font-size: 1.23em;
 }
 html.index .content .user-info .finance-details span {
   margin-left: 10px;
 }
 html.index .content .user-info .finance-details span label {
   margin-right: 8px;
-  font-size: 12px;
+  font-size: 0.8em;
 }
 html.index .content .user-info .finance-details span:first-child {
   margin-left: 0px;
@@ -803,7 +822,7 @@ html.index .content .often-links li a {
   line-height: 50px;
   text-indent: 85px;
   color: #fff;
-  font-size: 16px;
+  font-size: 1.23em;
 }
 html.index .content .often-links li a:before {
   position: absolute;
@@ -857,7 +876,6 @@ html.index .content .function-list li a b {
   bottom: 15px;
   left: 0px;
   width: 100%;
-  font-size: 14px;
   color: #7F7F7F;
   font-weight: 500;
 }
@@ -895,6 +913,11 @@ html.index .content .function-list li .system-setting:before {
   background-image: url('../images/bg-index-function-list.png');
   background-position: left -288px;
   background-position: 0px -144px;
+}
+html.index .content .function-list li .daily-report:before {
+  background-image: url('../images/bg-index-function-list.png');
+  background-position: left -336px;
+  background-position: 0px -168px;
 }
 html.index .content .function-list li:nth-of-type(3n+1) {
   width: 34%;
@@ -947,7 +970,6 @@ html.bill-details .content .bill-overview h1 {
 }
 html.bill-details .content .bill-overview .amount {
   color: #000;
-  font-size: 14px;
 }
 html.bill-details .content .bill-overview .amount b {
   margin-left: 10px;
@@ -988,13 +1010,13 @@ html.bill-details .content .bill-overview .cate:before {
 }
 html.bill-details .content h2 {
   line-height: 25px;
-  font-size: 14px;
   text-indent: 10px;
   color: #888;
   font-weight: 500;
   background-color: #EEE;
   border-left-style: solid;
   border-left-width: 3px;
+  font-size: 1.15em;
 }
 html.bill-details .content h2 b {
   float: right;
@@ -1054,7 +1076,6 @@ html.bill-details .content .details-total .details-list li .details h3 {
   width: 100%;
   height: 25px;
   line-height: 25px;
-  font-size: 14px;
   font-weight: 500;
   overflow: hidden;
   color: #000;
@@ -1121,7 +1142,6 @@ html.bill-details .content .borrowing-bill .details-list li .details h3 {
   width: 100%;
   height: 25px;
   line-height: 25px;
-  font-size: 14px;
   font-weight: 500;
   overflow: hidden;
   color: #000;
@@ -1160,9 +1180,7 @@ html.bill-details .content .borrowing-bill .details-list li {
   padding-left: 10px;
 }
 html.bill-details .content .attachment {
-  padding: 8px 0px;
-  margin: 0px auto;
-  width: 94%;
+  padding: 8px 10px;
 }
 html.bill-details .content .attachment .button {
   display: block;
@@ -1170,7 +1188,6 @@ html.bill-details .content .attachment .button {
   line-height: 40px;
   text-align: center;
   color: #888;
-  font-size: 14px;
   border: solid 1px #DDD;
   background-color: #FFF;
   -webkit-border-radius: 3px;
@@ -1204,7 +1221,7 @@ html.bill-details .content .new-status .new-status-fixed {
   background-color: #fff;
   border: solid 1px #ddd;
   color: #000;
-  font-size: 16px;
+  font-size: 1.23em;
   text-indent: 38px;
 }
 html.bill-details .content .new-status .new-status-fixed:before {
@@ -1307,7 +1324,6 @@ html.process-status .content .process-status-list .process-status .details:after
 }
 html.process-status .content .process-status-list .process-status .details h3 {
   line-height: 20px;
-  font-size: 14px;
   font-weight: 500;
 }
 html.process-status .content .process-status-list .process-status .details span {
@@ -1370,9 +1386,9 @@ html.process-status .content .process-status-log h2 {
   position: relative;
   line-height: 20px;
   color: #666;
-  font-size: 14px;
   font-weight: 500;
   text-indent: 22px;
+  font-size: 1.23em;
 }
 html.process-status .content .process-status-log h2:before {
   content: ' ';
@@ -1393,7 +1409,6 @@ html.process-status .content .process-status-log .log-list li {
 html.process-status .content .process-status-log .log-list li div {
   min-height: 20px;
   line-height: 20px;
-  font-size: 13px;
 }
 html.process-status .content .process-status-log .log-list li div b {
   font-weight: 500;
@@ -1551,7 +1566,7 @@ html.my-expense .content .bill-list li .cate:before {
 html.my-expense .content .bill-list li h3 {
   line-height: 24px;
   color: #000;
-  font-size: 15px;
+  font-size: 1.15em;
   font-weight: 500;
 }
 html.my-expense .content .bill-list li h3 b {
@@ -1611,7 +1626,6 @@ html.bill-create .content .bill-overview h1 {
 }
 html.bill-create .content .bill-overview .amount {
   color: #000;
-  font-size: 14px;
 }
 html.bill-create .content .bill-overview .amount b {
   margin-left: 10px;
@@ -1674,7 +1688,6 @@ html.bill-create .content .bill-form .form-item-groups .form-item.choose-content
   line-height: 30px;
   font-weight: 500;
   color: #333;
-  font-size: 13px;
 }
 html.bill-create .content .bill-form .form-item-groups .form-item.choose-content b:after {
   content: ' ';
@@ -1694,7 +1707,6 @@ html.bill-create .content .bill-form .form-item-groups.borrowing-total .form-ite
   line-height: 30px;
   font-weight: 500;
   color: #F37815;
-  font-size: 14px;
 }
 html.bill-create .content .bill-form .form-item-groups.details-total .details-list li,
 html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-list li {
@@ -1726,7 +1738,6 @@ html.bill-create .content .bill-form .form-item-groups.borrowing-total .details-
   width: 100%;
   height: 25px;
   line-height: 25px;
-  font-size: 14px;
   font-weight: 500;
   overflow: hidden;
   color: #000;
@@ -1905,6 +1916,337 @@ html.bill-create .content .bill-form .buttons .button-save-template {
   margin-left: 10px;
   background-color: #BBB;
 }
+html.bill-create-add-details .content .add-details-form {
+  padding: 10px;
+}
+html.bill-create-add-details .content .add-details-form .base-info {
+  position: relative;
+  padding-left: 70px;
+  height: 70px;
+}
+html.bill-create-add-details .content .add-details-form .base-info .screenage {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 60px;
+  height: 60px;
+  background-size: 60px;
+  background-image: url('../images/bg-bill-create-screenage.png');
+  background-position: left -0px;
+}
+html.bill-create-add-details .content .add-details-form .base-info .form-item-groups {
+  border: none;
+  background-color: #F7F7F7;
+}
+html.bill-create-add-details .content .add-details-form .base-info .form-item-groups .form-item {
+  padding: 0px;
+  padding-right: 5px;
+}
+html.bill-create-add-details .content .add-details-form .base-info .form-item-groups .form-item .text {
+  float: right;
+  min-width: 170px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #F7F7F7;
+  color: #FF7302;
+  font-weight: 700;
+  text-align: right;
+}
+html.bill-create-add-details .content .add-details-form .base-info .form-item-groups .form-item.choose-content {
+  border-top-style: dashed;
+}
+html.bill-create-add-details .content .add-details-form .base-info .form-item-groups .form-item.choose-content b:after {
+  border-color: #F7F7F7;
+  border-top: solid 5px #7F7F7F;
+}
+html.bill-create-add-details .content .add-details-form .form-item-groups .form-item .date-zone {
+  float: right;
+  color: #333;
+}
+html.bill-create-add-details .content .add-details-form .form-item-groups .form-item .date-zone i {
+  font-style: normal;
+}
+html.bill-create-add-details .content .add-details-form .form-item-groups .form-item .date-zone .text {
+  width: 80px;
+  text-align: center;
+  border-bottom: solid 1px #ddd;
+}
+html.bill-create-add-details .content .add-details-form .form-item-groups .form-item.choose-content b {
+  position: relative;
+  float: right;
+  padding-right: 15px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #333;
+}
+html.bill-create-add-details .content .add-details-form .form-item-groups .form-item.choose-content b:after {
+  content: ' ';
+  position: absolute;
+  right: 0px;
+  top: 13px;
+  width: 0px;
+  height: 0px;
+  border: solid 5px #fff;
+  border-top: solid 5px #7F7F7F;
+  overflow: hidden;
+}
+html.bill-create-add-details .content .add-details-form .textarea {
+  margin-top: 10px;
+  padding: 3px;
+  height: 60px;
+  width: 100%;
+  border: solid 1px #ddd;
+  resize: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html.bill-create-add-details .content .add-details-form .buttons {
+  margin-top: 10px;
+}
+html.bill-create-add-details .content .add-details-form .buttons button {
+  padding: 0px 15px;
+  height: 30px;
+  color: #fff;
+  -webkit-border-radius: 15px;;
+  -moz-border-radius: 15px;;
+  border-radius: 15px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.bill-create-add-details .content .add-details-form .buttons .button-delete {
+  position: relative;
+  padding-left: 32px;
+  background-color: #DF3646;
+}
+html.bill-create-add-details .content .add-details-form .buttons .button-delete:before {
+  content: ' ';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-image: url('../images/bg-bill-create-delete.png');
+  background-position: left -0px;
+  background-size: 16px;
+  background-position: center center;
+  -webkit-border-radius: 13px;;
+  -moz-border-radius: 13px;;
+  border-radius: 13px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.bill-create-add-borrowing .content .borrowing-list li {
+  position: relative;
+  padding: 5px 0px 8px 50px;
+  min-height: 45px;
+  border-top: solid 1px #CCC;
+}
+html.bill-create-add-borrowing .content .borrowing-list li .check {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 40px;
+  background-color: #DDD;
+  background-repeat: no-repeat;
+  background-image: url('../images/sprite/bg-approve-item-check.png');
+  background-size: 14px;
+  background-position: center center;
+}
+html.bill-create-add-borrowing .content .borrowing-list li .details {
+  width: 100%;
+}
+html.bill-create-add-borrowing .content .borrowing-list li .details h3 {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  font-weight: 500;
+  overflow: hidden;
+  color: #000;
+}
+html.bill-create-add-borrowing .content .borrowing-list li .details h3 b {
+  float: right;
+  margin-right: 12px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #F37815;
+}
+html.bill-create-add-borrowing .content .borrowing-list li .details .date {
+  line-height: 20px;
+  height: 20px;
+  color: #999;
+}
+html.bill-create-add-borrowing .content .borrowing-list li .details .date span {
+  float: left;
+  width: 160px;
+}
+html.bill-create-add-borrowing .content .borrowing-list li .details .date cite {
+  float: right;
+  margin-right: 10px;
+  width: 60px;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+html.bill-create-add-borrowing .content .borrowing-list li .details .remark {
+  margin-top: 3px;
+  line-height: 18px;
+  color: #999;
+}
+html.bill-create-add-borrowing .content .borrowing-list .checked .check {
+  background-color: #62CA15;
+}
+html.bill-create-add-borrowing .content .borrowing-total {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  background-color: #DDD;
+  color: #888;
+}
+html.bill-create-add-borrowing .content .borrowing-total b {
+  margin-right: 10px;
+  color: #000;
+  font-weight: 500;
+}
+html.bill-create-add-borrowing .content .operation-bar {
+  height: 50px;
+}
+html.bill-create-add-borrowing .content .operation-bar .operation-bar-fixed {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  padding: 8px 0px;
+  width: 100%;
+  height: 32px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  -webkit-transition: -webkit-all 0.3s ease-in-out;
+  -moz-transition: -moz-all 0.3s ease-in-out;
+  -ms-transition: -ms-all 0.3s ease-in-out;
+  -o-transition: -o-all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+html.bill-create-add-borrowing .content .operation-bar .operation-bar-fixed .check-all {
+  position: relative;
+  float: left;
+  margin: 5px 0px 0px 25px;
+  padding: 0px 20px;
+  line-height: 20px;
+  color: #666;
+}
+html.bill-create-add-borrowing .content .operation-bar .operation-bar-fixed .check-all:before {
+  content: ' ';
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/bg-bill-create-add-borrowing.png');
+  background-position: left -0px;
+  background-size: 16px;
+  background-position: 0px 0px;
+}
+html.bill-create-add-borrowing .content .operation-bar .operation-bar-fixed .check-all.checked:before {
+  background-image: url('../images/bg-bill-create-add-borrowing.png');
+  background-position: left -32px;
+  background-position: 0px -16px;
+}
+html.bill-create-add-borrowing .content .operation-bar .operation-bar-fixed .button-confirm {
+  margin-right: 25px;
+  float: right;
+  width: 120px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #62CA15;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.bank-account-create .content .bank-account-form {
+  padding: 10px;
+}
+html.bank-account-create .content .bank-account-form .form-item-groups .form-item .text {
+  float: right;
+  min-width: 200px;
+  text-align: right;
+}
+html.bank-account-create .content .bank-account-form .form-item-groups .form-item.choose-content b {
+  position: relative;
+  float: right;
+  padding-right: 15px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #333;
+}
+html.bank-account-create .content .bank-account-form .form-item-groups .form-item.choose-content b:after {
+  content: ' ';
+  position: absolute;
+  right: 0px;
+  top: 13px;
+  width: 0px;
+  height: 0px;
+  border: solid 5px #fff;
+  border-top: solid 5px #7F7F7F;
+  overflow: hidden;
+}
+html.selector-bank-account .content .bank-account-list {
+  padding: 10px;
+}
+html.selector-bank-account .content .bank-account-list li {
+  padding: 5px 10px 5px 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  border: solid 1px #DDD;
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.selector-bank-account .content .bank-account-list li div {
+  line-height: 20px;
+  color: #000;
+}
+html.selector-bank-account .content .bank-account-list li div span {
+  float: right;
+  color: #999;
+}
+html.selector-bank-account .content .bank-account-list li h3 {
+  line-height: 30px;
+  color: #000;
+  font-size: 1.23em;
+  font-weight: 700;
+}
+html.selector-bank-account .content .bank-account-list .add {
+  border: dashed 1px #DDD;
+  line-height: 60px;
+  text-align: center;
+  color: #7F7F7F;
+}
 html.daily-report .content {
   padding-bottom: 20px;
 }
@@ -1913,10 +2255,10 @@ html.daily-report .content h2 {
   height: 32px;
   line-height: 32px;
   color: #2C8AD3;
-  font-size: 14px;
   font-weight: 500;
   text-indent: 40px;
   border-bottom: solid 1px #ddd;
+  font-size: 1.15em;
 }
 html.daily-report .content h2:before {
   content: ' ';
@@ -1933,16 +2275,15 @@ html.daily-report .content h2:before {
 }
 html.daily-report .content .daily-report-list li {
   padding: 0px 10px 5px 10px;
-  height: 50px;
   border-bottom: solid 1px #ddd;
   background-color: #fff;
 }
 html.daily-report .content .daily-report-list li h3 {
   position: relative;
   line-height: 30px;
-  font-size: 14px;
   color: #000;
   font-weight: 500;
+  font-size: 1.07em;
 }
 html.daily-report .content .daily-report-list li h3:after {
   content: ' ';
@@ -1954,23 +2295,51 @@ html.daily-report .content .daily-report-list li h3:after {
   background-repeat: no-repeat;
   background-size: 24px;
 }
-html.daily-report .content .daily-report-list li span {
+html.daily-report .content .daily-report-list li span,
+html.daily-report .content .daily-report-list li p {
   margin-right: 12px;
+  line-height: 22px;
   color: #333;
 }
-html.daily-report .content .daily-report-list li span b {
+html.daily-report .content .daily-report-list li span b,
+html.daily-report .content .daily-report-list li p b {
   color: #999;
   font-weight: 500;
 }
+html.daily-report .content .daily-report-list li h4 {
+  padding-top: 3px;
+  margin-top: 3px;
+  min-height: 22px;
+  line-height: 22px;
+  font-size: 1em;
+  font-weight: 500;
+  border-top: dashed 1px #DDD;
+}
+html.daily-report .content .daily-report-list li h4 span {
+  display: inline-block;
+  color: #2C8AD3;
+}
+html.daily-report .content .daily-report-list li h4 span:first-child {
+  margin-right: 0px;
+  width: 130px;
+}
 html.daily-report .content .daily-report-list .Confirmed h3:after {
-  background-image: url('../images/bg-daily-report-status.png');
-  background-position: left -40px;
-  background-position: 0px -24px;
+  top: 6px;
+  width: 50px;
+  height: 16px;
+  background-image: url('../images/daily-report/bg-daily-report-status-star.png');
+  background-size: 50px;
+}
+html.daily-report .content .daily-report-list .Confirmed.star-2 h3:after {
+  background-position: 0px -16px;
+}
+html.daily-report .content .daily-report-list .Confirmed.star-3 h3:after {
+  background-position: 0px -33px;
 }
 html.daily-report .content .daily-report-list .Return h3:after {
   background-image: url('../images/bg-daily-report-status.png');
-  background-position: left -80px;
-  background-position: 0px -48px;
+  background-position: left -40px;
+  background-position: 0px -24px;
 }
 html.daily-report .content .daily-report-list .Submited h3:after {
   background-image: url('../images//daily-report/bg-daily-report-status-submited.gif');
@@ -2222,7 +2591,7 @@ html.business-transaction .content .tabs .bill-list li .cate:before {
 html.business-transaction .content .tabs .bill-list li h3 {
   line-height: 24px;
   color: #000;
-  font-size: 15px;
+  font-size: 1.15em;
   font-weight: 500;
 }
 html.business-transaction .content .tabs .bill-list li h3 b {
@@ -2323,7 +2692,7 @@ html.business-transaction .content .approve-bar .approve-bar-fixed .button-appro
   height: 32px;
   line-height: 32px;
   text-align: center;
-  font-size: 15px;
+  font-size: 1.15em;
   letter-spacing: 1px;
   color: #fff;
   background-color: #2C8AD3;
@@ -2349,14 +2718,331 @@ html.business-transaction .content.show-approve .approve-bar {
 html.business-transaction .content.show-approve .approve-bar .approve-bar-fixed {
   bottom: 0px;
 }
+html.system-setting .content .setting-items {
+  padding: 10px;
+}
+html.system-setting .content .setting-items .form-item-groups {
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item {
+  padding: 0px;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item b {
+  font-weight: 500;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.user-info {
+  padding: 10px 0px;
+  height: 56px;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.user-info .avatar {
+  display: inline-block;
+  margin-left: 12px;
+  width: 50px;
+  height: 50px;
+  border: solid 3px #ccc;
+  background-color: #ccc;
+  vertical-align: top;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.user-info .avatar img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.user-info .user-details {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: top;
+  line-height: 22px;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.user-info .user-details span {
+  margin-top: 5px;
+  display: block;
+  color: #333;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.user-info .user-details cite {
+  color: #999;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.choose-content b {
+  position: relative;
+  display: block;
+  line-height: 40px;
+  text-indent: 15px;
+  font-weight: 500;
+  color: #333;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.choose-content b:before {
+  content: ' ';
+  position: absolute;
+  top: 14px;
+  right: 8px;
+  border: solid 6px #fff;
+  border-left-color: #3A3A3A;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.choose-content b:after {
+  content: ' ';
+  position: absolute;
+  top: 14px;
+  right: 9px;
+  border: solid 6px transparent;
+  border-left-color: #fff;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.data-update a,
+html.system-setting .content .setting-items .form-item-groups .form-item.check-update a {
+  display: block;
+  line-height: 40px;
+  text-indent: 15px;
+  color: #333;
+  font-size: 1em;
+}
+html.system-setting .content .setting-items .form-item-groups .form-item.data-update a i,
+html.system-setting .content .setting-items .form-item-groups .form-item.check-update a i {
+  float: right;
+  margin-right: 12px;
+  font-style: normal;
+  color: #999;
+}
+html.system-setting .content .setting-items .button-logout {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background-color: #DF3646;
+  font-size: 1.23em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.about-us .content .about-logo {
+  padding-top: 50px;
+  text-align: center;
+}
+html.about-us .content .about-logo img {
+  max-width: 40%;
+}
+html.about-us .content .about-info {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 30px;
+  background-color: #fff;
+  border: solid 1px #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.about-us .content .about-info div {
+  height: 40px;
+  line-height: 40px;
+  border-top: solid 1px #ddd;
+  color: #333;
+}
+html.about-us .content .about-info div label {
+  display: inline-block;
+  width: 50px;
+  color: #999;
+}
+html.about-us .content .about-info div a {
+  color: #2C8AD3;
+  text-decoration: underline;
+}
+html.about-us .content .about-info div .tel {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding-right: 25px;
+  background-repeat: no-repeat;
+  background-image: url('../images/bg-about-us-tel.png');
+  background-position: left -0px;
+  background-position: right 13px;
+  background-size: 15px;
+}
+html.about-us .content .about-info div:first-child {
+  border-top: none;
+}
+html.company-info .content .company-info {
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border: solid 1px #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.company-info .content .company-info div {
+  min-height: 40px;
+  line-height: 40px;
+  border-top: solid 1px #ddd;
+  color: #333;
+}
+html.company-info .content .company-info div label {
+  display: inline-block;
+  width: 50px;
+  color: #999;
+}
+html.company-info .content .company-info .description {
+  position: relative;
+  padding: 5px 0px 5px 55px;
+  line-height: 20px;
+}
+html.company-info .content .company-info .description label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  line-height: 30px;
+}
+html.company-info .content .company-info div:first-child {
+  border-top: none;
+}
+html.feedback .content .feedback-form {
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border: solid 1px #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.feedback .content .feedback-form .textarea {
+  padding: 3px;
+  height: 100px;
+  line-height: 20px;
+  width: 100%;
+  border: none;
+  color: #333;
+  resize: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html.feedback .content .feedback-form .text {
+  padding: 0px 3px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  color: #333;
+}
+html.feedback .content .feedback-form div:first-child {
+  margin-bottom: 10px;
+  border-bottom: solid 1px #ddd;
+}
+html.feedback .content .buttons {
+  padding: 10px;
+}
+html.feedback .content .buttons .button-submit {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background-color: #62CA15;
+  font-size: 1.23em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.notification-setting .content .notification-setting {
+  padding: 10px;
+}
+html.notification-setting .content .notification-setting .form-item-groups {
+  margin-bottom: 10px;
+}
+html.notification-setting .content .notification-setting .form-item-groups .form-item {
+  padding: 0px;
+  height: 40px;
+  line-height: 40px;
+  text-indent: 12px;
+  color: #000;
+}
+html.notification-setting .content .notification-setting .form-item-groups .form-item input[type="checkbox"] {
+  display: none;
+}
+html.notification-setting .content .notification-setting .form-item-groups .form-item input + label {
+  position: relative;
+  float: right;
+  margin: 9px 9px 0px 0px;
+  height: 22px;
+  width: 45px;
+  background-color: #CCC;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  border-radius: 11px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+html.notification-setting .content .notification-setting .form-item-groups .form-item input + label b {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-transition: -webkit-left 0.3s;
+  -moz-transition: -moz-left 0.3s;
+  -ms-transition: -ms-left 0.3s;
+  -o-transition: -o-left 0.3s;
+  transition: left 0.3s;
+}
+html.notification-setting .content .notification-setting .form-item-groups .form-item input:checked + label {
+  background-color: #62CA15;
+}
+html.notification-setting .content .notification-setting .form-item-groups .form-item input:checked + label b {
+  left: 24px;
+}
 .selector-expense-cate .content,
 .selector-emp .content,
-.selector-project .content {
+.selector-project .content,
+.selector-bank .content {
   padding: 10px;
 }
 .selector-expense-cate .content .search,
 .selector-emp .content .search,
-.selector-project .content .search {
+.selector-project .content .search,
+.selector-bank .content .search {
   padding-right: 30px;
   height: 30px;
   position: relative;
@@ -2371,19 +3057,23 @@ html.business-transaction .content.show-approve .approve-bar .approve-bar-fixed 
 }
 .selector-expense-cate .content .search:after,
 .selector-emp .content .search:after,
-.selector-project .content .search:after {
+.selector-project .content .search:after,
+.selector-bank .content .search:after {
   content: ' ';
   position: absolute;
   top: 5px;
   right: 5px;
   width: 18px;
   height: 18px;
-  background-image: url('../../images/sprite/bg-selector-emp-search.png');  /** sprite-ref: bg-selector-emp-search; */
+  background-image: url('../images/bg-selector-emp.png');
+  background-position: left -0px;
   background-size: 18px;
+  background-position: 0px 0px;
 }
 .selector-expense-cate .content .search .text,
 .selector-emp .content .search .text,
-.selector-project .content .search .text {
+.selector-project .content .search .text,
+.selector-bank .content .search .text {
   padding: 0px 10px;
   width: 100%;
   height: 30px;
@@ -2400,7 +3090,8 @@ html.business-transaction .content.show-approve .approve-bar .approve-bar-fixed 
 }
 .selector-expense-cate .content .data-list,
 .selector-emp .content .data-list,
-.selector-project .content .data-list {
+.selector-project .content .data-list,
+.selector-bank .content .data-list {
   margin-top: 10px;
   background-color: #fff;
   border: solid 1px #CCC;
@@ -2413,12 +3104,14 @@ html.business-transaction .content.show-approve .approve-bar .approve-bar-fixed 
 }
 .selector-expense-cate .content .data-list li,
 .selector-emp .content .data-list li,
-.selector-project .content .data-list li {
+.selector-project .content .data-list li,
+.selector-bank .content .data-list li {
   border-top: solid 1px #CCC;
 }
 .selector-expense-cate .content .data-list li a,
 .selector-emp .content .data-list li a,
-.selector-project .content .data-list li a {
+.selector-project .content .data-list li a,
+.selector-bank .content .data-list li a {
   position: relative;
   display: block;
   height: 35px;
@@ -2428,18 +3121,22 @@ html.business-transaction .content.show-approve .approve-bar .approve-bar-fixed 
 }
 .selector-expense-cate .content .data-list li .checked:after,
 .selector-emp .content .data-list li .checked:after,
-.selector-project .content .data-list li .checked:after {
+.selector-project .content .data-list li .checked:after,
+.selector-bank .content .data-list li .checked:after {
   content: ' ';
   position: absolute;
   top: 9px;
   right: 9px;
   width: 18px;
   height: 18px;
-  background-image: url('../../images/sprite/bg-selector-emp-item-check.png');  /** sprite-ref: bg-selector-emp-search; */
+  background-image: url('../images/bg-selector-emp.png');
+  background-position: left -36px;
   background-size: 18px;
+  background-position: 0px -18px;
 }
 .selector-expense-cate .content .data-list li:first-child,
 .selector-emp .content .data-list li:first-child,
-.selector-project .content .data-list li:first-child {
+.selector-project .content .data-list li:first-child,
+.selector-bank .content .data-list li:first-child {
   border-top: none;
 }

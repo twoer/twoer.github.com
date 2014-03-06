@@ -165,9 +165,33 @@ $('*[data-selector-url]').bind('mousedown', function()
 	window.location.href = _url;
 });
 
+//bill create add borrowing
+//all check
+$(document).delegate('.bill-create-add-borrowing .operation-bar .check-all', 'mousedown', function(e)
+{
+	var $this = $(this);
+	var $items = $('.bill-create-add-borrowing .content .borrowing-list li');
+	if($this.hasClass('checked'))
+	{
+		$items.removeClass('checked');
+		$this.removeClass('checked');
+	}
+	else
+	{
+		$items.addClass('checked');
+		$this.addClass('checked');
+	}
+});
+//one check
+$('.bill-create-add-borrowing .borrowing-list li .check').unbind('mousedown').bind('mousedown', function()
+{
+	$(this).closest('li').toggleClass('checked');
+});
+
+
 
 //selector emp / expense cate
-$('html.selector-emp .data-list li a,html.selector-expense-cate .data-list li a,html.selector-project .data-list li a').bind('mousedown', function()
+$('html.selector-emp .data-list li a,html.selector-expense-cate .data-list li a,html.selector-project .data-list li a,html.selector-bank .data-list li a').bind('mousedown', function()
 {
 	var $this = $(this);
 	$this.closest('.data-list').find('li a').removeClass('checked');
