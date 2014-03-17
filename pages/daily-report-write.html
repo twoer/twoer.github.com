@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" class="daily-report-write">
+<head>
+	<meta charset="UTF-8">
+	<title>daily report write</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="../style/global.css">
+</head>
+<body >
+	<div class="main">
+		
+		<div class="side-menu">
+	<div class="user-info">
+		<a class="avatar">
+			<img src="../images/avatar.jpg" alt="">
+		</a>
+		<div class="user-details">
+			<span>张三</span>
+			<cite>Java程序员</cite>
+		</div>
+	</div>
+
+	<ul class="menu-list">
+		<li>
+			<a href="my-expense.html" class="my-expense">我的报销<i>999</i></a>
+			
+		</li>
+		<li>
+			<a href="business-transaction.html" class="business-transaction">业务办理<i>88</i></a>
+
+		</li>
+		<li>
+			<a href="javascript:;" class="bill-sign">单据签收<i>3</i></a>
+		</li>
+		<li>
+			<a href="javascript:;" class="bill-payment">单据支付<i>2</i></a>
+		</li>
+		<li>
+			<a href="daily-report.html" class="bill-payment">我的日报<i>2</i></a>
+		</li>
+		<li>
+			<a href="javascript:;" class="system-setting">系统设置<i>1</i></a>
+		</li>
+	</ul>
+</div>
+
+		<div class="content">
+			<div class="hd">
+				<div class="hd-fixed">
+					填写日报(2014-03-04)
+					<a href="javascript:;" class="left-link back"></a>
+					<a href="javascript:;" class="right-link confirm"></a>
+				</div>
+			</div>
+
+			<ul class="daily-report-write-list repeat" data-repeat-index="1">
+				<li class="repeat-item" data-repeat-index="0">
+					<table class="form-grid">
+						<tr>
+							<th>
+								用时：
+							</th>
+							<td>
+								<div class="text-outer">
+									<input type="text" class="text" value="0.5" placeholder="最少0.1小时，最多8小时" name="date_0" data-copy-marker="date">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>
+								项目：
+							</th>
+							<td>
+								<div class="text-outer" data-selector-url="selector-project.html">
+									<b data-copy-marker="project-value">NPR</b>
+									<input type="hidden" class="text" name="project_{#index#}"  data-copy-marker="project-key">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>
+								经理：
+							</th>
+							<td>
+								<div class="text-outer" data-selector-url="selector-emp.html">
+									<b data-copy-marker="manager-value">HZZ</b>
+									<input type="hidden" class="text" name="manager-{#index#}"  data-copy-marker="manager-key">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>
+								描述：
+							</th>
+							<td>
+								<div class="text-outer">
+									<input type="text" class="text"  name="description_0" data-copy-marker="description" value="测试描述">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>
+								备注：
+							</th>
+							<td>
+								<div class="text-outer">
+									<input type="text" class="text"  name="remark__0" data-copy-marker="remark" value="测试备注">
+								</div>
+							</td>
+						</tr>
+					</table>
+					<div class="buttons">
+						<button type="button" class="button-delete repeat-remove">删除</button>
+						<button type="button" class="button-copy">复制</button>
+						<button type="button" class="button-add " >新增</button>
+					</div>
+				</li>
+			</ul>
+
+			<a href="javascript:;" class="repeat-add d-n" data-repeat="tmpl-repeat-daily-report">新增</a>
+			
+		</div>
+	</div>
+</body>
+<script src="../script/jquery.js"></script>
+<script src="../script/global.js"></script>
+<script src="../script/plugin/jquery.repeat.js"></script>
+<script type="text/repeat" id="tmpl-repeat-daily-report">
+	<code>
+		<li class="repeat-item" data-repeat-index="0">
+        	<table class="form-grid">
+				<tr>
+					<th>
+						用时：
+					</th>
+					<td>
+						<div class="text-outer">
+							<input type="text" class="text" placeholder="最少0.1小时，最多8小时" name="date_{#index#}" data-copy-marker="date">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						项目：
+					</th>
+					<td>
+						<div class="text-outer" data-selector-url="selector-project.html">
+							<b data-copy-marker="project-value"></b>
+							<input type="hidden" name="project_{#index#}"  data-copy-marker="project-key">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						经理：
+					</th>
+					<td>
+						<div class="text-outer" data-selector-url="selector-emp.html">
+							<b data-copy-marker="manager-value"></b>
+							<input type="hidden" name="manager-{#index#}"  data-copy-marker="manager-key">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						描述：
+					</th>
+					<td>
+						<div class="text-outer">
+							<input type="text" class="text"  name="description_{#index#}" data-copy-marker="description">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						备注：
+					</th>
+					<td>
+						<div class="text-outer">
+							<input type="text" class="text"  name="remark__{#index#}" data-copy-marker="remark">
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="buttons">
+				<button type="button" class="button-delete repeat-remove">删除</button>
+				<button type="button" class="button-copy">复制</button>
+				<button type="button" class="button-add " >新增</button>
+			</div>
+		</li>
+    </code>
+    var setting = 
+    { 
+        repeat : '.daily-report-write-list',
+        min : 1,
+        max : 8,
+        onMin : function(sender)
+        {
+            alert('至少需要 1 条记录。');
+        },
+        onMax : function($item, sender)
+        {
+            alert('最多 10 个参数.');
+        },
+        onRemoveBefore : function()
+        {
+        	return confirm('确定删除？');
+        }
+    };
+</script>
+
+<script>
+	
+	//add	
+	$(document).delegate('.daily-report-write-list .buttons .button-add', 'mousedown', function(e)
+	{
+		$('.repeat-add:first').trigger('mousedown');
+
+		_bindSelectorEvent();
+	});
+
+	//copy
+	$(document).delegate('.daily-report-write-list .buttons .button-copy', 'mousedown', function(e)
+	{
+		var $this = $(this);
+		var $item = $this.closest('.repeat-item');
+		$('.repeat-add:first').trigger('mousedown');
+
+		var $newItem = $('.daily-report-write-list').find('.repeat-item:last');
+
+		$newItem.find('*[data-copy-marker]').each(function()
+		{
+			var $this = $(this);
+			var _marker = $this.attr('data-copy-marker');
+			$this.is('input') ? $this.val($item.find('*[data-copy-marker="' + _marker + '"]').val()) : $this.html($item.find('*[data-copy-marker="' + _marker + '"]').html());
+		});
+
+		_bindSelectorEvent();
+	});
+
+	function _bindSelectorEvent()
+	{
+		$('*[data-selector-url]').unbind('mousedown').bind('mousedown', function()
+		{
+			var $this = $(this);
+			var _url = $this.attr('data-selector-url');
+			window.location.href = _url;
+		});
+	}
+</script>
+</html>

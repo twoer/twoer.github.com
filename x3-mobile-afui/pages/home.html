@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="../style/global.css">
+</head>
+<body>
+	<div id="afui">
+
+		<div id="header"></div>
+
+		<div id="content">
+			<!-- home -->
+            <div id="home" class="panel home" title="兴元X/3" selected="true" data-tab="home">
+
+                <header>
+                    <a id="menubadge" class="menuButton"></a>
+                    <h1 id="pageTitle" class="">兴元X/3</h1>
+                </header>
+
+                <div class="user-info">
+                    <div class="user-details">
+                        <label>张三</label>Java程序员
+                    </div>
+                    <div class="finance-details">
+                        <span>
+                            <label>已付款</label>2,500.00
+                        </span>
+                        <span>
+                            <label>审批中</label>120.00
+                        </span>
+                    </div>
+                    <a href="javascript:;" class="link-details"></a>
+                </div>
+
+                <ul class="often-links clear">
+                    <li>
+                        <a href="javascript:;" class="expense">报销</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="approve">审批</a>
+                    </li>
+                </ul>
+
+                <ul class="function-list clear">
+                    <li>
+                        <a href="#my-expense" class="my-expense"><b>我的报销</b></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="bill-sign"><b>单据签收</b></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="bill-payment"><b>单据支付</b></a>
+                    </li>
+                    <!-- <li>
+                        <a href="javascript:;" class="report-statistic"><b>报表统计</b></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="bill-statistic"><b>单据统计</b></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="borrowing-status"><b>借款单状态</b></a>
+                    </li> -->
+                    <li>
+                        <a href="daily-report.html" class="daily-report"><b>我的日报</b></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="system-setting"><b>系统设置</b></a>
+                    </li>
+                </ul>
+			</div>
+            
+            <!-- my expense -->
+            <div id="my-expense" class="panel my-expense" title="我的报销" data-defer="my-expense.html" data-load="myExpenseOnload" data-unload="myExpenseUnload">
+                
+            </div>
+
+            <!-- bill create -->
+            <div id="bill-create" class="panel bill-create" title="新增单据" data-defer="bill-create.html" data-load="billCreateOnload" data-unload="billCreateUnload" >
+                
+            </div>
+
+    
+            <!-- selector bill category -->
+            <div id="selector-bill-cate" class="panel" modal="true" >
+                <div class="selector-panel selector-bill-cate">
+                    <h2>选择单据类型</h2>
+                    <ul class="data-list">
+                        <li>
+                            <a href="#bill-create/1">
+                                <i class="cate borrowing"></i>申请单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bill-create/2">
+                                <i class="cate everyday"></i>借款单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bill-create/3">
+                                <i class="cate repayment"></i>还款单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bill-create/4">
+                                <i class="cate request"></i>出差申请
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bill-create/5">
+                                <i class="cate travelling"></i>差旅费用报销
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bill-create/6">
+                                <i class="cate vendor"></i>日常费用报销
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bill-create7">
+                                <i class="cate travel"></i>供应商支付
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- selector dept -->
+            <div id="selector-dept" class="panel" modal="true" >
+                <div class="selector-panel selector-dept">
+                    <h2>选择部门</h2>
+                    <ul class="data-list">
+                        <li>
+                            <a href="#bill-create">财务部</a>
+                        </li>
+                        <li>
+                            <a href="#bill-create">产品部</a>
+                        </li>
+                        <li>
+                            <a href="#bill-create">软件实施部门</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- selector payment pattern -->
+            <div id="selector-payment-pattern" class="panel" modal="true" >
+                <div class="selector-panel selector-payment-pattern">
+                    <h2>选择支付方式</h2>
+                    <ul class="data-list">
+                        <li>
+                            <a href="#bill-create">
+                                现金
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bill-create">
+                                网银
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- selector currency -->
+            <div id="selector-currency" class="panel" modal="true" >
+                <div class="selector-panel selector-currency">
+                    <h2>选择币种</h2>
+                    <ul class="data-list">
+                        <li>
+                            <a href="#bill-create">
+                                人民币
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bill-create">
+                                美元
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- selector emp  -->
+            <div id="selector-emp" class="panel" title="选择员工" data-defer="selector-emp.html" data-load="selectoPanelFullScreenOnload" data-header="selector-panel-full-screen-header"></div>
+
+            <!-- selector project  -->
+            <div id="selector-project" class="panel" title="选择项目" data-defer="selector-project.html" data-load="selectoPanelFullScreenOnload" data-header="selector-panel-full-screen-header"></div>
+
+            <!-- selector bank account  -->
+            <div id="selector-bank-account" class="panel" title="选择银行账号" data-defer="selector-bank-account.html" data-load="selectoPanelFullScreenOnload" data-header="selector-panel-full-screen-header"></div>
+
+
+            <script>
+                function selectoPanelFullScreenOnload(sender)
+                {
+                    var _title = $(sender).attr('data-title');
+
+                    $('#selector-panel-full-screen-header #pageTitle').html(_title);
+                }
+            </script>
+
+		</div>
+
+		<nav id="sideMenu">
+
+            <div class="user-info">
+                <a class="avatar">
+                    <img src="../images/avatar.jpg" alt="">
+                </a>
+                <div class="user-details">
+                    <span>张三</span>
+                    <span>Java程序员</span>
+                </div>
+            </div>
+
+            <ul class="menu-list">
+                <li class="item">
+                    <a href="#my-expense" class="my-expense">我的报销<i>999</i></a>
+                </li>
+                <li class="item">
+                    <a href="business-transaction.html" class="business-transaction">业务办理<i>88</i></a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;" class="bill-sign">单据签收<i>3</i></a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;" class="bill-payment">单据支付<i>2</i></a>
+                </li>
+                <li class="item">
+                    <a href="daily-report-write.html" class="daily-report-write">日报填写<i>2</i></a>
+                </li>
+                <li class="item">
+                    <a href="system-setting.html" class="system-setting">系统设置<i>1</i></a>
+                </li>
+                <li class="logout">
+                    <a href="javascript:;">退出登录</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header id="selector-panel-full-screen-header" class="selector-panel-full-screen-header">
+            <a id="backButton" class="button"></a>
+            <h1 id="pageTitle" class=""></h1>
+            <a id="confirmButton" class="button"></a>
+        </header>
+
+       
+        
+
+	</div>
+</body>
+<script src="../script/jquery.js"></script>
+<script src="../script/jq.appframework.js"></script>
+<script src="../script/appframework.ui.min.js"></script>
+<script src="../script/global.js"></script>
+
+<script>
+</script>
+</html>

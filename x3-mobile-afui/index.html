@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="style/global.css">
+</head>
+<body>
+	<div id="afui">
+		<div id="content">
+			<div id="main" class="panel login" selected="true" data-tab="main">
+				<header id="header"></header>
+
+				<div class="logo">
+					<img src="images/logo.png" alt="logo">
+				</div>
+
+				<div class="login-form">
+					<form action="pages/home.html">
+						<div class="form-item user-domain">
+							<input type="text" class="text" placeholder="请输入二级域名">
+							<b>x3china.com</b>
+						</div>
+						<div class="form-item user-name">
+							<input type="text" class="text" placeholder="请输入用户名">
+						</div>
+						<div class="form-item user-pwd">
+							<input type="password" class="text" placeholder="请输入密码">
+						</div>
+						<div class="form-item user-button">
+							<button class="button" type="button">登录</button>
+						</div>
+						<div class="form-item user-forgetpwd">
+							<a href="javascript:;" data-ignore="True">忘记密码？</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="navbar"></div>
+		</div>
+	</div>
+</body>
+<script src="script/jquery.js"></script>
+<script src="script/jq.appframework.js"></script>
+<script src="script/appframework.ui.min.js"></script>
+<script src="script/global.js"></script>
+
+<script>
+	
+	$('button[type="button"]').bind("tap",function()
+	{
+        $.ui.showMask('登录中...');
+        $('form')[0].submit();
+    });
+
+</script>
+</html>

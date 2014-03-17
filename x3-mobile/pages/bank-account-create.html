@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" class="bank-account-create">
+<head>
+	<meta charset="UTF-8">
+	<title>bank account create</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="../style/global.css">
+</head>
+<body >
+	<div class="main">
+		
+		<div class="side-menu">
+	<div class="user-info">
+		<a class="avatar">
+			<img src="../images/avatar.jpg" alt="">
+		</a>
+		<div class="user-details">
+			<span>张三</span>
+			<cite>Java程序员</cite>
+		</div>
+	</div>
+
+	<ul class="menu-list">
+		<li>
+			<a href="my-expense.html" class="my-expense">我的报销<i>999</i></a>
+			
+		</li>
+		<li>
+			<a href="business-transaction.html" class="business-transaction">业务办理<i>88</i></a>
+
+		</li>
+		<li>
+			<a href="javascript:;" class="bill-sign">单据签收<i>3</i></a>
+		</li>
+		<li>
+			<a href="javascript:;" class="bill-payment">单据支付<i>2</i></a>
+		</li>
+		<li>
+			<a href="daily-report-write.html" class="daily-report-write">日报填写<i>2</i></a>
+		</li>
+		<li>
+			<a href="system-setting.html" class="system-setting">系统设置<i>1</i></a>
+		</li>
+		<li class="logout">
+			<a href="javascript:;">退出登录</a>
+		</li>
+	</ul>
+</div>
+
+		<div class="content">
+			<div class="hd">
+				<div class="hd-fixed">
+					新增银行账号
+					<a href="javascript:;" class="left-link back"></a>
+					<a href="javascript:;" class="right-link confirm" ></a>
+				</div>
+			</div>
+
+			<div class="bank-account-form">
+				<div class="form-item-groups">
+					<div class="form-item" >
+						<span class="cell-label require">户名</span>
+						<input type="text" class="text" placeholder="请输入银行帐户名">
+					</div>
+					<div class="form-item choose-content" data-selector-url="selector-bank.html">
+						<span class="cell-label require">银行</span>
+						<b>招行银行</b>
+					</div>
+					<div class="form-item">
+						<span class="cell-label require">银行账号</span>
+						<input type="text" class="text" placeholder="请输入银行账号">
+					</div>
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+	
+</body>
+<script src="../script/jquery.js"></script>
+<script src="../script/global.js"></script>
+</html>
