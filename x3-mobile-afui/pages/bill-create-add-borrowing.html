@@ -1,0 +1,101 @@
+<ul class="borrowing-list">
+    <li class="checked">
+        <b class="check"></b>
+        <div class="details">
+            <h3>AA12345678<b>10.00</b></h3>
+            <div class="date">
+                <span>2013-01-18</span>
+                <cite>SGM-SDDDDD</cite>
+            </div>
+            <div class="remark">备注备注</div>
+        </div>
+    </li>
+    <li>
+        <b class="check"></b>
+        <div class="details">
+            <h3>AA12345678<b>500.00</b></h3>
+            <div class="date">
+                <span>2013-01-18</span>
+                <cite>SGM-SDDDDD</cite>
+            </div>
+            <div class="remark">备注备注备注备注备备注备注备注</div>
+        </div>
+    </li>
+    <li>
+        <b class="check"></b>
+        <div class="details">
+            <h3>AA12345678<b>2,500.00</b></h3>
+            <div class="date">
+                <span>2013-01-18</span>
+                <cite>SGM-SDDDDD</cite>
+            </div>
+            <div class="remark">备注备注备注备注备注备注备注备注备注备注备注备注备注备注</div>
+        </div>
+    </li>
+    <li>
+        <b class="check"></b>
+        <div class="details">
+            <h3>AA12345678<b>10.00</b></h3>
+            <div class="date">
+                <span>2013-01-18</span>
+                <cite>SGM-SDDDDD</cite>
+            </div>
+            <div class="remark">备注备注</div>
+        </div>
+    </li>
+    <li>
+        <b class="check"></b>
+        <div class="details">
+            <h3>AA12345678<b>500.00</b></h3>
+            <div class="date">
+                <span>2013-01-18</span>
+                <cite>SGM-SDDDDD</cite>
+            </div>
+            <div class="remark">备注备注备注备注备备注备注备注</div>
+        </div>
+    </li>
+    <li>
+        <b class="check"></b>
+        <div class="details">
+            <h3>AA12345678<b>2,500.00</b></h3>
+            <div class="date">
+                <span>2013-01-18</span>
+                <cite>SGM-SDDDDD</cite>
+            </div>
+            <div class="remark">备注备注备注备注备注备注备注备注备注备注备注备注备注备注</div>
+        </div>
+    </li>
+</ul>
+
+<header class="selector-panel-full-screen-header">
+    <a id="backButton" class="button"></a>
+    <h1 id="pageTitle" class=""></h1>
+</header>
+
+<footer class="bill-create-add-borrowing-footer">
+    <div class="total">合计：<b>100.00</b></div>
+    <div class="operation">
+        <a href="javascript:;" class="check-all">全选</a>
+        <a href="javascript:;" class="button-confirm">确认</a>
+    </div>
+</footer>
+
+<script>
+    var $navbar = $('#navbar');
+    function billCreateAddBorrowingOnload(sender)
+    {
+        var _title = $(sender).attr('data-title');
+        $('#header #pageTitle').html(_title);
+
+        $.ui.toggleNavMenu(true);
+        $navbar.toggleClass('navbar-bill-create-add-borrowing');
+    } 
+    function billCreateAddBorrowingUnload(sender)
+    {
+        //remove selexted status
+        $('.panel.bill-create-add-borrowing .borrowing-list .checked, .bill-create-add-borrowing .operation .check-all').removeClass('checked');
+
+        $.ui.toggleNavMenu(false);
+        $navbar.toggleClass('navbar-bill-create-add-borrowing');
+    }   
+</script>

@@ -40,9 +40,9 @@ $(document).delegate('.panel.my-expense .tabs .tab-nav li', 'tap', function()
 
 
 //modal tap
-$(document).delegate('#modalContainer', 'tap', function()
+$(document).delegate('#modalContainer', 'tap', function(e)
 {
-	$.ui.hideModal();
+    $.ui.hideModal();
 });
 $(document).delegate('#modalContainer .selector-panel', 'tap', function(e)
 {
@@ -58,3 +58,36 @@ $(document).delegate('.selector-panel-full-screen .data-list li a', 'tap', funct
     $this.closest('.data-list').find('li a').removeClass('checked');
     $this.addClass('checked');
 });
+
+//bill create add borrowing
+//one check
+$(document).delegate('.panel.bill-create-add-borrowing .borrowing-list li .check', 'tap', function()
+{
+    $(this).closest('li').toggleClass('checked');
+});
+//all check
+$(document).delegate('#navbar.navbar-bill-create-add-borrowing .operation .check-all', 'tap', function(e)
+{
+    var $this = $(this);
+    var $items = $('.panel.bill-create-add-borrowing .borrowing-list li');
+    if($this.hasClass('checked'))
+    {
+        $items.removeClass('checked');
+        $this.removeClass('checked');
+    }
+    else
+    {
+        $items.addClass('checked');
+        $this.addClass('checked');
+    }
+});
+
+
+//data mode transition
+$(document).delegate('a[href][data-mode-transition]', 'click', function(e)
+{
+    var $this = $(this);
+    $.ui.showModal($this.attr('href'), $this.attr('data-mode-transition'));
+    e.stopPropagation();
+    return false;
+})

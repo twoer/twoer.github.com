@@ -75,12 +75,22 @@
             
             <!-- my expense -->
             <div id="my-expense" class="panel my-expense" title="我的报销" data-defer="my-expense.html" data-load="myExpenseOnload" data-unload="myExpenseUnload">
-                
             </div>
 
             <!-- bill create -->
             <div id="bill-create" class="panel bill-create" title="新增单据" data-defer="bill-create.html" data-load="billCreateOnload" data-unload="billCreateUnload" >
-                
+            </div>
+
+            <!-- bill details -->
+            <div id="bill-details" class="panel bill-details" title="查看单据" data-defer="bill-details.html" data-load="billDetailsOnload" data-unload="billDetailsUnload" >
+            </div>
+            
+            <!-- bill create add details -->
+            <div id="bill-create-add-details" class="panel bill-create-add-details" title="添加明细" data-defer="bill-create-add-details.html"  data-load="selectoPanelFullScreenOnload" data-header="selector-panel-full-screen-header">
+            </div>
+
+            <!-- bill create add borrowing -->
+            <div id="bill-create-add-borrowing" class="panel bill-create-add-borrowing" title="添加借款单" data-defer="bill-create-add-borrowing.html"  data-load="billCreateAddBorrowingOnload" data-unload="billCreateAddBorrowingUnload" >
             </div>
 
     
@@ -146,7 +156,6 @@
                 </div>
             </div>
 
-
             <!-- selector payment pattern -->
             <div id="selector-payment-pattern" class="panel" modal="true" >
                 <div class="selector-panel selector-payment-pattern">
@@ -193,6 +202,9 @@
 
             <!-- selector bank account  -->
             <div id="selector-bank-account" class="panel" title="选择银行账号" data-defer="selector-bank-account.html" data-load="selectoPanelFullScreenOnload" data-header="selector-panel-full-screen-header"></div>
+
+            <!-- selector expense cate  -->
+            <div id="selector-expense-cate" class="panel" title="选择费用类型" data-defer="selector-expense-cate.html" data-load="selectoPanelFullScreenOnload" data-header="selector-panel-full-screen-header"></div>
 
 
             <script>
