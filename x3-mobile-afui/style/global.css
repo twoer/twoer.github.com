@@ -261,6 +261,9 @@ button:focus,
 select:focus {
   outline: none;
 }
+cite {
+  font-style: normal;
+}
 button {
   border: none;
   cursor: pointer;
@@ -271,6 +274,9 @@ textarea {
 }
 ::-webkit-input-placeholder {
   color: #CCC;
+}
+table th {
+  font-weight: 500;
 }
 .tabs .tab-nav {
   height: 28px;
@@ -1148,13 +1154,18 @@ textarea {
     overflow: visible !important;
   }
 }
+#afui #header {
+  height: 40px;
+  overflow: hidden;
+}
 #afui .panel {
   background-color: #F7F7F7!important;
 }
 #afui #navbar {
   padding: 0px;
-  height: 0px;
-  overflow: hidden;
+  margin: 0px;
+  height: auto;
+  border: none;
 }
 .panel.login {
   background-color: #F7F7F7;
@@ -1632,9 +1643,6 @@ textarea {
 .panel.home .function-list li:nth-of-type(3n+1) {
   width: 34%;
 }
-.panel.my-expense {
-  padding-bottom: 50px;
-}
 .panel.my-expense .tabs .tab-nav {
   padding: 10px;
 }
@@ -1731,6 +1739,9 @@ textarea {
   height: 30px;
   background-color: #ddd;
   border: none;
+}
+#afui #navbar.navbar-my-expense footer.my-expense-footer {
+  height: 30px;
 }
 #afui #navbar.navbar-my-expense footer.my-expense-footer div {
   line-height: 30px;
@@ -1903,7 +1914,6 @@ textarea {
   margin-right: 10px;
   width: 60px;
   font-weight: 500;
-  font-style: normal;
   color: #999;
   overflow: hidden;
   white-space: nowrap;
@@ -2214,9 +2224,6 @@ textarea {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.panel.bill-create-add-borrowing .borrowing-list {
-  margin-bottom: 100px;
-}
 .panel.bill-create-add-borrowing .borrowing-list li {
   position: relative;
   padding: 5px 0px 8px 50px;
@@ -2267,7 +2274,6 @@ textarea {
   margin-right: 10px;
   width: 60px;
   font-weight: 500;
-  font-style: normal;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2351,21 +2357,289 @@ textarea {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-#afui #navbar.navbar-bill-details {
+.panel.bill-details .bill-overview {
+  padding: 20px 12px 0px 20px;
+  height: 70px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.bill-details .bill-overview h1 {
+  line-height: 24px;
+  font-size: 18px;
+  color: #000;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.panel.bill-details .bill-overview .amount {
+  color: #000;
+}
+.panel.bill-details .bill-overview .amount b {
+  margin-left: 10px;
+  font-size: 18px;
+  color: #F37815;
+}
+.panel.bill-details .bill-overview .date {
+  float: right;
+  line-height: 24px;
+  color: #999;
+  font-style: normal;
+}
+.panel.bill-details .bill-overview .cate {
+  position: relative;
+  float: left;
+  margin-top: 3px;
+  margin-right: 15px;
+  width: 45px;
   height: 45px;
+  background-color: #2C8AD3;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel.bill-details .bill-overview .cate:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -9.5px 0px 0px -14px;
+  width: 28px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+.panel.bill-details h2 {
+  line-height: 25px;
+  text-indent: 10px;
+  color: #888;
+  font-weight: 500;
+  background-color: #EEE;
+  border-left-style: solid;
+  border-left-width: 3px;
+  font-size: 1.15em;
+}
+.panel.bill-details h2 b {
+  float: right;
+  margin-right: 12px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #F37815;
+}
+.panel.bill-details .base-info h2 {
+  border-left-color: #2C8AD3;
+}
+.panel.bill-details .base-info .base-info-details {
+  padding: 10px 0px;
+  border-left: solid 3px #91C0E5;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.bill-details .base-info .form-grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+.panel.bill-details .base-info .form-grid th {
+  width: 80px;
+  text-indent: 12px;
+  color: #999;
+}
+.panel.bill-details .base-info .form-grid td {
+  height: 24px;
+  color: #000;
+}
+.panel.bill-details .details-total h2 {
+  border-left-color: #31B5AD;
+}
+.panel.bill-details .details-total .details-list {
+  border-left: solid 3px #94D6D2;
+}
+.panel.bill-details .details-total .details-list li {
+  position: relative;
+  padding: 5px 0px 8px 80px;
+  min-height: 45px;
+  border-bottom: solid 1px #CCC;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.bill-details .details-total .details-list li .screenage {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 50px;
+  height: 37.5px;
+}
+.panel.bill-details .details-total .details-list li .screenage img {
+  width: 50px;
+  height: 37.5px;
+  vertical-align: top;
+}
+.panel.bill-details .details-total .details-list li .details {
+  width: 100%;
+}
+.panel.bill-details .details-total .details-list li .details h3 {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  font-weight: 500;
+  overflow: hidden;
+  color: #000;
+}
+.panel.bill-details .details-total .details-list li .details h3 b {
+  float: right;
+  margin-right: 12px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #F37815;
+}
+.panel.bill-details .details-total .details-list li .details .date {
+  line-height: 20px;
+  height: 20px;
+  color: #999;
+}
+.panel.bill-details .details-total .details-list li .details .date span {
+  float: left;
+  width: 160px;
+}
+.panel.bill-details .details-total .details-list li .details .date cite {
+  float: right;
+  margin-right: 10px;
+  width: 60px;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.panel.bill-details .details-total .details-list li .details .remark {
+  margin-top: 3px;
+  line-height: 18px;
+  color: #999;
+}
+.panel.bill-details .borrowing-bill h2 {
+  border-left-color: #63C532;
+}
+.panel.bill-details .borrowing-bill .details-list {
+  border-left: solid 3px #94D6D2;
+  border-left: solid 3px #ADDE94;
+}
+.panel.bill-details .borrowing-bill .details-list li {
+  position: relative;
+  padding: 5px 0px 8px 80px;
+  min-height: 45px;
+  border-bottom: solid 1px #CCC;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.bill-details .borrowing-bill .details-list li .screenage {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 50px;
+  height: 37.5px;
+}
+.panel.bill-details .borrowing-bill .details-list li .screenage img {
+  width: 50px;
+  height: 37.5px;
+  vertical-align: top;
+}
+.panel.bill-details .borrowing-bill .details-list li .details {
+  width: 100%;
+}
+.panel.bill-details .borrowing-bill .details-list li .details h3 {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  font-weight: 500;
+  overflow: hidden;
+  color: #000;
+}
+.panel.bill-details .borrowing-bill .details-list li .details h3 b {
+  float: right;
+  margin-right: 12px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #F37815;
+}
+.panel.bill-details .borrowing-bill .details-list li .details .date {
+  line-height: 20px;
+  height: 20px;
+  color: #999;
+}
+.panel.bill-details .borrowing-bill .details-list li .details .date span {
+  float: left;
+  width: 160px;
+}
+.panel.bill-details .borrowing-bill .details-list li .details .date cite {
+  float: right;
+  margin-right: 10px;
+  width: 60px;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.panel.bill-details .borrowing-bill .details-list li .details .remark {
+  margin-top: 3px;
+  line-height: 18px;
+  color: #999;
+}
+.panel.bill-details .borrowing-bill .details-list li {
+  padding-left: 10px;
+}
+.panel.bill-details .attachment {
+  padding: 8px 10px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.bill-details .attachment .button {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #888;
+  border: solid 1px #DDD;
+  background-color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel.bill-details .attachment .button:before {
+  content: ' ';
+  display: inline-block;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  background-image: url('../images/bg-button-attachment.png');
+  background-position: left -0px;
+  background-size: 18px;
+  vertical-align: middle;
+}
+#afui #navbar.navbar-bill-details {
+  height: 47px;
   border: none;
   background-color: #fff;
-  border: solid 1px #ddd;
 }
 #afui #navbar.navbar-bill-details .new-status {
   display: block;
   padding-left: 38px;
+  top: 0px!important;
   width: auto!important;
   height: 45px;
   line-height: 45px;
   color: #000;
   font-size: 1.23em;
   text-align: left;
+  background-color: #fff;
+  border: solid 1px #ddd;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -2415,6 +2689,171 @@ textarea {
   background-image: url('../images/process-status/process-status-waiting.png');
   background-position: 0px -6px;
 }
+.panel.bill-details-process .process-status-list {
+  padding: 10px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.bill-details-process .process-status-list .process-status {
+  position: relative;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  min-height: 50px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.bill-details-process .process-status-list .process-status:before {
+  content: ' ';
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  width: 20px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+.panel.bill-details-process .process-status-list .process-status .details {
+  position: relative;
+  padding: 7px 5px 7px 10px;
+  min-height: 34px;
+  border: solid 1px #CCC;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.bill-details-process .process-status-list .process-status .details:before {
+  content: ' ';
+  position: absolute;
+  top: 6px;
+  left: -16px;
+  width: 0px;
+  height: 0px;
+  border: solid 8px transparent;
+  border-right-color: #ccc;
+  overflow: hidden;
+}
+.panel.bill-details-process .process-status-list .process-status .details:after {
+  content: ' ';
+  position: absolute;
+  top: 6px;
+  left: -15px;
+  width: 0px;
+  height: 0px;
+  border: solid 8px transparent;
+  border-right-color: #F7F7F7;
+  overflow: hidden;
+}
+.panel.bill-details-process .process-status-list .process-status .details h3 {
+  line-height: 20px;
+  font-weight: 500;
+}
+.panel.bill-details-process .process-status-list .process-status .details span {
+  display: block;
+  line-height: 20px;
+  color: #888;
+}
+.panel.bill-details-process .process-status-list .process-status .details span b {
+  color: #333;
+  font-weight: 500;
+}
+.panel.bill-details-process .process-status-list .process-status.process-start:before {
+  background-image: url('../images/process-status/process-status-start.png');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-list .process-status.process-start:before {
+  background-image: url('../images/process-status/process-status-start.png');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-list .process-status.process-back:before {
+  background-image: url('../images/process-status/process-status-back.png');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-list .process-status.process-back:last-child:before {
+  background-image: url('../images/process-status/process-status-back_last.png');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-list .process-status.process-deny:before {
+  background-image: url('../images/process-status/process-status-deny.png');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-list .process-status.process-deny:last-child:before {
+  background-image: url('../images/process-status/process-status-deny-last.png');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-list .process-status.process-pass:before {
+  background-image: url('../images/process-status/process-status-pass.png');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-list .process-status.process-pass:last-child:before {
+  background-image: url('../images/process-status/process-status-pass-last.png');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-list .process-status.process-pending:before {
+  background-image: url('../images/process-status/process-status-pending.gif');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-list .process-status.process-waiting:before {
+  background-image: url('../images/process-status/process-status-waiting.png');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-list .process-status.process-waiting:last-child:before {
+  background-image: url('../images/process-status/process-status-waiting-last.png');
+  background-position: 0px -6px;
+}
+.panel.bill-details-process .process-status-log {
+  padding: 10px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.bill-details-process .process-status-log h2 {
+  position: relative;
+  line-height: 20px;
+  color: #666!important;
+  font-weight: 500;
+  text-indent: 22px;
+  font-size: 1.23em;
+}
+.panel.bill-details-process .process-status-log h2:before {
+  content: ' ';
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/bg-process-status-log.png');
+  background-position: left -0px;
+  background-size: 16px;
+}
+.panel.bill-details-process .process-status-log .log-list li {
+  padding: 8px 0px 10px 5px;
+  border-bottom: solid 1px #DDD;
+  color: #888;
+}
+.panel.bill-details-process .process-status-log .log-list li div {
+  min-height: 20px;
+  line-height: 20px;
+}
+.panel.bill-details-process .process-status-log .log-list li div b {
+  font-weight: 500;
+  color: #333;
+}
+.panel.bill-details-process .process-status-log .log-list li div span {
+  float: right;
+  width: 120px;
+}
+.panel.bill-details-process .process-status-log .log-list li div span:first-child {
+  float: left;
+  width: 170px;
+}
 .cate.borrowing:before {
   background-image: url('../images/bg-bill-cate.png');
   background-position: left -0px;
@@ -2450,10 +2889,12 @@ textarea {
   background-position: left -228px;
   background-position: 0px -114px;
 }
-.panel.bill-create .attachment-list {
+.panel.bill-create .attachment-list,
+.panel.bill-details-attachment .attachment-list {
   padding: 20px 10px;
 }
-.panel.bill-create .attachment-list li {
+.panel.bill-create .attachment-list li,
+.panel.bill-details-attachment .attachment-list li {
   float: left;
   padding: 0px 5px;
   margin-bottom: 15px;
@@ -2462,7 +2903,8 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.panel.bill-create .attachment-list li .cate {
+.panel.bill-create .attachment-list li .cate,
+.panel.bill-details-attachment .attachment-list li .cate {
   display: block;
   padding: 5px 0px;
   text-align: center;
@@ -2470,7 +2912,8 @@ textarea {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-.panel.bill-create .attachment-list li .cate:before {
+.panel.bill-create .attachment-list li .cate:before,
+.panel.bill-details-attachment .attachment-list li .cate:before {
   content: ' ';
   display: block;
   margin: 0px auto;
@@ -2479,54 +2922,67 @@ textarea {
   background-repeat: no-repeat;
   background-size: 46px;
 }
-.panel.bill-create .attachment-list li span {
+.panel.bill-create .attachment-list li span,
+.panel.bill-details-attachment .attachment-list li span {
   display: block;
   line-height: 18px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.panel.bill-create .attachment-list li .name {
+.panel.bill-create .attachment-list li .name,
+.panel.bill-details-attachment .attachment-list li .name {
   margin-top: 5px;
   color: #333;
 }
-.panel.bill-create .attachment-list li .size {
+.panel.bill-create .attachment-list li .size,
+.panel.bill-details-attachment .attachment-list li .size {
   color: #949494;
 }
-.panel.bill-create .attachment-list li .cate.doc:before {
+.panel.bill-create .attachment-list li .cate.doc:before,
+.panel.bill-details-attachment .attachment-list li .cate.doc:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -0px;
   background-position: 0px 0px;
 }
-.panel.bill-create .attachment-list li .cate.ppt:before {
+.panel.bill-create .attachment-list li .cate.ppt:before,
+.panel.bill-details-attachment .attachment-list li .cate.ppt:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -92px;
   background-position: 0px -46px;
 }
-.panel.bill-create .attachment-list li .cate.excel:before {
+.panel.bill-create .attachment-list li .cate.excel:before,
+.panel.bill-details-attachment .attachment-list li .cate.excel:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -184px;
   background-position: 0px -92px;
 }
-.panel.bill-create .attachment-list li .cate.txt:before {
+.panel.bill-create .attachment-list li .cate.txt:before,
+.panel.bill-details-attachment .attachment-list li .cate.txt:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -276px;
   background-position: 0px -138px;
 }
-.panel.bill-create .attachment-list li .cate.pdf:before {
+.panel.bill-create .attachment-list li .cate.pdf:before,
+.panel.bill-details-attachment .attachment-list li .cate.pdf:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -368px;
   background-position: 0px -184px;
 }
-.panel.bill-create .attachment-list li .cate.rar:before {
+.panel.bill-create .attachment-list li .cate.rar:before,
+.panel.bill-details-attachment .attachment-list li .cate.rar:before {
   background-image: url('../images/bg-attachment-cate.png');
   background-position: left -460px;
   background-position: 0px -230px;
 }
-.panel.bill-create .attachment-list li .cate.img:before {
+.panel.bill-create .attachment-list li .cate.img:before,
+.panel.bill-details-attachment .attachment-list li .cate.img:before {
   display: none;
 }
-.panel.bill-create .attachment-list li .cate.img img {
+.panel.bill-create .attachment-list li .cate.img img,
+.panel.bill-details-attachment .attachment-list li .cate.img img {
+  min-width: 46px;
+  min-height: 46px;
   max-width: 46px;
   max-height: 46px;
   vertical-align: top;

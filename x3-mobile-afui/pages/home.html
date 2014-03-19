@@ -85,6 +85,12 @@
             <div id="bill-details" class="panel bill-details" title="查看单据" data-defer="bill-details.html" data-load="billDetailsOnload" data-unload="billDetailsUnload" >
             </div>
             
+            <!-- bill details attachment -->
+            <div id="bill-details-attachment" class="panel bill-details-attachment" title="查看附件" data-defer="bill-details-attachment.html" data-load="billDetailsAttachmentOnload" data-unload="billDetailsAttachmentUnload"></div>
+
+            <!-- bill details process -->
+            <div id="bill-details-process" class="panel bill-details-process" title="" data-defer="bill-details-process.html" data-load="billDetailsProcessOnload" data-unload="billDetailsProcessUnload"></div>
+            
             <!-- bill create add details -->
             <div id="bill-create-add-details" class="panel bill-create-add-details" title="添加明细" data-defer="bill-create-add-details.html"  data-load="selectoPanelFullScreenOnload" data-header="selector-panel-full-screen-header">
             </div>
@@ -205,7 +211,6 @@
 
             <!-- selector expense cate  -->
             <div id="selector-expense-cate" class="panel" title="选择费用类型" data-defer="selector-expense-cate.html" data-load="selectoPanelFullScreenOnload" data-header="selector-panel-full-screen-header"></div>
-
 
             <script>
                 function selectoPanelFullScreenOnload(sender)

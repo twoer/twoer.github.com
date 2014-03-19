@@ -340,12 +340,12 @@
     var $navbar = $('#navbar');
     function myExpenseOnload()
     {
-        $.ui.toggleNavMenu(true);
         $navbar.toggleClass('navbar-my-expense');
+        $.ui.toggleNavMenu(true);
     } 
     function myExpenseUnload()
     {
-        $.ui.toggleNavMenu(false);
         $navbar.toggleClass('navbar-my-expense');
+        $.ui.toggleNavMenu(false);
     }   
 </script>

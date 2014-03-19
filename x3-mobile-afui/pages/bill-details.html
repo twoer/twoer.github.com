@@ -123,12 +123,12 @@
 </div>
 
 <div class="attachment">
-    <a href="attachment-view.html" class="button">查看附件 (10)</a>
+    <a href="#bill-details-attachment" class="button">查看附件 (10)</a>
 </div>
 
 
 <footer class="bill-details-footer">
-    <a href="#process-status" class="new-status process-pass">
+    <a href="#bill-details-process" class="new-status process-pass">
         <!-- process-start/process-back/process-deny/process-pass/process-pending/process-waiting -->
         <!-- 单据什么状态就使用什么 class 即可 -->
         部门经理 高明 (通过)
@@ -140,12 +140,12 @@
     var $navbar = $('#navbar');
     function billDetailsOnload()
     {
-        $.ui.toggleNavMenu(true);
         $navbar.toggleClass('navbar-bill-details');
+        $.ui.toggleNavMenu(true);
     } 
     function billDetailsUnload()
     {
-        $.ui.toggleNavMenu(false);
         $navbar.toggleClass('navbar-bill-details');
+        $.ui.toggleNavMenu(false);
     }   
 </script>

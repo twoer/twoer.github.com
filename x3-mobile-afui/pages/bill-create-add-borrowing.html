@@ -87,15 +87,15 @@
         var _title = $(sender).attr('data-title');
         $('#header #pageTitle').html(_title);
 
-        $.ui.toggleNavMenu(true);
         $navbar.toggleClass('navbar-bill-create-add-borrowing');
+        $.ui.toggleNavMenu(true);
     } 
     function billCreateAddBorrowingUnload(sender)
     {
         //remove selexted status
         $('.panel.bill-create-add-borrowing .borrowing-list .checked, .bill-create-add-borrowing .operation .check-all').removeClass('checked');
 
-        $.ui.toggleNavMenu(false);
         $navbar.toggleClass('navbar-bill-create-add-borrowing');
+        $.ui.toggleNavMenu(false);
     }   
 </script>
