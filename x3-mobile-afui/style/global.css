@@ -1154,6 +1154,9 @@ textarea {
     overflow: visible !important;
   }
 }
+#afui {
+  background-color: #F7F7F7;
+}
 #afui #header {
   height: 40px;
   overflow: hidden;
@@ -2853,6 +2856,357 @@ textarea {
 .panel.bill-details-process .process-status-log .log-list li div span:first-child {
   float: left;
   width: 170px;
+}
+.panel.business-transaction .tabs .tab-nav {
+  padding: 10px;
+}
+.panel.business-transaction .tabs .tab-nav li {
+  width: 50%;
+}
+.panel.business-transaction .tabs .bill-list {
+  margin-bottom: 30px;
+}
+.panel.business-transaction .tabs .bill-list li {
+  position: relative;
+  padding-left: 10px;
+  margin-top: -1px;
+  border: solid 1px #CCC;
+  border-right: none;
+  border-left: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.business-transaction .tabs .bill-list li .check {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 60px;
+  width: 40px;
+  background-color: #DDD;
+  background-repeat: no-repeat;
+  background-image: url('../images/bg-approve-check.png');
+  background-position: left -0px;
+  background-size: 14px;
+  background-position: 13px 22px;
+}
+.panel.business-transaction .tabs .bill-list li a {
+  display: block;
+  padding: 8px 10px 7px 10px;
+  height: 45px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.business-transaction .tabs .bill-list li .cate {
+  position: relative;
+  float: left;
+  margin-right: 15px;
+  width: 45px;
+  height: 45px;
+  background-color: #2C8AD3;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel.business-transaction .tabs .bill-list li .cate:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -9.5px 0px 0px -14px;
+  width: 28px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+.panel.business-transaction .tabs .bill-list li h3 {
+  line-height: 24px;
+  color: #000;
+  font-size: 1.15em;
+  font-weight: 500;
+}
+.panel.business-transaction .tabs .bill-list li h3 b {
+  float: right;
+}
+.panel.business-transaction .tabs .bill-list li b {
+  font-weight: 500;
+}
+.panel.business-transaction .tabs .bill-list li span {
+  line-height: 20px;
+  color: #888;
+}
+.panel.business-transaction .tabs .bill-list li span b {
+  float: right;
+  color: #389EEC;
+}
+.panel.business-transaction .tabs .bill-list li.checked .check {
+  background-color: #2C8AD3;
+}
+.panel.business-transaction .tabs .bill-list li:first-child {
+  margin-top: 0px;
+}
+.panel.business-transaction .tabs .bill-list .darft span b {
+  color: #888;
+}
+.panel.business-transaction .tabs .bill-list .processs span b {
+  color: #2c8ad3;
+}
+.panel.business-transaction .tabs .bill-list .deny span b {
+  color: #df3646;
+}
+.panel.business-transaction .tabs .bill-list .complete span b {
+  color: #58cd0a;
+}
+.panel.business-transaction .tabs .bill-total {
+  display: none;
+}
+.panel.business-transaction.show-approve .bill-list li {
+  padding-left: 50px;
+}
+.panel.business-transaction.show-approve .bill-list li .check {
+  display: block;
+}
+.panel.business-transaction.show-approve .bill-total {
+  bottom: 50px;
+}
+.panel.business-transaction.show-approve .approve-bar {
+  display: block;
+}
+.panel.business-transaction.show-approve .approve-bar .approve-bar-fixed {
+  bottom: 0px;
+}
+#afui header.business-transaction-header #menubadge {
+  float: left!important;
+}
+#afui header.business-transaction-header #confirmButton {
+  float: right!important;
+}
+#afui #navbar.navbar-business-transaction {
+  height: 30px;
+  background-color: #ddd;
+  border: none;
+}
+#afui #navbar.navbar-business-transaction footer.business-transaction-footer .total {
+  line-height: 30px;
+  text-align: right;
+  color: #888;
+}
+#afui #navbar.navbar-business-transaction footer.business-transaction-footer .total b {
+  margin-right: 10px;
+  color: #000;
+  font-weight: 500;
+}
+#afui #navbar.navbar-business-transaction footer.business-transaction-footer .operation {
+  display: none;
+  padding: 8px 0px;
+  height: 32px;
+  background-color: #fff;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+#afui #navbar.navbar-business-transaction footer.business-transaction-footer .operation .check-all {
+  position: relative;
+  float: left;
+  margin: 5px 0px 0px 25px;
+  padding: 0px 20px;
+  width: auto!important;
+  line-height: 20px;
+  color: #666;
+}
+#afui #navbar.navbar-business-transaction footer.business-transaction-footer .operation .check-all:before {
+  content: ' ';
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/bg-approve-check.png');
+  background-position: left -112px;
+  background-size: 16px;
+  background-position: 0px -56px;
+}
+#afui #navbar.navbar-business-transaction footer.business-transaction-footer .operation .check-all.checked:before {
+  background-image: url('../images/bg-approve-check.png');
+  background-position: left -144px;
+  background-position: 0px -72px;
+}
+#afui #navbar.navbar-business-transaction footer.business-transaction-footer .operation .button-approve {
+  margin-right: 25px;
+  float: right;
+  width: 120px!important;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #2C8AD3;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#afui #navbar.navbar-business-transaction.show-approve {
+  height: 78px;
+}
+#afui #navbar.navbar-business-transaction.show-approve footer.business-transaction-footer .operation {
+  display: block;
+}
+.business-transaction-approve-panel {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}
+.business-transaction-approve-panel .approve-content {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 10px;
+  width: 100%;
+  height: 130px;
+  background-color: #F7F7F7;
+}
+.business-transaction-approve-panel + .closebutton.modalbutton {
+  display: none!important;
+}
+.panel.system-setting .setting-items {
+  padding: 10px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.system-setting .setting-items .form-item-groups {
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item {
+  padding: 0px;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item b {
+  font-weight: 500;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item.user-info {
+  padding: 10px 0px;
+  height: 56px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item.user-info .avatar {
+  display: inline-block;
+  margin-left: 12px;
+  width: 50px;
+  height: 50px;
+  border: solid 3px #ccc;
+  background-color: #ccc;
+  vertical-align: top;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item.user-info .avatar img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item.user-info .user-details {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: top;
+  line-height: 22px;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item.user-info .user-details span {
+  margin-top: 5px;
+  display: block;
+  color: #333;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item.user-info .user-details cite {
+  color: #999;
+}
+.panel.system-setting .setting-items .form-item-groups a.form-item {
+  padding-left: 15px;
+}
+.panel.system-setting .setting-items .form-item-groups a.form-item:before {
+  content: ' ';
+  position: absolute;
+  top: 14px;
+  right: 8px;
+  border: solid 6px #fff;
+  border-left-color: #3A3A3A;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+.panel.system-setting .setting-items .form-item-groups a.form-item:after {
+  content: ' ';
+  position: absolute;
+  top: 14px;
+  right: 9px;
+  border: solid 6px transparent;
+  border-left-color: #fff;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item.data-update,
+.panel.system-setting .setting-items .form-item-groups .form-item.check-update {
+  color: #333;
+  font-size: 1em;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item.data-update i,
+.panel.system-setting .setting-items .form-item-groups .form-item.check-update i {
+  float: right;
+  margin-right: 12px;
+  font-style: normal;
+  color: #999;
+}
+.panel.system-setting .setting-items .form-item-groups .form-item.data-update:before,
+.panel.system-setting .setting-items .form-item-groups .form-item.check-update:before,
+.panel.system-setting .setting-items .form-item-groups .form-item.data-update:after,
+.panel.system-setting .setting-items .form-item-groups .form-item.check-update:after {
+  display: none;
+}
+.panel.system-setting .setting-items .button-logout {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background-color: #DF3646;
+  font-size: 1.23em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#afui header.system-setting-header #menubadge {
+  float: left!important;
 }
 .cate.borrowing:before {
   background-image: url('../images/bg-bill-cate.png');

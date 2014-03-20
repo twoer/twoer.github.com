@@ -99,6 +99,27 @@
             <div id="bill-create-add-borrowing" class="panel bill-create-add-borrowing" title="添加借款单" data-defer="bill-create-add-borrowing.html"  data-load="billCreateAddBorrowingOnload" data-unload="billCreateAddBorrowingUnload" >
             </div>
 
+            <!-- business transaction -->
+            <div id="business-transaction" class="panel business-transaction" title="业务办理" data-defer="business-transaction.html" data-load="businessTransactionOnload" data-unload="businessTransactionUnload"></div>
+            
+            <!-- business transaction approve -->
+            <div id="business-transaction-approve" class="panel business-transaction-approve" modal="true">
+                <div class="business-transaction-approve-panel">
+                    <div class="approve-content">
+                        <textarea name=""  class="textarea"></textarea>
+                        <div class="buttons">
+                            <button class="button-pass">同意</button>
+                            <button class="button-return">退回申请人</button>
+                            <button class="button-deny">拒绝</button>
+                            <button class="button-back">返回上级</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- system setting -->
+            <div id="system-setting" class="panel system-setting" data-defer="system-setting.html" data-load="systemSettingOnload" data-unload="systemSettingUnload"></div>
+
     
             <!-- selector bill category -->
             <div id="selector-bill-cate" class="panel" modal="true" >
@@ -240,7 +261,7 @@
                     <a href="#my-expense" class="my-expense">我的报销<i>999</i></a>
                 </li>
                 <li class="item">
-                    <a href="business-transaction.html" class="business-transaction">业务办理<i>88</i></a>
+                    <a href="#business-transaction" class="business-transaction">业务办理<i>88</i></a>
                 </li>
                 <li class="item">
                     <a href="javascript:;" class="bill-sign">单据签收<i>3</i></a>
@@ -252,7 +273,7 @@
                     <a href="daily-report-write.html" class="daily-report-write">日报填写<i>2</i></a>
                 </li>
                 <li class="item">
-                    <a href="system-setting.html" class="system-setting">系统设置<i>1</i></a>
+                    <a href="#system-setting" class="system-setting">系统设置<i>1</i></a>
                 </li>
                 <li class="logout">
                     <a href="javascript:;">退出登录</a>

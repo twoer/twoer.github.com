@@ -1,3 +1,5 @@
+var gWidth = $(window).width();
+
 //tabs
 $(document).delegate('.tabs .tab-nav li', 'tap', function()
 {
@@ -46,8 +48,12 @@ $(document).delegate('#modalContainer', 'tap', function(e)
 });
 $(document).delegate('#modalContainer .selector-panel', 'tap', function(e)
 {
-	e.stopPropagation();
+    e.stopPropagation();
     $.ui.hideModal();
+});
+$(document).delegate('#modalContainer .approve-content', 'tap', function(e)
+{
+	e.stopPropagation();
 });
 
 
@@ -82,6 +88,78 @@ $(document).delegate('#navbar.navbar-bill-create-add-borrowing .operation .check
     }
 });
 
+//business transaction
+//tab change
+$(document).delegate('.panel.business-transaction .tabs .tab-nav li', 'tap', function()
+{
+    var $content = $('.panel.business-transaction .tabs .tab-content .tab-pane:visible');
+    var _total = $content.find('.bill-total').text();
+    $('#navbar.navbar-business-transaction div b').html(_total);
+
+    var $checkall = $('#navbar.navbar-business-transaction .operation .check-all');
+    var $items = $('.panel.business-transaction .tab-pane:visible .bill-list li');
+    ($items.size() === $items.filter('.checked').size()) ? $checkall.addClass('checked') : $checkall.removeClass('checked');
+});
+
+$(document).delegate('#header .business-transaction-header #confirmButton', 'tap', function()
+{
+    $('#afui #navbar.navbar-business-transaction').toggleClass('show-approve');
+
+    var $content = $('#afui #content #business-transaction').toggleClass('show-approve');
+
+    $.ui.toggleNavMenu(true);
+
+    //start 修复低端安卓
+    if($content.hasClass('show-approve'))
+    {
+        $('.bill-list li a', $content).width(gWidth - 70 );
+    }
+    else
+    {
+        $('.bill-list li a', $content).width(gWidth - 30 );   
+    }
+    //end
+});
+
+//one check
+$(document).delegate('.panel.business-transaction .bill-list li .check', 'tap', function()
+{
+    $(this).closest('li').toggleClass('checked');
+});
+//all check
+$(document).delegate('#navbar.navbar-business-transaction .operation .check-all', 'tap', function(e)
+{
+    var $this = $(this);
+    var $items = $('.panel.business-transaction .tab-pane:visible .bill-list li');
+    if($this.hasClass('checked'))
+    {
+        $items.removeClass('checked');
+        $this.removeClass('checked');
+    }
+    else
+    {
+        $items.addClass('checked');
+        $this.addClass('checked');
+    }
+});
+
+//business transaction approve
+$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-pass', 'tap', function()
+{
+    alert('pass');
+})
+$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-return', 'tap', function()
+{
+    alert('return');
+})
+$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-deny', 'tap', function()
+{
+    alert('deny');
+})
+$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-back', 'tap', function()
+{
+    alert('back');
+})
 
 //data mode transition
 $(document).delegate('a[href][data-mode-transition]', 'click', function(e)
