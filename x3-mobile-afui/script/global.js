@@ -1,7 +1,7 @@
 var gWidth = $(window).width();
 
 //tabs
-$(document).delegate('.tabs .tab-nav li', 'tap', function()
+$(document).delegate('.tabs .tab-nav li', 'tap click', function()
 {
     var $this = $(this);
     var $tab = $this.closest('.tabs');
@@ -21,19 +21,19 @@ $('.tabs .tab-nav').each(function()
 });
 
 //toggle side menu
-$(document).delegate('#header #menubadge', 'tap', function()
+$(document).delegate('#header #menubadge', 'tap click', function()
 {
 	$.ui.toggleSideMenu();
 });
 
 //go back
-$(document).delegate('#header #backButton', 'tap', function()
+$(document).delegate('#header #backButton', 'tap click', function()
 {
 	//$.ui.goBack();
 });
 
 //my expense tabs change
-$(document).delegate('.panel.my-expense .tabs .tab-nav li', 'tap', function()
+$(document).delegate('.panel.my-expense .tabs .tab-nav li', 'tap click', function()
 {
     var $content = $('.panel.my-expense .tabs .tab-content .tab-pane:visible');
    	var _total = $content.find('.bill-total').text();
@@ -42,23 +42,23 @@ $(document).delegate('.panel.my-expense .tabs .tab-nav li', 'tap', function()
 
 
 //modal tap
-$(document).delegate('#modalContainer', 'tap', function(e)
+$(document).delegate('#modalContainer', 'tap click', function(e)
 {
     $.ui.hideModal();
 });
-$(document).delegate('#modalContainer .selector-panel', 'tap', function(e)
+$(document).delegate('#modalContainer .selector-panel', 'tap click', function(e)
 {
     e.stopPropagation();
     $.ui.hideModal();
 });
-$(document).delegate('#modalContainer .approve-content', 'tap', function(e)
+$(document).delegate('#modalContainer .approve-content', 'tap click', function(e)
 {
 	e.stopPropagation();
 });
 
 
 //selector panel full screen check
-$(document).delegate('.selector-panel-full-screen .data-list li a', 'tap', function()
+$(document).delegate('.selector-panel-full-screen .data-list li a', 'tap click', function()
 {
     var $this = $(this);
     $this.closest('.data-list').find('li a').removeClass('checked');
@@ -67,12 +67,12 @@ $(document).delegate('.selector-panel-full-screen .data-list li a', 'tap', funct
 
 //bill create add borrowing
 //one check
-$(document).delegate('.panel.bill-create-add-borrowing .borrowing-list li .check', 'tap', function()
+$(document).delegate('.panel.bill-create-add-borrowing .borrowing-list li .check', 'tap click', function()
 {
     $(this).closest('li').toggleClass('checked');
 });
 //all check
-$(document).delegate('#navbar.navbar-bill-create-add-borrowing .operation .check-all', 'tap', function(e)
+$(document).delegate('#navbar.navbar-bill-create-add-borrowing .operation .check-all', 'tap click', function(e)
 {
     var $this = $(this);
     var $items = $('.panel.bill-create-add-borrowing .borrowing-list li');
@@ -90,7 +90,7 @@ $(document).delegate('#navbar.navbar-bill-create-add-borrowing .operation .check
 
 //business transaction
 //tab change
-$(document).delegate('.panel.business-transaction .tabs .tab-nav li', 'tap', function()
+$(document).delegate('.panel.business-transaction .tabs .tab-nav li', 'tap click', function()
 {
     var $content = $('.panel.business-transaction .tabs .tab-content .tab-pane:visible');
     var _total = $content.find('.bill-total').text();
@@ -101,7 +101,7 @@ $(document).delegate('.panel.business-transaction .tabs .tab-nav li', 'tap', fun
     ($items.size() === $items.filter('.checked').size()) ? $checkall.addClass('checked') : $checkall.removeClass('checked');
 });
 
-$(document).delegate('#header .business-transaction-header #confirmButton', 'tap', function()
+$(document).delegate('#header .business-transaction-header #confirmButton', 'tap click', function()
 {
     $('#afui #navbar.navbar-business-transaction').toggleClass('show-approve');
 
@@ -122,12 +122,12 @@ $(document).delegate('#header .business-transaction-header #confirmButton', 'tap
 });
 
 //one check
-$(document).delegate('.panel.business-transaction .bill-list li .check', 'tap', function()
+$(document).delegate('.panel.business-transaction .bill-list li .check', 'tap click', function()
 {
     $(this).closest('li').toggleClass('checked');
 });
 //all check
-$(document).delegate('#navbar.navbar-business-transaction .operation .check-all', 'tap', function(e)
+$(document).delegate('#navbar.navbar-business-transaction .operation .check-all', 'tap click', function(e)
 {
     var $this = $(this);
     var $items = $('.panel.business-transaction .tab-pane:visible .bill-list li');
@@ -144,19 +144,19 @@ $(document).delegate('#navbar.navbar-business-transaction .operation .check-all'
 });
 
 //business transaction approve
-$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-pass', 'tap', function()
+$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-pass', 'tap click', function()
 {
     alert('pass');
 })
-$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-return', 'tap', function()
+$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-return', 'tap click', function()
 {
     alert('return');
 })
-$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-deny', 'tap', function()
+$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-deny', 'tap click', function()
 {
     alert('deny');
 })
-$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-back', 'tap', function()
+$(document).delegate('#afui #afui_modal .business-transaction-approve-panel .button-back', 'tap click', function()
 {
     alert('back');
 })
