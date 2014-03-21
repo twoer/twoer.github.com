@@ -3208,6 +3208,207 @@ textarea {
 #afui header.system-setting-header #menubadge {
   float: left!important;
 }
+.panel.notification-setting .setting-items {
+  padding: 10px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.notification-setting .setting-items .form-item-groups {
+  margin-bottom: 10px;
+}
+.panel.notification-setting .setting-items .form-item-groups .form-item {
+  padding: 0px;
+  height: 40px;
+  line-height: 40px;
+  text-indent: 12px;
+  color: #000;
+}
+.panel.notification-setting .setting-items .form-item-groups .form-item input[type="checkbox"] {
+  display: none;
+}
+.panel.notification-setting .setting-items .form-item-groups .form-item input + label {
+  position: relative;
+  float: right;
+  margin: 9px 9px 0px 0px;
+  height: 22px;
+  width: 45px;
+  background-color: #CCC;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  border-radius: 11px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel.notification-setting .setting-items .form-item-groups .form-item input + label b {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-transition: -webkit-left 0.3s;
+  -moz-transition: -moz-left 0.3s;
+  -ms-transition: -ms-left 0.3s;
+  -o-transition: -o-left 0.3s;
+  transition: left 0.3s;
+}
+.panel.notification-setting .setting-items .form-item-groups .form-item input:checked + label {
+  background-color: #62CA15;
+}
+.panel.notification-setting .setting-items .form-item-groups .form-item input:checked + label b {
+  left: 24px;
+}
+.panel.company-info .info-items {
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border: solid 1px #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel.company-info .info-items div {
+  min-height: 40px;
+  line-height: 40px;
+  border-top: solid 1px #ddd;
+  color: #333;
+}
+.panel.company-info .info-items div label {
+  display: inline-block;
+  width: 50px;
+  color: #999!important;
+}
+.panel.company-info .info-items .description {
+  position: relative;
+  padding: 5px 0px 5px 55px;
+  line-height: 20px;
+}
+.panel.company-info .info-items .description label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  line-height: 30px;
+}
+.panel.company-info .info-items div:first-child {
+  border-top: none;
+}
+.panel.about-us .about-logo {
+  padding-top: 50px;
+  text-align: center;
+}
+.panel.about-us .about-logo img {
+  max-width: 40%;
+}
+.panel.about-us .about-info {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 30px;
+  background-color: #fff;
+  border: solid 1px #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel.about-us .about-info div {
+  height: 40px;
+  line-height: 40px;
+  border-top: solid 1px #ddd;
+  color: #333;
+}
+.panel.about-us .about-info div label {
+  display: inline-block;
+  width: 50px;
+  color: #999;
+}
+.panel.about-us .about-info div a {
+  color: #2C8AD3;
+  text-decoration: underline;
+}
+.panel.about-us .about-info div .tel {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding-right: 25px;
+  background-repeat: no-repeat;
+  background-image: url('../images/bg-about-us-tel.png');
+  background-position: left -0px;
+  background-position: right 13px;
+  background-size: 15px;
+}
+.panel.about-us .about-info div:first-child {
+  border-top: none;
+}
+.panel.feedback .feedback-form {
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border: solid 1px #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel.feedback .feedback-form .textarea {
+  padding: 3px;
+  height: 100px;
+  line-height: 20px;
+  width: 100%;
+  border: none;
+  color: #333;
+  resize: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.panel.feedback .feedback-form .text {
+  padding: 0px 3px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  color: #333;
+}
+.panel.feedback .feedback-form div:first-child {
+  margin-bottom: 10px;
+  border-bottom: solid 1px #ddd;
+}
+.panel.feedback .buttons {
+  padding: 10px;
+}
+.panel.feedback .buttons .button-submit {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background-color: #62CA15;
+  font-size: 1.23em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
 .cate.borrowing:before {
   background-image: url('../images/bg-bill-cate.png');
   background-position: left -0px;
