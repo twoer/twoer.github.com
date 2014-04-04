@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="../style/global.css">
+</head>
+<body>
+	<div id="afui">
+
+		<div id="header"></div>
+
+		<div id="content">
+			<!-- today task -->
+            <div id="today-task" class="panel today-task" title="今日任务" selected="true" data-tab="home" data-defer="today-task.html" data-load="todayTaskOnload" data-unload="todayTaskUnload" >
+            </div>
+
+            <!-- my task -->
+            <div id="my-task" class="panel my-task" title="@我" data-tab="home" data-defer="my-task.html" data-load="myTaskOnload" data-unload="myTaskUnload" >
+            </div>
+
+            <!-- week task -->
+            <div id="week-task" class="panel week-task" title="每周任务" data-tab="home" data-defer="week-task.html" data-load="weekTaskOnload" data-unload="weekTaskUnload" >
+            </div>
+
+            <!-- project task -->
+            <div id="project-task" class="panel project-task" title="项目任务" data-tab="home" data-defer="project-task.html" data-load="projectTaskOnload" data-unload="projectTaskUnload" >
+            </div>
+
+            <!-- task overall-->
+            <div id="task-overall" class="panel task-overall" title="任务总揽" data-tab="home" data-defer="task-overall.html" data-load="taskOverallOnload" data-unload="taskOverallUnload" >
+            </div>
+
+            <!-- task create -->
+            <div id="task-create" class="panel task-create" title="新建任务" data-defer="task-create.html" data-load="taskCreateOnload" data-unload="taskCreateUnload" ></div>
+
+            <!-- my treasure -->
+            <div id="my-treasure" class="panel my-treasure" title="我的财富" data-defer="my-treasure.html" data-load="myTreasureOnload" data-unload="myTreasureUnload" >
+            </div>
+            
+            <!-- daily confirm -->
+            <div id="daily-confirm" class="panel daily-confirm" title="日报确认" data-defer="daily-confirm.html" data-load="dailyConfirmOnload" data-unload="dailyConfirmUnload">    
+            </div>
+
+            <!-- my daily -->
+            <div id="my-daily" class="panel my-daily" title="日报确认" data-defer="my-daily.html" data-load="myDailyOnload" data-unload="myDailyUnload">
+            </div>
+
+            <!-- task discuss -->
+            <div id="task-discuss" class="panel task-discuss" title="任务评论" data-defer="task-discuss.html" data-load="taskDiscussOnload" data-unload="taskDiscussUnload">
+            </div>
+
+            <!-- selector emp  -->
+            <div id="selector-emp" class="panel" title="选择员工" data-defer="selector-emp.html" data-load="selectoPanelFullScreenOnload" data-header="selector-panel-full-screen-header"></div>
+
+            <!-- selector project  -->
+            <div id="selector-project" class="panel" title="选择项目" data-defer="selector-project.html" data-load="selectoPanelFullScreenOnload" data-header="selector-panel-full-screen-header"></div>
+
+            <!-- selector project manager -->
+            <div id="selector-project-manager" class="panel" modal="true" >
+                <div class="selector-panel selector-project-manager">
+                    <h2>选择项目经理</h2>
+                    <ul class="data-list">
+                        <li>
+                            <a href="#task-create">
+                                hzz
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#task-create">
+                                hxx
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- selector task repeat -->
+            <div id="selector-task-repeat" class="panel" modal="true" >
+                <div class="selector-panel selector-task-repeat">
+                    <h2>选择是否重复</h2>
+                    <ul class="data-list">
+                        <li>
+                            <a href="#task-create">
+                                重复
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#task-create">
+                                不重复
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- selector task level -->
+            <div id="selector-task-level" class="panel" modal="true" >
+                <div class="selector-panel selector-task-level">
+                    <h2>选择优先级</h2>
+                    <ul class="data-list">
+                        <li>
+                            <a href="#task-create">
+                                1级
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#task-create">
+                                2级
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#task-create">
+                                3级
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <script>
+                function selectoPanelFullScreenOnload(sender)
+                {
+                    var _title = $(sender).attr('data-title');
+
+                    $('#selector-panel-full-screen-header #pageTitle').html(_title);
+                }
+            </script>
+
+
+		</div>
+
+		<nav id="sideMenu">
+            <h2>功能列表</h2>
+            <ul class="menu-list">
+                <li class="item">
+                    <a href="#my-task" class="my-task selected">@我<i>999</i></a>
+                </li>
+                <li class="item">
+                    <a href="#today-task" class="today-task">今日任务<i>88</i></a>
+                </li>
+                <li class="item">
+                    <a href="#week-task" class="week-task">本周任务<i>3</i></a>
+                </li>
+                <li class="item">
+                    <a href="#project-task" class="project">项目任务<i>2</i></a>
+                </li>
+                <li class="item">
+                    <a href="#task-overall" class="task-overall">任务总揽<i>2</i></a>
+                </li>
+                <li class="item">
+                    <a href="#my-daily" class="my-daily">我的日报<i>1</i></a>
+                </li>
+                <li class="item">
+                    <a href="#daily-confirm" class="daily-confirm">日报确认<i>1</i></a>
+                </li>
+                <li class="item">
+                    <a href="#my-treasure" class="my-treasure">我的财富<i>1</i></a>
+                </li>
+                <li class="logout">
+                    <a href="javascript:;">退出登录</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header id="selector-panel-full-screen-header" class="selector-panel-full-screen-header">
+            <a id="backButton" class="button"></a>
+            <h1 id="pageTitle" class=""></h1>
+            <a id="confirmButton" class="button"></a>
+        </header>
+
+        
+	</div>
+</body>
+<script src="../script/jquery.js"></script>
+<script src="../script/jq.appframework.js"></script>
+<!-- <script src="../script/appframework.min.js"></script> -->
+<script src="../script/appframework.ui.min.js"></script>
+<script src="../script/plugin/af.slidemenu.js"></script>
+<script src="../script/highcharts.js"></script>
+<script src="../script/global.js"></script>
+
+<script>
+</script>
+</html>
