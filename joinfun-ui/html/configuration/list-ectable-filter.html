@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/configuration.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+    <div class="list-content">
+        
+        <h2 class="tool-bar">
+            <b class="icon"></b>
+            应用配置
+            <b class="line"></b>
+            xx配置
+            <span class="tool-bar-oper">
+                <a href="javascript:;" class="add"><i class="icon-add-20"></i>新增</a>
+                <a href="javascript:;" class="batch-delete"><i class="icon-batch-delete-20"></i>批量删除</a>
+                <a href="javascript:;" class="refresh"><i class="icon-refresh-20"></i>刷新</a>
+            </span>
+        </h2>
+        
+        <div class="eXtremeTable">
+            <table cellspacing="0" cellpadding="0" class="tableBox" width="100%">
+                <tbody><tr>
+                <td width="100%">
+                <table id="ec_table" border="0" cellspacing="1" cellpadding="2" class="list-grid-ectable list-grid-highlight" width="100%">
+                    <thead>
+                    <tr class="filter">
+                        <td width="20px"></td>
+                        <td width="40px"></td>
+                        <td width="200px"><input type="text" name="ec_f_nprCompany_companyName" onkeypress="if (event.keyCode == 13) {javascript:document.forms.ec.ec_f_a.value='fa';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()}"></td>
+                        <td width="200px"><input type="text" name="ec_f_year" onkeypress="if (event.keyCode == 13) {javascript:document.forms.ec.ec_f_a.value='fa';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()}"></td>
+                        <td width="200px"><input type="text" name="ec_f_userStartDateStr" onkeypress="if (event.keyCode == 13) {javascript:document.forms.ec.ec_f_a.value='fa';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()}"></td>
+                        <td width="200px"><input type="text" name="ec_f_userEndDateStr" onkeypress="if (event.keyCode == 13) {javascript:document.forms.ec.ec_f_a.value='fa';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()}"></td>
+                        <td width="200px"><input type="text" name="ec_f_fdAuditDeadlineStr" onkeypress="if (event.keyCode == 13) {javascript:document.forms.ec.ec_f_a.value='fa';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()}"></td>
+                        <td width="100px"><input type="text" name="ec_f_isAvailable" onkeypress="if (event.keyCode == 13) {javascript:document.forms.ec.ec_f_a.value='fa';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()}"></td>
+                        <td width="60px"></td>
+                    </tr>
+                    <tr>
+                        <td class="tableHeader" style="text-align:center;" width="20px"><input type="checkbox" onclick="EccnUtil.checkAll2(this)"></td>
+                        <td class="tableHeader" style="text-align:center;" width="40px">SN</td>
+                        <td class="tableHeader" style="text-align: center; cursor: default;" width="200px" onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_nprCompany_companyName.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 区域">区域</td>
+                        <td class="tableHeader" style="text-align: center; cursor: default;" width="200px" onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_year.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 年份">年份</td>
+                        <td class="tableHeader" style="text-align: center; cursor: default;" width="200px" onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_userStartDateStr.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 用户使用的开始日期">用户使用的开始日期</td>
+                        <td class="tableHeader" style="text-align: center; cursor: default;" width="200px" onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_userEndDateStr.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 用户使用的结束日期">用户使用的结束日期</td>
+                        <td class="tableHeader" style="text-align: center; cursor: default;" width="200px" onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_fdAuditDeadlineStr.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 财务审核截止日期">财务审核截止日期</td>
+                        <td class="tableHeader" style="text-align:center;" width="100px" onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_isAvailable.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 是否可用">是否可用</td>
+                        <td class="tableHeader" width="60px"> </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="text-align:center;" width="20px">
+                                    <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                                </td>
+                        <td style="text-align:center;" width="40px">1</td>
+                        <td style="text-align:left;" width="200px">SGMS</td>
+                        <td style="text-align:center;" width="200px">
+                                    <a href="javascript:;" onclick="Utils.openMaximizeWindow('/nprerconfiguration/fdoperation/config/er-tel-budget-settlement!input.do?id=161');">2011</a>
+                                </td>
+                        <td style="text-align:center;" width="200px">2013-05-28</td>
+                        <td style="text-align:center;" width="200px">2013-06-11</td>
+                        <td style="text-align:center;" width="200px">2013-06-27</td>
+                        <td style="text-align:center;" width="100px">Y</td>
+                        <td style="text-align:center;" width="60px">
+                            <ul class="action">
+                                <li>
+                                    <a href="javascript:;" class="icon-edit-20" data-open="maxWindow"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="icon-delete-20" data-open="appendUrl"></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;" width="20px">
+                                    <input type="checkbox" value="181" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                                </td>
+                        <td style="text-align:center;" width="40px">2</td>
+                        <td style="text-align:left;" width="200px">SGM</td>
+                        <td style="text-align:center;" width="200px">
+                                    <a href="javascript:;" onclick="Utils.openMaximizeWindow('/nprerconfiguration/fdoperation/config/er-tel-budget-settlement!input.do?id=181');">2011</a>
+                                </td>
+                        <td style="text-align:center;" width="200px">2013-06-04</td>
+                        <td style="text-align:center;" width="200px">2013-06-05</td>
+                        <td style="text-align:center;" width="200px">2013-06-25</td>
+                        <td style="text-align:center;" width="100px">N</td>
+                        <td style="text-align:center;" width="60px">
+                            <ul class="action">
+                                <li>
+                                    <a href="javascript:;" class="icon-edit-20" data-open="maxWindow"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="icon-delete-20" data-open="appendUrl"></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;" width="20px">
+                                    <input type="checkbox" value="17" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                                </td>
+                        <td style="text-align:center;" width="40px">3</td>
+                        <td style="text-align:left;" width="200px">SGM</td>
+                        <td style="text-align:center;" width="200px">
+                                    <a href="javascript:;" onclick="Utils.openMaximizeWindow('/nprerconfiguration/fdoperation/config/er-tel-budget-settlement!input.do?id=17');">2012</a>
+                                </td>
+                        <td style="text-align:center;" width="200px">2013-02-13</td>
+                        <td style="text-align:center;" width="200px">2013-02-14</td>
+                        <td style="text-align:center;" width="200px">2013-02-18</td>
+                        <td style="text-align:center;" width="100px">Y</td>
+                        <td style="text-align:center;" width="60px">
+                            <ul class="action">
+                                <li>
+                                    <a href="javascript:;" class="icon-edit-20" data-open="maxWindow"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="icon-delete-20" data-open="appendUrl"></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="highlight" onmouseover="this.className='highlight'" onmouseout="this.className='even'">
+                        <td style="text-align:center;" width="20px">
+                                    <input type="checkbox" value="201" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                                </td>
+                        <td style="text-align:center;" width="40px">4</td>
+                        <td style="text-align:left;" width="200px">SWH</td>
+                        <td style="text-align:center;" width="200px">
+                                    <a href="javascript:;" onclick="Utils.openMaximizeWindow('/nprerconfiguration/fdoperation/config/er-tel-budget-settlement!input.do?id=201');">2013</a>
+                                </td>
+                        <td style="text-align:center;" width="200px">2013-07-01</td>
+                        <td style="text-align:center;" width="200px">2013-11-28</td>
+                        <td style="text-align:center;" width="200px">2014-07-09</td>
+                        <td style="text-align:center;" width="100px">Y</td>
+                        <td style="text-align:center;" width="60px">
+                            <ul class="action">
+                                <li>
+                                    <a href="javascript:;" class="icon-edit-20" data-open="maxWindow"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="icon-delete-20" data-open="appendUrl"></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;" width="20px">
+                                    <input type="checkbox" value="16" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                                </td>
+                        <td style="text-align:center;" width="40px">5</td>
+                        <td style="text-align:left;" width="200px">SGM</td>
+                        <td style="text-align:center;" width="200px">
+                                    <a href="javascript:;" onclick="Utils.openMaximizeWindow('/nprerconfiguration/fdoperation/config/er-tel-budget-settlement!input.do?id=16');">2013</a>
+                                </td>
+                        <td style="text-align:center;" width="200px">2012-01-01</td>
+                        <td style="text-align:center;" width="200px">2013-12-31</td>
+                        <td style="text-align:center;" width="200px">2013-12-31</td>
+                        <td style="text-align:center;" width="100px">Y</td>
+                        <td style="text-align:center;" width="60px">
+                            <ul class="action">
+                                <li>
+                                    <a href="javascript:;" class="icon-edit-20" data-open="maxWindow"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="icon-delete-20" data-open="appendUrl"></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;" width="20px">
+                                    <input type="checkbox" value="21" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                                </td>
+                        <td style="text-align:center;" width="40px">6</td>
+                        <td style="text-align:left;" width="200px">PAT</td>
+                        <td style="text-align:center;" width="200px">
+                                    <a href="javascript:;" onclick="Utils.openMaximizeWindow('/nprerconfiguration/fdoperation/config/er-tel-budget-settlement!input.do?id=21');">2013</a>
+                                </td>
+                        <td style="text-align:center;" width="200px">2012-12-01</td>
+                        <td style="text-align:center;" width="200px">2013-11-01</td>
+                        <td style="text-align:center;" width="200px">2014-01-30</td>
+                        <td style="text-align:center;" width="100px">Y</td>
+                        <td style="text-align:center;" width="60px">
+                            <ul class="action">
+                                <li>
+                                    <a href="javascript:;" class="icon-edit-20" data-open="maxWindow"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="icon-delete-20" data-open="appendUrl"></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;" width="20px">
+                                    <input type="checkbox" value="141" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                                </td>
+                        <td style="text-align:center;" width="40px">7</td>
+                        <td style="text-align:left;" width="200px">SGMS</td>
+                        <td style="text-align:center;" width="200px">
+                                    <a href="javascript:;" onclick="Utils.openMaximizeWindow('/nprerconfiguration/fdoperation/config/er-tel-budget-settlement!input.do?id=141');">2013</a>
+                                </td>
+                        <td style="text-align:center;" width="200px">2013-05-01</td>
+                        <td style="text-align:center;" width="200px">2014-06-12</td>
+                        <td style="text-align:center;" width="200px">2014-08-28</td>
+                        <td style="text-align:center;" width="100px">Y</td>
+                        <td style="text-align:center;" width="60px">
+                            <ul class="action">
+                                <li>
+                                    <a href="javascript:;" class="icon-edit-20" data-open="maxWindow"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="icon-delete-20" data-open="appendUrl"></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;" width="20px">
+                                    <input type="checkbox" value="101" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                                </td>
+                        <td style="text-align:center;" width="40px">8</td>
+                        <td style="text-align:left;" width="200px">SGM</td>
+                        <td style="text-align:center;" width="200px">
+                                    <a href="javascript:;" onclick="Utils.openMaximizeWindow('/nprerconfiguration/fdoperation/config/er-tel-budget-settlement!input.do?id=101');">2014</a>
+                                </td>
+                        <td style="text-align:center;" width="200px">2012-01-01</td>
+                        <td style="text-align:center;" width="200px">2012-12-29</td>
+                        <td style="text-align:center;" width="200px">2013-12-31</td>
+                        <td style="text-align:center;" width="100px">Y</td>
+                        <td style="text-align:center;" width="60px">
+                            <ul class="action">
+                                <li>
+                                    <a href="javascript:;" class="icon-edit-20" data-open="maxWindow"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="icon-delete-20" data-open="appendUrl"></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table></td>
+                </tr>
+                </tbody></table><input type="hidden" name="ec_totalpages" value="1"><input type="hidden" name="ec_totalrows" value="8"><table border="0" cellspacing="0" cellpadding="0" class="ec_tb_list tb_list table_highlightToolbar" width="100%" style="margin:0px;">
+                    <tbody><tr style="padding: 0px;">
+                        <td colspan="9">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody><tr>
+                                <td class="statusBar">共8条记录,显示1到8</td>
+                                <td class="toolbar">
+                                <table border="0" cellpadding="1" cellspacing="1">
+                                    <tbody><tr>
+                    <td></td>
+                                    <td>&nbsp;<img src="../../images/table/separator.gif" style="border:0" alt="Separator"></td>
+                                    <td>&nbsp;<a href="javascript:document.forms.ec.ec_f_a.value='fa';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()"><img src="../../images/table/filter.gif" style="border:0" title="搜索" alt="搜索"></a></td>
+                                    <td>&nbsp;<a href="javascript:document.forms.ec.ec_f_a.value='ca';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()"><img src="../../images/table/clear.gif" style="border:0" title="清除" alt="清除"></a></td>
+                                    <td class="statusBar"><input type="button" disabled="disabled" class="pageNav firstPageD" onclick="javascript:EccnUtil.gotoPage('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti',1);" title="第一页"><input type="button" disabled="disabled" class="pageNav prevPageD" onclick="javascript:EccnUtil.gotoPage('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti',0);" title="上一页"><input type="button" disabled="disabled" class="pageNav nextPageD" onclick="javascript:EccnUtil.gotoPage('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti',2);" title="下一页"><input type="button" disabled="disabled" class="pageNav lastPageD" onclick="javascript:EccnUtil.gotoPage('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti',1);" title="最后页"></td>
+                                
+                                <td class="statusBar"><input type="button" class="pageNav jumpPage" onclick="EccnUtil.gotoPageByInput('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti','ec_pg');" title="页面跳转"></td>
+                                <td class="statusBar"><input type="text" name="ec_pg" value="1" class="jumpPageInput" onkeydown="if (event.keyCode &amp;&amp; event.keyCode==13 ) {EccnUtil.gotoPageByInput('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti','ec_pg');;return false; } ">/1页</td>
+                                    <td class="statusBar">&nbsp;<span class="rowsdisplayed">每页<select name="ec_rd" onchange="EccnUtil.changeRowsDisplayed('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti',this);">
+                                <option value="8">8</option><option value="50">50</option><option value="100">100</option>
+                                </select>条</span></td>
+                                    </tr>
+                                </tbody></table></td>
+                            </tr>
+                        </tbody></table>
+                        </td>
+                    </tr>       
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="..\../script/require.js" data-main="..\../script/configuration.js" ></script>
+
+<script>
+    
+    function requireReady(configuration)
+    {
+    }
+</script>
+</html>

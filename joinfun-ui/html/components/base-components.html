@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/t.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+    <div class="demo">
+    
+        <h2>基本按钮 :</h2>
+        <code>
+            <p>
+                <button class="button" type="button"> button </button>  <i>由于 button type 属性浏览器兼容性问题，请一定要制定 type 属性</i>
+            </p>
+            <p>
+                <button class="button" type="button"> button </button>  <i>该 button 为默认 button 大小，可以根据实际情况改变其大小，请找我</i>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><button class="button" type="button"> button </button></textarea>
+            </div>
+        </code>
+
+        <h2>基本文本框 :</h2>
+        <code>
+            <p>
+                <input type="text" class="text" />  <i>就是文本框，什么功能都没有</i>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><input type="text" class="text" /></textarea>
+            </div>
+        </code>
+
+        <h2>文本域 :</h2>
+        <code>
+            <p>
+                <textarea  class="textarea"></textarea>  <i>就是文本域，什么功能都没有</i>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><textarea  class="textarea"></textarea></textarea>
+            </div>
+        </code>
+
+        <h2>文本域显示 :</h2>
+        <code>
+            <p>
+                <textarea  class="textarea" readonly></textarea>  <i>就是文本域，什么功能都没有</i>
+            </p>
+            <!-- <div>
+                <textarea class="textarea textarea-code"><input type="text" class="text" /></textarea>
+            </div> -->
+        </code>
+
+        <h2>基本下拉框 :</h2>
+        <code>
+            <p>
+                <select class="select" name="" id="">
+                    <option value="">test.........</option>
+                    <option value="">test.........</option>
+                    <option value="">test.........</option>
+                </select>  <i>就是普通下拉框，什么功能都没有</i>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><select class="select" ></select></textarea>
+            </div>
+        </code>
+
+        <h2>基本单选，多选 :</h2>
+        <code>
+            <p>
+                <div class="radio-groups">
+                    <label>
+                        <input type="radio" name="radio">单选
+                    </label>
+                    <label>
+                        <input type="radio" name="radio">单选
+                    </label>
+                </div>
+                <s>label 不用指定 for 属性，除了 ie6 以外，只要把 input(radio , checkbox )和 文字 丢在 label 里面即可</s>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><label><input type="radio">单选</label></textarea>
+            </div>
+            <p>
+                <div class="checkbox-groups">
+                    <label>
+                        <input type="checkbox" name="checkbox">多选
+                    </label>
+                    <label>
+                        <input type="checkbox" name="checkbox">多选
+                    </label>
+                    <label>
+                        <input type="checkbox" name="checkbox">多选
+                    </label>
+                </div>
+                <s>同上，并且统一实现了 input 和文字垂直对齐，input 居右文本 5px 距离</s>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><label><input type="checkbox">多选</label></textarea>
+            </div>
+        </code>
+
+        <h2>日历文本框 :</h2>
+        <code>
+            <p>
+                <input type="text" class="text text-icon-datepicker" />  <i>日历选择框，引入所需文件，拷贝以下代码即可</i>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><input type="text" class="text text-icon-datepicker" /></textarea>
+            </div>
+            <p>
+                <input type="text" class="text text-icon-datepicker" id="textDateMin" data-date-max='#textDateMax'/>  <i>起始日期</i>
+            </p>
+            <p>
+                <input type="text" class="text text-icon-datepicker" data-date-min='#textDateMin' data-date-max='#textDateMax'/>  <i>只能 选择 起始日期和结束日期中间的日期</i>
+            </p>
+            <p>
+                <input type="text" class="text text-icon-datepicker" id="textDateMax"  data-date-min='#textDateMin'/>  <i>结束日期，只能选择比起始日期大的</i>
+            </p>
+            <s>通过 data-date-min , data-date-max 两个属性来指定，该属性是一个 JQ 选择器</s>
+            <div>
+                <textarea class="textarea textarea-code textarea-code-60"><input type="text" class="text text-icon-datepicker" id="textDateMin" />
+<input type="text" class="text text-icon-datepicker" data-date-min='#textDateMin' data-date-max='#textDateMax'/>
+<input type="text" class="text text-icon-datepicker" id="textDateMax"  data-date-min='#textDateMin'/></textarea>
+            </div>
+            <p>
+                <input type="text" class="text text-icon-datepicker" id="textDateMax"  data-date-format="yyyy"/>  <i>自定义格式</i>
+            </p>
+            <s>通过 data-date-format 属性来指定</s>
+            <div>
+                <textarea class="textarea textarea-code"><input type="text" class="text text-icon-datepicker" id="textDateMax"  data-date-format="yyyy-MM"/></textarea>
+            </div>
+        </code>
+
+        <h2>选人文本框 :</h2>
+        <code>
+            <p>
+                <input type="text" class="text text-icon-people" />  <i>选人文本框，引入所需文件，拷贝以下代码即可</i>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><input type="text" class="text text-icon-people" /></textarea>
+            </div>
+        </code>
+
+        <h2>选人文本框（可输入） :</h2>
+        <code>
+            <p>
+                <input type="text" class="text text-icon-people" data-edit="true"/>  <i>选人文本框，引入所需文件，拷贝以下代码即可</i>
+            </p>
+            <p>
+                 <s>icon 事件接口是 jfc.textPeopleChange(text) 如不明白，请找我，谢谢！</s>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><input type="text" class="text text-icon-people" data-edit="true"/></textarea>
+            </div>
+        </code>
+    
+        <h2>选择文本框 :</h2>
+        <code>
+            <p>
+                <input type="text" class="text text-icon-selector" />  <i>选人文本框，引入所需文件，拷贝以下代码即可</i>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><input type="text" class="text text-icon-selector" /></textarea>
+            </div>
+        </code>
+
+        <h2>选择文本框（可输入） :</h2>
+        <code>
+            <p>
+                <input type="text" class="text text-icon-selector"  data-edit="true"/>  <i>选人文本框，引入所需文件，拷贝以下代码即可</i>
+            </p>
+            <p>
+                 <s>icon 事件接口是 jfc.textSelectorChange(text) 如不明白，请找我，谢谢！</s>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><input type="text" class="text text-icon-selector"  data-edit="true"/></textarea>
+            </div>
+        </code>
+
+        <h2>带删除按钮文本框 :</h2>
+        <code>
+            <p>
+                <input type="text" class="text text-icon-delete" value="" />  <i>带删除按钮文本框，引入所需文件，拷贝以下代码即可</i>
+            </p>
+            <p>
+                <input type="text" class="text text-icon-delete" value="test"/>  <i>如果默认有内容将会自动出现删除按钮</i>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code"><input type="text" class="text text-icon-delete" /></textarea>
+            </div>
+            <p>
+                <input type="text" id="text0001" class="text " value="test"/>&nbsp;<input type="text"  class="text text0002" value="test"/>
+            </p>
+            <p>
+                <input type="text" class="text text-icon-delete" value="test" data-delete-selector="#text0001,.text0002" />  <i>删除自己时，删除其他的，这里是支持 jq 选择器的，很厉害吧！</i>
+            </p>
+            <p>
+                 <s>通过 data-delete-selector 属性来指定</s>
+            </p>
+            <p>
+                 <s>icon 事件接口是 jfc.textDeleted(text) 如不明白，请找我，谢谢！</s>
+            </p>
+            <div>
+                <textarea class="textarea textarea-code textarea-code-60"><input type="text" id="text0001" class="text " value="test"/>
+<input type="text"  class="text text0002" value="test"/>
+<input type="text" class="text text-icon-delete" value="test" data-delete-selector="#text0001,.text0002" /></textarea>
+            </div>
+        </code>
+
+    
+    </div>
+</body>
+<script src="..\../script/require.js" data-main="..\../script/t.js"></script>
+
+</html>

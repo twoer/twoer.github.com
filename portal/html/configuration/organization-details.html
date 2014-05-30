@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/configuration.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+    <div class="input-content">
+        <h2 class="tool-bar">
+            <b class="icon"></b>
+            应用配置
+            <span class="tool-bar-oper">
+                <a href="javascript:;" class="save"><i class="icon-save-20"></i>保存</a>
+                <a href="javascript:;" class="close"><i class="icon-back-20"></i>关闭</a>
+            </span>
+        </h2>
+        
+        <div class="validate-messages">
+            <h2 class="validate-messages-title">错误信息：</h2>
+            <a href="javascript:;" class="validate-messages-close"></a>
+            <ul class="validate-messages-list"></ul>
+        </div>
+
+        <div class="input">
+            <form action="x">
+                <h3 class="fold-hd" >
+                    <a href="javascript:;" class="hd-icon-text">组织信息</a>
+                </h3>
+        
+                <div class="fold-cnt">
+                    <table class="form-grid form-grid-col6">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <label>组织中文名</label>
+                                </th>
+                                <td>
+                                    张三
+                                </td>
+                                <th>
+                                    <label>组织英文名</label>
+                                </th>
+                                <td>
+                                    zhangsan
+                                </td>
+                                <th>
+                                    <label>组织编码</label>
+                                </th>
+                                <td>
+                                    0123456
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>组织ID</label>
+                                </th>
+                                <td>
+                                    三
+                                </td>
+                                <th>
+                                    <label>所属成本中心</label>
+                                </th>
+                                <td>
+                                    张
+                                </td>
+                                <th>
+                                    <label>组织层次</label>
+                                </th>
+                                <td>
+                                    xxxxxx
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>上级组织ID</label>
+                                </th>
+                                <td>
+                                    NA
+                                </td>
+                                <th>
+                                    <label>组织主管</label>
+                                </th>
+                                <td>
+                                    2012-12-12
+                                </td>
+                                <th>
+                                    <label>组织内勤</label>
+                                </th>
+                                <td>
+                                    NA
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>组织群组名称</label>
+                                </th>
+                                <td>
+                                    <div class="text-outer">
+                                        <input type="text" class="text">
+                                    </div>
+                                </td>
+                                <th></th>
+                                <td></td>
+                                <th></th>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>AD组特殊成员</label>
+                                </th>
+                                <td>
+                                    <div class="multiple-selector">
+                                        <select name="" id="" class="select" multiple>
+                                        </select>
+                                        <ul class="action">
+                                            <li>
+                                                <a href="javascript:;" class="icon-selector-20" data-action-type="MEmp-default"></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="icon-delete-20"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <th></th>
+                                <td></td>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="fold-hd" >
+                    <a href="javascript:;" class="hd-icon-text">管理信息</a>
+                </h3>
+        
+                <div class="fold-cnt">
+                    <table class="form-grid form-grid-col6">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <label>是否失效</label>
+                                </th>
+                                <td>
+                                    NA
+                                </td>
+                                <th>
+                                    <label>是否隐藏</label>
+                                </th>
+                                <td>
+                                    NA
+                                </td>
+                                <th>
+                                    <label></label>
+                                </th>
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+<script src="..\../script/require.js" data-main="..\../script/configuration.js" ></script>
+<script>
+    
+    function requireReady(configuration)
+    {
+        configuration.save = function()
+        {
+            alert('save....');
+        }
+    }
+
+</script>
+</html>

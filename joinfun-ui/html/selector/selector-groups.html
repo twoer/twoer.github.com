@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择群组</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/selector.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+	<div class="selector selector-groups">
+		<h1>选择群组</h1>
+
+		<div class="columns">
+			<div class="column">
+				<div class="filter">
+					<p>
+						<input type="text" class="text key" />
+						<button class="button reset">重置</button>
+						<button class="button search">搜索</button>
+					</p>
+				</div>
+
+				<div class="select-wrap">
+					<select class="select source-list" multiple ="multiple" size="20">
+						<option value="1">option 1</option>
+						<option value="2">option 2</option>
+						<option value="3">option 3</option>
+						<option value="4">option 4</option>
+						<option value="5">option 5</option>
+						<option value="6">option 6</option>
+						<option value="7">option 7</option>
+					</select>
+				</div>
+
+				<div class="buttons">
+					<button class="button confirm" type="button">确定</button>
+					<button class="button clear" type="button">清空</button>
+					<button class="button abnormal close" type="button">关闭</button>
+				</div>
+		
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var ctx = window['ctx'] || '';
+	var actionType = 'default';
+	var isMultiple = false;
+</script>
+<script src="..\../script/require.js" data-main="..\../script/selector.js"></script>
+<script>
+	function requireReady(selector)
+	{
+		var $key = $('.text.key');
+		var $selectedList = $('.selected-list');
+		var $rourceList = $('.source-list');
+
+		//search function
+		selector.search = function()
+		{
+			$.get(ctx + '/selector/select!findDeptsBySelectCondition.do',
+			{
+				keyword : $key.val()
+			},function(result)
+			{
+				$rourceList.empty().renderOptions(result, 'label', 'value');
+			}, 'json');
+		};
+	}
+
+</script>
+</html>

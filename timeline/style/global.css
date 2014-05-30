@@ -1,0 +1,337 @@
+@charset "utf-8";
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0px;
+  padding: 0px;
+}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+  width: 100%;
+}
+/* IE bug fixed: th 不继承 text-align*/
+th {
+  text-align: inherit;
+}
+/* 去除默认边框 */
+fieldset,
+img {
+  border: none;
+}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block;
+}
+/* 去掉 firefox 下此元素的边框 */
+abbr,
+acronym {
+  border: none;
+  font-variant: normal;
+}
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+/* 去掉列表前的标识, li 会继承 */
+ol,
+ul,
+li {
+  list-style: none;
+}
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,
+th {
+  text-align: left;
+}
+/* 统一上标和下标 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins,
+a {
+  text-decoration: none;
+}
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+  text-decoration: underline;
+}
+/* 清理浮动 */
+.clear {
+  zoom: 1;
+  /* for IE6 IE7 */
+}
+.clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+body {
+  font: 12px/18px "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+a,
+input,
+textarea,
+button {
+  font: 12px/18px "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: none;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  outline: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+.tab-nav {
+  height: 28px;
+  background-color: #fff;
+}
+.tab-nav li {
+  float: left;
+  width: 50%;
+}
+.tab-nav li a {
+  display: block;
+  width: 100%;
+  height: 27px;
+  line-height: 28px;
+  text-align: center;
+  border-bottom: solid 1px #D1D1D1;
+  color: #9F9F9F;
+  font-weight: 700;
+}
+.tab-nav li a:hover {
+  text-decoration: none;
+}
+.tab-nav li a.selected {
+  background-color: #EFEFEF;
+  border-bottom: solid 1px #341D4C;
+  color: #341D4C;
+}
+.tab-content .tab-panel {
+  display: none;
+}
+.tab-content .tab-panel:first-child {
+  display: block;
+}
+html {
+  background-color: #EEE;
+}
+.wrap {
+  width: 1000px;
+  margin: 0px auto;
+}
+.timeline-outer {
+  position: relative;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.timeline-outer .timeline-trunk {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  z-index: -1;
+  margin-left: -3px;
+  width: 6px;
+  height: 100%;
+  background-color: #9eb5c6;
+  overflow: hidden;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 0 1px 0 rgba(0,0,0,.5), 0 0 1px 0 rgba(255,255,255,.6);
+  -moz-box-shadow: inset 0 0 1px 0 rgba(0,0,0,.5), 0 0 1px 0 rgba(255,255,255,.6);
+  box-shadow: inset 0 0 1px 0 rgba(0,0,0,.5), 0 0 1px 0 rgba(255,255,255,.6);
+}
+.timeline-outer .timeline-list li {
+  margin-bottom: 30px;
+}
+.timeline-outer .timeline-list li h3 {
+  text-align: center;
+}
+.timeline-outer .timeline-list li h3 cite {
+  display: inline-block;
+  padding: 0px 12px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #60829F;
+  color: #fff;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.timeline-outer .timeline-list .timeline-tag-list {
+  margin-top: 30px;
+}
+.timeline-outer .timeline-list .timeline-tag-list li {
+  position: relative;
+}
+.timeline-outer .timeline-list .timeline-tag-list li h4 {
+  position: relative;
+  text-align: center;
+}
+.timeline-outer .timeline-list .timeline-tag-list li h4:before {
+  content: ' ';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  z-index: -1;
+  width: 300px;
+  height: 1px;
+  background-color: #60829F;
+  overflow: hidden;
+}
+.timeline-outer .timeline-list .timeline-tag-list li h4 cite {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  border: solid 1px #60829F;
+  background-color: #fff;
+  color: #60829F;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.timeline-outer .timeline-list .timeline-tag-list li h4 a {
+  position: absolute;
+  top: -17px;
+  right: 180px;
+  width: 54px;
+  height: 54px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.timeline-outer .timeline-list .timeline-tag-list li h4 a img {
+  width: 50px;
+  height: 50px;
+  border: solid 2px #60829F;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.timeline-outer .timeline-list .timeline-tag-list li:nth-of-type(2n+2) h4:before {
+  left: auto;
+  right: 50%;
+}
+.timeline-outer .timeline-list .timeline-tag-list li:nth-of-type(2n+2) h4 a {
+  right: auto;
+  left: 180px;
+}

@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/configuration.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+    <div class="list-content list-content-inner">
+        <div class="simple-search-fields">
+            <label>员工姓名：</label>
+            <input type="text" class="text text-icon-delete">
+            <button class="button" type="submit">搜索</button>
+        </div>
+        <div class="eXtremeTable">
+            <table cellspacing="0" cellpadding="0" class="tableBox" width="100%">
+                <tbody><tr>
+                <td width="100%">
+                <table id="ec_table" border="0" cellspacing="1" cellpadding="2" class="list-grid-ectable list-grid-highlight" width="100%">
+                    <thead>
+                    <tr>
+                        <td class="tableHeader" style="text-align:center;" width="20px"><input type="checkbox" onclick="EccnUtil.checkAll2(this)"></td>
+                        <td class="tableHeader" style="text-align:center;" width="40px">SN</td>
+                        <td class="tableHeader" style="text-align: center; cursor: default;" width="100px" onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_nprCompany_companyName.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 中文名">中文名</td>
+                        <td class="tableHeader" style="text-align: center; cursor: default;" width="100px" onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_year.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 英文名">英文名</td>
+                        <td class="tableHeader" style="text-align: center; cursor: default;" width="100px" onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_userStartDateStr.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 工号">工号</td>
+                        <td class="tableHeader" style="text-align: center; cursor: default;" onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_userEndDateStr.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 邮箱账号">邮箱账号</td>
+                        <td class="tableHeader" style="text-align: center; cursor: default;"  width="150px"  onmouseover="this.className='tableHeaderSort';this.style.cursor='pointer'" onmouseout="this.className='tableHeader';this.style.cursor='default'" onclick="javascript:document.forms.ec.ec_s_fdAuditDeadlineStr.value='asc';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()" title="排序 所属组织">所属组织</td>
+                        <td class="tableHeader" width="30px"> </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align:center;" width="20px">
+                                <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                            </td>
+                            <td style="text-align:center;" >1</td>
+                            <td style="text-align:center;" >
+                                <a href="employee-details.html" data-open="maxWindow">张三</a>
+                            </td>
+                            <td style="text-align:center;" >zhangsan</td>
+                            <td style="text-align:center;" >0123456789</td>
+                            <td style="text-align:left;" ><a href="mailto:zhangsan@HHGrace.com">zhangsan@HHGrace.com</a></td>
+                            <td style="text-align:left;" >FD</td>
+                            <td style="text-align:center;" >
+                                <ul class="action">
+                                    <li>
+                                        <a href="employee-details.html" class="icon-view-20" data-open="maxWindow"></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;" width="20px">
+                                <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                            </td>
+                            <td style="text-align:center;" >2</td>
+                            <td style="text-align:center;" >
+                                <a href="employee-details.html" data-open="maxWindow">张三</a>
+                            </td>
+                            <td style="text-align:center;" >zhangsan</td>
+                            <td style="text-align:center;" >0123456789</td>
+                            <td style="text-align:left;" ><a href="mailto:zhangsan@HHGrace.com">zhangsan@HHGrace.com</a></td>
+                            <td style="text-align:left;" >FD</td>
+                            <td style="text-align:center;" >
+                                <ul class="action">
+                                    <li>
+                                        <a href="employee-details.html" class="icon-view-20" data-open="maxWindow"></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;" width="20px">
+                                <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                            </td>
+                            <td style="text-align:center;" >3</td>
+                            <td style="text-align:center;" >
+                                <a href="employee-details.html" data-open="maxWindow">张三</a>
+                            </td>
+                            <td style="text-align:center;" >zhangsan</td>
+                            <td style="text-align:center;" >0123456789</td>
+                            <td style="text-align:left;" ><a href="mailto:zhangsan@HHGrace.com">zhangsan@HHGrace.com</a></td>
+                            <td style="text-align:left;" >FD</td>
+                            <td style="text-align:center;" >
+                                <ul class="action">
+                                    <li>
+                                        <a href="employee-details.html" class="icon-view-20" data-open="maxWindow"></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;" width="20px">
+                                <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                            </td>
+                            <td style="text-align:center;" >4</td>
+                            <td style="text-align:center;" >
+                                <a href="employee-details.html" data-open="maxWindow">张三</a>
+                            </td>
+                            <td style="text-align:center;" >zhangsan</td>
+                            <td style="text-align:center;" >0123456789</td>
+                            <td style="text-align:left;" ><a href="mailto:zhangsan@HHGrace.com">zhangsan@HHGrace.com</a></td>
+                            <td style="text-align:left;" >FD</td>
+                            <td style="text-align:center;" >
+                                <ul class="action">
+                                    <li>
+                                        <a href="employee-details.html" class="icon-view-20" data-open="maxWindow"></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;" width="20px">
+                                <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                            </td>
+                            <td style="text-align:center;" >5</td>
+                            <td style="text-align:center;" >
+                                <a href="employee-details.html" data-open="maxWindow">张三</a>
+                            </td>
+                            <td style="text-align:center;" >zhangsan</td>
+                            <td style="text-align:center;" >0123456789</td>
+                            <td style="text-align:left;" ><a href="mailto:zhangsan@HHGrace.com">zhangsan@HHGrace.com</a></td>
+                            <td style="text-align:left;" >FD</td>
+                            <td style="text-align:center;" >
+                                <ul class="action">
+                                    <li>
+                                        <a href="employee-details.html" class="icon-view-20" data-open="maxWindow"></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;" width="20px">
+                                <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                            </td>
+                            <td style="text-align:center;" >6</td>
+                            <td style="text-align:center;" >
+                                <a href="employee-details.html" data-open="maxWindow">张三</a>
+                            </td>
+                            <td style="text-align:center;" >zhangsan</td>
+                            <td style="text-align:center;" >0123456789</td>
+                            <td style="text-align:left;" ><a href="mailto:zhangsan@HHGrace.com">zhangsan@HHGrace.com</a></td>
+                            <td style="text-align:left;" >FD</td>
+                            <td style="text-align:center;" >
+                                <ul class="action">
+                                    <li>
+                                        <a href="employee-details.html" class="icon-view-20" data-open="maxWindow"></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;" width="20px">
+                                <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                            </td>
+                            <td style="text-align:center;" >7</td>
+                            <td style="text-align:center;" >
+                                <a href="employee-details.html" data-open="maxWindow">张三</a>
+                            </td>
+                            <td style="text-align:center;" >zhangsan</td>
+                            <td style="text-align:center;" >0123456789</td>
+                            <td style="text-align:left;" ><a href="mailto:zhangsan@HHGrace.com">zhangsan@HHGrace.com</a></td>
+                            <td style="text-align:left;" >FD</td>
+                            <td style="text-align:center;" >
+                                <ul class="action">
+                                    <li>
+                                        <a href="employee-details.html" class="icon-view-20" data-open="maxWindow"></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;" width="20px">
+                                <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                            </td>
+                            <td style="text-align:center;" >8</td>
+                            <td style="text-align:center;" >
+                                <a href="employee-details.html" data-open="maxWindow">张三</a>
+                            </td>
+                            <td style="text-align:center;" >zhangsan</td>
+                            <td style="text-align:center;" >0123456789</td>
+                            <td style="text-align:left;" ><a href="mailto:zhangsan@HHGrace.com">zhangsan@HHGrace.com</a></td>
+                            <td style="text-align:left;" >FD</td>
+                            <td style="text-align:center;" >
+                                <ul class="action">
+                                    <li>
+                                        <a href="employee-details.html" class="icon-view-20" data-open="maxWindow"></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;" width="20px">
+                                <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                            </td>
+                            <td style="text-align:center;" >9</td>
+                            <td style="text-align:center;" >
+                                <a href="employee-details.html" data-open="maxWindow">张三</a>
+                            </td>
+                            <td style="text-align:center;" >zhangsan</td>
+                            <td style="text-align:center;" >0123456789</td>
+                            <td style="text-align:left;" ><a href="mailto:zhangsan@HHGrace.com">zhangsan@HHGrace.com</a></td>
+                            <td style="text-align:left;" >FD</td>
+                            <td style="text-align:center;" >
+                                <ul class="action">
+                                    <li>
+                                        <a href="employee-details.html" class="icon-view-20" data-open="maxWindow"></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;" width="20px">
+                                <input type="checkbox" value="161" name="deleteTelBudgetSettlementIDs" batchdelete="true">
+                            </td>
+                            <td style="text-align:center;" >10</td>
+                            <td style="text-align:center;" >
+                                <a href="employee-details.html" data-open="maxWindow">张三</a>
+                            </td>
+                            <td style="text-align:center;" >zhangsan</td>
+                            <td style="text-align:center;" >0123456789</td>
+                            <td style="text-align:left;" ><a href="mailto:zhangsan@HHGrace.com">zhangsan@HHGrace.com</a></td>
+                            <td style="text-align:left;" >FD</td>
+                            <td style="text-align:center;" >
+                                <ul class="action">
+                                    <li>
+                                        <a href="employee-details.html" class="icon-view-20" data-open="maxWindow"></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table></td>
+                </tr>
+                </tbody></table><input type="hidden" name="ec_totalpages" value="1"><input type="hidden" name="ec_totalrows" value="8"><table border="0" cellspacing="0" cellpadding="0" class="ec_tb_list tb_list table_highlightToolbar" width="100%" style="margin:0px;">
+                    <tbody><tr style="padding: 0px;">
+                        <td colspan="9">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody><tr>
+                                <td class="statusBar">共8条记录,显示1到8</td>
+                                <td class="toolbar">
+                                <table border="0" cellpadding="1" cellspacing="1">
+                                    <tbody><tr>
+                    <td></td>
+                                    <td>&nbsp;<img src="../../images/table/separator.gif" style="border:0" alt="Separator"></td>
+                                    <td>&nbsp;<a href="javascript:document.forms.ec.ec_f_a.value='fa';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()"><img src="../../images/table/filter.gif" style="border:0" title="搜索" alt="搜索"></a></td>
+                                    <td>&nbsp;<a href="javascript:document.forms.ec.ec_f_a.value='ca';document.forms.ec.ec_p.value='1';document.forms.ec.setAttribute('action','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do');document.forms.ec.setAttribute('method','get');document.forms.ec.submit()"><img src="../../images/table/clear.gif" style="border:0" title="清除" alt="清除"></a></td>
+                                    <td class="statusBar"><input type="button" disabled="disabled" class="pageNav firstPageD" onclick="javascript:EccnUtil.gotoPage('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti',1);" title="第一页"><input type="button" disabled="disabled" class="pageNav prevPageD" onclick="javascript:EccnUtil.gotoPage('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti',0);" title="上一页"><input type="button" disabled="disabled" class="pageNav nextPageD" onclick="javascript:EccnUtil.gotoPage('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti',2);" title="下一页"><input type="button" disabled="disabled" class="pageNav lastPageD" onclick="javascript:EccnUtil.gotoPage('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti',1);" title="最后页"></td>
+                                
+                                <td class="statusBar"><input type="button" class="pageNav jumpPage" onclick="EccnUtil.gotoPageByInput('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti','ec_pg');" title="页面跳转"></td>
+                                <td class="statusBar"><input type="text" name="ec_pg" value="1" class="jumpPageInput" onkeydown="if (event.keyCode &amp;&amp; event.keyCode==13 ) {EccnUtil.gotoPageByInput('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti','ec_pg');;return false; } ">/1页</td>
+                                    <td class="statusBar">&nbsp;<span class="rowsdisplayed">每页<select name="ec_rd" onchange="EccnUtil.changeRowsDisplayed('ec','/nprerconfiguration/fdoperation/config/er-tel-budget-settlement.do','get','ec_p','ec_eti',this);">
+                                <option value="10">10</option><option value="50">50</option><option value="100">100</option>
+                                </select>条</span></td>
+                                    </tr>
+                                </tbody></table></td>
+                            </tr>
+                        </tbody></table>
+                        </td>
+                    </tr>       
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="..\../script/require.js" data-main="..\../script/configuration.js" ></script>
+
+<script>
+    
+    function requireReady(configuration)
+    {
+        
+    }
+</script>
+</html>
