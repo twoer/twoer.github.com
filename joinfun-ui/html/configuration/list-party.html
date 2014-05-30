@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/configuration.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+    <div class="list-content list-content-party">
+        
+        <div class="list-content-inner clear">
+            <div class="side">
+                <h2>党员信息：</h2>
+                <ul id="ztree" class="ztree"></ul>
+            </div>
+            <div class="main">
+                <iframe src="list-employee-inner-for-party.html" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script src="..\../script/require.js" data-main="..\../script/configuration.js" ></script>
+
+<script>
+    
+    var _treeSetting = 
+    {
+        view: 
+        {
+            showIcon: false
+        },
+        data: 
+        {
+            simpleData: 
+            {
+                enable: true
+            }
+        },
+        callback: 
+        {
+            onClick : function(event, treeId, treeNode, clickFlag)
+            {
+
+            },
+            onDblClick : function(event, treeId, treeNode)
+            {
+
+            }
+        }
+    };
+
+    var _nodeId = 1;
+    var _treeNodes = 
+    [
+        { id:1, pId:0, name:"一厂分党委", open : true},
+        { id:2, pId:0, name:"二厂分党委", open : true},
+        { id:3, pId:0, name:"三厂分党委", open : true},
+        { id:10, pId:1, name:"质量与可靠性保证部党支部"},
+        { id:11, pId:1, name:"设计服务党支部"},
+        { id:12, pId:1, name:"集成党支部"},
+        { id:13, pId:1, name:"先模/器件/模型党支部"},
+        { id:14, pId:1, name:"测试与外包服务党支部"},
+        { id:15, pId:1, name:"一厂工程一部党支部"},
+        { id:16, pId:1, name:"一厂工程二部党支部"},
+        { id:17, pId:1, name:"一厂工程三部党支部"},
+        { id:18, pId:1, name:"一厂安全生产/动力党支部"},
+        { id:19, pId:1, name:"一厂制造部党总支"},
+        { id:21, pId:2, name:"财务/资讯技术党支部计划/科宣/合规党支部"},
+        { id:22, pId:2, name:"行政/办公/安保党支部"},
+        { id:23, pId:2, name:"采购物流/人事党支部"},
+        { id:24, pId:2, name:"市场/销售/客户工程党支部二厂工一党支部"},
+        { id:25, pId:2, name:"二厂工二/工三党支部"},
+        { id:26, pId:2, name:"二厂制造部党支部"},
+        { id:27, pId:2, name:"二厂安全生产/动力党支部"},
+        { id:30, pId:3, name:"三厂工程一部良率管理党支部"},
+        { id:31, pId:3, name:"三厂工程一部工艺整合党支部"},
+        { id:32, pId:3, name:"三厂工程二部薄膜工程党支部"},
+        { id:33, pId:3, name:"三厂工程二部扩散工程党支部"},
+        { id:34, pId:3, name:"三厂制造部党支部"},
+        { id:35, pId:3, name:"三厂安全生产/动力党支部"},
+        { id:36, pId:3, name:"三厂工程三部蚀刻/光刻党支部"}
+
+
+    ];
+
+    function requireReady(configuration)
+    {
+        // treeNodes = $.fn.zTree.loaddingStatus(treeNodes);
+        $.fn.zTree.init($("#ztree"), _treeSetting, _treeNodes);
+    }
+</script>
+</html>

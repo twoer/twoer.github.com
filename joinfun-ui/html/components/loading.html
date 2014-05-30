@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/t.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+    <div class="demo">
+    
+
+        <h2>demo</h2>
+        <code>
+            <div class="mb-10" style="position:relative; z-index:999999;">
+                <button type="button" class="button button-loading">loading</button>
+                <button type="button" class="button button-update-loading ml-20">update loading</button>
+                <button type="button" class="button button-close-loading ml-20">close</button>
+            </div>
+            <div>
+                <textarea class="textarea textarea-code textarea-code-120"><button type="button" class="button">loading</button>
+<button type="button" class="button ml-20">update loading</button>
+<button type="button" class="button ml-20">close</button>
+$.loading('请等待......');
+$.loading('请继续等待......');
+$.loading();</textarea>
+
+            </div>
+        </code>
+
+
+    </div>
+</body>
+<script src="..\../script/require.js" data-main="..\../script/t.js"></script>
+
+<script>
+    
+    function requireReady()
+    {
+        $(document).delegate('.button-loading', 'click', function()
+        {
+            $.loading('请等待......');
+        });
+
+        $(document).delegate('.button-update-loading', 'click', function()
+        {
+            $.loading('请继续等待......');
+        });
+
+        $(document).delegate('.button-close-loading', 'click', function()
+        {
+            $.loading();
+        });
+    }
+</script>
+</html>

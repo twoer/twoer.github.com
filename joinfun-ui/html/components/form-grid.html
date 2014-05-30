@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/t.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+    <div class="demo">
+        
+        <h2>form grid (3栏编辑，适用于新增/编辑):</h2>
+        <code>
+            <table class="form-grid form-grid-col3">
+                <tbody>
+                    <tr>
+                        <th>
+                            <label class="require">洲</label>
+                        </th>
+                        <td>
+                            <select name="" id="" class="select">
+                                <option value="">亚洲</option>
+                            </select>
+                        </td>
+                        <td>
+                            选择洲
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                             <label class="require">中文名</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text text-icon-people">
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                             <label class="require">英文名</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text">
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                             <label>说明</label>
+                        </th>
+                        <td>
+                            <div class="multiple-selector">
+                                <select name="" id="" class="select" multiple>
+                                    <option value="">test01</option>
+                                    <option value="">test02</option>
+                                </select>
+                                <ul class="action">
+                                    <li>
+                                        <a href="javascript:;" class="icon-selector-20" ></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="icon-delete-20"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            这里可以有很多个图标，当然也可以自适应....
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label class="require">是否可用</label>
+                        </th>
+                        <td>
+                            <select name="" id="" class="select">
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <textarea class="textarea textarea-code textarea-code-120"><<table class="form-grid form-grid-col3">
+                <tbody>
+                    <tr>
+                        <th>
+                            <label class="require">洲</label>
+                        </th>
+                        <td>
+                            <select name="" id="" class="select">
+                                <option value="">亚洲</option>
+                            </select>
+                        </td>
+                        <td>
+                            选择洲
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                             <label class="require">中文名</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text text-icon-people">
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                             <label class="require">英文名</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text">
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                             <label>说明</label>
+                        </th>
+                        <td>
+                            <div class="multiple-selector">
+                                <select name="" id="" class="select" multiple>
+                                    <option value="">test01</option>
+                                    <option value="">test02</option>
+                                </select>
+                                <ul class="action">
+                                    <li>
+                                        <a href="javascript:;" class="icon-selector-20" ></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="icon-delete-20"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            这里可以有很多个图标，当然也可以自适应....
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label class="require">是否可用</label>
+                        </th>
+                        <td>
+                            <select name="" id="" class="select">
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table></textarea>
+            </div>
+        </code>
+
+        <h2>form grid (4栏查询，宽度自适应):</h2>
+        <code>
+            <table class="form-grid form-grid-col4">
+                <tbody>
+                    <tr>
+                        <th>
+                            <label>区域</label>
+                        </th>
+                        <td>
+                            <select name="" id="" class="select">
+                                <option value="">亚洲</option>
+                            </select>
+                        </td>
+                        <th>
+                            <label>申请编号</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>test1</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text ">
+                        </td>
+                        <th>
+                            <label>test2</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>扫描时间</label>
+                        </th>
+                        <td>
+                            <div class="text-groups">
+                                <input type="text" id="t1" class="text text-icon-datepicker" />
+                                <span class="divider">-</span>
+                                <input type="text" id="t1" class="text text-icon-datepicker" />
+                            </div>
+                        </td>
+                        <th>
+                        </th>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>    
+            
+            <textarea class="textarea textarea-code textarea-code-120"><table class="form-grid form-grid-col4">
+                <tbody>
+                    <tr>
+                        <th>
+                            <label>区域</label>
+                        </th>
+                        <td>
+                            <select name="" id="" class="select">
+                                <option value="">亚洲</option>
+                            </select>
+                        </td>
+                        <th>
+                            <label>申请编号</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>test1</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text ">
+                        </td>
+                        <th>
+                            <label>test2</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>扫描时间</label>
+                        </th>
+                        <td>
+                            <div class="text-groups">
+                                <input type="text" id="t1" class="text text-icon-datepicker" />
+                                <span class="divider">-</span>
+                                <input type="text" id="t1" class="text text-icon-datepicker" />
+                            </div>
+                        </td>
+                        <th>
+                        </th>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>    </textarea>
+        </code>
+
+
+        <h2>form grid (6栏查询，宽度自适应):</h2>
+        <code>
+            <table class="form-grid form-grid-col6">
+                <tbody>
+                    <tr>
+                        <th>
+                            <label class="require">区域</label>
+                        </th>
+                        <td>
+                            <select name="" id="" class="select">
+                                <option value="">亚洲</option>
+                            </select>
+                        </td>
+                        <th>
+                            <label>申请编号</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text">
+                        </td>
+                        <th>
+                            <label>工号</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>test1</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text ">
+                        </td>
+                        <th>
+                            <label>test2</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text ">
+                        </td>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>扫描时间</label>
+                        </th>
+                        <td>
+                            <div class="text-groups">
+                                <input type="text" id="t1" class="text text-icon-datepicker" />
+                                <span class="divider">-</span>
+                                <input type="text" id="t1" class="text text-icon-datepicker" />
+                            </div>
+                        </td>
+                        <th>
+                        </th>
+                        <td>
+                        </td>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>    
+            
+            <textarea class="textarea textarea-code textarea-code-120"><table class="form-grid form-grid-col6">
+                <tbody>
+                    <tr>
+                        <th>
+                            <label class="require">区域</label>
+                        </th>
+                        <td>
+                            <select name="" id="" class="select">
+                                <option value="">亚洲</option>
+                            </select>
+                        </td>
+                        <th>
+                            <label>申请编号</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text">
+                        </td>
+                        <th>
+                            <label>工号</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>test1</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text ">
+                        </td>
+                        <th>
+                            <label>test2</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text ">
+                        </td>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>扫描时间</label>
+                        </th>
+                        <td>
+                            <div class="text-groups">
+                                <input type="text" id="t1" class="text text-icon-datepicker" />
+                                <span class="divider">-</span>
+                                <input type="text" id="t1" class="text text-icon-datepicker" />
+                            </div>
+                        </td>
+                        <th>
+                        </th>
+                        <td>
+                        </td>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>    
+</textarea>
+        </code>
+
+    
+    </div>
+</body>
+<script src="..\../script/require.js" data-main="..\../script/t.js"></script>
+</html>

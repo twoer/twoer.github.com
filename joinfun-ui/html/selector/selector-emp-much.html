@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择人员</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/selector.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+	<div class="selector selector-emp-much">
+		<h1>
+			选择人员
+		</h1>
+
+		<div class="columns">
+
+			<div class="column">
+				<div class="filter">
+					<p>
+						<input type="text" class="text key" />
+						<button class="button reset">重置</button>
+						<button class="button search">搜索</button>
+					</p>
+				</div>
+
+				<div class="select-wrap">
+					<h4>
+						所有人员：
+						<a href="javascript:;" class="icon-info-20"></a>
+					</h4>
+					<select class="select source-list" multiple ="multiple" size="20">
+						<option value="1" data-cnname="cnname 1" data-enname="enname 1">option 1</option>
+						<option value="2" data-cnname="cnname 2" data-enname="enname 2">option 2</option>
+						<option value="3" data-cnname="cnname 3" data-enname="enname 3">option 3</option>
+						<option value="4" data-cnname="cnname 4" data-enname="enname 4">option 4</option>
+						<option value="5" data-cnname="cnname 5" data-enname="enname 5">option 5</option>
+						<option value="6" data-cnname="cnname 6" data-enname="enname 6">option 6</option>
+						<option value="7" data-cnname="cnname 7" data-enname="enname 7">option 7</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="column letter">
+				<ul class="letter-list">
+					<li>
+						<a href="javascript:;" class="selected" data-value="">All</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="A">A</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="B">B</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="C">C</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="D">D</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="E">E</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="F">F</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="G">G</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="H">H</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="I">I</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="J">J</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="K">K</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="L">L</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="M">M</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="N">N</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="O">O</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="P">P</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="Q">Q</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="R">R</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="S">S</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="T">T</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="U">U</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="V">V</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="W">W</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="X">X</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="Y">Y</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-value="Z">Z</a>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="column operate">
+				<ul class="operate-list">
+					<li>
+						<a href="javascript:;" class="right"></a>
+					</li>
+					<li>
+						<a href="javascript:;" class="left"></a>
+					</li>
+					<li>
+						<a href="javascript:;" class="all-left"></a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="column">
+				<div class="select-wrap">
+					<h4>待选人员：</h4>
+					<select class="select selected-list" multiple ="multiple" size="20">
+					</select>
+				</div>
+
+				<div class="buttons">
+					<button class="button confirm" type="button">确定</button>
+					<button class="button clear" type="button">清空</button>
+					<button class="button abnormal close" type="button">关闭</button>
+				</div>
+		
+			</div>
+
+		</div>
+	</div>
+</body>
+<script>
+	var ctx = window['ctx'] || '';
+	var actionType = 'default';
+	var isMultiple = true;
+</script>
+<script src="..\../script/require.js" data-main="..\../script/selector.js"></script>
+<script>
+	function requireReady(selector)
+	{
+		var $key = $('.text.key');
+		var $letter = $('.letter-list a');
+		var $selectedList = $('.selected-list');
+		var $rourceList = $('.source-list');
+
+		//search function
+		selector.search = function()
+		{
+			$.get(ctx + '/selector/select!findDeptsBySelectCondition.do',
+			{
+				keyword : $key.val(),
+				letter : $letter.filter('.selected').attr('data-value')
+			},function(result)
+			{
+				$rourceList.empty().renderOptions(result, 'label', 'value');
+			}, 'json');
+		};
+	}
+
+</script>
+</html>

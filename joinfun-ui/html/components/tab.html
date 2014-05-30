@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/t.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+    <div class="demo">
+    
+        <h2>tab :</h2>
+        <code>
+            <ul class="tab-nav-list clear">
+                <li class="item selected">
+                    <a href="javascript:;">Tab 1</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">Tab 2</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">Tab 3</a>
+                </li>
+            </ul>
+            <div class="tab-cnt-list">
+                <div>
+                    content 1
+                </div>
+                <div>
+                    content 2
+                </div>
+                <div>
+                    content 3
+                </div>
+            </div>
+            <div>
+                Tab 组件，引入所需文件，拷贝以下代码即可
+            </div>
+            <s>该 tab 为默认 tab 大小，可以根据实际情况改变其大小，请找我</s>
+            <div>
+                <textarea class="textarea textarea-code textarea-code-120"><ul class="tab-nav-list clear">
+    <li class="item selected">
+        <a href="javascript:;">Tab 1</a>
+    </li>
+    <li class="item">
+        <a href="javascript:;">Tab 2</a>
+    </li>
+    <li class="item">
+        <a href="javascript:;">Tab 3</a>
+    </li>
+</ul>
+<div class="tab-cnt-list">
+    <div>
+        content 1
+    </div>
+    <div>
+        content 2
+    </div>
+    <div>
+        content 3
+    </div>
+</div></textarea>
+            </div>
+        </code>
+
+        <h2>tab (根据 nav 选中项 ，自动调整内容选中项):</h2>
+        <code>
+            <ul class="tab-nav-list clear">
+                <li class="item">
+                    <a href="javascript:;">Tab 1</a>
+                </li>
+                <li class="item selected">
+                    <a href="javascript:;">Tab 2</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">Tab 3</a>
+                </li>
+            </ul>
+            <div class="tab-cnt-list">
+                <div>
+                    content 1
+                </div>
+                <div>
+                    content 2
+                </div>
+                <div>
+                    content 3
+                </div>
+            </div>
+            <div>
+                Tab 组件，引入所需文件，拷贝以下代码即可
+            </div>
+            <div>
+                <textarea class="textarea textarea-code textarea-code-120"><ul class="tab-nav-list clear">
+    <li class="item">
+        <a href="javascript:;">Tab 1</a>
+    </li>
+    <li class="item selected">
+        <a href="javascript:;">Tab 2</a>
+    </li>
+    <li class="item">
+        <a href="javascript:;">Tab 3</a>
+    </li>
+</ul>
+<div class="tab-cnt-list">
+    <div>
+        content 1
+    </div>
+    <div>
+        content 2
+    </div>
+    <div>
+        content 3
+    </div>
+</div></textarea>
+            </div>
+        </code>
+
+    
+    </div>
+</body>
+<script src="..\../script/require.js" data-main="..\../script/t.js"></script>
+
+<script>
+    function requireReady()
+    {
+        jfc.tabChange = function(index)
+        {
+            alert('当前选中项    ' + index);
+        }     
+    }
+</script>
+
+</html>

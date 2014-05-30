@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en" class="request">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="..\..\../style/form-test.css" />
+	<!--[if gte IE 8]><link rel="stylesheet" href="..\..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+    <div class="wrap">
+
+        <form id="requrest-form" action="?">
+        
+            
+        <div class="req-hd">
+            <table class="form-grid" >
+                <tbody>
+                    <tr>
+                        <td colspan="2" rowspan="3">
+                            <div class="form-name">
+                                <h1>测试申请</h1>
+                                <h2>Test Request</h2>
+                            </div>
+                        </td>
+                        <th>
+                            <label>申请编号</label>
+                        </th>
+                        <td>SGM-A-00-000001</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>申请时间</label>
+                        </th>
+                        <td>2012-10-25</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>起草人</label>
+                        </th>
+                        <td>Test01,测试者01(000001)</td>
+                    </tr>
+                    <tr class="row-subject">
+                        <th>
+                            <label class="require">主题</label>
+                        </th>
+                        <td>
+                            <input type="text" name="subject" class="text text-subject" value="">
+                        </td>
+                        <th>
+                            <label class="require">起草人电话</label>
+                        </th>
+                        <td>
+                            <input type="text" class="text" value="13817959745">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+            		
+		<div class="validate-messages">
+            <h2 class="validate-messages-title">错误信息：</h2>
+            <a href="javascript:;" class="validate-messages-close"></a>
+            <ul class="validate-messages-list"></ul>
+        </div>
+
+            <div class="req-wrap">
+                
+                			
+			<ul class="tab-nav-list clear">
+                <li class="item selected">
+                    <a href="javascript:;">申请栏</a>
+                </li>
+                <li class="item ">
+                    <a href="javascript:;">审批栏</a>
+                </li>
+            </ul>
+                
+                <div class="tab-cnt-list">
+                    <div>
+                                            
+                    <h3 class="fold-hd" >
+                        <a href="javascript:;" class="hd-icon-text">基本信息</a>
+                    </h3>
+            
+                    <div class="fold-cnt">
+                        <table class=" form-grid ">
+                            <tbody>
+                                <tr class="placeholder">
+                                    <th></th>
+                                    <td></td>
+                                    <th></th>
+                                    <td></td>
+                                    <th></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label class="require">申请人</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" class="text" name="proposer">
+                                    </td>
+                                    <th>
+                                        <label class="require">部门</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" class="text" name="dept">
+                                    </td>
+                                    <th>
+                                        <label class="require">工号</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" class="text" name="empid">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label class="require">座机</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" class="text" name="ext">
+                                    </td>
+                                    <th></th>
+                                    <td></td>
+                                    <th></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>地址</label>
+                                    </th>
+                                    <td colspan="3">
+                                        <input type="text" class="text text-colspan3">
+                                    </td>
+                                    <th>
+                                        <label>地址</label>
+                                    </th>
+                                    <td>
+                                        <select name="" id="" class="select"></select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>地址</label>
+                                    </th>
+                                    <td colspan="5">
+                                        <input type="text" class="text text-colspan5">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>地址</label>
+                                    </th>
+                                    <td colspan="5">
+                                        <select name="" id="" class="select select-colspan5"></select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>地址</label>
+                                    </th>
+                                    <td colspan="5">
+                                        <div class="multiple-selector">
+                                            <select name="" id="" class="select" multiple>
+                                            </select>
+                                            <ul class="action">
+                                                <li>
+                                                    <a href="javascript:;" class="icon-selector-20" data-action-type="MEmp-default"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="icon-delete-20"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                                            
+                    <h3 class="fold-hd" >
+                        <a href="javascript:;" class="hd-icon-text">其他</a>
+                    </h3>
+            
+                    <div class="fold-cnt ">
+                        <table class=" form-grid ">
+                            <tbody>
+                                <tr class="h-0">
+                                    <th></th>
+                                    <td></td>
+                                    <th></th>
+                                    <td></td>
+                                    <th></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>备注</label>
+                                    </th>
+                                    <td colspan="5">
+                                       <textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>一个附件</label>
+                                    </th>
+                                    <td colspan="5">
+                                        <div class="upload-multiple-file" 
+                                            data-upload-count="1"
+                                            data-add-url="../iframe/upload-attch.html"
+                                            data-download-url="../iframe/upload-attch.html?id={id}"
+                                        >
+                                            <a href="javascript:;" class="add-file" >上传附件</a>
+                                            <input type="hidden" value="1,2,3,4" />
+                                            <ul class="file-list">
+                                                <li data-file-id="1">
+                                                    <a href="javascript:;" class="delete-file" ></a>
+                                                    <a href="javascript:;" class="download-file">
+                                                        测试情况反馈-zhangkun20130704.xlsx
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>多个附件</label>
+                                    </th>
+                                    <td colspan="5">
+                                        <div class="upload-multiple-file" 
+                                            data-add-url="../iframe/upload-attch.html"
+                                            data-download-url="../iframe/upload-attch.html?id={id}"
+                                        >
+                                            <a href="javascript:;" class="add-file" >上传附件</a>
+                                            <input type="hidden" value="1,2,3,4" />
+                                            <ul class="file-list">
+                                                <li data-file-id="1">
+                                                    <a href="javascript:;" class="delete-file" ></a>
+                                                    <a href="javascript:;" class="download-file">
+                                                        测试情况反馈-zhangkun20130704.xlsx
+                                                    </a>
+                                                </li>
+                                                <li data-file-id="2">
+                                                    <a href="javascript:;" class="delete-file" ></a>
+                                                    <a href="javascript:;" class="download-file">
+                                                        测试情况反馈-zhangkun20130704.xlsx
+                                                    </a>
+                                                </li>
+                                                <li data-file-id="3">
+                                                    <a href="javascript:;" class="delete-file" ></a>
+                                                    <a href="javascript:;" class="download-file">
+                                                        测试情况反馈-zhangkun20130704.xlsx
+                                                    </a>
+                                                </li>
+                                                <li data-file-id="4">
+                                                    <a href="javascript:;" class="delete-file" ></a>
+                                                    <a href="javascript:;" class="download-file">
+                                                        测试情况反馈-zhangkun20130704.xlsx
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                        
+                    </div>
+                    <div>
+                                            
+                    <h3 class="fold-hd" >
+                        <a href="javascript:;" class="hd-icon-text">审批操作</a>
+                    </h3>
+
+                    <div class="fold-cnt audit-decision">
+                        
+                        <table class="form-grid form-grid-audit-info">
+                            <tr>
+                                <th>
+                                    <label class="require">审批决策</label>
+                                </th>
+                                <td>
+                                    <ul class="decision-list">
+                                        <li class="item">
+                                            <label>
+                                                <input type="radio" name="audit-decision" value="Approve" />Approve
+                                            </label>
+                                        </li>
+                                        <li class="item">
+                                            <label>
+                                                <input type="radio" name="audit-decision" value="More Approval" />More Approval
+                                            </label>
+                                            <label>
+                                                <input type="text" class="text text-icon-people" />
+                                            </label>
+                                        </li>
+                                        <li class="item">
+                                            <label>
+                                                <input type="radio" name="audit-decision" value="Need Originator’s comment" />Need Originator’s comment
+                                            </label>
+                                        </li>
+                                        <li class="item">
+                                            <label>
+                                                <input type="radio" name="audit-decision" value="Deny" />Deny
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>备注</label>
+                                </th>
+                                <td>
+                                    <textarea  class="textarea"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="person">Current Person</label>
+                                </th>
+                                <td>
+                                    test01; test02; test01; test02; test01; test02; test01; test02; test01; test02; test01; test02; test01; test02; test01; test02; test01; test02; test01; test02; test01; test02; test01; test02; test01; test02; test01; test02; test01; test02;
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="activity">Current Activity</label>
+                                </th>
+                                <td>
+                                    Req Dept Site Header/SGM Senior Managereq Dept Req Dept Site Header/SGM Senior Managere
+                                </td>
+                            </tr>
+                        </table>
+                    </div>    
+
+                                            
+                    <h3 class="fold-hd" >
+                        <a href="javascript:;" class="hd-icon-text">历史审批记录</a>
+                    </h3>
+
+                    <div class="fold-cnt audit-history-list">
+                        <div class="audit-history-list-switch">
+                            <a href="javascript:;" class="switch-list"><i class="icon-sort-20"></i>审批时间排序</a>
+                            <a href="javascript:;" class="switch-dept"><i class="icon-list-20"></i>部门分类排序</a>
+                        </div>
+
+                        <table class="list-grid list-grid-audit-history list-grid-highlight list-grid-dept" >
+                            <thead>
+                                <th width="200px">节点</th>
+                                <th width="200px">姓名</th>
+                                <th width="150px">动作</th>
+                                <th width="140px">时间</th>
+                                <th>备注</th>
+                            </thead>
+                            <thead class="sub-hd">
+                                <th colspan="6">HR：</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ta-l">QQQQQQQQQQQQQ</td>
+                                    <td class="ta-l">WPSJQ Test001,门户测试(200001)</td>
+                                    <td>Submit</td>
+                                    <td>2013-04-01 12:00:12</td>
+                                    <td class="ta-l">Create</td>
+                                </tr>
+                                <tr>
+                                    <td class="ta-l">TELFDControlManager</td>
+                                    <td class="ta-l">WPSJQ Test001,门户测试(200001)</td>
+                                    <td>approve</td>
+                                    <td>2013-04-01 12:00:12</td>
+                                    <td class="ta-l"></td>
+                                </tr>
+                            </tbody>                                    
+                            <thead class="sub-hd">
+                                <th colspan="6">DEPT：</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ta-l">Create</td>
+                                    <td class="ta-l">WPSJQ Test001,门户测试(200001)</td>
+                                    <td>Submit</td>
+                                    <td>2013-04-01 12:00:12</td>
+                                    <td class="ta-l">Create</td>
+                                </tr>
+                                <tr>
+                                    <td class="ta-l">ERExpenseAudit</td>
+                                    <td class="ta-l">WPSJQ Test001,门户测试(200001)</td>
+                                    <td>approve</td>
+                                    <td>2013-04-01 12:00:12</td>
+                                    <td class="ta-l"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="list-grid list-grid-audit-history list-grid-highlight list-grid-sort" >
+                            <thead class="grid-hd">
+                                <th width="200px">节点</th>
+                                <th width="200px">姓名</th>
+                                <th width="150px">动作</th>
+                                <th width="140px">时间</th>
+                                <th>备注</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ta-l">QQQQQQQQQQQQQ</td>
+                                    <td class="ta-l">WPSJQ Test001,门户测试(200001)</td>
+                                    <td>Submit</td>
+                                    <td>2013-04-01 12:00:12</td>
+                                    <td class="ta-l">Create</td>
+                                </tr>
+                                <tr>
+                                    <td class="ta-l">TELFDControlManager</td>
+                                    <td class="ta-l">WPSJQ Test001,门户测试(200001)</td>
+                                    <td>approve</td>
+                                    <td>2013-04-01 12:00:12</td>
+                                    <td class="ta-l"></td>
+                                </tr>
+                                <tr>
+                                    <td class="ta-l">Create</td>
+                                    <td class="ta-l">WPSJQ Test001,门户测试(200001)</td>
+                                    <td>Submit</td>
+                                    <td>2013-04-01 12:00:12</td>
+                                    <td class="ta-l">Create</td>
+                                </tr>
+                                <tr>
+                                    <td class="ta-l">ERExpenseAudit</td>
+                                    <td class="ta-l">WPSJQ Test001,门户测试(200001)</td>
+                                    <td>approve</td>
+                                    <td>2013-04-01 12:00:12</td>
+                                    <td class="ta-l"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>    
+                    </div>
+                </div>
+            </div>
+
+            
+        <div class="req-oper">
+            <ul class="req-oper-list">
+                <li class="item item-submit active">
+                    <a href="javascript:;"></a>
+                    <div class="des">
+                        <p>提交</p>
+                    </div>
+                </li>
+                <li class="item item-close">
+                    <a href="javascript:;"></a>
+                    <div class="des">
+                        <p>关闭</p>
+                    </div>
+                </li>
+                <li class="item item-delete">
+                    <a href="?action=delete"></a>
+                    <div class="des">
+                        <p>删除</p>
+                    </div>
+                </li>
+                <li class="item item-save">
+                    <a href="javascript:;"></a>
+                    <div class="des">
+                        <p>保存</p>
+                    </div>
+                </li>
+                <li class="item item-print">
+                    <a href="javascript:;"></a>
+                    <div class="des">
+                        <p>打印</p>
+                    </div>
+                </li>
+                <li class="item item-custom-1">
+                    <a href="javascript:;"></a>
+                    <div class="des">
+                        <p>自定义按钮1</p>
+                    </div>
+                </li>
+                <li class="item item-custom-2">
+                    <a href="javascript:;"></a>
+                    <div class="des">
+                        <p>自定义按钮2</p>
+                    </div>
+                </li>
+                <li class="item item-title">
+                </li>
+                <li class="item item-top">
+                    <a href="javascript:;"></a>
+                    <div class="des">
+                        <p>TOP</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            
+        </div>
+    </form>
+    
+</body>
+
+<script src="..\..\../script/require.js" data-main="..\..\../script/form-test.js"></script>
+<script>
+
+    function requireReady(form)
+    {
+        var rules = {};
+
+        rules['subject']={required: true};   
+        rules['proposer']={required: true, groups : ['submit', 'custom']};   
+        rules['dept']={required: true, groups : ['submit']};   
+        rules['empid']={required: true, groups : ['submit']};   
+        rules['ext']={required: true, groups : ['submit']};   
+          
+        var messages = {};
+        messages['subject']={ required: '主题不能为空....'};
+        messages['proposer']={ required: '申请人不能为空....'};
+        messages['dept']={ required: '部门不能为空....'};
+        messages['empid']={ required: '工号不能为空....'};
+        messages['ext']={ required: '座机不能为空....'};
+
+        form.setValidate('#requrest-form', rules, messages);
+
+
+
+        //所有 提交、保存 after，before 方法，都有一个 data 参数，里面包含 e(事件源), validate(验证对象), validateResult(验证结果)
+
+        //data 可以写自定义属性，供其他方法使用
+
+        //所有 提交、保存 after，before 方法如果 return false，后续方法就不会执行
+
+        //提交时验证前
+        form.submitValidateBefore = function(data)
+        {
+
+            alert('提交验证之前....' + '\r\n' + 'e：' + data.e  + '\r\n' + 'validate：' + data.validate  + '\r\n' + 'validate result：' + data.validateResult + '\r\n' + 'myattr：' + data.myattr );
+
+            data.myattr = '自定义属性';
+
+            //设置自定义验证 groups
+            data.validateGroups = 'custom';
+
+            //return false 后，后面的方法不再执行
+        };
+
+        //提交时验证后
+        form.submitValidateAfter = function(data)
+        {
+            alert('提交验证之后....' + '\r\n' + 'e：' + data.e  + '\r\n' + 'validate：' + data.validate  + '\r\n' + 'validate result：' + data.validateResult + '\r\n' + 'myattr：' + data.myattr );
+
+            data.myattr = '自定义属性(提交验证后改变)';
+
+            //return false 后，后面的方法不再执行
+        };
+
+        //提交前
+        form.submitBefore = function(data)
+        {
+            alert('提交之前....' + '\r\n' + 'e：' + data.e  + '\r\n' + 'validate：' + data.validate  + '\r\n' + 'validate result：' + data.validateResult + '\r\n' + 'myattr：' + data.myattr );
+
+            data.myattr = '自定义属性(提交之前改变)';
+        };
+
+        //提交后
+        form.submitAfter = function(data)
+        {
+            alert('提交之后....' + '\r\n' + 'e：' + data.e  + '\r\n' + 'validate：' + data.validate  + '\r\n' + 'validate result：' + data.validateResult + '\r\n' + 'myattr：' + data.myattr );
+
+        };
+
+
+        //保存事件接口，参数 同  提交
+
+        //保存时验证前
+        form.saveValidateBefore = function(data)
+        {
+            alert('保存验证之前....' + '\r\n' + 'e：' + data.e  + '\r\n' + 'validate：' + data.validate  + '\r\n' + 'validate result：' + data.validateResult + '\r\n' + 'myattr：' + data.myattr );
+
+            data.myattr = '自定义属性';
+
+            data.validateGroups = 'custom';
+
+            //return false 后，后面的方法不再执行
+        };
+
+        //保存时验证后
+        form.saveValidateAfter = function(data)
+        {
+            alert('保存验证之后....' + '\r\n' + 'e：' + data.e  + '\r\n' + 'validate：' + data.validate  + '\r\n' + 'validate result：' + data.validateResult + '\r\n' + 'myattr：' + data.myattr );
+
+            data.myattr = '自定义属性(保存验证后改变)';
+
+            //return false 后，后面的方法不再执行
+        };
+
+        //保存前
+        form.saveBefore = function(data)
+        {
+            alert('保存之前....' + '\r\n' + 'e：' + data.e  + '\r\n' + 'validate：' + data.validate  + '\r\n' + 'validate result：' + data.validateResult + '\r\n' + 'myattr：' + data.myattr );
+
+            data.myattr = '自定义属性(保存之前改变)';
+        };
+
+        //保存后
+        form.saveAfter = function(data)
+        {
+            alert('保存之后....' + '\r\n' + 'e：' + data.e  + '\r\n' + 'validate：' + data.validate  + '\r\n' + 'validate result：' + data.validateResult + '\r\n' + 'myattr：' + data.myattr );
+
+        };
+
+
+
+
+
+
+
+        //所有 关闭、打印 after，before 方法，都有一个 data 参数，里面包含 e(事件源),
+
+        //data 可以写自定义属性，供其他方法使用
+
+        //所有 关闭、打印 after，before 方法如果 return false，后续方法就不会执行
+
+        //关闭之前
+        form.closeBefore = function(data)
+        {
+             alert('关闭之前....' + '\r\n' + 'e：' + data.e  );
+        };
+
+        //关闭之后
+        form.closeAfter = function(data)
+        {
+            alert('关闭之后....' + '\r\n' + 'e：' + data.e  );
+        };
+
+        //删除之前
+        form.deleteBefore = function(data)
+        {
+             alert('删除之前....' + '\r\n' + 'e：' + data.e  );
+        };
+
+        //删除之后
+        form.deleteAfter = function(data)
+        {
+            alert('删除之后....' + '\r\n' + 'e：' + data.e  );
+        };
+
+        //打印之前
+        form.printBefore = function(data)
+        {
+             alert('打印之前....' + '\r\n' + 'e：' + data.e  );
+        };
+
+        //打印之后
+        form.printAfter = function(data)
+        {
+            alert('打印之后....' + '\r\n' + 'e：' + data.e  );
+        };
+
+        //定义按钮
+        $(document).delegate('.req-oper .item-custom-1', 'click', function()
+        {
+            alert('自定义按钮1');
+        });
+
+        $(document).delegate('.req-oper .item-custom-2', 'click', function()
+        {
+            alert('自定义按钮2');
+        });
+
+    }
+    
+
+</script>
+
+</html>
