@@ -473,7 +473,7 @@ label input[type="checkbox"] {
 }
 .upload-multiple-file .add-file {
   width: auto;
-  vertical-align: -3px;
+  vertical-align: -1px;
   background: none;
   color: #1999D7;
 }

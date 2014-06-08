@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="..\../style/t.css" />
+<!--[if gte IE 8]><link rel="stylesheet" href="..\../style/ie8.css" /><![endif]-->
+</head>
+<body>
+    <div class="demo">
+
+        <h2>Switch：</h2>
+        <code>
+            <p>
+                <textarea class="textarea textarea-code "><input type="radio" name="" id="" data-switch="checked ? show .row-personal";></textarea>
+            </p>
+            <p>
+                当前元素 checked 时，执行 show 动作，.row-personal 是一个标准的 jQuery 选择器
+            </p>
+            <p>
+                <textarea class="textarea textarea-code "><input type="checkbox" name="" id="" data-switch="checked ? show : hide .row-personal";></textarea>
+            </p>
+            <p>
+                当前元素 checked 时，执行 show 动作，否则执行 hide 动作 .row-personal 是一个标准的 jQuery 选择器
+            </p>
+            <p>
+                <textarea class="textarea textarea-code textarea-code-60"><select name="" id="" class="select" data-switch="value=='Y' ? show .row-personal; value!='Y' ? hide .row-personal">
+    <option></option>
+    <option value="Y">YES</option>
+    <option value="N">NO</option>
+</select></textarea>
+            </p>
+            <p>
+                当前元素 value 为 Y 时，执行 show 动作;<br>
+                当前元素 value 为 !Y 时，执行 hide 动作;<br>
+                .row-personal 是一个标准的 jQuery 选择器
+            </p>
+        </code>
+
+        <h2>radio</h2>
+        <code>
+            <div>
+                <table class="form-grid form-grid-col3">
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label class="require">申请类型</label>
+                            </th>
+                            <td>
+                                <label>
+                                    <input type="radio" name="req-cate" id="" checked data-switch="checked ? show .row-personal; checked ? hide .row-company;">个人
+                                </label>
+                                <label>
+                                    <input type="radio" name="req-cate" id="" data-switch="checked ? show .row-company; checked ? hide .row-personal;">公司
+                                </label>
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr class="row-personal">
+                            <th>
+                                <label class="require">姓名</label>
+                            </th>
+                            <td>
+                                <input type="text" class="text text-icon-people">
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr class="row-company d-n">
+                            <th>
+                                <label class="require">公司名称</label>
+                            </th>
+                            <td>
+                                <input type="text" class="text text-icon-selector">
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <textarea class="textarea textarea-code textarea-code-120"><table class="form-grid form-grid-col3">
+    <tbody>
+        <tr>
+            <th>
+                <label class="require">申请类型</label>
+            </th>
+            <td>
+                <label>
+                    <input type="radio" name="req-cate" id="" checked data-switch="checked ? show .row-personal; checked ? hide .row-company;">个人
+                </label>
+                <label>
+                    <input type="radio" name="req-cate" id="" data-switch="checked ? show .row-company; checked ? hide .row-personal;">公司
+                </label>
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr class="row-personal">
+            <th>
+                <label class="require">姓名</label>
+            </th>
+            <td>
+                <input type="text" class="text text-icon-people">
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr class="row-company d-n">
+            <th>
+                <label class="require">公司名称</label>
+            </th>
+            <td>
+                <input type="text" class="text text-icon-selector">
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+</table></textarea>
+            </div>
+        </code>
+
+        <h2>checkbox</h2>
+        <code>
+            <div>
+                <table class="form-grid form-grid-col3">
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label class="require">你有病吗?</label>
+                            </th>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" id="" data-switch="checked ? show&focus : hide .text-more">有没有？
+                                </label>
+                                <input type="text" class="text text-more">
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <textarea class="textarea textarea-code textarea-code-120"><table class="form-grid form-grid-col3">
+<tbody>
+    <tr>
+        <th>
+            <label class="require">你有病吗?</label>
+        </th>
+        <td>
+            <label>
+                <input type="checkbox" name="" id="" data-switch="checked ? show&focus : hide .text-more">有没有？
+            </label>
+            <input type="text" class="text text-more">
+        </td>
+        <td>
+        </td>
+    </tr>
+</tbody>
+</table></textarea>
+            </div>
+        </code>
+
+        <h2>select</h2>
+        <code>
+            <div>
+                <table class="form-grid form-grid-col3">
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label class="require">申请原因</label>
+                            </th>
+                            <td>
+                                <select name="" id="" class="select" data-switch="value=='Other' ? show&focus .text-other; value!='Other' ? hide .text-other">
+                                    <option></option>
+                                    <option>政府</option>
+                                    <option>合作企业</option>
+                                    <option>股东方</option>
+                                    <option value="Other">其他</option>
+                                </select>
+                                <input type="text" class="text text-other d-n">
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <textarea class="textarea textarea-code textarea-code-120"><table class="form-grid form-grid-col3">
+    <tbody>
+        <tr>
+            <th>
+                <label class="require">申请原因</label>
+            </th>
+            <td>
+                <select name="" id="" class="select" data-switch="value=='Other' ? show&focus .text-other; value!='Other' ? hide .text-other">
+                    <option></option>
+                    <option>政府</option>
+                    <option>合作企业</option>
+                    <option>股东方</option>
+                    <option value="Other">其他</option>
+                </select>
+                <input type="text" class="text text-other d-n">
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table></textarea>
+            </div>
+        </code>
+
+
+    
+    </div>
+</body>
+<script src="..\../script/require.js" data-main="..\../script/t.js"></script>
+
+</html>

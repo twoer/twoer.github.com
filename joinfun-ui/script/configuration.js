@@ -16,7 +16,8 @@ require.config(
         select : 'plugin/jquery.select',
         tip : 'plugin/jquery.ptip',
         tree : 'plugin/jquery.ztree',
-        template : 'plugin/template'
+        template : 'plugin/template',
+        tinyswitch : 'plugin/jquery.tinyswitch'
     },
     shim:
     {
@@ -59,6 +60,10 @@ require.config(
         tree:
         {
             deps: ['jquery']
+        },
+        tinyswitch:
+        {
+            deps: ['jquery']
         }
     }
 });
@@ -84,7 +89,7 @@ require(['jquery'], function()
 });
 
 
-require(['components', 'upload', 'select', 'validate', 'ectable', 'tree', 'selector', 'utils', 'datepicker', 'tip', 'template'], function(page)
+require(['components', 'upload', 'select', 'validate', 'ectable', 'tree', 'selector', 'utils', 'datepicker', 'tip', 'template', 'tinyswitch'], function(page)
 {
 	//lang
     if(window['_lang'] === undefined)

@@ -62,7 +62,6 @@ require(['uploadify', 'lang-cn'], function()
     {
         $("#uploadify").uploadifyClearQueue();
 
-        parent._uploadFileCallback({id:1,name:'xxx'});
         _close();
     });
 

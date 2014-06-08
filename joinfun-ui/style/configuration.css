@@ -473,7 +473,7 @@ label input[type="checkbox"] {
 }
 .upload-multiple-file .add-file {
   width: auto;
-  vertical-align: -3px;
+  vertical-align: -1px;
   background: none;
   color: #1999D7;
 }
@@ -1915,21 +1915,21 @@ select {
   border: solid 1px #C0DAEB;
   border-top: none;
 }
-.list-content .search-fields .buttons,
-.input-content .search-fields .buttons,
-.list-content .batch-auth .buttons,
-.input-content .batch-auth .buttons,
-.list-content .simple-search-fields .buttons,
-.input-content .simple-search-fields .buttons {
+.list-content .search-fields .action,
+.input-content .search-fields .action,
+.list-content .batch-auth .action,
+.input-content .batch-auth .action,
+.list-content .simple-search-fields .action,
+.input-content .simple-search-fields .action {
   padding: 5px 0px 5px 0px;
   text-align: center;
 }
-.list-content .search-fields .buttons .button,
-.input-content .search-fields .buttons .button,
-.list-content .batch-auth .buttons .button,
-.input-content .batch-auth .buttons .button,
-.list-content .simple-search-fields .buttons .button,
-.input-content .simple-search-fields .buttons .button {
+.list-content .search-fields .action .button,
+.input-content .search-fields .action .button,
+.list-content .batch-auth .action .button,
+.input-content .batch-auth .action .button,
+.list-content .simple-search-fields .action .button,
+.input-content .simple-search-fields .action .button {
   padding: 3px 25px;
   margin-right: 20px;
   font-size: 14px;
@@ -2068,13 +2068,9 @@ select {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.list-content .form-grid-col3 .text-groups .text,
-.input-content .form-grid-col3 .text-groups .text {
-  width: 164px;
-}
-.list-content .form-grid-col3 .text-groups .divider,
-.input-content .form-grid-col3 .text-groups .divider {
-  width: 15px;
+.list-content .form-grid-col3 .text-groups,
+.input-content .form-grid-col3 .text-groups {
+  width: 350px;
 }
 .list-content .form-grid-col3 .ui-customSelect,
 .input-content .form-grid-col3 .ui-customSelect {
@@ -2098,6 +2094,10 @@ select {
 .list-content .form-grid-col3 .upload-multiple-file .select,
 .input-content .form-grid-col3 .upload-multiple-file .select {
   width: 350px;
+}
+.list-content .form-grid-col3 .upload-multiple-file,
+.input-content .form-grid-col3 .upload-multiple-file {
+  margin-top: -1px;
 }
 .list-content .form-grid-col6,
 .input-content .form-grid-col6 {
@@ -2133,143 +2133,9 @@ select {
 .list-content-inner {
   padding: 0px;
 }
-.list-content-organization .list-content-inner,
-.list-content-employee .list-content-inner,
-.list-content-party .list-content-inner {
-  position: relative;
-  padding-left: 221px;
-  border-top: none;
-}
-.list-content-organization .list-content-inner .side,
-.list-content-employee .list-content-inner .side,
-.list-content-party .list-content-inner .side {
-  display: none;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 220px;
-  min-height: 200px;
-  background-color: #fff;
-  border: solid 1px #C0DAEB;
-  border-top: none;
-}
-.list-content-organization .list-content-inner .side h2,
-.list-content-employee .list-content-inner .side h2,
-.list-content-party .list-content-inner .side h2 {
-  padding-left: 10px;
-  line-height: 40px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #1999d7;
-  border-bottom: solid 1px #C0DAEB;
-}
-.list-content-organization .list-content-inner .side .ztree,
-.list-content-employee .list-content-inner .side .ztree,
-.list-content-party .list-content-inner .side .ztree {
-  padding: 0px;
-  margin: 5px;
-  overflow: auto;
-}
-.list-content-organization .list-content-inner .main .simple-search-fields,
-.list-content-employee .list-content-inner .main .simple-search-fields,
-.list-content-party .list-content-inner .main .simple-search-fields {
-  padding: 8px;
-  border: none;
-  border: solid 1px #C0DAEB;
-  border-top: none;
-}
-.list-content-organization .list-content-inner .main .eXtremeTable,
-.list-content-employee .list-content-inner .main .eXtremeTable,
-.list-content-party .list-content-inner .main .eXtremeTable {
-  border-left: solid 1px #C0DAEB;
-}
-.list-content-organization iframe,
-.list-content-employee iframe,
-.list-content-party iframe {
-  width: 100%;
-  height: 435px;
-}
-.list-content-organization .simple-search-fields,
-.list-content-employee .simple-search-fields,
-.list-content-party .simple-search-fields {
-  padding: 8px 65px 8px 60px;
-  height: 25px;
-  border-left: none;
-  border-right: none;
-  -webkit-box-sizing: border-content;
-  -moz-box-sizing: border-content;
-  box-sizing: border-content;
-}
-.list-content-organization .simple-search-fields label,
-.list-content-employee .simple-search-fields label,
-.list-content-party .simple-search-fields label {
-  float: left;
-  padding-left: 8px;
-  margin-left: -60px;
-  line-height: 25px;
-}
-.list-content-organization .simple-search-fields .button,
-.list-content-employee .simple-search-fields .button,
-.list-content-party .simple-search-fields .button {
-  float: right;
-  margin-right: -60px;
-}
-.list-content-organization .simple-search-fields .text,
-.list-content-employee .simple-search-fields .text,
-.list-content-party .simple-search-fields .text {
-  float: left;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.list-content-organization .simple-search-fields .text-icon-delete + .text-icon-delete-inner,
-.list-content-employee .simple-search-fields .text-icon-delete + .text-icon-delete-inner,
-.list-content-party .simple-search-fields .text-icon-delete + .text-icon-delete-inner {
-  float: left;
-}
-.list-content-party .list-content-inner {
-  padding-left: 300px;
-}
-.list-content-party .list-content-inner .side {
-  width: 300px;
-}
-.list-content-union .union-list {
-  margin: 0px auto;
-  margin-top: 200px;
-  width: 80%;
-}
-.list-content-union .union-list li {
-  float: left;
-  margin-right: 1%;
-  width: 24%;
-  height: 100px;
-  background-color: #1999d7;
-  text-align: center;
-  line-height: 100px;
-  color: #fff;
-  font-size: 14px;
-}
-.list-content-union .union-list li:hover {
-  background-color: #F60;
-}
-.list-content-union .union-list li a {
-  display: block;
-  width: 100%;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  color: #fff;
-  text-decoration: none;
-}
 .input-content {
   padding: 5px 5px 10px 5px;
   min-width: 990px;
-}
-.input-content .form-grid-employee-base-info .avatar {
-  float: left;
-  width: 100px;
-  height: 120px;
 }
 .list-content-function-auth .eXtremeTable iframe {
   width: 100%;

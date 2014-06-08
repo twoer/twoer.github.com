@@ -160,26 +160,6 @@ require(['components', 'dialog'], function()
 		return _url;
 	}
 
-
-
-	function _uploadFileCallback(data)
-	{
-		if(!_uploadFileSender || !data)
-		{
-			return;
-		}
-
-		var _tmpl = '<li data-file-id="{0}">' +
-						'<a href="javascript:;" class="delete-file" ></a>' +
-                    	'<a href="javascript:;" class="download-file">{1}</a>' +
-                    '</li>';
-
-        var _str = _tmpl.replace('{0}', data.id).replace('{1}', data.fileName);
-        _uploadFileSender.find('.file-list').append(_str);
-
-        _updateFileValue();
-	}
-
 	function _updateFileValue()
 	{
 		var _value  = [];
@@ -201,6 +181,24 @@ require(['components', 'dialog'], function()
 			return false;
 		}
 		return true;
+	}
+
+	_uploadFileCallback = function(data)
+	{
+		if(!_uploadFileSender || !data)
+		{
+			return;
+		}
+
+		var _tmpl = '<li data-file-id="{0}">' +
+						'<a href="javascript:;" class="delete-file" ></a>' +
+                    	'<a href="javascript:;" class="download-file">{1}</a>' +
+                    '</li>';
+
+        var _str = _tmpl.replace('{0}', data.id).replace('{1}', data.fileName);
+        _uploadFileSender.find('.file-list').append(_str);
+
+        _updateFileValue();
 	}
 	
 }, function(err)

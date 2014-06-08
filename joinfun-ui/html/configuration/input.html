@@ -30,23 +30,19 @@
                     <tbody>
                         <tr>
                             <th>
-                                <label class="require">洲</label>
+                                <label class="require">文本框</label>
                             </th>
                             <td>
-                                <select name="" id="" class="select">
-                                    <option value="">亚洲</option>
-                                </select>
+                                <input type="text" class="text">
                             </td>
-                            <td>
-                                选择洲
-                            </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <th>
-                                 <label class="require">中文名</label>
+                                 <label class="require">可选人文本框</label>
                             </th>
                             <td>
-                                <input type="text" class="text text-icon-people" data-action-type="manager" >
+                                <input type="text" class="text text-icon-people" data-action-type="" >
                             </td>
                             <td>
                                 
@@ -54,20 +50,10 @@
                         </tr>
                         <tr>
                             <th>
-                                 <label class="require">中文名</label>
+                                 <label class="require">可选择文本框</label>
                             </th>
                             <td>
-                                <input type="text" class="text text-icon-people" data-action-type="M-manager?markIsDeleted=Y&key=xxx" >
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <tr>
-                            <th>
-                                 <label class="require">中文名</label>
-                            </th>
-                            <td>
-                                <input type="text" class="text text-icon-people" data-action-type="Dept-manager" >
+                                <input type="text" class="text text-icon-selector" data-action-type="manager" >
                             </td>
                             <td>
                                 
@@ -75,18 +61,7 @@
                         </tr>
                         <tr>
                             <th>
-                                 <label class="require">英文名</label>
-                            </th>
-                            <td>
-                                <input type="text" class="text" name="xxx">
-                            </td>
-                            <td>
-                                
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                 <label class="require">日期</label>
+                                 <label class="require">日历选择框</label>
                             </th>
                             <td>
                                 <input type="text" class="text text-icon-datepicker" name="xxx">
@@ -97,7 +72,62 @@
                         </tr>
                         <tr>
                             <th>
-                                 <label>说明</label>
+                                 <label class="require">日历组合选择框</label>
+                            </th>
+                            <td>
+                                <div class="text-groups">
+                                    <input type="text" class="text text-icon-datepicker" name="xxx">
+                                    <span class="divider">-</span>
+                                    <input type="text" class="text text-icon-datepicker" name="xxx">
+                                </div>
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                 <label class="require">其他组合选择框</label>
+                            </th>
+                            <td>
+                                <div class="text-groups">
+                                    <input type="text" class="text " name="xxx">
+                                    <span class="divider">-</span>
+                                    <input type="text" class="text " name="xxx">
+                                </div>
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label class="require">下拉框</label>
+                            </th>
+                            <td>
+                                <select name="" id="" class="select">
+                                    <option value="">亚洲</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label class="require">多选下拉框</label>
+                            </th>
+                            <td>
+                                <select name="" id="" class="select select-multiple" multiple data-placeholder="请选择...">
+                                    <option value="">亚洲</option>
+                                    <option value="">非洲</option>
+                                    <option value="">美洲</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <th>
+                                 <label>多选框</label>
                             </th>
                             <td>
                                 <div class="multiple-selector">
@@ -116,23 +146,20 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="des">
-                                    金额<=RMB，由法律部主管法律顾问和财务部执行副总监进行会签审批。 
-                                </div>
+                                
                             </td>
                         </tr>
-
                         <tr>
                             <th>
-                                <label class="require">是否可用</label>
+                                <label class="require">radio</label>
                             </th>
                             <td>
                                 <div class="radio-groups">
                                     <label>
-                                        <input type="radio" name="" id="">YES
+                                        <input type="radio" name="radio" id="">YES
                                     </label>
                                      <label>
-                                        <input type="radio" name="" id="">NO
+                                        <input type="radio" name="radio" id="">NO
                                     </label>
                                 </div>
                             </td>
@@ -140,7 +167,6 @@
                                 
                             </td>
                         </tr>
-
                         <tr>
                             <th>
                                 <label class="require">radio list</label>
@@ -149,22 +175,22 @@
                                 <ul class="radio-list">
                                     <li>
                                         <label>
-                                            <input type="radio" name="" id=""> test001
+                                            <input type="radio" name="radio-list" id=""> test001
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="" id=""> test001
+                                            <input type="radio" name="radio-list" id=""> test001
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="" id=""> test001
+                                            <input type="radio" name="radio-list" id=""> test001
                                         </label>
                                     </li>
                                     <li>
                                         <label title="我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长">
-                                            <input type="radio" name="" id="" >我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长
+                                            <input type="radio" name="radio-list" id="" >我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长
                                         </label>
                                     </li>
                                 </ul>
@@ -173,7 +199,6 @@
                                 
                             </td>
                         </tr>
-
                         <tr>
                             <th>
                                 <label class="require">checkbox list</label>
@@ -182,22 +207,22 @@
                                 <ul class="checkbox-list">
                                     <li>
                                         <label>
-                                            <input type="checkbox" name="" id=""> test001
+                                            <input type="checkbox" name="checkbox-list" id=""> test001
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="checkbox" name="" id=""> test001
+                                            <input type="checkbox" name="checkbox-list" id=""> test001
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="checkbox" name="" id=""> test001
+                                            <input type="checkbox" name="checkbox-list" id=""> test001
                                         </label>
                                     </li>
                                     <li>
                                         <label title="我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长">
-                                            <input type="checkbox" name="" id="" >我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长
+                                            <input type="checkbox" name="checkbox-list" id="" >我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长我很长
                                         </label>
                                     </li>
                                 </ul>
@@ -206,7 +231,6 @@
                                 
                             </td>
                         </tr>
-
                         <tr>
                             <th>
                                 <label class="require">文件</label>
@@ -226,7 +250,6 @@
                                 没有文件时....
                             </td>
                         </tr>
-
                         <tr>
                             <th>
                                 <label class="require">文件</label>
@@ -249,7 +272,6 @@
                                 有文件时....
                             </td>
                         </tr>
-
                         <tr>
                             <th>
                                 <label class="require">文件</label>
@@ -265,23 +287,63 @@
                                 不能上传时....
                             </td>
                         </tr>
-
                         <tr>
                             <th>
-                                <label class="require">单价</label>
+                                <label class="require">附件上传</label>
                             </th>
                             <td>
-                                <div class="text-groups">
-                                    <input type="text" class="text text-zoom" data-zoom-type="number">
-                                    <span class="divider">-</span>
-                                    <input type="text" class="text text-zoom" data-zoom-type="number">
+                                <div class="upload-multiple-file" 
+                                        data-upload-count="1"
+                                        data-add-url="../iframe/upload-attch.html"
+                                        data-download-url="../iframe/upload-attch.html?id={id}"
+                                    >
+                                        <a href="javascript:;" class="add-file" >上传附件</a>
+                                        <input type="hidden" value="1,2,3,4" />
+                                        <ul class="file-list">
+                                            <li data-file-id="1">
+                                                <a href="javascript:;" class="delete-file" ></a>
+                                                <a href="javascript:;" class="download-file">
+                                                    测试情况反馈-zhangkun20130704.xlsx
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                            </td>
+                            <td>
+                                不能上传时....
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label class="require">附件只读</label>
+                            </th>
+                            <td>
+                                <div class="upload-multiple-file" 
+                                    data-download-url="../iframe/upload-attch.html?id={id}"
+                                    >
+                                    <ul class="file-list">
+                                        <li data-file-id="1">
+                                            <a href="javascript:;" class="download-file">
+                                                测试情况反馈-zhangkun20130704.xlsx
+                                            </a>
+                                        </li>
+                                        <li data-file-id="2">
+                                            <a href="javascript:;" class="download-file">
+                                                测试情况反馈-zhangkun20130704.xlsx
+                                            </a>
+                                        </li>
+                                        <li data-file-id="3">
+                                            <a href="javascript:;" class="download-file">
+                                                测试情况反馈-zhangkun20130704.xlsx
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </td>
                             <td>
-                                
+                                不能上传时....
                             </td>
                         </tr>
-
                         <tr>
                             <th>
                                 <label class="require">备注</label>

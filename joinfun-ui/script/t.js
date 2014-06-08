@@ -13,7 +13,8 @@ require.config(
         validate : 'plugin/jquery.validate.ext',
         ptip : 'plugin/jquery.ptip',
         template : 'plugin/template',
-        datalistinput : 'plugin/jquery.datalistinput'
+        datalistinput : 'plugin/jquery.datalistinput',
+        tinyswitch : 'plugin/jquery.tinyswitch'
     },
     shim:
     {
@@ -44,11 +45,15 @@ require.config(
         datalistinput:
         {
             deps: ['jquery']
+        },
+        tinyswitch:
+        {
+            deps: ['jquery']
         }
     }
 });
 
-require(['components', 'validate', 'utils', 'selector', 'ptip', 'template', 'datalistinput'], function()
+require(['components', 'validate', 'utils', 'selector', 'ptip', 'template', 'datalistinput', 'tinyswitch'], function()
 {
     //menu click
     $(document).delegate('.menu dt a', 'click', function()

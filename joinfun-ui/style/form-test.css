@@ -472,7 +472,7 @@ label input[type="checkbox"] {
 }
 .upload-multiple-file .add-file {
   width: auto;
-  vertical-align: -3px;
+  vertical-align: -1px;
   background: none;
   color: #1999D7;
 }
@@ -1954,7 +1954,7 @@ a:hover {
   margin-top: -2px;
 }
 .req-wrap .form-grid td .upload-multiple-file {
-  margin-top: -3px;
+  margin-top: -1px;
 }
 .req-wrap .form-grid td .upload-multiple-file.review {
   margin-top: 0px;
