@@ -1,0 +1,187 @@
+<div class="bill-overview">
+    <i class="cate everyday"></i>
+    <!-- borrowing/everyday/repayment/request/travelling/vendor/travel -->
+    <!-- 单据类型暂时只用 everyyday 日常费用，后期加上其他 -->
+    <h1 class="change">日常费用报销</h1>
+    <div class="amount">
+        报销金额<b>2,500.00</b>
+    </div>
+</div>
+
+<div class="bill-form">
+    <form action="bill-create.html">
+        <div class="form-item-groups">
+            <div class="form-item bill-note">
+                <span class="cell-label require">附票据</span>
+                <span class="cell-input-unit">张</span>
+                <input type="text" class="text" value="">
+            </div>
+        </div>
+
+        <div class="form-item-groups">
+            <a href="#selector-emp" class="form-item">
+                <span class="cell-label require">申请人</span>
+                <b>张坤</b>
+            </a>
+            <a href="#selector-dept" data-mode-transition="pop" data-ignore="true" class="form-item">
+                <span class="cell-label require">部门</span>
+                <b>张坤</b>
+            </a>
+            <a href="#selector-payment-pattern" data-mode-transition="pop" data-ignore="true" class="form-item">
+                <span class="cell-label require">支付方式</span>
+                <b>网银</b>
+            </a>
+            <a href="#selector-currency" data-mode-transition="pop" data-ignore="true" class="form-item">
+                <span class="cell-label require">币种</span>
+                <b>人民币</b>
+            </a>
+            <a href="#selector-project" class="form-item">
+                <span class="cell-label require">项目/产品</span>
+                <b>NPR</b>
+            </a>
+            <a href="#selector-bank-account" class="form-item">
+                <span class="cell-label require">银行</span>
+                <b>高明/工商银行/1234 5678 1234 5678</b>
+            </a>
+        </div>
+
+        <div class="form-item-groups details-total">
+            <div class="form-item ">
+                <span class="cell-label">明细合计</span>
+                <b>500.00</b>
+            </div>
+            <ul class="details-list">
+                <li>
+                    <a href="javascript:;" class="screenage">
+                        <img src="../images/screenage.png" alt="" class="">
+                    </a>
+                    <div class="details">
+                        <h3>办公费<b>10.00</b></h3>
+                        <div class="date">
+                            <span>2013-01-18 至 2014-12-12</span>
+                            <cite>2013-01-18 至 2014-12-12</cite>
+                        </div>
+                        <div class="remark">备注备注</div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="screenage">
+                        <img src="../images/screenage.png" alt="" class="">
+                    </a>
+                    <div class="details">
+                        <h3>办公费<b>500.00</b></h3>
+                        <div class="date">
+                            <span>2013-01-18 至 2014-12-12</span>
+                            <cite>SGM-SDDDDD</cite>
+                        </div>
+                        <div class="remark">备注备注备注备注备备注备注备注</div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="screenage">
+                        <img src="../images/screenage.png" alt="" class="">
+                    </a>
+                    <div class="details">
+                        <h3>办公费<b>2,500.00</b></h3>
+                        <div class="date">
+                            <span>2013-01-18 至 2014-12-12</span>
+                            <cite>SGM-SDDDDD</cite>
+                        </div>
+                        <div class="remark">备注备注备注备注备注备注备注备注备注备注备注备注备注备注</div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#bill-create-add-details" class="add-details"><i>添加明细</i></a>
+        </div>
+
+        <div class="form-item-groups borrowing-total">
+            <div class="form-item ">
+                <span class="cell-label">借款单合计</span>
+                <b>-500.00</b>
+            </div>
+            <ul class="details-list">
+                <li>
+                    <div class="details">
+                        <h3>AA12345678<b>10.00</b></h3>
+                        <div class="date">
+                            <span>2013-01-18 至 2014-12-12</span>
+                            <cite>SGM-SDDDDD</cite>
+                        </div>
+                        <div class="remark">备注备注</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="details">
+                        <h3>AA12345678<b>10.00</b></h3>
+                        <div class="date">
+                            <span>2013-01-18 至 2014-12-12</span>
+                            <cite>SGM-SDDDDD</cite>
+                        </div>
+                        <div class="remark">备注备注</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="details">
+                        <h3>AA12345678<b>10.00</b></h3>
+                        <div class="date">
+                            <span>2013-01-18 至 2014-12-12</span>
+                            <cite>SGM-SDDDDD</cite>
+                        </div>
+                        <div class="remark">备注备注</div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#bill-create-add-borrowing" class="add-details"><i>添加借款单</i></a>
+        </div>
+
+        <ul class="attachment-list clear">
+            <li>
+                <a href="javascript:;" class="cate rar">
+                    <span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+                </a>
+                <a href="javascript:;" class="delete"></a>
+            </li>
+            <li>
+                <a href="javascript:;" class="cate doc">
+                    <span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+                </a>
+                <a href="javascript:;" class="delete"></a>
+            </li>
+            <li>
+                <a href="javascript:;" class="cate excel">
+                    <span class="name">xxxxxxxxxxxxxxxxxxxxxx.zip</span>
+                </a>
+                <a href="javascript:;" class="delete"></a>
+            </li>
+            <li>
+                <a href="javascript:;" class="add"></a>
+            </li>
+        </ul>
+        
+        <div class="buttons">
+            <button type="button" class="button-delete">删除此单据</button>
+            <button type="button" class="button-save-template">保存模板</button>
+            <button type="button" class="button-chose-template">更改模板</button>
+        </div>
+
+    </form>
+</div>
+
+<header>
+    <a id="backButton" class="button"></a>
+    <h1 id="pageTitle" class="">新增单据</h1>
+    <a id="confirmButton" class="button"></a>
+</header>
+
+
+<script>
+    var $navbar = $('#navbar');
+    function billCreateOnload()
+    {
+        
+    } 
+    function billCreateUnload()
+    {
+        
+    }   
+</script>
