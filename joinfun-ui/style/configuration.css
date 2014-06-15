@@ -601,8 +601,14 @@ label input[type="checkbox"] {
 .data-list.sprit-comma li:after {
   content: '，';
 }
+.data-list.sprit-comma li:last-child:after {
+  content: none;
+}
 .data-list.sprit-semicolon li:after {
   content: '；';
+}
+.data-list.sprit-semicolon li:last-child:after {
+  content: none;
 }
 /* form grid */
 .form-grid {

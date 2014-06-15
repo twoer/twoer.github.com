@@ -41,49 +41,29 @@
                             </select>
                         </td>
                         <th>申请单编号</th>
-                        <td class="text-c">
+                        <td>
                             <input type="text" class="text " />
                         </td>
-                        <th>主题</th>
-                        <td class="text-c">
-                            <input type="text" class="text " />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>部门</th>
-                        <td class="text-icon-c">
-                            <input type="text" class="text text-icon-selector" />
-                        </td>
-                        <th>部门</th>
-                        <td class="text-icon-c">
-                            <input type="text" class="text text-icon-selector" />
-                        </td>
-                        <th>科室</th>
-                        <td class="text-icon-c">
-                            <input type="text" class="text text-icon-selector" />
-                        </td>
-                    </tr>
-                    <tr>
                         <th>申请人</th>
-                        <td class="text-icon-c">
+                        <td>
+                            <input type="text" class="text text-icon-people" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>部门</th>
+                        <td>
                             <input type="text" class="text text-icon-selector" />
                         </td>
-                        <th>起草人</th>
-                        <td class="">
-                            <div class="text-datepicker-groups">
-                                <input type="text" id="t1" class="text text-icon-datepicker" />
+                        <th>申请时间</th>
+                        <td >
+                            <div class="text-groups">
+                                <input type="text" class="text text-icon-datepicker" name="xxx" data-date-max='#textDateMax'>
                                 <span class="divider">-</span>
-                                <input type="text" id="t1" class="text text-icon-datepicker" />
+                                <input type="text" class="text text-icon-datepicker" name="xxx" id="textDateMax">
                             </div>
                         </td>
                         <th></th>
                         <td></td>
-                    </tr>
-                    <tr>
-                        <td class="buttons" colspan="6">
-                            <button class="button" type="submit" />查询</button>
-                            <button class="button" type="reset" />重置</button>
-                        </td>
                     </tr>
                 </tbody>
             </table>
