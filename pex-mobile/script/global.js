@@ -51,6 +51,16 @@ $(document).delegate('#modalContainer', 'tap', function(e)
 });
 
 
+//selector
+$(document).delegate('.panel-selector .selector .data-list a', 'tap', function(e)
+{
+	var $this = $(e.target);
+	var $list = $this.closest('.data-list');
+
+	$list.find('li a').removeClass('checked');
+    $this.addClass('checked');
+});
+
 
 
 //tabs
@@ -74,13 +84,13 @@ $(document).delegate('#header #menuButton', 'tap', function()
 	$.ui.toggleSideMenu();
 });
 
-//差旅费报销
-$(document).delegate('.header-travel-expenses-create #deleteButton', 'click', function(e)
+//back button
+$(document).delegate('#header #backButton', 'tap', function()
 {
-	alert('xxx');
-	e.preventDefault();
-	return false;
+	var _back = $.ui.history[$.ui.history.length-1];
+	_back && $.ui.loadContent(_back.target);
 });
+
 
 //借款单
 //one check
