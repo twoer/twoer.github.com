@@ -603,7 +603,7 @@ img {
   display: none;
   height: 0px!important;
 }
-.panel-login .logo {
+.panel-login .content .logo {
   margin: 0px auto;
   height: 180px;
   background-image: url('../images/logo.png');
@@ -611,15 +611,15 @@ img {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.panel-login .login-form {
+.panel-login .content .login-form {
   padding: 0px 10px;
 }
-.panel-login .login-form .form-item li {
+.panel-login .content .login-form .form-item li {
   text-align: left;
 }
-.panel-login .login-form .form-item .user-domain,
-.panel-login .login-form .form-item .user-name,
-.panel-login .login-form .form-item .user-pwd {
+.panel-login .content .login-form .form-item .user-domain,
+.panel-login .content .login-form .form-item .user-name,
+.panel-login .content .login-form .form-item .user-pwd {
   padding: 0px 0px 0px 40px;
   background-color: #FFFFFF;
   background-repeat: no-repeat;
@@ -634,15 +634,15 @@ img {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-.panel-login .login-form .form-item .user-domain .text,
-.panel-login .login-form .form-item .user-name .text,
-.panel-login .login-form .form-item .user-pwd .text {
+.panel-login .content .login-form .form-item .user-domain .text,
+.panel-login .content .login-form .form-item .user-name .text,
+.panel-login .content .login-form .form-item .user-pwd .text {
   width: 96%;
   height: 38px;
   line-height: 38px;
   border: none;
 }
-.panel-login .login-form .form-item .user-domain {
+.panel-login .content .login-form .form-item .user-domain {
   position: relative;
   padding-right: 100px;
   background-image: url('../images/bg-login.png');
@@ -655,7 +655,7 @@ img {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.panel-login .login-form .form-item .user-domain b {
+.panel-login .content .login-form .form-item .user-domain b {
   position: absolute;
   top: 4px;
   right: 0px;
@@ -667,14 +667,14 @@ img {
   color: #000;
   font-weight: 500;
 }
-.panel-login .login-form .form-item .user-name {
+.panel-login .content .login-form .form-item .user-name {
   position: relative;
   background-image: url('../images/bg-login.png');
   background-position: left -60px;
   background-position: 8px -26px;
   border-bottom: none;
 }
-.panel-login .login-form .form-item .user-name:before {
+.panel-login .content .login-form .form-item .user-name:before {
   content: ' ';
   position: absolute;
   left: 4%;
@@ -683,7 +683,7 @@ img {
   width: 92%;
   background-color: #E5E5E5;
 }
-.panel-login .login-form .form-item .user-pwd {
+.panel-login .content .login-form .form-item .user-pwd {
   border-top: none;
   background-image: url('../images/bg-login.png');
   background-position: left -120px;
@@ -695,15 +695,15 @@ img {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.panel-login .login-form .form-item-action {
+.panel-login .content .login-form .form-item-action {
   margin-top: 25px;
   border: none;
   background-color: #F7F7F7;
 }
-.panel-login .login-form .form-item-action li {
+.panel-login .content .login-form .form-item-action li {
   border: none;
 }
-.panel-login .login-form .form-item-action .user-login .button {
+.panel-login .content .login-form .form-item-action .user-login .button {
   width: 100%;
   height: 40px;
   background-color: #2C8AD3;
@@ -717,12 +717,16 @@ img {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.panel-login .login-form .form-item-action .user-forgetpwd {
+.panel-login .content .login-form .form-item-action .user-forgetpwd {
   margin-top: 25px;
   text-align: right;
 }
-.panel-login .login-form .form-item-action .user-forgetpwd a {
+.panel-login .content .login-form .form-item-action .user-forgetpwd a {
   color: #2C8AD3;
+}
+.header-login {
+  height: 32px;
+  background-color: #fff!important;
 }
 .panel-travel-expenses-create .travel-expenses-form {
   padding: 10px;

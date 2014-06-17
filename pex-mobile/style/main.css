@@ -139,7 +139,7 @@ textarea {
   right: 0;
 }
 /* This is masthead bar that appears at the top of the UI */
-#afui .header h1 {
+#afui #header header[class] h1 {
   position: absolute;
   top: 0px;
   left: 0px;
