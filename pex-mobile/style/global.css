@@ -1,0 +1,1801 @@
+@charset "utf-8";
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0px;
+  padding: 0px;
+}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+  width: 100%;
+}
+/* IE bug fixed: th 不继承 text-align*/
+th {
+  text-align: inherit;
+}
+/* 去除默认边框 */
+fieldset,
+img {
+  border: none;
+}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block;
+}
+/* 去掉 firefox 下此元素的边框 */
+abbr,
+acronym {
+  border: none;
+  font-variant: normal;
+}
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+/* 去掉列表前的标识, li 会继承 */
+ol,
+ul,
+li {
+  list-style: none;
+}
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,
+th {
+  text-align: left;
+}
+/* 统一上标和下标 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins,
+a {
+  text-decoration: none;
+}
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+  text-decoration: underline;
+}
+body {
+  font: 81.25%/1.38 "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+a,
+input,
+textarea,
+button {
+  font: 100%/1.38 "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+/* 清理浮动 */
+.clear {
+  zoom: 1;
+  /* for IE6 IE7 */
+}
+.clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.d-n {
+  display: none;
+}
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: none;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  outline: none;
+  text-decoration: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.form-item {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border: solid 1px #DDD;
+  background-color: #fff;
+}
+.form-item li {
+  position: relative;
+  min-height: 38px;
+  text-align: right;
+  border-top: solid 1px #DDD;
+}
+.form-item li .selector {
+  display: block;
+  position: relative;
+  height: 38px;
+}
+.form-item li .selector span {
+  right: 25px;
+}
+.form-item li .selector:before {
+  content: ' ';
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  border: solid 6px #fff;
+  border-top-color: #7F7F7F;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+.form-item li label {
+  display: block;
+  padding-left: 10px;
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  color: #888;
+  text-align: left;
+}
+.form-item li label .text {
+  float: right;
+  padding: 5px;
+  height: 38px;
+  line-height: 28px;
+  border: none;
+  color: #333;
+  text-align: right;
+}
+.form-item li label.require:after {
+  content: ' *';
+  color: #FD6B00;
+  font-weight: 700;
+}
+.form-item li span {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  line-height: 38px;
+  color: #333;
+}
+.form-item li .textarea {
+  padding: 5px 10px;
+  width: 100%;
+  height: 60px;
+  resize: none;
+  border: none;
+  color: #888;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.form-item li .textarea::-webkit-input-placeholder {
+  color: #888;
+}
+.form-item li:first-child {
+  border-top: none;
+}
+.form-item .has-suffix {
+  padding-right: 25px;
+}
+.form-item .has-suffix span {
+  right: 25px;
+}
+.form-item .has-suffix .suffix {
+  right: 10px;
+}
+.form-item + .form-item {
+  margin-top: 10px;
+}
+.tabs {
+  overflow: hidden;
+}
+.tabs .tab-nav {
+  padding: 5px 10px;
+  height: 38px;
+  background-color: #fff;
+}
+.tabs .tab-nav li {
+  float: left;
+  height: 28px;
+}
+.tabs .tab-nav li a {
+  display: block;
+  margin-left: -1px;
+  height: 28px;
+  line-height: 26px;
+  text-align: center;
+  color: #2C8AD3;
+  font-size: 1.07em;
+  border: solid 1px #2C8AD3;
+}
+.tabs .tab-nav li:first-child a {
+  margin-left: 0px;
+  -webkit-border-radius: 5px 0px 0px 5px;
+  -moz-border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 0px 0px 5px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.tabs .tab-nav li:last-child a {
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.tabs .tab-nav .selected a {
+  color: #fff;
+  background-color: #2C8AD3;
+}
+.tabs .tab-content {
+  width: 5000px;
+  -webkit-transform: translate(0px, 0px);;
+  -moz-transform: translate(0px, 0px);;
+  -ms-transform: translate(0px, 0px);;
+  -o-transform: translate(0px, 0px);;
+  transform: translate(0px, 0px);;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.tabs .tab-content .tab-pane {
+  width: 100%;
+  float: left;
+}
+#afui {
+  background-color: #F7F7F7;
+}
+#afui #header {
+  height: auto;
+  border: none!important;
+  overflow: hidden;
+}
+#afui #content {
+  background-color: #F7F7F7!important;
+}
+#afui .panel {
+  background-color: #F7F7F7;
+}
+#afui #navbar {
+  padding: 0px;
+  margin: 0px;
+  height: auto;
+  border: none;
+}
+#afui #afui_modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999 !important;
+  background: rgba(102, 102, 102, 0.5) !important;
+}
+#afui #afui_modal #modalContainer {
+  background-color: transparent!important;
+}
+#afui #afui_modal #modalContainer div:first-child {
+  height: 100%;
+}
+#sideMenu .user-info {
+  padding-top: 15px;
+  height: 71px;
+  color: #fff;
+}
+#sideMenu .user-info .avatar {
+  display: inline-block;
+  margin-left: 12px;
+  width: 50px;
+  height: 50px;
+  border: solid 3px #707D88;
+  vertical-align: top;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#sideMenu .user-info .avatar img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#sideMenu .user-info .user-details {
+  display: inline-block;
+  padding-top: 5px;
+  margin-left: 8px;
+  line-height: 18px;
+}
+#sideMenu .user-info .user-details span {
+  display: block;
+  line-height: 20px;
+}
+#sideMenu .menu-list .item {
+  height: 45px;
+}
+#sideMenu .menu-list .item a[class] {
+  position: relative;
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  text-indent: 60px;
+  color: #fff;
+  border-bottom: solid 1px #475865;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+#sideMenu .menu-list .item a[class]:before {
+  position: absolute;
+  content: ' ';
+  top: 13px;
+  left: 20px;
+  width: 30px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
+#sideMenu .menu-list .item a[class] i {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  padding: 0px 8px;
+  text-indent: 0px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #2C8AD3;
+  font-style: normal;
+  color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#sideMenu .menu-list .item a[class]:hover,
+#sideMenu .menu-list .item a[class].selected {
+  height: 46px;
+  background-color: #172A39;
+  border-left: solid 4px #2C8AD3;
+  border-bottom: none;
+}
+#sideMenu .menu-list .item .my-expense:before {
+  background-image: url('../images/bg-side-menu.png');
+  background-position: left -0px;
+  background-position: 0px 0px;
+}
+#sideMenu .menu-list .item .business-transaction:before {
+  background-image: url('../images/bg-side-menu.png');
+  background-position: left -48px;
+  background-position: 0px -20px;
+}
+#sideMenu .menu-list .item .bill-sign:before {
+  background-image: url('../images/bg-side-menu.png');
+  background-position: left -96px;
+  background-position: 0px -40px;
+}
+#sideMenu .menu-list .item .bill-payment:before {
+  background-image: url('../images/bg-side-menu.png');
+  background-position: left -144px;
+  background-position: 0px -60px;
+}
+#sideMenu .menu-list .item .system-setting:before {
+  background-image: url('../images/bg-side-menu.png');
+  background-position: left -192px;
+  background-position: 0px -80px;
+}
+#sideMenu .menu-list .item .daily-report-write:before {
+  background-image: url('../images/bg-side-menu.png');
+  background-position: left -240px;
+  background-position: 0px -100px;
+}
+#sideMenu .menu-list .logout a {
+  display: block;
+  margin: 20px auto 0px auto;
+  width: 140px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #2C8AD3;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#afui #header #menuButton,
+#afui #header #backButton,
+#afui #header #createButton,
+#afui #header #confirmButton,
+#afui #header #deleteButton {
+  position: relative;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+#afui #header #menuButton:before,
+#afui #header #backButton:before,
+#afui #header #createButton:before,
+#afui #header #confirmButton:before,
+#afui #header #deleteButton:before {
+  content: ' ';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 21.6px;
+  height: 21.6px;
+  background-size: 21.6px;
+}
+#afui #header #menuButton {
+  float: left!important;
+}
+#afui #header #menuButton:before {
+  background-image: url('../images/bg-hd.png');
+  background-position: left -0px;
+  background-position: 0px 0px;
+}
+#afui #header #backButton {
+  padding-left: 28px;
+  float: left!important;
+  width: 60px;
+  visibility: visible!important;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+#afui #header #backButton:before {
+  left: 5px;
+  background-image: url('../images/bg-hd.png');
+  background-position: left -36px;
+  background-position: 0px -21.6px;
+}
+#afui #header #createButton {
+  float: right!important;
+}
+#afui #header #createButton:before {
+  right: 5px;
+  background-image: url('../images/bg-hd.png');
+  background-position: left -72px;
+  background-position: 0px -43.2px;
+}
+#afui #header #confirmButton {
+  float: right!important;
+}
+#afui #header #confirmButton:before {
+  right: 5px;
+  background-image: url('../images/bg-hd.png');
+  background-position: left -108px;
+  background-position: 0px -64.80000000000001px;
+}
+#afui #header #deleteButton {
+  float: left!important;
+}
+#afui #header #deleteButton:before {
+  left: 5px;
+  background-image: url('../images/bg-hd.png');
+  background-position: left -144px;
+  background-position: 0px -86.4px;
+}
+.panel-login {
+  background-color: #F7F7F7;
+}
+.panel-login header,
+.panel-login footer {
+  display: none;
+  height: 0px!important;
+}
+.panel-login .logo {
+  margin: 0px auto;
+  height: 180px;
+  background-image: url('../images/logo.png');
+  background-size: 175px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.panel-login .login-form {
+  padding: 0px 10px;
+}
+.panel-login .login-form .form-item li {
+  text-align: left;
+}
+.panel-login .login-form .form-item .user-domain,
+.panel-login .login-form .form-item .user-name,
+.panel-login .login-form .form-item .user-pwd {
+  padding: 0px 0px 0px 40px;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  -webkit-border-radius: 5px 5px 0px 0px;;
+  -moz-border-radius: 5px 5px 0px 0px;;
+  border-radius: 5px 5px 0px 0px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel-login .login-form .form-item .user-domain .text,
+.panel-login .login-form .form-item .user-name .text,
+.panel-login .login-form .form-item .user-pwd .text {
+  width: 96%;
+  height: 38px;
+  line-height: 38px;
+  border: none;
+}
+.panel-login .login-form .form-item .user-domain {
+  position: relative;
+  padding-right: 100px;
+  background-image: url('../images/bg-login.png');
+  background-position: left -0px;
+  background-position: 8px 9px;
+  -webkit-border-radius: 5px;;
+  -moz-border-radius: 5px;;
+  border-radius: 5px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-login .login-form .form-item .user-domain b {
+  position: absolute;
+  top: 4px;
+  right: 0px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-indent: 10px;
+  border-left: solid 1px #E5E5E5;
+  color: #000;
+  font-weight: 500;
+}
+.panel-login .login-form .form-item .user-name {
+  position: relative;
+  background-image: url('../images/bg-login.png');
+  background-position: left -60px;
+  background-position: 8px -26px;
+  border-bottom: none;
+}
+.panel-login .login-form .form-item .user-name:before {
+  content: ' ';
+  position: absolute;
+  left: 4%;
+  bottom: 0px;
+  height: 1px;
+  width: 92%;
+  background-color: #E5E5E5;
+}
+.panel-login .login-form .form-item .user-pwd {
+  border-top: none;
+  background-image: url('../images/bg-login.png');
+  background-position: left -120px;
+  background-position: 8px -58px;
+  -webkit-border-radius: 0px 0px 5px 5px;;
+  -moz-border-radius: 0px 0px 5px 5px;;
+  border-radius: 0px 0px 5px 5px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-login .login-form .form-item-action {
+  margin-top: 25px;
+  border: none;
+  background-color: #F7F7F7;
+}
+.panel-login .login-form .form-item-action li {
+  border: none;
+}
+.panel-login .login-form .form-item-action .user-login .button {
+  width: 100%;
+  height: 40px;
+  background-color: #2C8AD3;
+  color: #fff;
+  font-size: 1.23em;
+  letter-spacing: 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-login .login-form .form-item-action .user-forgetpwd {
+  margin-top: 25px;
+  text-align: right;
+}
+.panel-login .login-form .form-item-action .user-forgetpwd a {
+  color: #2C8AD3;
+}
+.panel-travel-expenses-create .travel-expenses-form {
+  padding: 10px;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total {
+  margin-top: 15px;
+  border: solid 1px #ddd;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total h2 {
+  padding: 0px 10px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #888;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total h2 b {
+  float: right;
+  color: #F37815;
+  font-weight: 500;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total .details-list li {
+  border-bottom: solid 1px #ddd;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total .details-list li a {
+  display: block;
+  position: relative;
+  padding: 8px 10px 8px 70px;
+  min-height: 56px;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total .details-list li a img {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 50px;
+  height: 40px;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total .details-list li a h3 {
+  font-size: 13px;
+  color: #333;
+  line-height: 24px;
+  font-weight: 500;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total .details-list li a h3 b {
+  float: right;
+  color: #F37815;
+  font-weight: 500;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total .details-list li a span {
+  color: #999;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total .details-list li:first-child {
+  border-top: solid 1px #ddd;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total .add-details {
+  display: block;
+  position: relative;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  background-color: #eee;
+  color: #888;
+  font-size: 14px;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total .add-details b {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.panel-travel-expenses-create .travel-expenses-form .details-total .add-details:before {
+  content: '+';
+  display: inline-block;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  background-color: #8F8F8F;
+  color: #eee;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  vertical-align: middle;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total {
+  margin-top: 15px;
+  border: solid 1px #ddd;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total h2 {
+  padding: 0px 10px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #888;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total h2 b {
+  float: right;
+  color: #F37815;
+  font-weight: 500;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total .borrowing-list li {
+  border-bottom: solid 1px #ddd;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total .borrowing-list li a {
+  display: block;
+  position: relative;
+  padding: 8px 10px 8px 10px;
+  min-height: 56px;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total .borrowing-list li a h3 {
+  font-size: 13px;
+  color: #333;
+  line-height: 24px;
+  font-weight: 500;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total .borrowing-list li a h3 b {
+  float: right;
+  color: #F37815;
+  font-weight: 500;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total .borrowing-list li a span {
+  display: block;
+  color: #999;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total .borrowing-list li a span b {
+  float: right;
+  color: #F37815;
+  font-weight: 500;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total .borrowing-list li:first-child {
+  border-top: solid 1px #ddd;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total .add-borrowing {
+  display: block;
+  position: relative;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  background-color: #eee;
+  color: #888;
+  font-size: 14px;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total .add-borrowing b {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.panel-travel-expenses-create .travel-expenses-form .borrowing-total .add-borrowing:before {
+  content: '+';
+  display: inline-block;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  background-color: #8F8F8F;
+  color: #eee;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  vertical-align: middle;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-travel-expenses-details-create .travel-expenses-details-form {
+  padding: 10px;
+}
+.panel-travel-expenses-details-create .travel-expenses-details-form .form-item.image-upload a {
+  display: block;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: #888;
+}
+.panel-travel-expenses-details-create .travel-expenses-details-form .form-item.image-upload a b {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.panel-travel-expenses-details-create .travel-expenses-details-form .form-item.image-upload a:before {
+  content: ' ';
+  display: inline-block;
+  width: 32px;
+  height: 38px;
+  background-image: url('../images/bg-form-image-upload.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 24px;
+  vertical-align: middle;
+}
+.panel-travel-expenses-create .form-action,
+.panel-travel-expenses-details-create .form-action {
+  margin-top: 15px;
+}
+.panel-travel-expenses-create .form-action .delete,
+.panel-travel-expenses-details-create .form-action .delete,
+.panel-travel-expenses-create .form-action .save,
+.panel-travel-expenses-details-create .form-action .save {
+  display: inline-block;
+  position: relative;
+  padding: 0px 8px 0px 32px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #DF3646;
+  color: #fff;
+  -webkit-border-radius: 15px;;
+  -moz-border-radius: 15px;;
+  border-radius: 15px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-travel-expenses-create .form-action .delete:before,
+.panel-travel-expenses-details-create .form-action .delete:before,
+.panel-travel-expenses-create .form-action .save:before,
+.panel-travel-expenses-details-create .form-action .save:before {
+  content: ' ';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-image: url('../images/bg-form-create-delete.png');
+  background-size: 16px;
+  background-position: center center;
+  -webkit-border-radius: 12px;;
+  -moz-border-radius: 12px;;
+  border-radius: 12px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-travel-expenses-create .form-action .save,
+.panel-travel-expenses-details-create .form-action .save {
+  float: right;
+  padding: 0px 15px;
+  background-color: #BBB;
+}
+.panel-travel-expenses-create .form-action .save:before,
+.panel-travel-expenses-details-create .form-action .save:before {
+  content: none;
+}
+.panel-selector-borrowing-list .borrowing-list li {
+  position: relative;
+  padding-left: 40px;
+  border-bottom: solid 1px #ccc;
+  background-color: #F7F7F7;
+}
+.panel-selector-borrowing-list .borrowing-list li .checkbox {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 40px;
+  height: 100%;
+  background-color: #DDD;
+}
+.panel-selector-borrowing-list .borrowing-list li .checkbox:before {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0px 0px -10px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/bg-selector-borrowing-list-check.png');
+  background-position: left -0px;
+  background-size: 20px;
+  background-position: 0px 0px;
+}
+.panel-selector-borrowing-list .borrowing-list li div {
+  display: block;
+  position: relative;
+  padding: 8px 10px 8px 10px;
+  min-height: 56px;
+}
+.panel-selector-borrowing-list .borrowing-list li div h3 {
+  font-size: 13px;
+  color: #333;
+  line-height: 24px;
+  font-weight: 500;
+}
+.panel-selector-borrowing-list .borrowing-list li div h3 b {
+  float: right;
+  color: #F37815;
+  font-weight: 500;
+}
+.panel-selector-borrowing-list .borrowing-list li div span {
+  display: block;
+  color: #999;
+}
+.panel-selector-borrowing-list .borrowing-list li div span b {
+  float: right;
+  color: #F37815;
+  font-weight: 500;
+}
+.panel-selector-borrowing-list .borrowing-list li div p {
+  margin-top: 3px;
+  color: #999;
+  line-height: 18px;
+}
+.panel-selector-borrowing-list .borrowing-list li.checked .checkbox {
+  background-color: #62CA15;
+}
+.footer-selector-borrowing-list .total {
+  padding: 0px 10px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #ddd;
+  text-align: right;
+  color: #888;
+}
+.footer-selector-borrowing-list .total b {
+  color: #333;
+  font-weight: 500;
+}
+.footer-selector-borrowing-list .action {
+  padding: 5px 10px;
+  height: 40px;
+  border: solid 1px #ccc;
+  border-left: none;
+  border-right: none;
+}
+.footer-selector-borrowing-list .action .checkbox-all {
+  position: relative;
+  float: left;
+  padding: 0px 24px;
+  width: auto!important;
+  line-height: 30px;
+  color: #666;
+}
+.footer-selector-borrowing-list .action .checkbox-all:before {
+  content: ' ';
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/bg-selector-borrowing-list-check.png');
+  background-position: left -32px;
+  background-size: 20px;
+  background-position: 0px -20px;
+}
+.footer-selector-borrowing-list .action .checkbox-all.checked:before {
+  background-image: url('../images/bg-selector-borrowing-list-check.png');
+  background-position: left -64px;
+  background-position: 0px -40px;
+}
+.footer-selector-borrowing-list .action .confirm {
+  float: right;
+  width: 100px!important;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.15em;
+  letter-spacing: 3px;
+  color: #fff;
+  background-color: #62CA15;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-my-expense .tabs .tab-nav li {
+  width: 33%;
+}
+.panel-my-expense .tabs .tab-nav li:first-child {
+  width: 34%;
+}
+.panel-my-expense .tabs .tab-content .bills-list {
+  margin-bottom: 30px;
+}
+.panel-my-expense .tabs .tab-content .bills-list li {
+  background-color: #FFF;
+  border-bottom: solid 1px #ccc;
+}
+.panel-my-expense .tabs .tab-content .bills-list li a {
+  display: block;
+  padding: 5px 10px 5px 10px;
+  min-height: 50px;
+}
+.panel-my-expense .tabs .tab-content .bills-list li h3 {
+  line-height: 22px;
+  color: #000;
+  font-size: 1.07em;
+  font-weight: 500;
+}
+.panel-my-expense .tabs .tab-content .bills-list li h3 b {
+  float: right;
+}
+.panel-my-expense .tabs .tab-content .bills-list li b {
+  font-weight: 500;
+}
+.panel-my-expense .tabs .tab-content .bills-list li span {
+  line-height: 18px;
+  color: #888;
+}
+.panel-my-expense .tabs .tab-content .bills-list li span b {
+  float: right;
+  color: #389EEC;
+}
+.panel-my-expense .tabs .tab-content .bills-list li:first-child {
+  border-top: solid 1px #ddd;
+}
+.panel-my-expense .tabs .tab-content .bills-list .darft span b {
+  color: #888;
+}
+.panel-my-expense .tabs .tab-content .bills-list .processs span b {
+  color: #2c8ad3;
+}
+.panel-my-expense .tabs .tab-content .bills-list .deny span b {
+  color: #df3646;
+}
+.panel-my-expense .tabs .tab-content .bills-list .return span b {
+  color: #df3646;
+}
+.panel-my-expense .tabs .tab-content .bills-list .complete span b {
+  color: #58cd0a;
+}
+.panel-my-expense .tabs .tab-content .bill-total {
+  display: none;
+}
+.footer-my-expense .total {
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  color: #888;
+  background-color: #ddd;
+}
+.footer-my-expense .total b {
+  margin-right: 10px;
+  color: #000;
+  font-weight: 500;
+}
+.panel-business-transaction .tabs .tab-nav li {
+  width: 50%;
+}
+.panel-business-transaction .tabs .tab-content .bills-list {
+  margin-bottom: 30px;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li {
+  position: relative;
+  border-bottom: solid 1px #ccc;
+  background-color: #FFF;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li a {
+  display: block;
+  padding: 5px 10px 5px 10px;
+  width: 100%;
+  min-height: 50px;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li h3 {
+  line-height: 22px;
+  color: #000;
+  font-size: 1.07em;
+  font-weight: 500;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li h3 b {
+  float: right;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li b {
+  font-weight: 500;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li span {
+  line-height: 18px;
+  color: #888;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li span b {
+  float: right;
+  color: #389EEC;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li .checkbox {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0px;
+  width: 40px;
+  height: 100%;
+  background-color: #DDD;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li .checkbox:before {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0px 0px -10px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/bg-business-transaction-list-check.png');
+  background-position: left -0px;
+  background-size: 20px;
+  background-position: 0px 0px;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li:first-child {
+  border-top: solid 1px #ddd;
+}
+.panel-business-transaction .tabs .tab-content .bills-list li.checked .checkbox {
+  background-color: #2C8AD3;
+}
+.panel-business-transaction .tabs .tab-content .bills-list .darft span b {
+  color: #888;
+}
+.panel-business-transaction .tabs .tab-content .bills-list .processs span b {
+  color: #2c8ad3;
+}
+.panel-business-transaction .tabs .tab-content .bills-list .deny span b {
+  color: #df3646;
+}
+.panel-business-transaction .tabs .tab-content .bills-list .return span b {
+  color: #df3646;
+}
+.panel-business-transaction .tabs .tab-content .bills-list .complete span b {
+  color: #58cd0a;
+}
+.panel-business-transaction .tabs .tab-content .bills-list.approve-status li {
+  padding-left: 40px;
+}
+.panel-business-transaction .tabs .tab-content .bills-list.approve-status li .checkbox {
+  display: block;
+}
+.panel-business-transaction .tabs .tab-content .bill-total {
+  display: none;
+}
+.footer-business-transaction .total {
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  color: #888;
+  background-color: #ddd;
+}
+.footer-business-transaction .total b {
+  margin-right: 10px;
+  color: #000;
+  font-weight: 500;
+}
+.footer-business-transaction .action {
+  display: none;
+  padding: 5px 10px;
+  height: 40px;
+  border: solid 1px #ccc;
+  border-left: none;
+  border-right: none;
+}
+.footer-business-transaction .action .checkbox-all {
+  position: relative;
+  float: left;
+  padding: 0px 24px;
+  width: auto!important;
+  line-height: 30px;
+  color: #666;
+}
+.footer-business-transaction .action .checkbox-all:before {
+  content: ' ';
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/bg-business-transaction-list-check.png');
+  background-position: left -32px;
+  background-size: 20px;
+  background-position: 0px -20px;
+}
+.footer-business-transaction .action .checkbox-all.checked:before {
+  background-image: url('../images/bg-business-transaction-list-check.png');
+  background-position: left -64px;
+  background-position: 0px -40px;
+}
+.footer-business-transaction .action .approve {
+  float: right;
+  width: 100px!important;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.15em;
+  letter-spacing: 3px;
+  color: #fff;
+  background-color: #2C8AD3;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-request-approve {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 10px;
+  width: 100%;
+  height: 120px!important;
+  background-color: #F7F7F7;
+}
+.panel-request-approve .textarea {
+  display: block;
+  padding: 3px;
+  margin: 0px auto;
+  width: 100%;
+  height: 60px;
+  line-height: 20px;
+  border: solid 1px #DDD;
+  background-color: #fff;
+  resize: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.panel-request-approve .action {
+  margin-top: 10px;
+  text-align: center;
+}
+.panel-request-approve .action a {
+  display: inline-block;
+  padding: 0px 14px;
+  height: 32px;
+  line-height: 32px;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-request-approve .action .pass {
+  float: left;
+  background-color: #2378BD;
+}
+.panel-request-approve .action .return {
+  background-color: #EEA945;
+}
+.panel-request-approve .action .back {
+  background-color: #888888;
+}
+.panel-request-approve .action .deny {
+  float: right;
+  background-color: #E6707B;
+}
+.panel-bills-view .content {
+  padding-bottom: 20px;
+}
+.panel-bills-view .content .overview {
+  position: relative;
+  padding: 10px 0px 10px 70px;
+  height: 70px;
+}
+.panel-bills-view .content .overview:before {
+  content: ' ';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 45px;
+  height: 45px;
+  background-image: url('../images/bg-bills-cate-travelling.png');
+  background-color: #2C8AD3;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 28px;
+  -webkit-border-radius: 45px;;
+  -moz-border-radius: 45px;;
+  border-radius: 45px;;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-bills-view .content .overview h1 {
+  line-height: 30px;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.panel-bills-view .content .overview .amount {
+  display: block;
+  line-height: 24px
+                color:#000;
+}
+.panel-bills-view .content .overview .amount b {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #F37815;
+}
+.panel-bills-view .content .overview .date {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  color: #999;
+  font-style: normal;
+}
+.panel-bills-view .content h2 {
+  line-height: 25px;
+  text-indent: 10px;
+  color: #888;
+  font-weight: 500;
+  background-color: #EEE;
+  border-left-style: solid;
+  border-left-width: 3px;
+  font-size: 1.15em;
+}
+.panel-bills-view .content h2 b {
+  float: right;
+  margin-right: 12px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #F37815;
+}
+.panel-bills-view .content .base-info h2 {
+  border-left-color: #2C8AD3;
+}
+.panel-bills-view .content .base-info .form-grid-outer {
+  padding: 10px 0px;
+  border-left: solid 3px #91C0E5;
+}
+.panel-bills-view .content .base-info .form-grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+.panel-bills-view .content .base-info .form-grid th {
+  width: 80px;
+  text-indent: 12px;
+  color: #999;
+}
+.panel-bills-view .content .base-info .form-grid td {
+  height: 24px;
+  color: #000;
+}
+.panel-bills-view .content .details-total h2 {
+  border-left-color: #31B5AD;
+}
+.panel-bills-view .content .details-total .details-list {
+  border-left: solid 3px #94D6D2;
+}
+.panel-bills-view .content .details-total .details-list li {
+  border-bottom: solid 1px #ddd;
+}
+.panel-bills-view .content .details-total .details-list li a {
+  display: block;
+  position: relative;
+  padding: 8px 10px 8px 70px;
+  min-height: 56px;
+}
+.panel-bills-view .content .details-total .details-list li a img {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 50px;
+  height: 40px;
+}
+.panel-bills-view .content .details-total .details-list li a h3 {
+  font-size: 13px;
+  color: #333;
+  line-height: 24px;
+  font-weight: 500;
+}
+.panel-bills-view .content .details-total .details-list li a h3 b {
+  float: right;
+  color: #F37815;
+  font-weight: 500;
+}
+.panel-bills-view .content .details-total .details-list li a span {
+  color: #999;
+}
+.panel-bills-view .content .borrowing-total h2 {
+  border-left-color: #63C532;
+}
+.panel-bills-view .content .borrowing-total .borrowing-list {
+  border-left: solid 3px #ADDE94;
+}
+.panel-bills-view .content .borrowing-total .borrowing-list li {
+  border-bottom: solid 1px #ddd;
+}
+.panel-bills-view .content .borrowing-total .borrowing-list li a {
+  display: block;
+  position: relative;
+  padding: 8px 10px 8px 10px;
+  min-height: 56px;
+}
+.panel-bills-view .content .borrowing-total .borrowing-list li a h3 {
+  font-size: 13px;
+  color: #333;
+  line-height: 24px;
+  font-weight: 500;
+}
+.panel-bills-view .content .borrowing-total .borrowing-list li a h3 b {
+  float: right;
+  color: #F37815;
+  font-weight: 500;
+}
+.panel-bills-view .content .borrowing-total .borrowing-list li a span {
+  display: block;
+  color: #999;
+}
+.panel-bills-view .content .borrowing-total .borrowing-list li a span b {
+  float: right;
+  color: #F37815;
+  font-weight: 500;
+}
+.footer-bills-view .action .new-status {
+  display: block;
+  padding-left: 38px;
+  top: 0px!important;
+  width: auto!important;
+  height: 45px;
+  line-height: 45px;
+  color: #000;
+  font-size: 1.23em;
+  border: solid 1px #ddd;
+  background-color: #fff;
+}
+.footer-bills-view .action .new-status:before {
+  content: ' ';
+  position: absolute;
+  top: 0px;
+  left: 12px;
+  width: 20px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+.footer-bills-view .action .new-status:after {
+  content: ' ';
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  width: 8px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-image: url('../images/process-status/process-status-more.png');
+  background-size: 8px;
+}
+.footer-bills-view .action .new-status.process-start:before {
+  background-image: url('../images/process-status/process-status-start.png');
+  background-position: 0px -6px;
+}
+.footer-bills-view .action .new-status.process-back:before {
+  background-image: url('../images/process-status/process-status-back.png');
+  background-position: 0px -6px;
+}
+.footer-bills-view .action .new-status.process-deny:before {
+  background-image: url('../images/process-status/process-status-deny.png');
+  background-position: 0px -6px;
+}
+.footer-bills-view .action .new-status.process-pass:before {
+  background-image: url('../images/process-status/process-status-pass.png');
+  background-position: 0px -6px;
+}
+.footer-bills-view .action .new-status.process-pending:before {
+  background-image: url('../images/process-status/process-status-pending.gif');
+  background-position: 0px -6px;
+}
+.footer-bills-view .action .new-status.process-waiting:before {
+  background-image: url('../images/process-status/process-status-waiting.png');
+  background-position: 0px -6px;
+}
+.panel-bills-details-view .travel-expenses-details-view {
+  padding: 10px;
+}
+.panel-bills-details-view .travel-expenses-details-view .form-item .textarea {
+  min-height: 100px;
+}
+.panel-bills-details-view .travel-expenses-details-view .form-item .image-view {
+  padding: 5px;
+  text-align: center;
+}
+.panel-bills-details-view .travel-expenses-details-view .form-item .image-view img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.panel-bill-process-view .process-status-list {
+  padding: 10px;
+}
+.panel-bill-process-view .process-status-list .process-status {
+  position: relative;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  min-height: 50px;
+}
+.panel-bill-process-view .process-status-list .process-status:before {
+  content: ' ';
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  width: 20px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+.panel-bill-process-view .process-status-list .process-status .details {
+  position: relative;
+  padding: 7px 5px 7px 10px;
+  min-height: 34px;
+  border: solid 1px #CCC;
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.panel-bill-process-view .process-status-list .process-status .details:before {
+  content: ' ';
+  position: absolute;
+  top: 6px;
+  left: -16px;
+  width: 0px;
+  height: 0px;
+  border: solid 8px transparent;
+  border-right-color: #ccc;
+  overflow: hidden;
+}
+.panel-bill-process-view .process-status-list .process-status .details:after {
+  content: ' ';
+  position: absolute;
+  top: 6px;
+  left: -15px;
+  width: 0px;
+  height: 0px;
+  border: solid 8px transparent;
+  border-right-color: #fff;
+  overflow: hidden;
+}
+.panel-bill-process-view .process-status-list .process-status .details h3 {
+  line-height: 20px;
+  font-weight: 500;
+}
+.panel-bill-process-view .process-status-list .process-status .details span,
+.panel-bill-process-view .process-status-list .process-status .details p {
+  display: block;
+  line-height: 20px;
+  color: #888;
+}
+.panel-bill-process-view .process-status-list .process-status .details span b,
+.panel-bill-process-view .process-status-list .process-status .details p b {
+  color: #333;
+  font-weight: 500;
+}
+.panel-bill-process-view .process-status-list .process-status .details p {
+  line-height: 18px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-start:before {
+  background-image: url('../images/process-status/process-status-start.png');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-start:before {
+  background-image: url('../images/process-status/process-status-start.png');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-back:before {
+  background-image: url('../images/process-status/process-status-back.png');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-back:last-child:before {
+  background-image: url('../images/process-status/process-status-back_last.png');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-deny:before {
+  background-image: url('../images/process-status/process-status-deny.png');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-deny:last-child:before {
+  background-image: url('../images/process-status/process-status-deny-last.png');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-pass:before {
+  background-image: url('../images/process-status/process-status-pass.png');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-pass:last-child:before {
+  background-image: url('../images/process-status/process-status-pass-last.png');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-pending:before {
+  background-image: url('../images/process-status/process-status-pending.gif');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-waiting:before {
+  background-image: url('../images/process-status/process-status-waiting.png');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-list .process-status.process-waiting:last-child:before {
+  background-image: url('../images/process-status/process-status-waiting-last.png');
+  background-position: 0px -6px;
+}
+.panel-bill-process-view .process-status-log {
+  padding: 10px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel-bill-process-view .process-status-log h2 {
+  position: relative;
+  line-height: 20px;
+  color: #666!important;
+  font-weight: 500;
+  text-indent: 22px;
+  font-size: 1.23em;
+}
+.panel-bill-process-view .process-status-log h2:before {
+  content: ' ';
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/process-status/process-status-log.png');
+  background-size: 16px;
+}
+.panel-bill-process-view .process-status-log .log-list li {
+  padding: 8px 0px 2px 5px;
+  border-top: solid 1px #DDD;
+  color: #888;
+}
+.panel-bill-process-view .process-status-log .log-list li .attr span {
+  float: left;
+}
+.panel-bill-process-view .process-status-log .log-list li div,
+.panel-bill-process-view .process-status-log .log-list li p {
+  min-height: 20px;
+  line-height: 20px;
+}
+.panel-bill-process-view .process-status-log .log-list li div b,
+.panel-bill-process-view .process-status-log .log-list li p b {
+  font-weight: 500;
+  color: #333;
+}
+.panel-bill-process-view .process-status-log .log-list li div span,
+.panel-bill-process-view .process-status-log .log-list li p span {
+  float: right;
+  width: 120px;
+}
+.panel-bill-process-view .process-status-log .log-list li div span:first-child,
+.panel-bill-process-view .process-status-log .log-list li p span:first-child {
+  float: left;
+  width: 170px;
+}
+.panel-bill-process-view .process-status-log .log-list li p {
+  line-height: 18px;
+}
+.panel-bill-process-view .process-status-log .log-list li:first-child {
+  border-top: none;
+}

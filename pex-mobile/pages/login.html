@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link rel="stylesheet" href="../style/main.css">
+<link rel="stylesheet" href="../style/appframework.css">
+<link rel="stylesheet" href="../style/global.css">
+</head>
+<body>
+	<div id="afui">
+		<div id="content">
+      
+            <!-- login -->
+            <div id="login" class="panel panel-login" title="" selected="true" style="overflow:hidden" data-load="loginOnload">
+
+                <div class="content">
+
+                    <header></header>
+                    
+                    <div class="logo"></div>
+
+                    <div class="login-form">
+                        <form action="http://42.96.130.116:30009/Retail/api/trip-claim-api/login" method="post">
+                            <ul class="form-item">
+                                <li class="user-domain">
+                                    <input type="text" class="text" name="schema" placeholder="请输入二级域名" value="retail">
+                                    <b>x3china.com</b>
+                                </li>
+                            </ul>
+                            <ul class="form-item">
+                                <li class="user-name">
+                                    <input type="text" class="text" name="loginName" placeholder="请输入用户名" value="admin">
+                                </li>
+                                <li class="user-pwd">
+                                    <input type="password" class="text" name="loginPwd" placeholder="请输入密码" value="joinfun">
+                                </li>
+                            </ul>
+                            <ul class="form-item form-item-action">
+                                <li class="user-login">
+                                    <button class="button" type="button">登录</button>
+                                </li>
+                                <li class="user-forgetpwd">
+                                    <a href="javascript:;" data-ignore="True">忘记密码？</a>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+
+                <script>
+
+
+                    function loginOnload()
+                    {
+
+                        $(document).delegate('.user-login .button', 'click', function()
+                        {
+
+                            window.location = 'home.html';
+                            // $.post('/Retail/api/trip-claim-api/login', 
+                            //     $('.login-form form').serialize(),
+                            //     function (data) 
+                            //     {
+                            //         if(data.error === null)
+                            //         {
+                            //             window.location.href = 'home.html';
+                            //         }
+                            //         else
+                            //         {
+                            //             alert('登录出错...');
+                            //         }
+                            //     },'json');
+                        });
+                    }
+
+                    //296CF4BF6040DCB837BC17951823863B
+
+                </script>
+
+            </div>
+              
+        </div>        
+	</div>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/afui/jq.appframework.min.js"></script>
+<script src="../script/afui/appframework.ui.min.js"></script>
+<script src="../script/afui/af.slidemenu.js"></script>
+<script src="../script/global.js"></script>
+
+
+<script>
+</script>
+</html>

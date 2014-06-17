@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<form action="http://42.96.130.116:30009/Retail/api/trip-claim-api/login" method="post">
+        <div class="form-item user-domain">
+            <input type="text" class="text" name="schema" placeholder="请输入二级域名" value="retail">
+        </div>
+        <div class="form-item user-name">
+            <input type="text" class="text" name="loginName" placeholder="请输入用户名" value="admin">
+        </div>
+        <div class="form-item user-pwd">
+            <input type="password" class="text" name="loginPwd" placeholder="请输入密码" value="joinfun">
+        </div>
+        <button type="submit" >post form </button>
+        <div class="form-item user-login">
+            <button class="button" type="button">ajax form</button>
+        </div>
+    </form>
+</body>
+
+<script src="../script/jquery.js"></script>
+<script>
+
+   	$('.user-login .button').bind('click', function()
+    {
+        $.post('/Retail/api/trip-claim-api/login',$('.login-form :input').serialize(),
+        function (data) 
+        {
+            console.log(data);
+        });
+    });
+
+</script>
+
+</html>

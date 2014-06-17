@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link rel="stylesheet" href="../style/main.css">
+<link rel="stylesheet" href="../style/appframework.css">
+<link rel="stylesheet" href="../style/global.css">
+</head>
+<body>
+	<div id="afui">
+
+		<div id="header"></div>
+
+		<div id="content">
+			<!-- 首页 -->
+            <div id="home" class="panel panel-home" title="" data-load="indexOnload" data-unload="indexUnload" >
+                <header>
+                    <a id="menuButton" class="button"></a>
+                    <h1 id="pageTitle" class="">兴元X/3</h1>
+                </header>
+            </div>
+            
+            <!-- 我的报销 -->
+            <div id="my-expense" class="panel panel-my-expense" title="" selected="true" data-defer="my-expense.html" data-load="myExpenseOnload" data-unload="myExpenseUnload">
+            </div>
+
+            <!-- 业务处理 -->
+            <div id="business-transaction" class="panel panel-business-transaction" title="" data-defer="business-transaction.html" data-load="businessTransactionOnload" data-unload="businessTransactionUnload"></div>
+
+            <!-- 审批动作 -->
+            <div id="request-approve" class="panel " modal="true" style="visibility:hidden;">
+                <div class="panel-request-approve">
+                    <textarea name=""  class="textarea"></textarea>
+                    <div class="action">
+                        <a href="javascript:;" class="pass">同意</a>
+                        <a href="javascript:;" class="return">退回申请人</a>
+                        <a href="javascript:;" class="back">返回上级</a>
+                        <a href="javascript:;" class="deny">拒绝</a>
+                    </div>
+                </div>
+            </div>
+
+             <!-- 差旅费用报销创建 -->
+            <div id="travel-expenses-create" class="panel panel-travel-expenses-create" title="" data-defer="travel-expenses-create.html"  data-load="travelExpensesCreateOnload" data-unload="travelExpensesCreateUnload" >
+            </div>
+
+            <!-- 差旅费用报销明细创建 -->
+            <div id="travel-expenses-details-create" class="panel panel-travel-expenses-details-create" title=""data-defer="travel-expenses-details-create.html"  data-load="travelExpensesDetailsCreateOnload" data-unload="travelExpensesDetailsCreateUnload" >
+            </div>
+
+             <!-- 差旅费用报销选择借款单 -->
+            <div id="selector-borrowing-list" class="panel panel-selector-borrowing-list" title=""data-defer="selector-borrowing-list.html"  data-load="selectorBorrowingListOnload" data-unload="selectorBorrowingListUnload" >
+            </div>
+
+            <!-- 单据查看 -->
+            <div id="bills-view" class="panel panel-bills-view" title="" data-defer="bills-view.html" data-load="billsViewOnload" data-unload="billsViewUnload" >
+            </div>
+
+            <!-- 单据明细查看 -->
+            <div id="bills-details-view" class="panel panel-bills-details-view" title="" data-defer="bills-details-view.html" data-load="billsDeatailsViewOnload" data-unload="billsDeatailsViewUnload" >
+            </div>
+
+            <!-- 单据流转状态查看 -->
+            <div id="bill-process-view" class="panel panel-bill-process-view" title="" data-defer="bill-process-view.html" data-load="billProcessViewOnload" data-unload="billProcessViewUnload" >
+            </div>
+
+		</div>
+
+		<nav id="sideMenu">
+            <div class="user-info">
+                <a class="avatar">
+                    <img src="../images/avatar.jpg" alt="">
+                </a>
+                <div class="user-details">
+                    <span>张三</span>
+                    <span>Java程序员</span>
+                </div>
+            </div>
+
+            <ul class="menu-list">
+                <li class="item">
+                    <a href="#my-expense" class="my-expense">我的报销<i>999</i></a>
+                </li>
+                <li class="item">
+                    <a href="#business-transaction" class="business-transaction">业务办理<i>88</i></a>
+                </li>
+                <li class="item">
+                    <a href="#system-setting" class="system-setting">系统设置<i>1</i></a>
+                </li>
+                <li class="logout">
+                    <a href="javascript:;">退出登录</a>
+                </li>
+            </ul>      
+        </nav>
+        
+	</div>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/afui/jq.appframework.min.js"></script>
+<script src="../script/afui/appframework.ui.min.js"></script>
+<script src="../script/afui/af.slidemenu.js"></script>
+<script src="../script/global.js"></script>
+
+
+<script>
+</script>
+</html>

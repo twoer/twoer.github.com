@@ -1,0 +1,123 @@
+<header class="header-bills-view">
+    <a id="backButton" class="button"></a>
+    <h1 id="pageTitle" class="">单据查看</h1>
+    <a id="confirmButton" class="button d-n" href="#request-approve"></a>
+</header>
+
+<footer class="footer-bills-view">
+    <div class="action">
+        <a href="#bill-process-view" class="new-status process-pending">
+            <!-- process-start/process-back/process-deny/process-pass/process-pending/process-waiting -->
+            <!-- 单据什么状态就使用什么 class 即可 -->
+            部门经理 高明 (通过)
+        </a>
+    </div>
+    
+</footer>
+
+
+<div class="content">
+    <div class="overview">
+        <h1>日常费用报销</h1>
+        <span class="date">2014-12-12</span>
+        <span class="amount">报销金额<b>2,500.00</b></span>
+    </div>
+
+    <div class="base-info">
+        <h2>基本信息</h2>
+        <div class="form-grid-outer">
+            <table class="form-grid">
+                <tr>
+                    <th>附票据</th>
+                    <td>12张</td>
+                </tr>
+                <tr>
+                    <th>创建人</th>
+                    <td>admin</td>
+                </tr>
+                <tr>
+                    <th>公司</th>
+                    <td>上海矩方信息技术有限公司</td>
+                </tr>
+                <tr>
+                    <th>工号</th>
+                    <td>JF00001</td>
+                </tr>
+                <tr>
+                    <th>成本中心</th>
+                    <td>12345678</td>
+                </tr>
+                <tr>
+                    <th>申请部门</th>
+                    <td>财务部</td>
+                </tr>
+                <tr>
+                    <th>项目/产品</th>
+                    <td>NPR</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="details-total">
+        <h2>明细合计<b>500.00</b></h2>
+        <ul class="details-list">
+            <li>
+                <a href="#bills-details-view">
+                    <img src="..//images/temp/screenage.png" alt="">
+                    <h3>上海<b>10.00</b></h3>
+                    <span>2013-01-18 至 2014-12-12</span>
+                </a>
+            </li>
+            <li>
+                <a href="#bills-details-view">
+                    <img src="..//images/temp/screenage.png" alt="" >
+                    <h3>上海<b>10.00</b></h3>
+                    <span>2013-01-18 至 2014-12-12</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="borrowing-total">
+        <h2>借款单<b>6,000.00</b></h2>
+        <ul class="borrowing-list">
+            <li>
+                <a href="javascript:;">
+                    <h3>AA12345678<b>100.00</b></h3>
+                    <span>2013-01-18<b>10.00</b></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <h3>AA12345678<b>100.00</b></h3>
+                    <span>2013-01-18<b>10.00</b></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<script>
+    
+    function billsViewOnload()
+    {
+        var _urlParams = $.getUrlParams();
+        if(_urlParams.approve)
+        {
+            $('.header-bills-view #confirmButton').show();
+        }
+        else
+        {
+            $('.header-bills-view #confirmButton').hide();
+        }
+    }
+
+    function billsViewUnload()
+    {
+    }
+
+
+</script>
