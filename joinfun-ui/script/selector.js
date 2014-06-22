@@ -150,6 +150,10 @@ require(['components'], function()
     {
         $selectedList.find('option:selected').remove();
     });
+    $(document).delegate('.selected-list', 'dblclick', function()
+    {
+        $selectedList.find('option:selected').remove();
+    });
 
     //remove all left
     $(document).delegate('.operate-list .all-left', 'click', function()

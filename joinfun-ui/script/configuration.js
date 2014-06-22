@@ -231,12 +231,11 @@ require(['components', 'upload', 'select', 'validate', 'ectable', 'tree', 'selec
 	//enter submit
 	$(document).delegate('input,select', 'keypress', function(e)
 	{
-		
-		var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+		var keyCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
 		if(keyCode != 13)
 			return;
 		
-		_configuration.save && _configuration.save();
+		$('.tool-bar-oper .save').trigger('click');
 		e.preventDefault();
 	});
 
