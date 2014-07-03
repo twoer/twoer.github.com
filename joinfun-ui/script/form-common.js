@@ -77,9 +77,6 @@ define(['jquery', 'validate', 'utils'], function($)
             return false;
         }
 
-        //取消 radio disabled
-        $('.radio-groups label :radio').prop('disabled', false);
-
         //save 和 submit 提交之前
         _function = _form[_action + 'Before'];
         if(_function && _function(_data) === false)
@@ -93,6 +90,9 @@ define(['jquery', 'validate', 'utils'], function($)
         }
 
         $.loading(_lang['submiting']);
+
+        //取消 radio disabled
+        $('.radio-groups label :radio').prop('disabled', false);
 
         //验证成功后提交
         $(_form.validateForm).submit();

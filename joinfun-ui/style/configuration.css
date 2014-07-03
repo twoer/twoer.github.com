@@ -272,8 +272,10 @@ label input[type="checkbox"] {
   box-sizing: border-box;
 }
 .textarea[readonly] {
+  height: 40px;
   border: dotted 1px #aedef5 ;
-  resize: vertical;
+  resize: none;
+  overflow: hidden;
 }
 .text:focus,
 .textarea:focus {
@@ -663,6 +665,10 @@ label input[type="checkbox"] {
 .form-grid-col3 .multiple-selector {
   width: 350px;
 }
+.form-grid-col2 .text-text-groups,
+.form-grid-col3 .text-text-groups {
+  width: 350px;
+}
 .form-grid-col2 th + td {
   width: auto;
 }
@@ -908,8 +914,8 @@ label input[type="checkbox"] {
   line-height: 20px;
   color: #333439;
 }
-/* loadding*/
-.loadding-mask {
+/* loading*/
+.loading-mask {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -920,7 +926,7 @@ label input[type="checkbox"] {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
-.loadding-text {
+.loading-text {
   display: none;
   position: fixed;
   top: 50%;
@@ -930,13 +936,13 @@ label input[type="checkbox"] {
   padding: 8px 15px 8px 30px;
   margin-top: -20px;
   border: solid 1px #fed22f;
-  background: #ffffcc url('../images/components//loadding.gif') no-repeat 10px center;
+  background: #ffffcc url('../images/components//loading.gif') no-repeat 10px center;
 }
-.loadding-text img {
+.loading-text img {
   margin-right: 4px;
   vertical-align: -4px;
 }
-.loadding-text em {
+.loading-text em {
   line-height: 20px;
 }
 /*! customSelect: a jQuery UI widget to select items and ranges
@@ -2331,29 +2337,4 @@ select {
 }
 .action-message {
   display: none!important;
-}
-.upload-error-info,
-.upload-warning-info {
-  display: none;
-  padding-left: 257px;
-  width: 550px;
-}
-.upload-error-info h2,
-.upload-warning-info h2 {
-  line-height: 30px;
-  font-size: 14px;
-}
-.upload-error-info .upload-action,
-.upload-warning-info .upload-action {
-  padding: 5px 0px;
-}
-.upload-error-info .list-grid,
-.upload-warning-info .list-grid {
-  border: solid 1px #C0DAEB;
-}
-.upload-error-info .list-grid th,
-.upload-warning-info .list-grid th,
-.upload-error-info .list-grid td,
-.upload-warning-info .list-grid td {
-  border: solid 1px #C0DAEB;
 }

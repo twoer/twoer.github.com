@@ -159,10 +159,9 @@ require(['components', 'upload', 'select', 'validate', 'ectable', 'tree', 'selec
 	$(document).delegate('form :reset', 'click', function()
 	{
 		var $form = $(this).closest('form');
-		$form[0] && $form[0].reset();
-	   	$form.find('.text,.select,:hidden').val('');
+	   	$form.find(':input').val('');
 	   	$form.find(':checkbox').prop('checked', false);
-	   	$form.find('.select.custom').reload();
+	   	$form.find('.select.custom').selectMultipleRreload();
 	   	return false;
 	});
 
