@@ -272,7 +272,7 @@ label input[type="checkbox"] {
   box-sizing: border-box;
 }
 .textarea[readonly] {
-  height: 40px;
+  height: 20px;
   border: dotted 1px #aedef5 ;
   resize: none;
   overflow: hidden;
