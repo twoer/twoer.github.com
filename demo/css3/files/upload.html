@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../style/upload.css" />
+</head>
+<body>
+	<div class="demo">
+		<img src="" alt="">
+		<a href="javascript:;" class="button">
+			upload
+			<input type="file" accept="image/*" capture="camera">
+		</a>
+	</div>
+</body>
+<script src="../script/require.js" data-main="../script/"></script>
+<script>
+	
+	require(['jquery'], function()
+	{
+		$(':input[type="file"]').change(function(e)
+		{
+			var _file = e.target.files[0];
+
+			var _fr = new FileReader();  
+
+			_fr.onloadend = function(e) 
+			{
+				$('img').attr('src', e.target.result);
+			};
+			_fr.readAsDataURL(_file);
+		});
+	});
+
+</script> 
+</html>
