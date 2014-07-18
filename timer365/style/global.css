@@ -1,0 +1,359 @@
+@charset "utf-8";
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0px;
+  padding: 0px;
+}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+  width: 100%;
+}
+/* IE bug fixed: th 不继承 text-align*/
+th {
+  text-align: inherit;
+}
+/* 去除默认边框 */
+fieldset,
+img {
+  border: none;
+}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block;
+}
+/* 去掉 firefox 下此元素的边框 */
+abbr,
+acronym {
+  border: none;
+  font-variant: normal;
+}
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+/* 去掉列表前的标识, li 会继承 */
+ol,
+ul,
+li {
+  list-style: none;
+}
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,
+th {
+  text-align: left;
+}
+/* 统一上标和下标 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins,
+a {
+  text-decoration: none;
+}
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+  text-decoration: underline;
+}
+/* 清理浮动 */
+.clear {
+  zoom: 1;
+  /* for IE6 IE7 */
+}
+.clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+body {
+  font: 12px/18px Arial, '\5FAE\8F6F\96C5\9ED1', 'Microsoft YaHei', SimSun, sans-serif;
+}
+a,
+input,
+textarea,
+button {
+  font: 12px/18px '\5FAE\8F6F\96C5\9ED1', 'Microsoft YaHei', SimSun, sans-serif;
+}
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: none;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  outline: none;
+  text-decoration: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+img {
+  vertical-align: top;
+}
+html {
+  background-image: url('../images/bg-html.png');
+  background-repeat: repeat-x;
+}
+.hd {
+  margin: 0px auto;
+  margin-top: 20px;
+  width: 980px;
+  height: 60px;
+  background-color: #fff;
+}
+.hd .logo {
+  float: left;
+  width: 200px;
+  height: 60px;
+}
+.hd .logo img {
+  width: 200px;
+  height: 60px;
+}
+.hd .nav li {
+  float: left;
+  margin-left: 10px;
+}
+.hd .nav li a {
+  display: block;
+  padding: 0px 30px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  color: #000;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.hd .nav li a:hover,
+.hd .nav li .selected {
+  background-color: #4A9EB1;
+  color: #fff;
+}
+.hd .avatar {
+  float: right;
+  margin-right: 55px;
+  height: 60px;
+}
+.hd .avatar img {
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+}
+.slider {
+  position: relative;
+  margin: 0px auto;
+  width: 980px;
+  height: 300px;
+}
+.slider .scrollable {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.slider .scrollable .items {
+  width: 20000em;
+  position: relative;
+  clear: both;
+}
+.slider .scrollable .items .item,
+.slider .scrollable .items .item a {
+  float: left;
+  overflow: hidden;
+}
+.slider .scrollable .items .item img {
+  width: 980px;
+  height: 300px;
+}
+.slider .navi {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  height: 20px;
+  z-index: 1002;
+  text-align: center;
+}
+.slider .navi a {
+  margin-right: 15px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.slider .navi .active {
+  background: #6FCEC4;
+}
+.main {
+  padding: 20px;
+  margin: 0px auto;
+  width: 940px;
+  background-color: #ECECEC;
+}
+.main .content {
+  float: left;
+  width: 620px;
+}
+.main .article-list li {
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.main .article-list li h2 {
+  padding: 5px 0px 5px 20px;
+}
+.main .article-list li h2 a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  color: #6B6B6B;
+  font-size: 20px;
+}
+.main .article-list li h2 a:hover {
+  text-decoration: underline;
+}
+.main .article-list li p {
+  padding: 0px 20px 5px 20px;
+  line-height: 20px;
+  color: #6B6B6B;
+  font-size: 16px;
+}
+.main .article-list li .action {
+  padding: 5px 0px 5px 20px;
+  height: 20px;
+}
+.main .article-list li .action .like,
+.main .article-list li .action .comment {
+  float: left;
+  padding-left: 24px;
+  margin-right: 24px;
+  height: 20px;
+  line-height: 20px;
+  color: #4A9EB1;
+  font-size: 16px;
+  background-image: url('../images/bg-index-article-list.png');
+  background-position: left -0px;
+  background-repeat: no-repeat;
+}
+.main .article-list li .action .comment {
+  margin-right: 24px;
+  background-image: url('../images/bg-index-article-list.png');
+  background-position: left -20px;
+}
+.main .article-list li .action .more {
+  float: right;
+  position: relative;
+  bottom: -5px;
+  width: 100px;
+  height: 20px;
+  background-image: url('../images/bg-index-article-list.png');
+  background-position: left -40px;
+}
+.main .side {
+  float: right;
+  width: 300px;
+}
