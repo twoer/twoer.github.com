@@ -237,6 +237,54 @@ html {
   width: 50px;
   height: 50px;
 }
+.ft {
+  padding: 20px;
+  margin: 0px auto;
+  margin-top: 20px;
+  width: 940px;
+  height: 160px;
+  background-color: #fff;
+}
+.ft .logo {
+  display: inline-block;
+}
+.ft .logo img {
+  width: 160px;
+  height: 45px;
+}
+.ft .site-info {
+  float: left;
+  width: 250px;
+}
+.ft .site-info .copyright {
+  display: block;
+  padding: 5px 0px 0px 5px;
+  font-size: 14px;
+  color: #9B9B9B;
+}
+.ft .site-link {
+  float: right;
+}
+.ft .site-link li {
+  float: left;
+  width: 200px;
+}
+.ft .site-link li dl dt {
+  padding-bottom: 20px;
+  color: #4A9EB1;
+  font-size: 20px;
+  line-height: 30px;
+}
+.ft .site-link li dl dd {
+  height: 24px;
+}
+.ft .site-link li dl dd a {
+  color: #9B9B9B;
+  font-size: 14px;
+}
+.ft .site-link li dl dd a:hover {
+  text-decoration: underline;
+}
 .slider {
   position: relative;
   margin: 0px auto;
@@ -289,45 +337,45 @@ html {
 .slider .navi .active {
   background: #6FCEC4;
 }
-.main {
+.article {
   padding: 20px;
   margin: 0px auto;
   width: 940px;
   background-color: #ECECEC;
 }
-.main .content {
+.article .content {
   float: left;
   width: 620px;
 }
-.main .article-list li {
+.article .article-list li {
   margin-bottom: 20px;
   background-color: #fff;
 }
-.main .article-list li h2 {
+.article .article-list li h2 {
   padding: 5px 0px 5px 20px;
 }
-.main .article-list li h2 a {
+.article .article-list li h2 a {
   display: block;
   height: 30px;
   line-height: 30px;
   color: #6B6B6B;
   font-size: 20px;
 }
-.main .article-list li h2 a:hover {
+.article .article-list li h2 a:hover {
   text-decoration: underline;
 }
-.main .article-list li p {
+.article .article-list li p {
   padding: 0px 20px 5px 20px;
   line-height: 20px;
   color: #6B6B6B;
   font-size: 16px;
 }
-.main .article-list li .action {
+.article .article-list li .action {
   padding: 5px 0px 5px 20px;
   height: 20px;
 }
-.main .article-list li .action .like,
-.main .article-list li .action .comment {
+.article .article-list li .action .like,
+.article .article-list li .action .comment {
   float: left;
   padding-left: 24px;
   margin-right: 24px;
@@ -339,12 +387,12 @@ html {
   background-position: left -0px;
   background-repeat: no-repeat;
 }
-.main .article-list li .action .comment {
+.article .article-list li .action .comment {
   margin-right: 24px;
   background-image: url('../images/bg-index-article-list.png');
   background-position: left -20px;
 }
-.main .article-list li .action .more {
+.article .article-list li .action .more {
   float: right;
   position: relative;
   bottom: -5px;
@@ -353,7 +401,86 @@ html {
   background-image: url('../images/bg-index-article-list.png');
   background-position: left -40px;
 }
-.main .side {
+.article .side {
   float: right;
   width: 300px;
+}
+.article .article-more {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #4A9EB1;
+  background-color: #fff;
+}
+.timeline {
+  padding: 20px;
+  margin: 0px auto;
+  margin-top: 20px;
+  width: 940px;
+  background-color: #ECECEC;
+}
+.timeline .timeline-list li {
+  position: relative;
+  margin-top: 20px;
+  height: 340px;
+  overflow: hidden;
+}
+.timeline .timeline-list li .img-main {
+  position: relative;
+  float: left;
+  width: 620px;
+  height: 340px;
+}
+.timeline .timeline-list li .img-main img {
+  width: 620px;
+  height: 340px;
+}
+.timeline .timeline-list li .img-main .more {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100px;
+  height: 20px;
+  background-image: url('../images/bg-index-article-list.png');
+  background-position: left -40px;
+}
+.timeline .timeline-list li .img-side {
+  float: right;
+  width: 300px;
+  height: 340px;
+}
+.timeline .timeline-list li .img-side img {
+  width: 300px;
+  height: 160px;
+}
+.timeline .timeline-list li .img-side img:first-child {
+  margin-bottom: 20px;
+}
+.timeline .timeline-list li .time {
+  position: absolute;
+  top: 140px;
+  right: 280px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-family: georgia;
+  font-size: 26px;
+  font-style: italic;
+  color: #4A9EB1;
+  background-color: #fff;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  border-radius: 80px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 0px 0px 20px #ECECEC;
+  -moz-box-shadow: 0px 0px 0px 20px #ECECEC;
+  box-shadow: 0px 0px 0px 20px #ECECEC;
+}
+.timeline .timeline-list li:first-child {
+  margin-top: 0px;
 }
