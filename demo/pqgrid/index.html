@@ -100,7 +100,7 @@ $(document).delegate(':checkbox[name="column"]', 'click', function()
 	var colM=$( "#grid_json" ).pqGrid( "option", "colModel" );
 	colM[$(this).val()].hidden = !$this.is(':checked');
 
-    $.each(colM[$(this).val()].colModel, function()
+    $.each((colM[$(this).val()].colModel || []), function()
     {
         this.hidden =  !$this.is(':checked');
     });
