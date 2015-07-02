@@ -1,3 +1,4 @@
+/* css3 v1.0 */
 ul,
 li {
   padding: 0px;
@@ -25,13 +26,13 @@ body {
 }
 .tab-pane.task .items li .task-item {
   position: relative;
-  padding-left: 100px;
+  padding-left: 130px;
 }
 .tab-pane.task .items li dl.action {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 90px;
+  width: 120px;
   height: 31px;
   overflow: hidden;
 }
@@ -72,4 +73,59 @@ body {
   width: 500px;
   background-color: #fff;
   border: dashed 1px #ccc;
+}
+.task-details {
+  position: fixed;
+  top: 0px;
+  right: -525px;
+  padding: 8px;
+  width: 525px;
+  height: 100%;
+  background-color: #fff;
+  border-left: solid 1px #ccc;
+  -webkit-box-shadow: #ccc 0px 0px 3px 1px;
+  -moz-box-shadow: #ccc 0px 0px 3px 1px;
+  box-shadow: #ccc 0px 0px 3px 1px;
+  -webkit-transition: -webkit-right, 0.3s;
+  -moz-transition: -moz-right, 0.3s;
+  -ms-transition: -ms-right, 0.3s;
+  -o-transition: -o-right, 0.3s;
+  transition: right, 0.3s;
+}
+.task-details.show {
+  right: 0px;
+}
+.task-details h2 {
+  margin: 0px;
+  line-height: 40px;
+  font-size: 16px;
+}
+.task-details .task-form {
+  padding-top: 15px;
+  border-top: solid 1px #ccc;
+}
+.task-details .action {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.task-details .action li {
+  float: left;
+  margin-left: 15px;
+}
+.task-details .action li a {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  text-align: center;
+}
+.task-details .action li a:hover,
+.task-details .action li a:focus {
+  text-decoration: none;
+}
+.task-details .action li a span {
+  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: -2px;
 }
