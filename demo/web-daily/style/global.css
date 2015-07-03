@@ -78,6 +78,7 @@ body {
   position: fixed;
   top: 0px;
   right: -525px;
+  z-index: 9;
   padding: 8px;
   width: 525px;
   height: 100%;

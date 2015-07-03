@@ -360,8 +360,33 @@
                 right: 'month,basicWeek,basicDay'
             },
             defaultDate: '2015-06-12',
-            editable: true,
-            eventLimit: true, // allow "more" link when too many events
+            selectable: true,
+            selectHelper: true,
+            select: function(start, end) 
+            {
+                var $taskDetails = $('.task-details');
+
+                if($taskDetails.hasClass('show'))
+                {
+                    return;
+                }
+                $taskDetails.addClass('show');
+
+                // var title = prompt('Event Title:');
+                // var eventData;
+                // if (title) 
+                // {
+                //     eventData = 
+                //     {
+                //         title: title,
+                //         start: start,
+                //         end: end
+                //     };
+                //     $('.fullcalendar-container').fullCalendar('renderEvent', eventData, true); // stick? = true
+                // }
+                $('.fullcalendar-container').fullCalendar('unselect');
+            },
+
             events: [
                 {
                     title: 'All Day Event',
@@ -461,7 +486,7 @@
 
     $(document).click(function(e)
     {
-        if($(e.target).closest('.btn-task-details, .task-details').size() > 0 )
+        if($(e.target).closest('.btn-task-details, .task-details, .fullcalendar-container').size() > 0 )
         {
             return;
         }
