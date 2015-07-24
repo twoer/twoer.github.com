@@ -344,3 +344,6 @@ body {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+.task-tantt {
+  min-height: 500px;
+}

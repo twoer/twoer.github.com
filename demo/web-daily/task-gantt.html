@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Gantt</title>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/dhtmlxgantt.css">
+    <link rel="stylesheet" href="style/global.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="task-tantt">
+        </div>
+    </div>
+
+</body>
+<script src="script/jquery.js"></script>
+<script src="script/dhtmlxgantt.js"></script>
+<script src="script/dhtmlxgantt.cn.js"></script>
+<script src="script/bootstrap.min.js"></script>
+<script>
+    
+    var tasks =  
+    {
+        data:
+        [
+            {
+                id:1, text:"Project #1", start_date:"01-08-2015", duration:18,order:10,
+                progress:0.4, open: true
+            },
+            {
+                id:2, text:"Task #1",    start_date:"04-08-2015", duration:8, order:10,
+                progress:0.6, parent:1
+            },
+            {
+                id:3, text:"Task #2",    start_date:"08-08-2015", duration:8, order:20,
+                progress:0.6, parent:1
+            },
+            {
+                id:4, text:"Task #3",    start_date:"12-08-2015", duration:8, order:20,
+                progress:0, parent:1
+            }
+        ]
+    };
+
+    gantt.config.scale_unit = "day";
+    gantt.config.date_scale = "%M %d日";
+    gantt.config.min_column_width = 60;
+
+    gantt.config.drag_progress = false;
+    gantt.config.drag_links = false;
+    gantt.config.drag_move = false;
+    gantt.config.drag_resize = false;
+
+    gantt.config.details_on_dblclick = false;
+
+
+    gantt.config.columns = 
+    [
+        {
+            name:"text", label:"Task Name", tree:true, width:'150' ,align: "left" 
+        }
+    ];
+
+    gantt.init($('.task-tantt')[0]);
+
+
+    gantt.parse(tasks);
+
+
+</script>
+</html>
