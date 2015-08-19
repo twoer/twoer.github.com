@@ -1,0 +1,195 @@
+
+img
+{
+    max-width: 100%;
+    vertical-align: top;
+}
+
+// font 
+.simsun()
+{
+    font-family: Arial, SimSun;
+}
+
+
+// text
+.text-left
+{
+    text-align: left;
+}
+.text-center
+{
+    text-align: center;
+}
+.text-right
+{
+    text-align: right;
+}
+.text-ellipsis
+{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// display
+.display-block,.show
+{
+    display: block;
+}
+.display-none,.hide
+{
+    display: none;
+}
+.inline
+{
+    display: inline;
+}
+
+// scrollable
+.scrollable
+{
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+}
+.scrollable-x
+{
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.scrollable-y
+{
+    height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+
+
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger
+{
+    padding: 15px;
+    background-color: #377bb5;
+
+    .border-radius(~'2px');
+}
+.bg-success
+{
+    background-color: #dff0d8;
+}
+.bg-info
+{
+    background-color: #daedf7;
+}
+.bg-warning
+{
+    background-color: #fcf8e3;
+}
+.bg-danger
+{
+    background-color: #f2dede;
+}
+
+
+
+// 清除浮动
+.clear-fix()
+{
+    zoom:1; /* for IE6 IE7 */
+    &:after
+    {
+        visibility:hidden;
+        display:block;
+        font-size:0;
+        content:" ";
+        clear:both;
+        height:0;
+    }
+}
+
+
+.mini-top-border(@color: #ccc)
+{
+    &:before
+    {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 1px;
+        width: 100%;
+        background-color: @color;
+
+        .transform(~'scaleY(0.5)');
+    }
+}
+
+.mini-bottom-border(@color: #ccc)
+{
+    &:after
+    {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 1px;
+        width: 100%;
+        background-color: @color;
+
+        .transform(~'scaleY(0.5)');
+    }
+}
+
+.no-data()
+{
+    padding-top: 20px!important;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+    width: 100%!important;
+    line-height: 50px;
+    text-align: center;
+    color: #aaa;
+    &:before,
+    &:after
+    {
+        content: none!important;
+    }
+
+    span
+    {
+        position: relative;
+        float: none;
+        display: inline-block;
+        padding-left: 60px;
+        height: 50px;
+        width: auto;
+
+        &:before
+        {
+            .iconfont;
+            content: "\e601";
+            
+            position: absolute;
+            top: -5px;
+            left: 0px;
+            width: 50px;
+            height: 50px;
+            color: #aaa;
+            font-size: 55px;
+        }
+    }
+
+    
+}
+
+
+
+
+

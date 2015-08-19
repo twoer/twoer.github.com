@@ -1,0 +1,170 @@
+@charset "utf-8";
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-ellipsis {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.display-block,
+.show {
+  display: block;
+}
+.display-none,
+.hide {
+  display: none;
+}
+.inline {
+  display: inline;
+}
+.scrollable {
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+}
+.scrollable-x {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.scrollable-y {
+  height: 200px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger {
+  padding: 15px;
+  background-color: #377bb5;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.bg-success {
+  background-color: #dff0d8;
+}
+.bg-info {
+  background-color: #daedf7;
+}
+.bg-warning {
+  background-color: #fcf8e3;
+}
+.bg-danger {
+  background-color: #f2dede;
+}
+/* css3 v1.0 */
+@font-face {
+  font-family: iconfont;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/iconfont.ttf");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-shezhi:before {
+  content: "\e600";
+}
+.icon-duochuangkou:before {
+  content: "\e604";
+}
+.icon-xiangmuleixing:before {
+  content: "\e605";
+}
+.task-dashboard-list .mui-content {
+  padding-bottom: 55px;
+}
+.task-dashboard-list .mui-content .mui-table-title {
+  padding: 15px 15px 5px 15px;
+  line-height: 20px;
+  color: #6d6d72;
+  font-size: 15px;
+}
+.task-dashboard-list .mui-content .mui-table-view {
+  font-size: 15px;
+}
+.task-dashboard-list .mui-content .mui-table-view-cell {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #666;
+}
+.task-dashboard-stage .mui-content {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 55px;
+}
+.task-dashboard-stage .mui-content .mui-slider {
+  position: relative;
+  padding-bottom: 25px;
+  height: 100%;
+}
+.task-dashboard-stage .mui-content .mui-slider .mui-slider-group,
+.task-dashboard-stage .mui-content .mui-slider .mui-slider-item,
+.task-dashboard-stage .mui-content .mui-slider .mui-card {
+  position: relative;
+  height: 100%;
+}
+.task-dashboard-stage .mui-content .mui-slider .mui-card {
+  position: relative;
+  padding: 8px 5px;
+  padding-top: 32px;
+}
+.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-left: 10px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  background-color: #eeeeee;
+  color: #333;
+}
+.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view {
+  position: relative;
+  margin-top: 6px;
+  height: 99%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view-cell {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #666;
+}
+.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view-cell:after {
+  left: 5px;
+  right: 5px;
+}
+.task-dashboard-stage .mui-content .mui-slider-indicator {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+}
