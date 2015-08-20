@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>在线签名</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="style/global.css">
+
+</head>
+<body>
+
+	<div class="main main-online-request">
+		<div class="section signature">
+			<ul class="items">
+				<li class="row">
+					<label>签名区域</label>
+					<a href="javascript:;" class="button-sign-clear">重签</a>
+				</li>
+				<li class="row row-sign">
+					<canvas class="signature-pad"></canvas>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+
+</body>
+<script src="script/jquery.js"></script>
+<script src="script/global.js"></script>
+<script>
+    
+    var $sign = $('.signature-pad');
+    var w =  $sign.width();
+    var h = 150;
+    var canvas = null;
+    var context = null;
+    
+    // 初始化签名
+    function initSign()
+    {
+        
+        $sign.attr('height', h).attr('width', w);
+        canvas = $sign[0];
+        context = $sign[0].getContext("2d");
+        context.strokeStyle = "#222";
+        context.lineWidth = 2;
+        context.lineJoin = "round";
+
+        var xs = [];
+        var ys = [];
+        var vs = [];
+        var x = 0;
+        var y = 0;
+
+        var isTouch = false;
+
+        function touchStart(e)
+        {
+            e.preventDefault();
+            isTouch = true;
+            var touch = e.touches[0];
+
+            x = touch.clientX - touch.target.offsetLeft;
+            y = touch.clientY - touch.target.offsetTop + $(window).scrollTop();
+
+            pushPint(x, y);
+            drawPoint(x, y);
+        }
+
+        function touchMove(e)
+        {
+            e.preventDefault();
+            if(!isTouch)
+            {
+                return;
+            }
+
+            var touch = e.touches[0];
+
+            x = touch.clientX - touch.target.offsetLeft;
+            y = touch.clientY - touch.target.offsetTop + $(window).scrollTop();
+
+            pushPint(x, y);
+            drawPoint(x, y);
+
+
+        }
+
+        function touchEnd(e)
+        {
+            e.preventDefault();
+            isTouch = false;
+            xs = [];
+            ys = [];
+            vs = [];
+        }
+
+
+        function pushPint(x, y)
+        {
+            xs.push(x);
+            ys.push(y);
+            vs.push(y);
+        }
+
+        function drawPoint(x, y)
+        {
+            for(var i = 0; i < xs.length; i++)
+            {   
+                context.beginPath();
+                    
+                if(vs[i] && i)
+                {
+                    context.moveTo(xs[i-1], ys[i-1]);
+                }
+                else
+                {
+                    context.moveTo(xs[i]-1, ys[i]);
+                }
+
+                context.lineTo(xs[i], ys[i]);//context.lineTo(x, y) , 将当前点与指定的点用一条笔直的路径连接起来
+                context.closePath();//context.closePath() , 如果当前路径是打开的则关闭它
+                context.stroke();//context.stroke() , 绘制当前路径
+            }
+        }
+
+
+
+        canvas.addEventListener('touchstart', touchStart, false);
+        canvas.addEventListener('touchmove', touchMove, false);
+        canvas.addEventListener('touchend', touchEnd, false);
+    }
+
+    initSign();
+
+    // 重签
+    $(document).on('click', '.button-sign-clear', function()
+    {
+        context.clearRect(0, 0, w, h); 
+    });
+
+    // 获取 base64
+    $(document).on('click', '.button-primary', function()
+    {
+    	var imgBase64 = canvas.toDataURL("image/png"); 
+    	alert(imgBase64);
+    });
+
+</script>
+</html>
