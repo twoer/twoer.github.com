@@ -1,6 +1,16 @@
-mui('.mui-bar-tab').on('tap', '.mui-tab-item', function()
+mui('.mui-bar').on('tap', 'a', function()
 {
-    location.href = $(this).attr('href');
+    var href = $(this).attr('href');
+    if($(this).hasClass('mui-icon-left-nav'))
+    {
+        history.back();
+        return;
+    }
+    if(href && href === 'javascript:;')
+    {
+        return;
+    }
+    location.href = href;
     return false;
 });
 

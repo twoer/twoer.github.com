@@ -4,6 +4,13 @@
 @import "lib/css3.less";
 @import "lib/iconfont.less";
 
+@import "components/attach.less";
+
+
+@bg-url : '../images/';
+@bg-sprite-url : '../images/sprite/';
+
+
 body
 {
     font-size: 13px;
@@ -384,7 +391,7 @@ body
                 position: relative;
                 padding: 10px 0px;
                 padding-left: 50px;
-                padding-right: 20%;
+                padding-right: 15%;
 
                 .avatar
                 {
@@ -462,29 +469,30 @@ body
                         .images-list
                         {
                             padding-top: 5px;
-                            border-top: dotted 1px #ddd;
                             li
                             {
                                 float: left;
-                                padding-left: 0x;
-                                margin: 0px 5px 5px 0px;
-                                width: 23%;
-                                background-color: #f7f7f7;
-                                border: solid 1px #f7f7f7;
-                                &:hover
+                                width: 50%;
+                                padding-left: 0px;
+                                padding-right: 2px;
+                                margin-bottom: 4px;
+
+                                border-top: none;
+
+                                a
                                 {
-                                    border: solid 1px #f7f7f7;
+                                    display: block;
+                                    padding: 0px;
+                                    height: 80px;
+
+                                    background-color: #f7f7f7;
+
                                 }
-                                &:before
-                                {
-                                    left: 5px;
-                                }
-                                .button-download
-                                {
-                                    top: 0px;
-                                    right: 0px;
-                                    margin: 0px;
-                                }
+                            }
+                            li:nth-of-type(2n+2)
+                            {
+                                padding-left: 2px;
+                                padding-right: 0px;
                             }
                         }
                         
@@ -498,7 +506,7 @@ body
             li.my
             {
                 padding-right: 50px;
-                padding-left: 20%;
+                padding-left: 15%;
 
                 .avatar
                 {

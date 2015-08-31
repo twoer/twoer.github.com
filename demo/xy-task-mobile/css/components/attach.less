@@ -1,0 +1,135 @@
+.docs-list,
+.images-list
+{
+    .clear-fix();
+    li
+    {
+        padding: 0px;
+        border-top: dotted 1px #dddddd;
+
+        a
+        {
+            display: block;
+            position: relative;
+            padding-left: 50px;
+            height: 50px;
+            color: #888888;
+
+            &:before
+            {
+                content: '';
+                position: absolute;
+                top: 5px;
+                left: 0px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        cite,span
+        {
+            display: block;
+            line-height: 20px;
+            color: #888888;
+
+            .text-ellipsis();
+        }
+        cite
+        {
+            padding-top: 5px;
+            color: #555555;
+        }
+    }
+    li.zip,
+    li.rar
+    {
+        a
+        {
+            &:before
+            {
+                background-image: url('@{bg-sprite-url}bg-attach-zip.png');
+            }
+        }
+    }
+    li.doc,
+    li.docx
+    {
+        a
+        {
+            &:before
+            {
+                background-image: url('@{bg-sprite-url}bg-attach-word.png');
+            }
+        }
+    }
+    li.txt
+    {
+        a
+        {
+            &:before
+            {
+                background-image: url('@{bg-sprite-url}bg-attach-txt.png');
+            }
+        }
+    }
+    li.ppt,
+    li.pptx
+    {
+        a
+        {
+            &:before
+            {
+                background-image: url('@{bg-sprite-url}bg-attach-ppt.png');
+            }
+        }
+    }
+    li.pdf
+    {
+        a
+        {
+            &:before
+            {
+                background-image: url('@{bg-sprite-url}bg-attach-pdf.png');
+            }
+        }
+    }
+    li.xls,
+    li.xlsx
+    {
+        a
+        {
+            &:before
+            {
+                background-image: url('@{bg-sprite-url}bg-attach-excel.png');
+            }
+        }
+    }
+}
+
+.images-list
+{
+    .clear-fix();
+
+    li
+    {
+        position: relative;
+        height: 80px;
+        text-align: center;
+
+        img
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-height: 78px;
+
+            .transform(~'translate(-50%, -50%)');
+        }
+        .button-delete
+        {
+            top: 0px;
+            right: 0px;
+            margin: 0px;
+        }
+    }
+}

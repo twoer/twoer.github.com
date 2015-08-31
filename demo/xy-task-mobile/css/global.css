@@ -112,6 +112,124 @@ textarea {
 .icon-xiangmuleixing:before {
   content: "\e605";
 }
+.docs-list,
+.images-list {
+  zoom: 1;
+  /* for IE6 IE7 */
+}
+.docs-list:after,
+.images-list:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.docs-list li,
+.images-list li {
+  padding: 0px;
+  border-top: dotted 1px #dddddd;
+}
+.docs-list li a,
+.images-list li a {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  height: 50px;
+  color: #888888;
+}
+.docs-list li a:before,
+.images-list li a:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  width: 40px;
+  height: 40px;
+}
+.docs-list li cite,
+.images-list li cite,
+.docs-list li span,
+.images-list li span {
+  display: block;
+  line-height: 20px;
+  color: #888888;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.docs-list li cite,
+.images-list li cite {
+  padding-top: 5px;
+  color: #555555;
+}
+.docs-list li.zip a:before,
+.images-list li.zip a:before,
+.docs-list li.rar a:before,
+.images-list li.rar a:before {
+  background-image: url('../images/sprite/bg-attach-zip.png');
+}
+.docs-list li.doc a:before,
+.images-list li.doc a:before,
+.docs-list li.docx a:before,
+.images-list li.docx a:before {
+  background-image: url('../images/sprite/bg-attach-word.png');
+}
+.docs-list li.txt a:before,
+.images-list li.txt a:before {
+  background-image: url('../images/sprite/bg-attach-txt.png');
+}
+.docs-list li.ppt a:before,
+.images-list li.ppt a:before,
+.docs-list li.pptx a:before,
+.images-list li.pptx a:before {
+  background-image: url('../images/sprite/bg-attach-ppt.png');
+}
+.docs-list li.pdf a:before,
+.images-list li.pdf a:before {
+  background-image: url('../images/sprite/bg-attach-pdf.png');
+}
+.docs-list li.xls a:before,
+.images-list li.xls a:before,
+.docs-list li.xlsx a:before,
+.images-list li.xlsx a:before {
+  background-image: url('../images/sprite/bg-attach-excel.png');
+}
+.images-list {
+  zoom: 1;
+  /* for IE6 IE7 */
+}
+.images-list:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.images-list li {
+  position: relative;
+  height: 80px;
+  text-align: center;
+}
+.images-list li img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 78px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.images-list li .button-delete {
+  top: 0px;
+  right: 0px;
+  margin: 0px;
+}
 body {
   font-size: 13px;
 }
@@ -389,7 +507,7 @@ body {
   position: relative;
   padding: 10px 0px;
   padding-left: 50px;
-  padding-right: 20%;
+  padding-right: 15%;
 }
 .task-index .mui-content .message-items > li .avatar {
   position: absolute;
@@ -464,30 +582,28 @@ body {
 }
 .task-index .mui-content .message-items > li .message-content .message-attach .images-list {
   padding-top: 5px;
-  border-top: dotted 1px #ddd;
 }
 .task-index .mui-content .message-items > li .message-content .message-attach .images-list li {
   float: left;
-  padding-left: 0x;
-  margin: 0px 5px 5px 0px;
-  width: 23%;
+  width: 50%;
+  padding-left: 0px;
+  padding-right: 2px;
+  margin-bottom: 4px;
+  border-top: none;
+}
+.task-index .mui-content .message-items > li .message-content .message-attach .images-list li a {
+  display: block;
+  padding: 0px;
+  height: 80px;
   background-color: #f7f7f7;
-  border: solid 1px #f7f7f7;
 }
-.task-index .mui-content .message-items > li .message-content .message-attach .images-list li:hover {
-  border: solid 1px #f7f7f7;
-}
-.task-index .mui-content .message-items > li .message-content .message-attach .images-list li:before {
-  left: 5px;
-}
-.task-index .mui-content .message-items > li .message-content .message-attach .images-list li .button-download {
-  top: 0px;
-  right: 0px;
-  margin: 0px;
+.task-index .mui-content .message-items > li .message-content .message-attach .images-list li:nth-of-type(2n+2) {
+  padding-left: 2px;
+  padding-right: 0px;
 }
 .task-index .mui-content .message-items li.my {
   padding-right: 50px;
-  padding-left: 20%;
+  padding-left: 15%;
 }
 .task-index .mui-content .message-items li.my .avatar {
   left: auto;
