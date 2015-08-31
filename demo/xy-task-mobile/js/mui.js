@@ -5686,8 +5686,7 @@ var mui = (function(document, undefined) {
 		}
 		var arrowSize = arrow && arrow.offsetWidth / 2 || 0;
 
-
-
+		// var mcPTop = parseInt( getComputedStyle(mui('.mui-content')[0])['padding-top'] || 0 );
 		var pTop = 0;
 		var pLeft = 0;
 		var diff = 0;
@@ -5699,7 +5698,7 @@ var mui = (function(document, undefined) {
 			pTop = offset.top - pHeight - arrowSize;
 		} else if ((pHeight + arrowSize) < (wHeight - (offset.top - window.pageYOffset) - aHeight)) { //bottom
 			position = 'bottom';
-			pTop = offset.top + aHeight + arrowSize;
+			pTop = offset.top + aHeight + arrowSize ;
 		} else { //middle
 			position = 'middle';
 			pTop = Math.max((wHeight - pHeight) / 2 + window.pageYOffset, 0);
