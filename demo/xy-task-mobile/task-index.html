@@ -154,6 +154,7 @@
             var _val = $('.reply-message-container textarea').val();
             $('.reply-message-container textarea').val('');
             var $message = $('.message-items li').last().clone();
+            debugger;
             $message.find('.message-text').html(_val);
 
             $('.message-items').append($message);
