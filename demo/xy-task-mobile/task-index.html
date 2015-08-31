@@ -145,6 +145,22 @@
     <script type="text/javascript" src="js/zepto.min.js"></script>
     <script type="text/javascript" src="js/template.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
+    
 
+    <script>
+
+        mui('.reply-message-container').on('tap', '.mui-btn-reply', function()
+        {
+            var _val = $('.reply-message-container textarea').val();
+            $('.reply-message-container textarea').val('');
+            var $message = $('.message-items li').last().clone();
+            $message.find('.message-text').html(_val);
+
+            $('.message-items').append($message);
+
+            $('body').scrollTop(10000);
+        });
+
+    </script>
     
 </html>
