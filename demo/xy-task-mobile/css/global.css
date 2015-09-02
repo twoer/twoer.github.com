@@ -100,17 +100,23 @@ textarea {
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-shezhi:before {
+.icon-setting:before {
   content: "\e600";
 }
 .icon-ellipsis:before {
   content: "\e601";
 }
-.icon-duochuangkou:before {
+.icon-multiple-window:before {
   content: "\e604";
 }
-.icon-xiangmuleixing:before {
+.icon-project-category:before {
   content: "\e605";
+}
+.icon-succeed:before {
+  content: "\e606";
+}
+.icon-details:before {
+  content: "\e602";
 }
 .docs-list,
 .images-list {
@@ -230,8 +236,1036 @@ textarea {
   right: 0px;
   margin: 0px;
 }
+.mui-indexed-list {
+  position: relative;
+  border-top: solid 1px #e3e3e3;
+  border-bottom: solid 1px #e3e3e3;
+  overflow: hidden;
+  background-color: #fafafa;
+  height: 300px;
+  cursor: default;
+}
+.mui-indexed-list-inner {
+  margin: 0px;
+  padding: 0px;
+  overflow-y: auto;
+  border: none;
+}
+.mui-indexed-list-inner::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+}
+.mui-indexed-list-empty-alert,
+.mui-indexed-list-inner.empty ul {
+  display: none;
+}
+.mui-indexed-list-inner.empty .mui-indexed-list-empty-alert {
+  display: block;
+}
+.mui-indexed-list-empty-alert {
+  padding: 30px 15px;
+  text-align: center;
+  color: #ccc;
+  padding-right: 45px;
+}
+.mui-ios .mui-indexed-list-inner {
+  width: calc(110%);
+}
+.mui-indexed-list-group,
+.mui-indexed-list-item {
+  padding-right: 45px;
+}
+.mui-ios .mui-indexed-list-group,
+.mui-ios .mui-indexed-list-item,
+.mui-ios .mui-indexed-list-empty-alert {
+  padding-right: 55px;
+}
+.mui-indexed-list-group {
+  background-color: #f7f7f7;
+}
+.mui-indexed-list-group {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.mui-indexed-list-search {
+  border-bottom: solid 1px #e3e3e3;
+  z-index: 15;
+}
+.mui-indexed-list-search.mui-search:before {
+  margin-top: -10px;
+}
+.mui-indexed-list-search input {
+  border-radius: 0px;
+  margin: 0px;
+  background-color: #fafafa;
+}
+.mui-indexed-list-bar {
+  width: 23px;
+  background-color: lightgrey;
+  position: absolute;
+  height: 100%;
+  z-index: 10;
+  right: 0px;
+  -webkit-transition: .2s;
+}
+.mui-indexed-list-bar a {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  padding: 0px;
+  margin: 0px;
+  line-height: 15px;
+  color: #aaa;
+}
+.mui-indexed-list-bar.active {
+  background-color: #c8c8c8;
+}
+.mui-indexed-list-bar.active a {
+  color: #333;
+}
+.mui-indexed-list-bar.active a.active {
+  color: #007aff;
+}
+.mui-indexed-list-alert {
+  position: absolute;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  border-radius: 40px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  color: #fff;
+  display: none;
+  -webkit-transition: .2s;
+}
+.mui-indexed-list-alert.active {
+  display: block;
+}
+/*!
+ * mobilebone.css
+ * by zhangxinxu(.com) 2014-09-26
+ * some necessary CSS for mobilebone.js
+ * good luck for U, ^_^
+**/
+a,
+img {
+  -webkit-touch-callout: none;
+}
+body {
+  margin: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  -ms-touch-action: none;
+}
+/* construction */
+html,
+body,
+.page {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.page {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.page.out {
+  display: none;
+}
+.in,
+.out {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* mask layer when ajax sending... */
+.mask {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.35);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+}
+.loading {
+  /* more info: http://www.zhangxinxu.com/wordpress/?p=3357 */
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  box-shadow: 0 -10px 0 1px currentColor, /* top, 1px expand */ 10px 0px currentColor, /* right */ 0 10px currentColor, /* bottom */ -10px 0 currentColor, /* left */ -7px -7px 0 0.5px currentColor, /* left-top, 0.5px expand */ 7px -7px 0 1.5px currentColor, /* right-top, 1.5px expand */ 7px 7px currentColor, /* right-bottom */ -7px 7px currentColor;
+  /* left-bottom */
+  -webkit-animation: spin 1s steps(8) infinite;
+  animation: spin 1s steps(8) infinite;
+  /*center*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+/* Default animation - slide, you can visit 'src/mobilebone.aniamte.css' to get more styles of animation */
+.slide.out,
+.slide.in {
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 225ms;
+  animation-timing-function: ease-out;
+  animation-duration: 225ms;
+}
+.slide.in {
+  -webkit-animation-name: slideinfromright;
+  animation-name: slideinfromright;
+}
+.slide.out {
+  -webkit-animation-name: slideouttoleft;
+  animation-name: slideouttoleft;
+}
+.slide.reverse.out {
+  -webkit-animation-name: slideouttoright;
+  animation-name: slideouttoright;
+}
+.slide.reverse.in {
+  -webkit-animation-name: slideinfromleft;
+  animation-name: slideinfromleft;
+}
+/* keyframes for slidein from sides */
+@-webkit-keyframes slideinfromright {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideinfromright {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideinfromleft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideinfromleft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* keyframes for slideout to sides */
+@-webkit-keyframes slideouttoleft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes slideouttoleft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slideouttoright {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes slideouttoright {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+/* chrysanthemum loading effect */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*
+* jQuery Mobile Framework
+* Copyright (c) jQuery Project
+* Dual licensed under the MIT (MIT-LICENSE.txt) or GPL (GPL-LICENSE.txt) licenses.
+*/
+.in {
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 350ms;
+  animation-timing-function: ease-out;
+  animation-duration: 350ms;
+}
+.out {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 225ms;
+  animation-timing-function: ease-in;
+  animation-duration: 225ms;
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fade.out {
+  opacity: 0;
+  -webkit-animation-duration: 125ms;
+  -webkit-animation-name: fadeout;
+  animation-duration: 125ms;
+  animation-name: fadeout;
+}
+.fade.in {
+  opacity: 1;
+  -webkit-animation-duration: 225ms;
+  -webkit-animation-name: fadein;
+  animation-duration: 225ms;
+  animation-name: fadein;
+}
+.pop {
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.pop.in {
+  -webkit-transform: scale(1);
+  -webkit-animation-name: popin;
+  -webkit-animation-duration: 350ms;
+  transform: scale(1);
+  animation-name: popin;
+  animation-duration: 350ms;
+  opacity: 1;
+}
+.pop.out {
+  -webkit-animation-name: fadeout;
+  -webkit-animation-duration: 100ms;
+  animation-name: fadeout;
+  animation-duration: 100ms;
+  opacity: 0;
+}
+.pop.in.reverse {
+  -webkit-animation-name: fadein;
+  animation-name: fadein;
+}
+.pop.out.reverse {
+  -webkit-transform: scale(0.8);
+  -webkit-animation-name: popout;
+  transform: scale(0.8);
+  animation-name: popout;
+}
+@-webkit-keyframes popin {
+  from {
+    -webkit-transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes popin {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes popout {
+  from {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0.8);
+    opacity: 0;
+  }
+}
+@keyframes popout {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+/* keyframes for slidein from sides */
+@-webkit-keyframes slideinfromright {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideinfromright {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideinfromleft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideinfromleft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* keyframes for slideout to sides */
+@-webkit-keyframes slideouttoleft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes slideouttoleft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slideouttoright {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes slideouttoright {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.slide.out,
+.slide.in {
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 350ms;
+  animation-timing-function: ease-out;
+  animation-duration: 350ms;
+}
+.slide.out {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -webkit-animation-name: slideouttoleft;
+  transform: translateX(-100%);
+  animation-name: slideouttoleft;
+}
+.slide.in {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation-name: slideinfromright;
+  transform: translateX(0);
+  animation-name: slideinfromright;
+}
+.slide.out.reverse {
+  -webkit-transform: translate3d(100%, 0, 0);
+  -webkit-animation-name: slideouttoright;
+  transform: translateX(100%);
+  animation-name: slideouttoright;
+}
+.slide.in.reverse {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation-name: slideinfromleft;
+  transform: translateX(0);
+  animation-name: slideinfromleft;
+}
+.slidefade.out {
+  -webkit-transform: translateX(-100%);
+  -webkit-animation-name: slideouttoleft;
+  -webkit-animation-duration: 225ms;
+  transform: translateX(-100%);
+  animation-name: slideouttoleft;
+  animation-duration: 225ms;
+}
+.slidefade.in {
+  -webkit-transform: translateX(0);
+  -webkit-animation-name: fadein;
+  -webkit-animation-duration: 200ms;
+  transform: translateX(0);
+  animation-name: fadein;
+  animation-duration: 200ms;
+}
+.slidefade.out.reverse {
+  -webkit-transform: translateX(100%);
+  -webkit-animation-name: slideouttoright;
+  -webkit-animation-duration: 200ms;
+  transform: translateX(100%);
+  animation-name: slideouttoright;
+  animation-duration: 200ms;
+}
+.slidefade.in.reverse {
+  -webkit-transform: translateX(0);
+  -webkit-animation-name: fadein;
+  -webkit-animation-duration: 200ms;
+  transform: translateX(0);
+  animation-name: fadein;
+  animation-duration: 200ms;
+}
+/* slide down */
+.slidedown.out {
+  -webkit-animation-name: fadeout;
+  -webkit-animation-duration: 100ms;
+  animation-name: fadeout;
+  animation-duration: 100ms;
+}
+.slidedown.in {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name: slideinfromtop;
+  -webkit-animation-duration: 250ms;
+  transform: translateY(0);
+  animation-name: slideinfromtop;
+  animation-duration: 250ms;
+}
+.slidedown.in.reverse {
+  -webkit-animation-name: fadein;
+  -webkit-animation-duration: 150ms;
+  animation-name: fadein;
+  animation-duration: 150ms;
+}
+.slidedown.out.reverse {
+  -webkit-transform: translateY(-100%);
+  -webkit-animation-name: slideouttotop;
+  -webkit-animation-duration: 200ms;
+  transform: translateY(-100%);
+  animation-name: slideouttotop;
+  animation-duration: 200ms;
+}
+@-webkit-keyframes slideinfromtop {
+  from {
+    -webkit-transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes slideinfromtop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes slideouttotop {
+  from {
+    -webkit-transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-100%);
+  }
+}
+@keyframes slideouttotop {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+/* slide up */
+.slideup.out {
+  -webkit-animation-name: fadeout;
+  -webkit-animation-duration: 100ms;
+  animation-name: fadeout;
+  animation-duration: 100ms;
+}
+.slideup.in {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name: slideinfrombottom;
+  -webkit-animation-duration: 250ms;
+  transform: translateY(0);
+  animation-name: slideinfrombottom;
+  animation-duration: 250ms;
+}
+.slideup.in.reverse {
+  -webkit-animation-name: fadein;
+  -webkit-animation-duration: 150ms;
+  animation-name: fadein;
+  animation-duration: 150ms;
+}
+.slideup.out.reverse {
+  -webkit-transform: translateY(100%);
+  -webkit-animation-name: slideouttobottom;
+  -webkit-animation-duration: 200ms;
+  transform: translateY(100%);
+  animation-name: slideouttobottom;
+  animation-duration: 200ms;
+}
+@-webkit-keyframes slideinfrombottom {
+  from {
+    -webkit-transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes slideinfrombottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes slideouttobottom {
+  from {
+    -webkit-transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(100%);
+  }
+}
+@keyframes slideouttobottom {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+/* The properties in this rule are only necessary for the 'flip' transition.
+ * We need specify the perspective to create a projection matrix. This will add
+ * some depth as the element flips. The depth number represents the distance of
+ * the viewer from the z-plane. According to the CSS3 spec, 1000 is a moderate
+ * value.
+ */
+.viewport-flip {
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  position: absolute;
+}
+.flip {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateX(0);
+  /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
+  backface-visibility: hidden;
+  transform: translateX(0);
+}
+.flip.out {
+  -webkit-transform: rotateY(-90deg) scale(0.9);
+  -webkit-animation-name: flipouttoleft;
+  -webkit-animation-duration: 175ms;
+  transform: rotateY(-90deg) scale(0.9);
+  animation-name: flipouttoleft;
+  animation-duration: 175ms;
+}
+.flip.in {
+  -webkit-animation-name: flipintoright;
+  -webkit-animation-duration: 225ms;
+  animation-name: flipintoright;
+  animation-duration: 225ms;
+}
+.flip.out.reverse {
+  -webkit-transform: rotateY(90deg) scale(0.9);
+  -webkit-animation-name: flipouttoright;
+  transform: rotateY(90deg) scale(0.9);
+  animation-name: flipouttoright;
+}
+.flip.in.reverse {
+  -webkit-animation-name: flipintoleft;
+  animation-name: flipintoleft;
+}
+@-webkit-keyframes flipouttoleft {
+  from {
+    -webkit-transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(-90deg) scale(0.9);
+  }
+}
+@keyframes flipouttoleft {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-90deg) scale(0.9);
+  }
+}
+@-webkit-keyframes flipouttoright {
+  from {
+    -webkit-transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(90deg) scale(0.9);
+  }
+}
+@keyframes flipouttoright {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(90deg) scale(0.9);
+  }
+}
+@-webkit-keyframes flipintoleft {
+  from {
+    -webkit-transform: rotateY(-90deg) scale(0.9);
+  }
+  to {
+    -webkit-transform: rotateY(0);
+  }
+}
+@keyframes flipintoleft {
+  from {
+    transform: rotateY(-90deg) scale(0.9);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+@-webkit-keyframes flipintoright {
+  from {
+    -webkit-transform: rotateY(90deg) scale(0.9);
+  }
+  to {
+    -webkit-transform: rotateY(0);
+  }
+}
+@keyframes flipintoright {
+  from {
+    transform: rotateY(90deg) scale(0.9);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+/* The properties in this rule are only necessary for the 'flip' transition.
+ * We need specify the perspective to create a projection matrix. This will add
+ * some depth as the element flips. The depth number represents the distance of
+ * the viewer from the z-plane. According to the CSS3 spec, 1000 is a moderate
+ * value.
+ */
+.viewport-turn {
+  -webkit-perspective: 200px;
+  perspective: 200px;
+  position: absolute;
+}
+.turn {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateX(0);
+  /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
+  -webkit-transform-origin: 0;
+  backface-visibility: hidden;
+  transform: translateX(0);
+  transform-origin: 0;
+}
+.turn.out {
+  -webkit-transform: rotateY(-90deg) scale(0.9);
+  -webkit-animation-name: flipouttoleft;
+  -webkit-animation-duration: 125ms;
+  transform: rotateY(-90deg) scale(0.9);
+  animation-name: flipouttoleft;
+  animation-duration: 125ms;
+}
+.turn.in {
+  -webkit-animation-name: flipintoright;
+  -webkit-animation-duration: 250ms;
+  animation-name: flipintoright;
+  animation-duration: 250ms;
+}
+.turn.out.reverse {
+  -webkit-transform: rotateY(90deg) scale(0.9);
+  -webkit-animation-name: flipouttoright;
+  transform: rotateY(90deg) scale(0.9);
+  animation-name: flipouttoright;
+}
+.turn.in.reverse {
+  -webkit-animation-name: flipintoleft;
+  animation-name: flipintoleft;
+}
+@-webkit-keyframes flipouttoleft {
+  from {
+    -webkit-transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(-90deg) scale(0.9);
+  }
+}
+@keyframes flipouttoleft {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-90deg) scale(0.9);
+  }
+}
+@-webkit-keyframes flipouttoright {
+  from {
+    -webkit-transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(90deg) scale(0.9);
+  }
+}
+@keyframes flipouttoright {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(90deg) scale(0.9);
+  }
+}
+@-webkit-keyframes flipintoleft {
+  from {
+    -webkit-transform: rotateY(-90deg) scale(0.9);
+  }
+  to {
+    -webkit-transform: rotateY(0);
+  }
+}
+@keyframes flipintoleft {
+  from {
+    transform: rotateY(-90deg) scale(0.9);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+@-webkit-keyframes flipintoright {
+  from {
+    -webkit-transform: rotateY(90deg) scale(0.9);
+  }
+  to {
+    -webkit-transform: rotateY(0);
+  }
+}
+@keyframes flipintoright {
+  from {
+    transform: rotateY(90deg) scale(0.9);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+/* flow transition */
+.flow {
+  -webkit-transform-origin: 50% 30%;
+  transform-origin: 50% 30%;
+}
+.flow.out {
+  -webkit-transform: translateX(-100%) scale(0.7);
+  -webkit-animation-name: flowouttoleft;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-duration: 350ms;
+  transform: translateX(-100%) scale(0.7);
+  animation-name: flowouttoleft;
+  animation-timing-function: ease;
+  animation-duration: 350ms;
+}
+.flow.in {
+  -webkit-transform: translateX(0) scale(1);
+  -webkit-animation-name: flowinfromright;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-duration: 350ms;
+  transform: translateX(0) scale(1);
+  animation-name: flowinfromright;
+  animation-timing-function: ease;
+  animation-duration: 350ms;
+}
+.flow.out.reverse {
+  -webkit-transform: translateX(100%);
+  -webkit-animation-name: flowouttoright;
+  transform: translateX(100%);
+  animation-name: flowouttoright;
+}
+.flow.in.reverse {
+  -webkit-animation-name: flowinfromleft;
+  animation-name: flowinfromleft;
+}
+@-webkit-keyframes flowouttoleft {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+  }
+  60%,
+  70% {
+    -webkit-transform: translateX(0) scale(0.7);
+  }
+  100% {
+    -webkit-transform: translateX(-100%) scale(0.7);
+  }
+}
+@keyframes flowouttoleft {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  60%,
+  70% {
+    transform: translateX(0) scale(0.7);
+  }
+  100% {
+    transform: translateX(-100%) scale(0.7);
+  }
+}
+@-webkit-keyframes flowouttoright {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+  }
+  60%,
+  70% {
+    -webkit-transform: translateX(0) scale(0.7);
+  }
+  100% {
+    -webkit-transform: translateX(100%) scale(0.7);
+  }
+}
+@keyframes flowouttoright {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  60%,
+  70% {
+    transform: translateX(0) scale(0.7);
+  }
+  100% {
+    transform: translateX(100%) scale(0.7);
+  }
+}
+@-webkit-keyframes flowinfromleft {
+  0% {
+    -webkit-transform: translateX(-100%) scale(0.7);
+  }
+  30%,
+  40% {
+    -webkit-transform: translateX(0) scale(0.7);
+  }
+  100% {
+    -webkit-transform: translateX(0) scale(1);
+  }
+}
+@keyframes flowinfromleft {
+  0% {
+    transform: translateX(-100%) scale(0.7);
+  }
+  30%,
+  40% {
+    transform: translateX(0) scale(0.7);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+@-webkit-keyframes flowinfromright {
+  0% {
+    -webkit-transform: translateX(100%) scale(0.7);
+  }
+  30%,
+  40% {
+    -webkit-transform: translateX(0) scale(0.7);
+  }
+  100% {
+    -webkit-transform: translateX(0) scale(1);
+  }
+}
+@keyframes flowinfromright {
+  0% {
+    transform: translateX(100%) scale(0.7);
+  }
+  30%,
+  40% {
+    transform: translateX(0) scale(0.7);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
 body {
   font-size: 13px;
+}
+.mui-bar {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  z-index: 9;
+  width: 100%;
+}
+.mui-bar-nav {
+  top: 0px;
+}
+.mui-bar-tab {
+  bottom: 0px;
+}
+.mui-bar-tab.fix-transition-bug {
+  position: absolute;
 }
 .mui-bar-nav .mui-pull-left,
 .mui-bar-nav .mui-pull-right {
@@ -245,11 +1279,23 @@ body {
   line-height: 44px;
   text-align: center;
 }
+.mui-bar-nav .mui-text.mui-pull-left,
+.mui-bar-nav .mui-text.mui-pull-right {
+  line-height: 44px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 60px;
+}
+.mui-bar-nav .mui-icon.iconfont {
+  font-size: 20px;
+}
 .mui-bar-nav .mui-pull-right {
   left: auto;
   right: 0px;
 }
-.mui-bar-nav .mui-icon-details .icon-ellipsis {
+.mui-bar-nav .mui-icon.icon-ellipsis {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -284,26 +1330,34 @@ body {
   height: 80px;
 }
 .mui-content-padded .mui-input-group .mui-input-row label + span,
-.mui-content-padded .mui-input-group .mui-input-row label + .mui-navigate-right {
+.mui-content-padded .mui-input-group .mui-input-row label + .mui-btn {
   float: left;
   padding: 11px 20px 11px 5px;
   color: #333;
   font-size: 13px;
   line-height: 18px;
   width: 72%;
-}
-.mui-content-padded .mui-input-group .mui-input-row label + span:after,
-.mui-content-padded .mui-input-group .mui-input-row label + .mui-navigate-right:after {
-  right: 10px;
+  min-height: 40px;
+  white-space: normal;
+  text-align: left;
 }
 .mui-content-padded .mui-btn-block {
   padding: 8px 0px;
   font-size: 14px;
 }
-.task-dashboard-list .mui-content {
-  padding-bottom: 55px;
+.page {
+  z-index: 1;
+  background-color: transparent;
 }
-.task-dashboard-list .mui-content .mui-table-title {
+.page .mui-content {
+  position: absolute;
+  top: 44px;
+  bottom: 50px;
+  padding: 0px;
+  width: 100%;
+  overflow: auto;
+}
+.page.dashboard-list .mui-content .mui-table-title {
   position: relative;
   padding: 10px 40px 0px 14px;
   height: 40px;
@@ -311,11 +1365,11 @@ body {
   color: #6d6d72;
   font-size: 15px;
 }
-.task-dashboard-list .mui-content .mui-table-title .title-editor {
+.page.dashboard-list .mui-content .mui-table-title .title-editor {
   position: relative;
   height: 26px;
 }
-.task-dashboard-list .mui-content .mui-table-title .title-editor input {
+.page.dashboard-list .mui-content .mui-table-title .title-editor input {
   display: block;
   margin: 0px;
   padding: 3px 0px;
@@ -333,59 +1387,53 @@ body {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.task-dashboard-list .mui-content .mui-table-title .title-editor input:focus {
+.page.dashboard-list .mui-content .mui-table-title .title-editor input:focus {
   border-bottom: solid 1px #ccc;
 }
-.task-dashboard-list .mui-content .mui-table-title .mui-btn-more {
+.page.dashboard-list .mui-content .mui-table-title .mui-btn-add-task {
   position: absolute;
-  top: 10px;
+  top: 2px;
   right: 0px;
   padding: 0px;
   width: 35px;
-  height: 30px;
-  line-height: 36px;
+  height: 32px;
+  line-height: 30px;
   text-align: center;
   color: #333;
-}
-.task-dashboard-list .mui-content .mui-table-title .mui-btn-more .iconfont {
   font-size: 24px;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
-.task-dashboard-list .mui-content .mui-table-view {
+.page.dashboard-list .mui-content .mui-table-title .mui-btn-add-task .iconfont {
+  font-size: 24px;
+}
+.page.dashboard-list .mui-content .mui-table-view {
   font-size: 15px;
 }
-.task-dashboard-list .mui-content .mui-table-view-cell {
+.page.dashboard-list .mui-content .mui-table-view-cell {
   padding-top: 9px;
   padding-bottom: 9px;
   color: #666;
 }
-.task-dashboard-stage .mui-content {
-  position: relative;
-  padding-top: 52px;
-  padding-bottom: 55px;
+.page.dashboard-stage .mui-content {
+  padding-top: 8px;
 }
-.task-dashboard-stage .mui-content .mui-slider {
+.page.dashboard-stage .mui-content .mui-slider {
   position: relative;
   padding-bottom: 20px;
   height: 100%;
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-slider-group,
-.task-dashboard-stage .mui-content .mui-slider .mui-slider-item,
-.task-dashboard-stage .mui-content .mui-slider .mui-card {
+.page.dashboard-stage .mui-content .mui-slider .mui-slider-group,
+.page.dashboard-stage .mui-content .mui-slider .mui-slider-item,
+.page.dashboard-stage .mui-content .mui-slider .mui-card {
   position: relative;
   height: 100%;
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-card {
+.page.dashboard-stage .mui-content .mui-slider .mui-card {
   position: relative;
   padding: 8px 5px;
-  margin: 0px 5px;
+  margin: 0px 8px;
   padding-top: 32px;
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title {
+.page.dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -397,12 +1445,12 @@ body {
   background-color: #eeeeee;
   color: #333;
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title .title-editor {
+.page.dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title .title-editor {
   position: relative;
   padding-top: 2px;
   height: 30px;
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title .title-editor input {
+.page.dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title .title-editor input {
   display: block;
   margin: 0px;
   padding: 4px 0px;
@@ -420,251 +1468,145 @@ body {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title .title-editor input:focus {
+.page.dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title .title-editor input:focus {
   border-bottom: solid 1px #ccc;
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title .mui-btn-more {
+.page.dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title .mui-btn-add-task {
   position: absolute;
   top: 2px;
   right: 0px;
   padding: 0px;
   width: 35px;
   height: 32px;
-  line-height: 36px;
+  line-height: 30px;
   text-align: center;
   color: #333;
-}
-.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title .mui-btn-more .iconfont {
   font-size: 24px;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view {
+.page.dashboard-stage .mui-content .mui-slider .mui-card .mui-table-title .mui-btn-add-task .iconfont {
+  font-size: 24px;
+}
+.page.dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view {
   position: relative;
   margin-top: 6px;
   height: 99%;
   overflow: hidden;
   overflow-y: auto;
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view-cell {
+.page.dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view-cell {
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 5px;
   padding-right: 5px;
   color: #666;
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view-cell:after {
+.page.dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view-cell:after {
   left: 5px;
   right: 5px;
 }
-.task-dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view-cell > a:not(.mui-btn) {
+.page.dashboard-stage .mui-content .mui-slider .mui-card .mui-table-view-cell > a:not(.mui-btn) {
   margin-right: -5px;
   margin-left: -5px;
 }
-.task-dashboard-stage .mui-content .mui-slider-indicator {
+.page.dashboard-stage .mui-content .mui-slider-indicator {
   position: absolute;
   left: 0px;
   bottom: 0px;
   width: 100%;
 }
-.task-dashboard-stage .mui-content .mui-slider-indicator .mui-indicator {
+.page.dashboard-stage .mui-content .mui-slider-indicator .mui-indicator {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.task-project .mui-content {
-  position: relative;
-  padding-top: 44px;
-  padding-bottom: 55px;
-}
-.task-project .mui-content .mui-content-padded .mui-btn-block {
+.page.task-project .mui-content .mui-content-padded .mui-btn-block {
   margin-top: 30px;
 }
-.task-index .mui-content,
-.task-details .mui-content {
-  position: relative;
-  padding-top: 44px;
-  padding-bottom: 55px;
+.page-container.task-info .page {
+  z-index: 99;
 }
-.task-index .mui-content .mui-content-padded .mui-input-group + .mui-input-group,
-.task-details .mui-content .mui-content-padded .mui-input-group + .mui-input-group {
+.page-container.task-info .mui-content {
+  bottom: 0px;
+}
+.page-container.task-info .mui-content .mui-content-padded .mui-input-group + .mui-input-group {
   margin-top: 10px;
 }
-.task-index .mui-content .mui-content-padded .mui-btn-block,
-.task-details .mui-content .mui-content-padded .mui-btn-block {
+.page-container.task-info .mui-content .mui-content-padded .mui-btn-group {
   margin-top: 30px;
 }
-.task-index .mui-content {
-  padding-bottom: 65px;
-}
-.task-index .mui-content .message-items {
-  padding: 0px 10px;
-}
-.task-index .mui-content .message-items > li {
+.page-container.task-info .mui-content .mui-content-padded .mui-input-row.selector-row {
   position: relative;
-  padding: 10px 0px;
-  padding-left: 50px;
-  padding-right: 15%;
 }
-.task-index .mui-content .message-items > li .avatar {
+.page-container.task-info .mui-content .mui-content-padded .mui-input-row.selector-row:before {
+  content: '\e583';
   position: absolute;
-  top: 10px;
-  left: 0px;
-  width: 40px;
-  height: 40px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
+  top: 50%;
+  right: 10px;
+  display: inline-block;
+  font-family: Muiicons;
+  font-size: inherit;
+  line-height: 1;
+  color: #bbb;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
 }
-.task-index .mui-content .message-items > li .avatar img {
-  width: 40px;
-  height: 40px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-}
-.task-index .mui-content .message-items > li .message-attr {
-  margin-top: -2px;
-}
-.task-index .mui-content .message-items > li .message-attr cite,
-.task-index .mui-content .message-items > li .message-attr span {
-  margin-right: 5px;
-  color: #919191;
-}
-.task-index .mui-content .message-items > li .message-attr cite {
-  color: #4a94d3;
-}
-.task-index .mui-content .message-items > li .message-content {
-  position: relative;
-  margin-top: 2px;
-  padding: 5px 10px;
-  border: solid 1px #d7e7f5;
-  background-color: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-}
-.task-index .mui-content .message-items > li .message-content:before,
-.task-index .mui-content .message-items > li .message-content:after {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: -15px;
-  width: 0px;
-  overflow: hidden;
-  border: solid 7px transparent;
-  border-right-color: #d7e7f5;
-}
-.task-index .mui-content .message-items > li .message-content:after {
-  left: -14px;
-  border-right-color: #fff;
-}
-.task-index .mui-content .message-items > li .message-content .message-text {
-  position: relative;
-  color: #676767;
-  font-size: 12px;
-  line-height: 16px;
-}
-.task-index .mui-content .message-items > li .message-content .message-attach {
-  margin-top: 5px;
-}
-.task-index .mui-content .message-items > li .message-content .message-attach .images-list {
-  padding-top: 5px;
-}
-.task-index .mui-content .message-items > li .message-content .message-attach .images-list li {
-  float: left;
-  width: 50%;
-  padding-left: 0px;
-  padding-right: 2px;
-  margin-bottom: 4px;
-  border-top: none;
-}
-.task-index .mui-content .message-items > li .message-content .message-attach .images-list li a {
-  display: block;
-  padding: 0px;
-  height: 80px;
-  background-color: #f7f7f7;
-}
-.task-index .mui-content .message-items > li .message-content .message-attach .images-list li:nth-of-type(2n+2) {
-  padding-left: 2px;
-  padding-right: 0px;
-}
-.task-index .mui-content .message-items li.my {
-  padding-right: 50px;
-  padding-left: 15%;
-}
-.task-index .mui-content .message-items li.my .avatar {
-  left: auto;
-  right: 0px;
-}
-.task-index .mui-content .message-items li.my .message-attr {
-  display: none;
-}
-.task-index .mui-content .message-items li.my .message-content {
-  margin-top: 0px;
-}
-.task-index .mui-content .message-items li.my .message-content:before,
-.task-index .mui-content .message-items li.my .message-content:after {
-  left: auto;
-  right: -15px;
-  border-right-color: transparent;
-  border-left-color: #d7e7f5;
-}
-.task-index .mui-content .message-items li.my .message-content:after {
-  left: auto;
-  right: -14px;
-  border-right-color: transparent;
-  border-left-color: #fff;
-}
-.task-index .mui-content .message-items li.my .message-content .message-text {
-  font-size: 12px;
-  line-height: 15px;
-}
-.task-index .mui-content .message-items li.my .message-content .message-text label + a {
-  color: #328bd0;
-}
-.task-index .mui-bar-tab .reply-message-container {
-  position: relative;
-  padding: 5px;
-  padding-right: 60px;
-}
-.task-index .mui-bar-tab .reply-message-container textarea {
-  padding: 3px;
-  margin: 0px;
-  height: 40px;
-  font-size: 12px;
-  line-height: 15px;
-}
-.task-index .mui-bar-tab .reply-message-container .mui-btn-reply {
-  position: absolute;
+.task-index .mui-content,
+.task-details .mui-content,
+.task-editor .mui-content {
   top: 0px;
-  right: 0px;
-  padding: 0px;
-  width: 55px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
+  bottom: 0px;
 }
-.mui-popover.stage-popover {
+.task-index .mui-content .mui-content-padded .mui-input-group + .mui-input-group,
+.task-details .mui-content .mui-content-padded .mui-input-group + .mui-input-group,
+.task-editor .mui-content .mui-content-padded .mui-input-group + .mui-input-group {
+  margin-top: 10px;
+}
+.task-index .mui-content .mui-content-padded .mui-btn-group,
+.task-details .mui-content .mui-content-padded .mui-btn-group,
+.task-editor .mui-content .mui-content-padded .mui-btn-group {
+  margin-top: 30px;
+}
+.task-index .mui-content .mui-content-padded .mui-input-row.selector-row,
+.task-details .mui-content .mui-content-padded .mui-input-row.selector-row,
+.task-editor .mui-content .mui-content-padded .mui-input-row.selector-row {
+  position: relative;
+}
+.task-index .mui-content .mui-content-padded .mui-input-row.selector-row:before,
+.task-details .mui-content .mui-content-padded .mui-input-row.selector-row:before,
+.task-editor .mui-content .mui-content-padded .mui-input-row.selector-row:before {
+  content: '\e583';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: inline-block;
+  font-family: Muiicons;
+  font-size: inherit;
+  line-height: 1;
+  color: #bbb;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+.selector-user .mui-content {
+  padding-top: 44px;
+}
+.selector-user .mui-content .mui-indexed-list {
+  height: 800px;
+}
+.mui-popover.stage-popover,
+.mui-popover.task-details-popover {
   width: 100px;
 }
-.mui-popover.stage-popover .mui-table-view {
+.mui-popover.stage-popover .mui-table-view,
+.mui-popover.task-details-popover .mui-table-view {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.mui-popover.stage-popover .mui-table-view a {
+.mui-popover.stage-popover .mui-table-view a,
+.mui-popover.task-details-popover .mui-table-view a {
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 13px;

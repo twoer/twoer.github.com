@@ -14,9 +14,7 @@
         <header class="mui-bar mui-bar-nav">
             <a class="mui-icon mui-icon-left-nav mui-pull-left"></a>
             <h1 class="mui-title">任务信息</h1>
-            <a class="mui-icon-details  mui-pull-right" href="task-details.html">
-                <span class="mui-icon iconfont icon-ellipsis"></span>
-            </a>
+            <a class="mui-icon iconfont icon-ellipsis mui-pull-right" href="#task-details-popover"></a>
         </header>
         
         <div class="mui-content">
@@ -49,10 +47,26 @@
                     </div>
                     <div class="message-content">
                         <div class="message-text">
+                            test...
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <a href="javascript:;" class="avatar">
+                        <img src="images/temp/avatar.jpg" alt="">
+                    </a>
+                    <div class="message-attr">
+                        <cite>张三</cite>
+                        <span>2015-12-12 12:12:00</span>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
                             此版本的目的为功能的实现（具体哪些功能，后面会详细说明），主要用于公司内部交流测试，可能依然存在一些Bug。
                         </div>
                     </div>
                 </li>
+
                 <li>
                     <a href="javascript:;" class="avatar">
                         <img src="images/temp/avatar.jpg" alt="">
@@ -128,6 +142,51 @@
                         </div>
                     </div>
                 </li>
+
+                <li class="my">
+                    <a href="javascript:;" class="avatar">
+                        <img src="images/temp/avatar.jpg" alt="">
+                    </a>
+                    <div class="message-attr">
+                        <cite>张三</cite>
+                        <span>2015-12-12 12:12:00</span>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            test...
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my">
+                    <a href="javascript:;" class="avatar">
+                        <img src="images/temp/avatar.jpg" alt="">
+                    </a>
+                    <div class="message-attr">
+                        <cite>张三</cite>
+                        <span>2015-12-12 12:12:00</span>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            <img src="images/temp/test-1.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my">
+                    <a href="javascript:;" class="avatar">
+                        <img src="images/temp/avatar.jpg" alt="">
+                    </a>
+                    <div class="message-attr">
+                        <cite>张三</cite>
+                        <span>2015-12-12 12:12:00</span>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            <img src="images/temp/test-2.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
             </ul>
 
         </div>
@@ -138,6 +197,21 @@
                 <button type="button" class="mui-btn mui-btn-link mui-btn-reply">发送</button>
             </div>
         </nav>
+
+
+        <div id="task-details-popover" class="mui-popover task-details-popover">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <a href="task-editor.html">任务详情</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a href="javascript:;">完成任务</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a href="javascript:;">删除任务</a>
+                </li>
+            </ul>
+        </div>
 
     </body>
 
@@ -152,9 +226,13 @@
         mui('.reply-message-container').on('tap', '.mui-btn-reply', function()
         {
             var _val = $('.reply-message-container textarea').val();
+
+            if(_val.length === 0)
+            {
+                return;
+            }
             $('.reply-message-container textarea').val('');
             var $message = $('.message-items li').last().clone();
-            debugger;
             $message.find('.message-text').html(_val);
 
             $('.message-items').append($message);

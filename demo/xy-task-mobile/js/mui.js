@@ -5784,7 +5784,6 @@ var mui = (function(document, undefined) {
  * @returns {undefined}
  */
 (function($, window, document, name, undefined) {
-
 	var CLASS_CONTROL_ITEM = 'mui-control-item';
 	var CLASS_SEGMENTED_CONTROL = 'mui-segmented-control';
 	var CLASS_CONTROL_CONTENT = 'mui-control-content';
@@ -5810,7 +5809,6 @@ var mui = (function(document, undefined) {
 	});
 
 	window.addEventListener('tap', function(e) {
-
 		var targetTab = $.targets.tab;
 		if (!targetTab) {
 			return;

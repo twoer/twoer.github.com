@@ -1,16 +1,306 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title></title>
-    <script src="js/mui.min.js"></script>
-    <link href="css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" charset="utf-8">
-      	mui.init();
-    </script>
-</head>
-<body>
-	
-</body>
+<html class="task-home">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+        <meta name="misapplication-tap-highlight" content="no"/>
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="MobileOptimized" content="320"/>
+        <title>任务看板</title>
+        <link rel="stylesheet" href="css/mui.css">
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav">
+            <h1 class="mui-title">任务看板</h1>
+        </header>
+        
+        <div id="dashboard-list" class="page dashboard-list">
+            <div class="mui-content">
+                <div class="mui-table-title">
+                    <div class="title-editor">
+                        <input type="text" value="阶段 1">
+                    </div>
+                    <a href="task-add.html" class="mui-btn mui-btn-link mui-btn-add-task" data-container="task-info" >
+                        <span class="mui-icon mui-icon-plusempty"></span>
+                    </a>
+                </div>
+                <ul class="mui-table-view">
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">新建</a> 
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 2</a>
+                    </li>
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 3</a>
+                    </li>
+                </ul>
+
+                <div class="mui-table-title">
+                    <div class="title-editor">
+                        <input type="text" value="阶段 2">
+                    </div>
+                    <a href="task-add.html" class="mui-btn mui-btn-link mui-btn-add-task" data-container="task-info">
+                        <span class="mui-icon mui-icon-plusempty"></span>
+                    </a>
+                </div>
+                <ul class="mui-table-view">
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 1</a>
+                    </li>
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 2</a>
+                    </li>
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 3</a>
+                    </li>
+                </ul>
+
+                <div class="mui-table-title">
+                    <div class="title-editor">
+                        <input type="text" value="阶段 3">
+                    </div>
+                    <a href="task-add.html" class="mui-btn mui-btn-link mui-btn-add-task" data-container="task-info">
+                        <span class="mui-icon mui-icon-plusempty"></span>
+                    </a>
+                </div>
+                <ul class="mui-table-view">
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 1</a>
+                    </li>
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 2</a>
+                    </li>
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 3</a>
+                    </li>
+                </ul>
+
+                <div class="mui-table-title">
+                    <div class="title-editor">
+                        <input type="text" value="阶段 4">
+                    </div>
+                    <a href="task-add.html" class="mui-btn mui-btn-link mui-btn-add-task" data-container="task-info">
+                        <span class="mui-icon mui-icon-plusempty"></span>
+                    </a>
+                </div>
+                <ul class="mui-table-view">
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 1</a>
+                    </li>
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 2</a>
+                    </li>
+                     <li class="mui-table-view-cell">
+                        <a href="task-editor.html" data-container="task-info">任务 3</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="dashboard-stage" class="page out dashboard-stage">
+            <div class="mui-content">
+                <div class="mui-slider">
+                    <div class="mui-slider-group">
+                        <div class="mui-slider-item">
+                            <div class="mui-card">
+                                <div class="mui-table-title">
+                                    <div class="title-editor">
+                                        <input type="text" value="阶段 1">
+                                    </div>
+                                    <a href="task-add.html" class="mui-btn mui-btn-link mui-btn-add-task">
+                                        <span class="mui-icon mui-icon-plusempty"></span>
+                                    </a>
+                                </div>
+                                <ul class="mui-table-view">
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 3</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 4</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 5</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 6</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 7</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 8</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 9</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 10</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 11</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 12</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 13</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 14</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 15</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 16</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="mui-card">
+                                <div class="mui-table-title">
+                                    <div class="title-editor">
+                                        <input type="text" value="阶段 2">
+                                    </div>
+                                    <a href="task-add.html" class="mui-btn mui-btn-link mui-btn-add-task">
+                                        <span class="mui-icon mui-icon-plusempty"></span>
+                                    </a>
+                                </div>
+                                <ul class="mui-table-view">
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="mui-card">
+                                <div class="mui-table-title">
+                                    <div class="title-editor">
+                                        <input type="text" value="阶段 3">
+                                    </div>
+                                    <a href="task-add.html" class="mui-btn mui-btn-link mui-btn-add-task">
+                                        <span class="mui-icon mui-icon-plusempty"></span>
+                                    </a>
+                                </div>
+                                <ul class="mui-table-view">
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="mui-card">
+                                <div class="mui-table-title">
+                                    <div class="title-editor">
+                                        <input type="text" value="阶段 4">
+                                    </div>
+                                    <a href="task-add.html" class="mui-btn mui-btn-link mui-btn-add-task">
+                                        <span class="mui-icon mui-icon-plusempty"></span>
+                                    </a>
+                                </div>
+                                <ul class="mui-table-view">
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="task-editor.html" data-container="task-info">任务 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="task-project" class="page out task-project">
+            <div class="mui-content">
+                <div class="mui-content-padded">
+                    <div class="mui-input-group">
+                        <div class="mui-input-row">
+                            <label>项目名称：</label>
+                            <span>今日任务web端设计</span>
+                        </div>
+                        <div class="mui-input-row">
+                            <label>项目描述：</label>
+                            <span>项目描述项目描述项目描述项目描述项目描述项目描述</span>
+                        </div>
+                        <div class="mui-input-row">
+                            <label>负责人：</label>
+                            <span>张三</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mui-content-padded">
+                    <div class="mui-input-group">
+                        <div class="mui-input-row">
+                            <label>阶段信息：</label>
+                            <span>阶段1、阶段2、阶段3、阶段4</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="task-info" class="page-container task-info" data-form="fade"></div>
+        
+        <nav class="mui-bar mui-bar-tab">
+            <a class="mui-tab-item mui-active" href="#dashboard-list" data-rel="auto">
+                <span class="mui-icon iconfont icon-project-category"></span>
+                <span class="mui-tab-label">列表视图</span>
+            </a>
+            <a class="mui-tab-item" href="#dashboard-stage" data-rel="auto">
+                <span class="mui-icon iconfont icon-multiple-window"></span>
+                <span class="mui-tab-label">阶段视图</span>
+            </a>
+            <a class="mui-tab-item" href="#task-project" data-rel="auto">
+                <span class="mui-icon iconfont icon-setting"></span>
+                <span class="mui-tab-label">项目信息</span>
+            </a>
+        </nav>
+        
+    </body>
+
+    <script type="text/javascript" src="js/mui.js"></script>
+    <script type="text/javascript" src="js/mobilebone.js"></script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+
+    
 </html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="selector-user">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+        <meta name="misapplication-tap-highlight" content="no"/>
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="MobileOptimized" content="320"/>
+        <title>选择项目</title>
+        <link rel="stylesheet" href="css/mui.css">
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">选择项目</h1>
+            <a href="javascript:;" class="mui-icon iconfont icon-succeed mui-pull-right"></a>
+        </header>
+        
+        <div class="mui-content">
+         <div class="mui-indexed-list">
+                <div class="mui-indexed-list-search mui-input-row mui-search">
+                    <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索员工">
+                </div>
+                <div class="mui-indexed-list-bar">
+                    <a>A</a>
+                    <a>B</a>
+                    <a>D</a>
+                </div>
+                <div class="mui-indexed-list-alert"></div>
+                <div class="mui-indexed-list-inner">
+                    <div class="mui-indexed-list-empty-alert">没有数据</div>
+                    <ul class="mui-table-view">
+                        <li data-group="A" class="mui-table-view-divider mui-indexed-list-group">A</li>
+                        <li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>阿克苏机场
+                        </li>
+                        <li data-group="B" class="mui-table-view-divider mui-indexed-list-group">B</li>
+                        <li data-value="BSD" data-tags="BaoShan" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>保山机场
+                        </li>
+                        <li data-group="D" class="mui-table-view-divider mui-indexed-list-group">D</li>
+                        <li data-value="DLU" data-tags="DaLi" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>大理机场
+                        </li>
+                        <li data-value="DLC" data-tags="DaLianZhouShuiZiGuoJi" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>大连周水子国际机场
+                        </li>
+                        <li data-value="DQA" data-tags="DaQingSaErTu" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>大庆萨尔图机场
+                        </li>
+                        <li data-value="DAT" data-tags="DaTongDongWangZhuang" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>大同东王庄机场
+                        </li>
+                        <li data-value="DAX" data-tags="DaZhouHeShi" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>达州河市机场
+                        </li>
+                        <li data-value="DDG" data-tags="DanDongLangTou" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>丹东浪头机场
+                        </li>
+                        <li data-value="LUM" data-tags="DeHongMangShi" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>德宏芒市机场
+                        </li>
+                        <li data-value="DIG" data-tags="DiQingXiangGeLiLa" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>迪庆香格里拉机场
+                        </li>
+                        <li data-value="DOY" data-tags="DongYing" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>东营机场
+                        </li>
+                        <li data-value="DNH" data-tags="DunHuang" class="mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left">
+                            <input type="checkbox"/>敦煌机场
+                        </li>        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+    <script type="text/javascript" src="js/mui.js"></script>
+    <script type="text/javascript" src="js/mui.indexedlist.js"></script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+
+
+    <script>
+
+        var isMutpile = false;
+        (function()
+        {
+            var $nav = $('.mui-bar-nav');
+            var $list = $('.mui-indexed-list');
+            $list.height( $(window).height() - $nav.height() );
+        
+            window.indexedList = new mui.IndexedList($list[0]);
+
+            if(isMutpile)
+            {
+                return;
+            }
+
+            mui('.mui-indexed-list').on('tap', '.mui-checkbox', function()
+            {
+                var $checkbox = $(this).find('input');
+                $('.mui-indexed-list .mui-checkbox input:checked').not($checkbox).prop('checked', false);
+            });
+
+
+
+
+        })();
+
+
+
+    </script>
+
+    
+</html>
