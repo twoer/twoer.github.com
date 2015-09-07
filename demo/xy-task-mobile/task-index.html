@@ -1,22 +1,12 @@
 <!DOCTYPE html>
-<html class="task-index">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-        <meta name="misapplication-tap-highlight" content="no"/>
-        <meta name="HandheldFriendly" content="true"/>
-        <meta name="MobileOptimized" content="320"/>
-        <title>任务信息</title>
-        <link rel="stylesheet" href="css/mui.css">
-        <link rel="stylesheet" href="css/global.css">
-    </head>
-    <body>
+    
+    <div id="task-index" class="page-inner task-index">
         <header class="mui-bar mui-bar-nav">
-            <a class="mui-icon mui-icon-left-nav mui-pull-left"></a>
-            <h1 class="mui-title">任务信息</h1>
-            <a class="mui-icon iconfont icon-ellipsis mui-pull-right" href="#task-details-popover"></a>
+        <a href="javascript:;" class="mui-icon mui-icon-left-nav mui-pull-left" data-rel="back"></a>
+        <h1 class="mui-title">任务信息</h1>
+        <a class="mui-icon iconfont icon-ellipsis mui-pull-right" href="#task-details-popover" data-preventDefault="placeholderPreventDefault"></a>
         </header>
-        
+            
         <div class="mui-content">
             
             <div class="mui-content-padded">
@@ -198,48 +188,5 @@
             </div>
         </nav>
 
-
-        <div id="task-details-popover" class="mui-popover task-details-popover">
-            <ul class="mui-table-view">
-                <li class="mui-table-view-cell">
-                    <a href="task-editor.html">任务详情</a>
-                </li>
-                <li class="mui-table-view-cell">
-                    <a href="javascript:;">完成任务</a>
-                </li>
-                <li class="mui-table-view-cell">
-                    <a href="javascript:;">删除任务</a>
-                </li>
-            </ul>
-        </div>
-
-    </body>
-
-    <script type="text/javascript" src="js/mui.js"></script>
-    <script type="text/javascript" src="js/zepto.min.js"></script>
-    <script type="text/javascript" src="js/template.js"></script>
-    <script type="text/javascript" src="js/global.js"></script>
-    
-
-    <script>
-
-        mui('.reply-message-container').on('tap', '.mui-btn-reply', function()
-        {
-            var _val = $('.reply-message-container textarea').val();
-
-            if(_val.length === 0)
-            {
-                return;
-            }
-            $('.reply-message-container textarea').val('');
-            var $message = $('.message-items li').last().clone();
-            $message.find('.message-text').html(_val);
-
-            $('.message-items').append($message);
-
-            $('body').scrollTop(10000);
-        });
-
-    </script>
-    
+    </div>
 </html>

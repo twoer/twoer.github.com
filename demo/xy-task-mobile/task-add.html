@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <header class="mui-bar mui-bar-nav">
-        <a href="javascript:;" class="mui-icon mui-icon-left-nav mui-pull-left" data-rel="back"></a>
-        <h1 class="mui-title">任务详情</h1>
-        <a href="javascript:;" class="mui-icon iconfont icon-succeed mui-pull-right"></a>
-    </header>
+    <div id="task-info" class="page-inner task-info">
+        <header class="mui-bar mui-bar-nav">
+            <a href="javascript:;" class="mui-icon mui-icon-left-nav mui-pull-left" data-rel="back"></a>
+            <h1 class="mui-title">新建任务</h1>
+            <a href="javascript:;" class="mui-icon iconfont icon-succeed mui-pull-right"></a>
+        </header>
+            
+        <div class="mui-content">
+            
+            <div class="mui-content-padded">
+                <div class="mui-input-group">
+                    <div class="mui-input-row">
+                        <label>任务名称：</label>
+                        <input type="text" placeholder="任务名称">
+                    </div>
+                    <div class="mui-input-row">
+                        <label>任务描述：</label>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="任务描述"></textarea>
+                    </div>
+                </div>
+
+                <div class="mui-input-group">
+                    <div class="mui-input-row">
+                        <label>截至日期：</label>
+                        <input type="date" placeholder="截至日期">
+                    </div>
+                    <div class="mui-input-row selector-row">
+                        <label>优先级：</label>
+                        <select name="" id="">
+                            <option value="1">无优先级</option>
+                            <option value="2">最低优先级</option>
+                            <option value="3">次要优先级</option>
+                            <option value="4">最高优先级</option>
+                        </select>
+                    </div>
+                    <div class="mui-input-row">
+                        <label>预估时间：</label>
+                        <input type="number" value="4" placeholder="预估时间">
+                    </div>
+                </div>
+
+                <div class="mui-input-group">
+                    <div class="mui-input-row selector-row">
+                        <label>任务项目：</label>
+                        <a href="#selector-project" class="mui-btn mui-btn-link"></a>
+                    </div>
+                    <div class="mui-input-row selector-row">
+                        <label>任务阶段：</label>
+                        <select name="" id=""></select>
+                    </div>
+                </div>
+
+                <div class="mui-input-group">
+                    <div class="mui-input-row selector-row" >
+                        <label>负责人：</label>
+                        <a href="#selector-user" class="mui-btn mui-btn-link"></a>
+                    </div>
+                    <div class="mui-input-row selector-row">
+                        <label>任务成员：</label>
+                        <a class="mui-btn mui-btn-link"></a>
+                    </div>
+                </div>
+            </div>
         
-    <div class="mui-content">
-        
-        <div class="mui-content-padded">
-            <div class="mui-input-group">
-                <div class="mui-input-row">
-                    <label>任务名称：</label>
-                    <input type="text" placeholder="任务名称">
-                </div>
-                <div class="mui-input-row">
-                    <label>任务描述：</label>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="任务描述"></textarea>
-                </div>
-            </div>
-
-            <div class="mui-input-group">
-                <div class="mui-input-row">
-                    <label>截至日期：</label>
-                    <input type="date" placeholder="截至日期">
-                </div>
-                <div class="mui-input-row selector-row">
-                    <label>优先级：</label>
-                    <select name="" id="">
-                        <option value="1">无优先级</option>
-                        <option value="2">最低优先级</option>
-                        <option value="3">次要优先级</option>
-                        <option value="4">最高优先级</option>
-                    </select>
-                </div>
-                <div class="mui-input-row">
-                    <label>预估时间：</label>
-                    <input type="number" value="4" placeholder="预估时间">
-                </div>
-            </div>
-
-            <div class="mui-input-group">
-                <div class="mui-input-row selector-row">
-                    <label>任务项目：</label>
-                </div>
-                <div class="mui-input-row selector-row">
-                    <label>任务阶段：</label>
-                    <select name="" id=""></select>
-                </div>
-            </div>
-
-            <div class="mui-input-group">
-                <div class="mui-input-row selector-row" >
-                    <label>负责人：</label>
-                </div>
-                <div class="mui-input-row selector-row">
-                    <label>任务成员：</label>
-                    <a class="mui-btn mui-btn-link"></a>
-                </div>
-            </div>
         </div>
-    
+
     </div>
 </html>

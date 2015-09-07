@@ -1046,7 +1046,14 @@
 			// for some unknown 'tap' plugin
 			// $(document).tap(this.handleTapEvent);
 
+			// mui(document).tap(function()
+			// {
+			// 	debugger;
+			// })
+
+
 			window.addEventListener('tap', this.handleTapEvent);
+			return;
 			
 			// zepto tap event.preventDefault can't prevent default click-events
 			document.addEventListener("click", function(event) {
@@ -1116,6 +1123,13 @@
 		}
 		// get target and href
 		target = target || event.target || event.touches[0], href = target.href;
+
+		// var ignore = target.getAttribute("data-ignore");
+		// if( ignore !== null && ignore !== "false")
+		// {
+		// 	return;
+		// }
+
 		if ((!href || /a/i.test(target.tagName) == false) && (target = target.getParentElementByTag("a"))) {
 			href = target.href;
 		}
