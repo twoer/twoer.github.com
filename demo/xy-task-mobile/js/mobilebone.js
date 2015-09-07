@@ -1042,39 +1042,33 @@
 		
 		// Initialization link-catch events.
 		var $ = root.$ || root.jQuery || root.Zepto;
-		if ('ontouchstart' in window == true) {
+		if (('ontouchstart' in window == true)) {
 			// for some unknown 'tap' plugin
 			// $(document).tap(this.handleTapEvent);
 
-			// mui(document).tap(function()
-			// {
-			// 	debugger;
-			// })
-
-
 			window.addEventListener('tap', this.handleTapEvent);
-			return;
+			// return;
 			
 			// zepto tap event.preventDefault can't prevent default click-events
-			document.addEventListener("click", function(event) {
-				var target = event.target;
-				if (!target) return;
-				if (target.tagName.toLowerCase() != "a" && !(target = target.getParentElementByTag("a"))) {
-					return;
-				}
-				var ajax = target.getAttribute("data-ajax"), href = target.href;
-				// if not ajax request
-				if (target.getAttribute("data-rel") == "external" 
-					|| ajax == "false"
-					|| (href.replace("://", "").split("/")[0] !== location.href.replace("://", "").split("/")[0] && ajax != "true")
-					|| (Mobilebone.captureLink == false && ajax != "true")
-				) {
-					// issues #123 #137 #142
-					if (/^http/i.test(href)) location.href = href;
-					return;
-				}
-				event.preventDefault();
-			});			
+			// document.addEventListener("click", function(event) {
+			// 	var target = event.target;
+			// 	if (!target) return;
+			// 	if (target.tagName.toLowerCase() != "a" && !(target = target.getParentElementByTag("a"))) {
+			// 		return;
+			// 	}
+			// 	var ajax = target.getAttribute("data-ajax"), href = target.href;
+			// 	// if not ajax request
+			// 	if (target.getAttribute("data-rel") == "external" 
+			// 		|| ajax == "false"
+			// 		|| (href.replace("://", "").split("/")[0] !== location.href.replace("://", "").split("/")[0] && ajax != "true")
+			// 		|| (Mobilebone.captureLink == false && ajax != "true")
+			// 	) {
+			// 		// issues #123 #137 #142
+			// 		if (/^http/i.test(href)) location.href = href;
+			// 		return;
+			// 	}
+			// 	event.preventDefault();
+			// });			
 		} else {
 			document.addEventListener("click", this.handleTapEvent);	
 		}
@@ -1123,15 +1117,14 @@
 		}
 		// get target and href
 		target = target || event.target || event.touches[0], href = target.href;
-
-		// var ignore = target.getAttribute("data-ignore");
-		// if( ignore !== null && ignore !== "false")
-		// {
-		// 	return;
-		// }
-
 		if ((!href || /a/i.test(target.tagName) == false) && (target = target.getParentElementByTag("a"))) {
 			href = target.href;
+		}
+		var ignore = target.getAttribute("data-ignore");
+		if( ignore !== null && ignore !== "false")
+		{
+			location.href = href;
+			return;
 		}
 		// the page that current touched or actived
 		var self_page = document.querySelector(".in." + Mobilebone.classPage);

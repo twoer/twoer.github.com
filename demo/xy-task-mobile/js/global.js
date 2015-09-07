@@ -1,3 +1,5 @@
+// Mobilebone.captureLink = false;
+
 // mui('.mui-bar').on('tap', 'a', function()
 // {
 //     var href = $(this).attr('href');
