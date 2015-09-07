@@ -104,6 +104,8 @@ mui('.task-details-popover').on('tap', 'a', function()
 
         window.indexedList = new mui.IndexedList($list[0]);
 
+        alert(dd);
+
         if(!dd)
         {
             return;
@@ -112,7 +114,7 @@ mui('.task-details-popover').on('tap', 'a', function()
         dd.biz.navigation.setLeft(
         {
             showIcon: false
-            text: '选择项目'
+            text: '选择人员'
         });
 
     };
