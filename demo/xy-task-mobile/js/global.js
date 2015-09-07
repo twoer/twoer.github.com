@@ -82,6 +82,18 @@ mui('.task-details-popover').on('tap', 'a', function()
         $list.height( $(window).height() - $nav.height() );
 
         window.indexedList = new mui.IndexedList($list[0]);
+
+        if(!dd)
+        {
+            return;
+        }
+
+        dd.biz.navigation.setLeft(
+        {
+            showIcon: false
+            text: '选择项目'
+        });
+
     };
 
     selector.userCallback = function()
@@ -91,6 +103,18 @@ mui('.task-details-popover').on('tap', 'a', function()
         $list.height( $(window).height() - $nav.height() );
 
         window.indexedList = new mui.IndexedList($list[0]);
+
+        if(!dd)
+        {
+            return;
+        }
+
+        dd.biz.navigation.setLeft(
+        {
+            showIcon: false
+            text: '选择项目'
+        });
+
     };
 
 
