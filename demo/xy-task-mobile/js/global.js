@@ -88,10 +88,9 @@ mui('.task-details-popover').on('tap', 'a', function()
             return;
         }
 
-        dd.biz.navigation.setLeft(
+        dd.biz.navigation.setTitle(
         {
-            showIcon: false
-            text: '选择项目'
+            title: '选择项目'
         });
 
     };
@@ -104,18 +103,26 @@ mui('.task-details-popover').on('tap', 'a', function()
 
         window.indexedList = new mui.IndexedList($list[0]);
 
-        alert(dd);
-
         if(!dd)
         {
             return;
         }
 
-        dd.biz.navigation.setLeft(
+        alert(dd.biz.navigation.setTitle)
+        dd.biz.navigation.setTitle(
         {
-            showIcon: false
-            text: '选择人员'
-        });
+    title: '邮箱正文',//控制标题文本，空字符串表示显示默认文本
+    onSuccess : function(result) {
+        /*结构
+        {
+        }*/
+
+        alert('onSuccess');
+    },
+    onFail : function(err) {
+        alert(err);
+    }
+});
 
     };
 
