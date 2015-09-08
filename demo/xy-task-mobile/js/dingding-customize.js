@@ -1,3 +1,16 @@
+dd.device.notification.alert(
+{
+    message: 'xxx',
+    title: 'xxx',//可传空
+    buttonName: 'xxx',
+    onSuccess : function() {
+        /*回调*/
+    },
+    onFail : function(err) {}
+});
+
+
+
 dd.config(
 {
     appId: '4173478',
@@ -29,15 +42,16 @@ dd.error(function(error)
     dd.ui.webViewBounce.disable();
 
 
-    dd.device.notification.alert({
-    message: 'xxx',
-    title: 'xxx',//可传空
-    buttonName: 'xxx',
-    onSuccess : function() {
-        /*回调*/
-    },
-    onFail : function(err) {}
-});
+    dd.device.notification.alert(
+    {
+        message: 'xxx',
+        title: 'xxx',//可传空
+        buttonName: 'xxx',
+        onSuccess : function() {
+            /*回调*/
+        },
+        onFail : function(err) {}
+    });
 
 
 })(dd);
