@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Time Weekly</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+
+    <link rel="stylesheet" href="styles/main.1e3120bf.css">
+    <script src="scripts/vendor/modernizr.dc24e6b4.js"></script>
+    
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    
+    <div class="page-header">
+        <div class="container">
+            <h1>Time Weekly</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-md-6">
+            <h2>编辑：</h2>
+
+            <div class="editor-container">
+                
+                <div class="global-info">
+
+                    <div class="col-md-3">
+                        <a href="javascript:;" class="btn btn-sm btn-default btn-choose">
+                            选择背景图片，要有逼格的...
+                            <input type="file">
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-8 col-md-offset-1">
+                        <input type="text" class="form-control input-sm" placeholder="期数、作者...">
+                    </div>
+                </div>
+
+                <div class="repeat" data-repeat-index="0">
+                    <!-- <div class="repeat-item">
+                        <span class="repeat-no">1</span>
+                        <button type="button" class="btn btn-danger btn-xs btn-delete repeat-remove">不要点我啦...</button>
+                        <div class="form-group form-group-sm">
+                            <a href="javascript:;" class="btn btn-sm btn-default btn-choose">
+                                对，我也要背景图片...
+                                <input type="file">
+                            </a>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <input type="text" class="form-control" placeholder="小标题，一定要小...">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="内容，内容，别忘记了..." ></textarea>
+                        </div><div class="form-group form-group-sm">
+                            <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="短评，一定要短..." ></textarea>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="repeat-action text-right">
+                    <button type="button" class="btn btn-success btn-xs repeat-add" data-repeat="tmpl-weekly">再写一条吧...</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <h2>预览：</h2>
+
+            <div class="preview-container">
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script id="tmpl-weekly" type="text/repeat">
+    <code>
+        <div class="repeat-item">
+            <span class="repeat-no">1</span>
+            <button type="button" class="btn btn-danger btn-xs btn-delete repeat-remove">不要点我啦...</button>
+            <div class="form-group form-group-sm">
+                <a href="javascript:;" class="btn btn-sm btn-default btn-choose">
+                    对，我也要背景图片...
+                    <input type="file">
+                </a>
+            </div>
+            <div class="form-group form-group-sm">
+                <input type="text" class="form-control" placeholder="小标题，一定要小...">
+            </div>
+            <div class="form-group form-group-sm">
+                <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="内容，内容，别忘记了..." ></textarea>
+            </div><div class="form-group form-group-sm">
+                <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="短评，一定要短..." ></textarea>
+            </div>
+        </div>
+    </code>
+    var setting = 
+    { 
+        repeat : '.editor-container .repeat',
+        min : 1,
+        max : 20,
+        init : 1,
+        onMin : function(sender)
+        {
+            alert('多少留一条吧...')   
+        }
+    };
+</script>
+
+    <script src="scripts/vendor.88694efe.js"></script>
+
+    
+    <script src="scripts/plugins.19a1d77b.js"></script>
+    
+
+    <script src="scripts/main.bf14f505.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
+</html>
