@@ -11,8 +11,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 
-    <link rel="stylesheet" href="styles/main.1e3120bf.css">
-    <script src="scripts/vendor/modernizr.dc24e6b4.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/vendor/modernizr.js"></script>
     
   </head>
   <body>
@@ -24,49 +24,43 @@
     <div class="page-header">
         <div class="container">
             <h1>Time Weekly</h1>
+
+            <div class="actions">
+                <a href="javascript:;" class="btn btn-default btn-create">生成图片</a>
+                <a href="javascript:;" class="btn btn-success btn-open" disabled target="_blank">打开</a>
+            </div>
         </div>
     </div>
 
     <div class="container">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2>编辑：</h2>
 
             <div class="editor-container">
                 
                 <div class="global-info">
+        
+                    <div class="form-group form-group-sm">
+                        <a href="javascript:;" class="btn btn-block btn-sm btn-info btn-choose">
+                            <span>选择页头图片，要有逼格的...(800 * 800+)</span>
+                            <input type="file" accept="image/*" name="bgHeader">
+                        </a>
+                    </div>
 
-                    <div class="col-md-3">
-                        <a href="javascript:;" class="btn btn-sm btn-default btn-choose">
-                            选择背景图片，要有逼格的...
-                            <input type="file">
+                    <div class="form-group form-group-sm">
+                        <a href="javascript:;" class="btn btn-block btn-sm btn-info btn-choose">
+                            <span>选择页脚图片，要有逼格的...</span>
+                            <input type="file" accept="image/*" name="bgFooter">
                         </a>
                     </div>
                     
-                    <div class="col-md-8 col-md-offset-1">
-                        <input type="text" class="form-control input-sm" placeholder="期数、作者...">
+                    <div class="form-group form-group-sm">
+                        <input type="text" class="form-control input-sm" name="author" placeholder="期数、作者...">
                     </div>
+
                 </div>
 
-                <div class="repeat" data-repeat-index="0">
-                    <!-- <div class="repeat-item">
-                        <span class="repeat-no">1</span>
-                        <button type="button" class="btn btn-danger btn-xs btn-delete repeat-remove">不要点我啦...</button>
-                        <div class="form-group form-group-sm">
-                            <a href="javascript:;" class="btn btn-sm btn-default btn-choose">
-                                对，我也要背景图片...
-                                <input type="file">
-                            </a>
-                        </div>
-                        <div class="form-group form-group-sm">
-                            <input type="text" class="form-control" placeholder="小标题，一定要小...">
-                        </div>
-                        <div class="form-group form-group-sm">
-                            <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="内容，内容，别忘记了..." ></textarea>
-                        </div><div class="form-group form-group-sm">
-                            <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="短评，一定要短..." ></textarea>
-                        </div>
-                    </div> -->
-                </div>
+                <div class="repeat" data-repeat-index="0"></div>
 
                 <div class="repeat-action text-right">
                     <button type="button" class="btn btn-success btn-xs repeat-add" data-repeat="tmpl-weekly">再写一条吧...</button>
@@ -74,11 +68,21 @@
             </div>
 
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <h2>预览：</h2>
 
             <div class="preview-container">
+                <div class="hd">
+                    <img src="" alt="">
+                    <h5></h5>
+                </div>
                 
+                <ul class="list">
+                </ul>
+
+                <div class="ft">
+                    <img src="" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -87,22 +91,22 @@
 
     <script id="tmpl-weekly" type="text/repeat">
     <code>
-        <div class="repeat-item">
+        <div class="repeat-item" data-repeat-index="{#index#}">
             <span class="repeat-no">1</span>
             <button type="button" class="btn btn-danger btn-xs btn-delete repeat-remove">不要点我啦...</button>
             <div class="form-group form-group-sm">
-                <a href="javascript:;" class="btn btn-sm btn-default btn-choose">
-                    对，我也要背景图片...
-                    <input type="file">
+                <a href="javascript:;" class="btn btn-sm btn-info btn-choose">
+                    我要图片...
+                    <input type="file" accept="image/*" name="picture">
                 </a>
             </div>
             <div class="form-group form-group-sm">
-                <input type="text" class="form-control" placeholder="小标题，一定要小...">
+                <input type="text" class="form-control" placeholder="小标题，一定要小..." name="title">
             </div>
             <div class="form-group form-group-sm">
-                <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="内容，内容，别忘记了..." ></textarea>
+                <textarea id="" cols="30" rows="5" class="form-control" placeholder="内容，内容，别忘记了..." name="content" ></textarea>
             </div><div class="form-group form-group-sm">
-                <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="短评，一定要短..." ></textarea>
+                <textarea id="" cols="30" rows="2" class="form-control" placeholder="短评，一定要短..." name="comment" ></textarea>
             </div>
         </div>
     </code>
@@ -111,30 +115,26 @@
         repeat : '.editor-container .repeat',
         min : 1,
         max : 20,
-        init : 1,
+        init : 0,
         onMin : function(sender)
         {
             alert('多少留一条吧...')   
-        }
+        },
+        onRemoveBefore : function($item, sender)
+        {
+            return confirm('确定要删除...');
+        },
     };
 </script>
 
-    <script src="scripts/vendor.88694efe.js"></script>
+    <script src="scripts/vendor.js"></script>
 
     
-    <script src="scripts/plugins.19a1d77b.js"></script>
+
     
 
-    <script src="scripts/main.bf14f505.js"></script>
+    <script src="scripts/main.js"></script>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+
   </body>
 </html>
